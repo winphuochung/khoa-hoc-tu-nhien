@@ -419,10 +419,15 @@ export function getDb() {
 
 export function saveDb() {
   if (!dbCache) return;
-  if (!fs.existsSync(DATA_DIR)) {
-    fs.mkdirSync(DATA_DIR, { recursive: true });
+  try {
+    if (!fs.existsSync(DATA_DIR)) {
+      fs.mkdirSync(DATA_DIR, { recursive: true });
+    }
+    fs.writeFileSync(DB_FILE, JSON.stringify(dbCache, null, 2), 'utf-8');
+  } catch (err) {
+    // In serverless environments like Vercel, filesystem outside /tmp is read-only
+    console.warn('[DB] Cannot write to filesystem (expected in Vercel/serverless):', err?.message || err);
   }
-  fs.writeFileSync(DB_FILE, JSON.stringify(dbCache, null, 2), 'utf-8');
 }
 
 export function sanitizeUser(user) {

@@ -18,7 +18,7 @@ async function buildBundle() {
     },
     build: {
       outDir: path.join(rootDir, 'dist'),
-      emptyOutDir: true,
+      emptyOutDir: false,
       cssCodeSplit: false,
       lib: {
         entry: path.join(rootDir, 'src', 'main.tsx'),

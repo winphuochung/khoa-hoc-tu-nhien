@@ -1731,7 +1731,12 @@ app.get('*', (req, res, next) => {
   next();
 });
 
+export default app;
+
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`[KHTN 9 Server] Running at http://localhost:${PORT}`);
-});
+const isMainModule = process.argv[1] && path.resolve(process.argv[1]) === path.resolve(__filename);
+if (isMainModule && !process.env.VERCEL) {
+  app.listen(PORT, () => {
+    console.log(`[KHTN 9 Server] Running at http://localhost:${PORT}`);
+  });
+}
