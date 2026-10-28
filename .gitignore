@@ -1,0 +1,43 @@
+# Dependencies
+node_modules/
+
+# Agent configuration & working files
+.agents/
+.agents
+agents/
+.agent/
+.agent
+
+# Environment variables & local secrets
+.env
+.env.local
+.env.*.local
+
+# Logs and system generated artifacts
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+*.log
+.system_generated/
+.gemini/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Operating System files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor & IDE directories
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
