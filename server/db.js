@@ -21,6 +21,15 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const DATA_DIR = path.join(__dirname, 'data');
 const DB_FILE = path.join(DATA_DIR, 'db.json');
+const VERCEL_TMP_DIR = '/tmp';
+const VERCEL_TMP_FILE = path.join(VERCEL_TMP_DIR, 'khtn_db.json');
+
+function getEffectiveDbFile() {
+  if (process.env.VERCEL && fs.existsSync(VERCEL_TMP_FILE)) {
+    return VERCEL_TMP_FILE;
+  }
+  return DB_FILE;
+}
 
 export function hashPassword(password, salt = crypto.randomBytes(16).toString('hex')) {
   const hash = crypto.scryptSync(String(password), salt, 64).toString('hex');
@@ -123,12 +132,16 @@ let dbCache = null;
 
 export function getDb() {
   if (dbCache) return dbCache;
-  if (!fs.existsSync(DATA_DIR)) {
-    fs.mkdirSync(DATA_DIR, { recursive: true });
-  }
-  if (fs.existsSync(DB_FILE)) {
+  const effectiveFile = getEffectiveDbFile();
+  const effectiveDir = path.dirname(effectiveFile);
+  if (!fs.existsSync(effectiveDir)) {
     try {
-      const raw = fs.readFileSync(DB_FILE, 'utf-8');
+      fs.mkdirSync(effectiveDir, { recursive: true });
+    } catch {}
+  }
+  if (fs.existsSync(effectiveFile)) {
+    try {
+      const raw = fs.readFileSync(effectiveFile, 'utf-8');
       dbCache = JSON.parse(raw);
       // Ensure chapters and lessons for grades 6, 7, 8, 9 exist
       const existingLessonIds = new Set((dbCache.lessons || []).map((l) => l.id));
@@ -419,14 +432,16 @@ export function getDb() {
 
 export function saveDb() {
   if (!dbCache) return;
+  const isVercel = Boolean(process.env.VERCEL);
+  const targetFile = isVercel ? VERCEL_TMP_FILE : DB_FILE;
+  const targetDir = isVercel ? VERCEL_TMP_DIR : DATA_DIR;
   try {
-    if (!fs.existsSync(DATA_DIR)) {
-      fs.mkdirSync(DATA_DIR, { recursive: true });
+    if (!fs.existsSync(targetDir)) {
+      fs.mkdirSync(targetDir, { recursive: true });
     }
-    fs.writeFileSync(DB_FILE, JSON.stringify(dbCache, null, 2), 'utf-8');
+    fs.writeFileSync(targetFile, JSON.stringify(dbCache, null, 2), 'utf-8');
   } catch (err) {
-    // In serverless environments like Vercel, filesystem outside /tmp is read-only
-    console.warn('[DB] Cannot write to filesystem (expected in Vercel/serverless):', err?.message || err);
+    console.warn('[DB] Cannot write to filesystem:', err?.message || err);
   }
 }
 

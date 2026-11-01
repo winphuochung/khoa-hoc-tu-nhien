@@ -1731,9 +1731,41 @@ export async function handleLocalApiRequest<T>(
   // 11. Submissions
   const subLogMatch = pathname.match(/^\/api\/submissions\/([^/]+)\/log$/);
   if (method === 'POST' && subLogMatch) {
-    requireAuthUser();
-    const submission = db.submissions.find((s: any) => s.id === subLogMatch[1]);
-    if (!submission) throw new Error('Không tìm thấy bài làm.');
+    const user = requireAuthUser();
+    const subId = subLogMatch[1];
+    let submission = db.submissions.find((s: any) => s.id === subId);
+    if (!submission && body?.examId) {
+      submission = db.submissions.find((s: any) => s.examId === body.examId && s.studentId === user.id);
+    }
+    if (!submission && body?.paperSnapshot) {
+      const now = new Date().toISOString();
+      submission = {
+        id: subId || randomId('sub'),
+        examId: body.examId || db.exams[0]?.id || 'exam-midterm',
+        studentId: user.id,
+        studentName: user.fullName,
+        studentUsername: user.username,
+        className: user.className || '9A1',
+        paperCode: body.paperCode || `MĐ-${user.className || '9A1'}-${subId.slice(0, 4)}`,
+        paperSignature: body.paperSignature || subId,
+        paperSnapshot: body.paperSnapshot,
+        answers: {},
+        status: 'in_progress',
+        startedAt: body.startedAt || now,
+        autoGradedScore: 0,
+        manualGradedScore: 0,
+        totalScore: 0,
+        violationCount: body.violationCount || 0,
+        flaggedForReview: false,
+        deviceInfo: body.deviceInfo || {},
+        activityLogs: [],
+      };
+      db.submissions.push(submission);
+      saveLocalDb();
+    }
+    if (!submission) {
+      return { violationCount: 0 } as T;
+    }
     const { logEntry, draftAnswers, violationIncrement } = body;
     if (logEntry && logEntry.eventType) {
       submission.activityLogs.push({
@@ -1756,11 +1788,56 @@ export async function handleLocalApiRequest<T>(
 
   const subSubmitMatch = pathname.match(/^\/api\/submissions\/([^/]+)\/submit$/);
   if (method === 'POST' && subSubmitMatch) {
-    requireAuthUser();
-    const submission = db.submissions.find((s: any) => s.id === subSubmitMatch[1]);
+    const user = requireAuthUser();
+    const subId = subSubmitMatch[1];
+    let submission = db.submissions.find((s: any) => s.id === subId);
+    if (!submission && body?.examId) {
+      submission = db.submissions.find((s: any) => s.examId === body.examId && s.studentId === user.id);
+    }
+    if (!submission && body?.paperSnapshot) {
+      const now = new Date().toISOString();
+      submission = {
+        id: subId || randomId('sub'),
+        examId: body.examId || db.exams[0]?.id || 'exam-midterm',
+        studentId: user.id,
+        studentName: user.fullName,
+        studentUsername: user.username,
+        className: user.className || '9A1',
+        paperCode: body.paperCode || `MĐ-${user.className || '9A1'}-${subId.slice(0, 4)}`,
+        paperSignature: body.paperSignature || subId,
+        paperSnapshot: body.paperSnapshot,
+        answers: {},
+        status: 'in_progress',
+        startedAt: body.startedAt || now,
+        autoGradedScore: 0,
+        manualGradedScore: 0,
+        totalScore: 0,
+        violationCount: body.violationCount || 0,
+        flaggedForReview: false,
+        deviceInfo: body.deviceInfo || {},
+        activityLogs: [
+          {
+            timestamp: now,
+            eventType: 'session_restored',
+            detail: 'Khôi phục bài làm từ dữ liệu an toàn của phiên làm bài.',
+          },
+        ],
+      };
+      db.submissions.push(submission);
+      saveLocalDb();
+    }
     if (!submission) throw new Error('Không tìm thấy bài làm.');
     if (submission.status !== 'in_progress') {
-      throw new Error('Bài làm đã được nộp và khoá trước đó.');
+      const exam = db.exams.find((e: any) => e.id === submission.examId);
+      return {
+        submissionId: submission.id,
+        status: submission.status,
+        submittedAt: submission.submittedAt,
+        flaggedForReview: submission.flaggedForReview,
+        allowReview: Boolean(exam?.allowReview),
+        autoGradedScore: exam?.allowReview ? submission.autoGradedScore : null,
+        totalScore: exam?.allowReview ? submission.totalScore : null,
+      } as T;
     }
     const { answers, submitReason = 'manual_submit', violationCount } = body;
     const finalRawAnswers = answers || submission.answers || {};
@@ -1810,7 +1887,10 @@ export async function handleLocalApiRequest<T>(
   const subDetailMatch = pathname.match(/^\/api\/submissions\/([^/]+)\/detail$/);
   if (method === 'GET' && subDetailMatch) {
     const user = requireAuthUser();
-    const submission = db.submissions.find((s: any) => s.id === subDetailMatch[1]);
+    let submission = db.submissions.find((s: any) => s.id === subDetailMatch[1]);
+    if (!submission && user.role === 'student') {
+      submission = db.submissions.find((s: any) => s.studentId === user.id);
+    }
     if (!submission) throw new Error('Không tìm thấy bài làm.');
     if (user.role === 'student' && submission.studentId !== user.id) {
       throw new Error('Học sinh không được xem bài làm hoặc kết quả của bạn khác.');

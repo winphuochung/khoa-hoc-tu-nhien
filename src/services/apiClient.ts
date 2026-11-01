@@ -88,6 +88,13 @@ export async function apiRequest<T>(
     }
 
     if (!response.ok || !json.success) {
+      if ((response.status === 404 || String(json?.error || '').includes('Không tìm thấy bài làm')) && path.includes('/submissions/')) {
+        try {
+          return await handleLocalApiRequest<T>(path, options, token);
+        } catch {
+          // fallback failed, continue to throw server error
+        }
+      }
       throw new Error(json.error || `Lỗi máy chủ (${response.status})`);
     }
 

@@ -62,6 +62,29 @@ export const StudentExamRoom: React.FC<StudentExamRoomProps> = ({ onNotify }) =>
   const [isFullscreen, setIsFullscreen] = useState<boolean>(false);
   const [submitting, setSubmitting] = useState<boolean>(false);
 
+  // Synchronous refs to avoid stale closure in timers and async listeners
+  const draftAnswersRef = useRef(draftAnswers);
+  useEffect(() => {
+    draftAnswersRef.current = draftAnswers;
+  }, [draftAnswers]);
+
+  const activeSubmissionRef = useRef(activeSubmission);
+  useEffect(() => {
+    activeSubmissionRef.current = activeSubmission;
+  }, [activeSubmission]);
+
+  const activeExamMetaRef = useRef(activeExamMeta);
+  useEffect(() => {
+    activeExamMetaRef.current = activeExamMeta;
+  }, [activeExamMeta]);
+
+  const violationCountRef = useRef(violationCount);
+  useEffect(() => {
+    violationCountRef.current = violationCount;
+  }, [violationCount]);
+
+  const isSubmittingRef = useRef<boolean>(false);
+
   // Question time tracking
   const questionStartRef = useRef<{ qId: string | null; ts: number }>({
     qId: null,
@@ -144,22 +167,29 @@ export const StudentExamRoom: React.FC<StudentExamRoomProps> = ({ onNotify }) =>
     violationInc = 0,
     updatedAnswers?: Record<string, Partial<QuestionSubmissionDetail>>
   ) => {
-    if (!activeSubmission) return;
+    const curSub = activeSubmissionRef.current || activeSubmission;
+    if (!curSub) return;
+    const curAnswers = updatedAnswers || draftAnswersRef.current || draftAnswers;
     try {
       const res = await apiRequest<{ violationCount: number }>(
-        `/api/submissions/${activeSubmission.id}/log`,
+        `/api/submissions/${curSub.id}/log`,
         {
           method: 'POST',
           body: JSON.stringify({
             logEntry: { eventType, detail },
             violationIncrement: violationInc,
-            draftAnswers: updatedAnswers || draftAnswers,
+            draftAnswers: curAnswers,
+            examId: curSub.examId,
+            paperCode: curSub.paperCode,
+            paperSignature: curSub.paperSignature,
+            paperSnapshot: curSub.paperSnapshot,
+            startedAt: curSub.startedAt,
           }),
         }
       );
-      if (typeof res.violationCount === 'number') {
+      if (typeof res?.violationCount === 'number') {
         setViolationCount(res.violationCount);
-        const maxV = activeExamMeta?.maxTabViolations || 3;
+        const maxV = activeExamMetaRef.current?.maxTabViolations || 3;
         if (res.violationCount >= maxV) {
           onNotify(
             'error',
@@ -173,15 +203,13 @@ export const StudentExamRoom: React.FC<StudentExamRoomProps> = ({ onNotify }) =>
     }
   };
 
-  // Countdown Timer & Auto-submit when timeout
+  // Countdown Timer
   useEffect(() => {
     if (!activeSubmission || activeSubmission.status !== 'in_progress') return;
     const timer = setInterval(() => {
       setRemainingSeconds((prev) => {
         if (prev <= 1) {
           clearInterval(timer);
-          onNotify('info', 'Đã hết thời gian làm bài! Hệ thống tự động nộp bài.');
-          handleSubmitExam('auto_submit_timeout');
           return 0;
         }
         return prev - 1;
@@ -190,6 +218,20 @@ export const StudentExamRoom: React.FC<StudentExamRoomProps> = ({ onNotify }) =>
 
     return () => clearInterval(timer);
   }, [activeSubmission?.id]);
+
+  // Clean timeout trigger outside setInterval
+  useEffect(() => {
+    if (
+      activeSubmission &&
+      activeSubmission.status === 'in_progress' &&
+      remainingSeconds === 0 &&
+      !submitting &&
+      !isSubmittingRef.current
+    ) {
+      onNotify('info', 'Đã hết thời gian làm bài! Hệ thống tự động nộp bài.');
+      handleSubmitExam('auto_submit_timeout');
+    }
+  }, [remainingSeconds, activeSubmission?.id]);
 
   // Anti-cheat listeners: visibilitychange, window blur, fullscreenchange
   useEffect(() => {
@@ -243,6 +285,22 @@ export const StudentExamRoom: React.FC<StudentExamRoomProps> = ({ onNotify }) =>
       };
       const nextAll = { ...prev, [qId]: nextQ };
       sendLogEvent('answer_change', `Cập nhật câu trả lời (${qId})`, 0, nextAll);
+
+      // Local backup for resilience
+      const curSub = activeSubmissionRef.current;
+      if (curSub) {
+        try {
+          localStorage.setItem(
+            `khtn_active_sub_${curSub.studentId}_${curSub.examId}`,
+            JSON.stringify({
+              submission: curSub,
+              answers: nextAll,
+              savedAt: Date.now(),
+            })
+          );
+        } catch {}
+      }
+
       return nextAll;
     });
   };
@@ -252,15 +310,26 @@ export const StudentExamRoom: React.FC<StudentExamRoomProps> = ({ onNotify }) =>
     reason: 'manual_submit' | 'auto_submit_timeout' | 'auto_submit_violation' = 'manual_submit',
     overrideViolationCount?: number
   ) => {
-    if (!activeSubmission || submitting) return;
+    const curSub = activeSubmissionRef.current || activeSubmission;
+    if (!curSub || isSubmittingRef.current || submitting) return;
+    isSubmittingRef.current = true;
     setSubmitting(true);
+    const answersToSubmit = draftAnswersRef.current || draftAnswers;
+    const finalViolation = overrideViolationCount ?? violationCountRef.current ?? violationCount;
+
     try {
-      await apiRequest(`/api/submissions/${activeSubmission.id}/submit`, {
+      await apiRequest(`/api/submissions/${curSub.id}/submit`, {
         method: 'POST',
         body: JSON.stringify({
-          answers: draftAnswers,
+          answers: answersToSubmit,
           submitReason: reason,
-          violationCount: overrideViolationCount ?? violationCount,
+          violationCount: finalViolation,
+          examId: curSub.examId,
+          paperCode: curSub.paperCode,
+          paperSignature: curSub.paperSignature,
+          paperSnapshot: curSub.paperSnapshot,
+          startedAt: curSub.startedAt,
+          deviceInfo: curSub.deviceInfo,
         }),
       });
 
@@ -272,12 +341,19 @@ export const StudentExamRoom: React.FC<StudentExamRoomProps> = ({ onNotify }) =>
         'success',
         'Đã nộp bài thành công! Bài làm đã được khoá theo quy định (mỗi đợt chỉ làm 1 lần).'
       );
+
+      // Clean local backup
+      try {
+        localStorage.removeItem(`khtn_active_sub_${curSub.studentId}_${curSub.examId}`);
+      } catch {}
+
       setActiveSubmission(null);
       setActiveExamMeta(null);
       await loadExamsList();
     } catch (err: any) {
       onNotify('error', err.message || 'Lỗi khi nộp bài.');
     } finally {
+      isSubmittingRef.current = false;
       setSubmitting(false);
     }
   };

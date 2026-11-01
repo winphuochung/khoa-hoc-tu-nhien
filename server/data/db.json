@@ -1981,6 +1981,31 @@
       "userId": "usr-teacher-0ae981a1",
       "role": "teacher",
       "createdAt": "2026-10-28T16:10:38.018Z"
+    },
+    "tk-student__usr-hs-5011bd36__d669fba53f74c3b2a98ec3ac": {
+      "userId": "usr-hs-5011bd36",
+      "role": "student",
+      "createdAt": "2026-11-01T07:56:57.023Z"
+    },
+    "undefined": {
+      "userId": "usr-teacher-0ae981a1",
+      "role": "teacher",
+      "createdAt": "2026-11-01T07:56:57.069Z"
+    },
+    "tk-student__usr-hs-5011bd36__677439d33606663d741781b7": {
+      "userId": "usr-hs-5011bd36",
+      "role": "student",
+      "createdAt": "2026-11-01T07:57:04.782Z"
+    },
+    "tk-student__usr-hs-5011bd36__01a79f8c551a07dac31fabc2": {
+      "userId": "usr-hs-5011bd36",
+      "role": "student",
+      "createdAt": "2026-11-01T07:57:16.304Z"
+    },
+    "tk-student__usr-hs-5011bd36__945ca7d28e3a8109ad444a33": {
+      "userId": "usr-hs-5011bd36",
+      "role": "student",
+      "createdAt": "2026-11-01T07:57:23.100Z"
     }
   },
   "chapters": [
@@ -98842,7 +98867,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Giới thiệu về khoa học tự nhiên vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -98950,7 +98975,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức An toàn trong phòng thực hành vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -99058,7 +99083,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Sử dụng kính lúp vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -99166,7 +99191,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Sử dụng kính hiển vi quang học vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -99274,7 +99299,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Đo chiều dài vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -99382,7 +99407,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Đo khối lượng vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -99490,7 +99515,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Đo thời gian vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -99598,7 +99623,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Đo nhiệt độ vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -99706,7 +99731,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Sự đa dạng của chất vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -99814,7 +99839,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Các thể của chất và sự chuyển thể vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -99922,7 +99947,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Oxygen. Không khí vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -100030,7 +100055,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Một số vật liệu vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -100138,7 +100163,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Một số nguyên liệu vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -100246,7 +100271,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Một số nhiên liệu vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -100354,7 +100379,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Một số lương thực, thực phẩm vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -100462,7 +100487,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Hỗn hợp các chất vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -100570,7 +100595,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Tách chất khỏi hỗn hợp vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -100678,7 +100703,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Tế bào vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -100786,7 +100811,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Cấu tạo và chức năng các thành phần của tế bào vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -100894,7 +100919,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Sự lớn lên và sinh sản của tế bào vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -101002,7 +101027,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Thực hành: Quan sát và phân biệt một số loại tế bào vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -101110,7 +101135,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Cơ thể sinh vật vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -101218,7 +101243,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Tổ chức cơ thể đa bào vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -101326,7 +101351,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Thực hành: Quan sát và mô tả cơ thể đơn bào, cơ thể đa bào. vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -101434,7 +101459,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Hệ thống phân loại sinh vật vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -101542,7 +101567,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Khoá lưỡng phân vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -101650,7 +101675,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Vi khuẩn vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -101758,7 +101783,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Thực hành: Làm sữa chua và quan sát vi khuẩn vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -101866,7 +101891,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Virus vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -101974,7 +101999,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Nguyên sinh vật vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -102082,7 +102107,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Thực hành: Quan sát nguyên sinh vật vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -102190,7 +102215,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Nấm vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -102298,7 +102323,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Thực hành: Quan sát các loại nấm vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -102406,7 +102431,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Thực vật vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -102514,7 +102539,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Thực hành: Quan sát phân biệt một số nhóm thực vật vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -102622,7 +102647,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Động vật vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -102730,7 +102755,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Thực hành: Quan sát và nhận biết một số nhóm động vật ngoài thiên nhiên vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -102838,7 +102863,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Đa dạng sinh học vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -102946,7 +102971,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Tìm hiểu sinh vật ngoài thiên nhiên vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -103054,7 +103079,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Lực là gì? vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -103162,7 +103187,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Biểu diễn lực vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -103270,7 +103295,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Biến dạng của lò xo vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -103378,7 +103403,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Trọng lượng, lực hấp dẫn vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -103486,7 +103511,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Lực ma sát vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -103594,7 +103619,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Lực cản của nước vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -103702,7 +103727,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Năng lượng và sự truyền năng lượng vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -103810,7 +103835,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Một số dạng năng lượng vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -103918,7 +103943,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Sự chuyển hoá năng lượng vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -104026,7 +104051,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Năng lượng hao phí vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -104134,7 +104159,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Năng lượng tái tạo vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -104242,7 +104267,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Tiết kiệm năng lượng vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -104350,7 +104375,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Chuyển động nhìn thấy của Mặt Trời. Thiên thể vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -104458,7 +104483,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Mặt Trăng vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -104566,7 +104591,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Hệ Mặt Trời vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -104674,7 +104699,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Ngân Hà vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -104782,7 +104807,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Phương pháp và kỹ năng học tập môn Khoa học tự nhiên vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -104890,7 +104915,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Nguyên tử vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -104998,7 +105023,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Nguyên tố hóa học vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -105106,7 +105131,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Sơ lược về bảng tuần hoàn các nguyên tố hóa học vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -105214,7 +105239,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Phân tử vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -105322,7 +105347,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Giới thiệu về liên kết hóa học vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -105430,7 +105455,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Hóa trị và công thức hóa học vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -105538,7 +105563,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Tốc độ chuyển động vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -105646,7 +105671,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Đo tốc độ vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -105754,7 +105779,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Đồ thị quãng đường vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -105862,7 +105887,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Thảo luận về ảnh hưởng của tốc độ trong an toàn giao thông vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -105970,7 +105995,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Sóng âm vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -106078,7 +106103,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Độ to và độ cao của âm vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -106186,7 +106211,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Phản xạ âm, chống ô nhiễm tiếng ồn vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -106294,7 +106319,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Năng lượng ánh sáng. Tia sáng, vùng tối vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -106402,7 +106427,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Sự phản xạ ánh sáng vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -106510,7 +106535,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Ảnh của vật qua gương phẳng. vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -106618,7 +106643,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Nam châm vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -106726,7 +106751,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Từ trường vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -106834,7 +106859,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Chế tạo nam châm điện đơn giản vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -106942,7 +106967,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Khái quát về trao đổi chất và chuyển hóa năng lượng vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -107050,7 +107075,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Quang hợp ở thực vật. vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -107158,7 +107183,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Một số yếu tố ảnh hưởng đến quang hợp. vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -107266,7 +107291,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Thực hành: Chứng minh quang hợp ở cây xanh. vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -107374,7 +107399,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Hô hấp tế bào vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -107482,7 +107507,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Một số yếu tố ảnh hưởng đến hô hấp tế bào vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -107590,7 +107615,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Thực hành: Hô hấp ở thực vật vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -107698,7 +107723,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Trao đổi khí ở sinh vật vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -107806,7 +107831,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Vai trò của nước và chất dinh dưỡng đối với sinh vât vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -107914,7 +107939,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Trao đổi nước và chất dinh dưỡng ở thực vật vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -108022,7 +108047,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Trao đổi nước và chất dinh dưỡng ở động vật vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -108130,7 +108155,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Thực hành: Chứng minh thân vận chuyển nước và lá thoát hơi nước. vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -108238,7 +108263,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Cảm ứng ở sinh vật và tập tính ở động vật vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -108346,7 +108371,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Vận dụng hiện tượng cảm ứng ở sinh vật vào thực tiễn vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -108454,7 +108479,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Thực hành: Cảm ứng ở sinh vật vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -108562,7 +108587,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Khái quát về sinh trưởng và phát triển ở sinh vật vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -108670,7 +108695,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Ứng dụng sinh trưởng và phát triển ở sinh vật vào thực tiễn vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -108778,7 +108803,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Thực hành: Quan sát, mô tả sự sinh trưởng và phát triển ở một số sinh vật vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -108886,7 +108911,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Sinh sản vô tính ở sinh vật vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -108994,7 +109019,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Sinh sản hữu tính ở sinh vật vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -109102,7 +109127,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Một sổ yếu tố ảnh hưởng và điều hoà, điều khiển sinh sản ở sinh vật vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -109210,7 +109235,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Cơ thể sinh vật là một thể thống nhất. vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -109318,7 +109343,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Sử dụng một số hoá chất, thiết bị cơ bản trong phòng thí nghiệm vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -109426,7 +109451,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Phản ứng hoá học vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -109534,7 +109559,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Mol và tỉ khối chất khí vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -109642,7 +109667,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Dung dịch và nồng độ dung dịch vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -109750,7 +109775,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Định luật bảo toàn khối lượng và phương trình hoá học vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -109858,7 +109883,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Tính theo phương trình hoá học vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -109966,7 +109991,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Tốc độ phản ứng và chất xúc tác vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -110074,7 +110099,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Acid vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -110182,7 +110207,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Base. Thang pH vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -110290,7 +110315,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Oxide vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -110398,7 +110423,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Muối vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -110506,7 +110531,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Phân bón hoá học vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -110614,7 +110639,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Khối lượng riêng vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -110722,7 +110747,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Thực hành xác định khối lượng riêng vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -110830,7 +110855,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Áp suất trên một bề mặt vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -110938,7 +110963,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Áp suất chất lỏng. Áp suất khí quyển vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -111046,7 +111071,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Lực đẩy Archimedes vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -111154,7 +111179,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Tác dụng làm quay của lực. Moment lực vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -111262,7 +111287,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Đòn bẩy và ứng dụng vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -111370,7 +111395,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Hiện tượng nhiễm điện do cọ xát vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -111478,7 +111503,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Dòng điện, nguồn điện vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -111586,7 +111611,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Mạch điện đơn giản vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -111694,7 +111719,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Tác dụng của dòng điện vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -111802,7 +111827,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Cường độ dòng điện và hiệu điện thế vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -111910,7 +111935,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Thực hành đo cường độ dòng điện và hiệu điện thế vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -112018,7 +112043,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Năng lượng nhiệt và nội năng vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -112126,7 +112151,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Thực hành đo năng lượng nhiệt bằng joulemeter vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -112234,7 +112259,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Sự truyền Nhiệt Stem “Đèn kéo quân” vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -112342,7 +112367,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Sự nở vì nhiệt vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -112450,7 +112475,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Khái quát về cơ thể người vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -112558,7 +112583,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Hệ vận động ở người vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -112666,7 +112691,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Dinh dưỡng và tiêu hoá ở người vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -112774,7 +112799,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Máu và hệ tuần hoàn của cơ thể người vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -112882,7 +112907,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Hệ hô hấp ở người vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -112990,7 +113015,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Hệ bài tiết ở người vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -113098,7 +113123,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Điều hoà môi trường trong của cơ thể người vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -113206,7 +113231,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Hệ thần kinh và các giác quan ở người vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -113314,7 +113339,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Hệ nội tiết ở người vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -113422,7 +113447,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Da và điều hoà thân nhiệt ở người vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -113530,7 +113555,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Sinh sản ở người vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -113638,7 +113663,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Môi trường sống và các nhân tố sinh thái vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -113746,7 +113771,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Quần thể sinh vật vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -113854,7 +113879,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Quần xã sinh vật vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -113962,7 +113987,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Hệ sinh thái vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -114070,7 +114095,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Sinh quyển vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -114178,7 +114203,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Cân bằng tự nhiên vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -114286,7 +114311,7 @@
           "points": 0.25
         }
       ],
-      "points": 1.0,
+      "points": 1,
       "explanation": "Lời giải đáp ứng đầy đủ yêu cầu cần đạt về vận dụng kiến thức Bảo vệ môi trường vào thực tiễn đời sống.",
       "knowledgeSectionRef": "examples",
       "createdAt": "2026-10-28T16:50:00.000Z",
@@ -119083,6 +119108,774 @@
       "submittedAt": "2026-10-28T12:03:11.834Z",
       "teacherOverallFeedback": "Xuất sắc!",
       "finalizedAt": "2026-10-28T12:03:11.865Z"
+    },
+    {
+      "id": "sub-a8be86df",
+      "examId": "exam-b537c94e",
+      "studentId": "usr-teacher-0ae981a1",
+      "studentName": "Lê Văn Thắng",
+      "studentUsername": "Lê Văn Thắng",
+      "className": "9A1",
+      "paperCode": "MĐ-9A-67FF",
+      "paperSignature": "67FFE525CDAC",
+      "paperSnapshot": [
+        {
+          "questionId": "q-les-37-mcq-hieu-2-v2",
+          "orderIndex": 1,
+          "type": "mcq",
+          "level": "hieu",
+          "lessonId": 37,
+          "points": 0.25,
+          "prompt": "Khi giải thích cơ sở tế bào học của các quy luật Mendel và sử dụng phép lai phân tích để kiểm tra độ thuần chủng của giống trong nông nghiệp, vì sao trong thực tế một số kết quả tính toán hoặc thực nghiệm lại bị sai lệch nếu người thực hiện không kiểm tra kĩ các điều kiện chuẩn?",
+          "originalOptionIndices": [
+            1,
+            2,
+            0,
+            3
+          ],
+          "shuffledOptions": [
+            "Mọi biến đổi kiểu hình do điều kiện dinh dưỡng và thời tiết (thường biến) đều làm thay đổi trình tự nucleotide của gene trong giao tử và di truyền nguyên vẹn cho đời con.",
+            "Chọn lọc tự nhiên trực tiếp tạo ra các kiểu gene thích nghi mới chỉ trong một thế hệ cá thể để đáp ứng tức thời với nguyện vọng của con người.",
+            "Vì dễ gặp sai sót kỹ thuật: \"Nhầm mục đích của phép lai phân tích là xác định kiểu gene của cơ thể lặn (cơ thể lặn luôn có kiểu gene đồng hợp lặn aa, phép lai phân tích dùng để xác định kiểu gene của cơ thể mang tính trạng trội).\" — do đó bắt buộc phải chuẩn hoá đơn vị và kiểm tra điều kiện áp dụng.",
+            "Bộ nhiễm sắc thể của tế bào con sau phân bào luôn tăng gấp bốn lần (4n) ở mọi mô sinh dưỡng nhằm tăng kích thước cơ thể trưởng thành."
+          ]
+        },
+        {
+          "questionId": "q-docx-204",
+          "orderIndex": 2,
+          "type": "mcq",
+          "level": "biet",
+          "lessonId": 3,
+          "points": 0.25,
+          "prompt": "Khi tính toán năng lượng cơ học của dòng nước chảy từ hồ chứa trên cao xuống làm quay tuabin nhà máy thủy điện, đơn vị đo cơ năng trong hệ đo lường quốc tế SI là gì?",
+          "originalOptionIndices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "shuffledOptions": [
+            "Watt (W).",
+            "Joule (J).",
+            "Newton (N).",
+            "Mét (m)."
+          ]
+        },
+        {
+          "questionId": "q-les-1-mcq-biet-3",
+          "orderIndex": 3,
+          "type": "mcq",
+          "level": "biet",
+          "lessonId": 1,
+          "points": 0.25,
+          "prompt": "Trong quá trình khảo sát thực nghiệm tại phòng bộ môn Khoa học tự nhiên: \"Trong buổi thực hành tại phòng thí nghiệm Khoa học tự nhiên, một nhóm học sinh tiến hành lấy một lượng nhỏ dung dịch kiềm, đun nóng ống nghiệm bằng đèn cồn và ghi chép số liệu để lập báo cáo khoa học.\" — nhận định khoa học nào sau đây là ĐÚNG?",
+          "originalOptionIndices": [
+            2,
+            1,
+            0,
+            3
+          ],
+          "shuffledOptions": [
+            "Sau khi kết thúc thí nghiệm, toàn bộ hoá chất độc hại và kim loại nặng dư thừa đều được đổ trực tiếp xuống bồn rửa dân dụng mà không cần thu gom xử lí.",
+            "Quy tắc an toàn hoá chất: Đọc kĩ nhãn lọ hoá chất; không dùng tay trực tiếp cầm hoá chất; dùng pipet có quả bóp cao su thay vì hút bằng miệng; không đổ trực tiếp hoá chất độc hại/ăn mòn xuống cống.",
+            "Có thể dùng miệng hút trực tiếp các dung dịch acid và kiềm đặc qua pipet thuỷ tinh để rút ngắn thời gian thao tác thí nghiệm.",
+            "Khi số liệu thực nghiệm đo được có sai lệch nhỏ so với công thức lí thuyết, người làm thí nghiệm được phép tự ý sửa lại số liệu trong báo cáo cho khớp hoàn toàn."
+          ]
+        },
+        {
+          "questionId": "q-les-1-mcq-biet-1",
+          "orderIndex": 4,
+          "type": "mcq",
+          "level": "biet",
+          "lessonId": 1,
+          "points": 0.25,
+          "prompt": "Trong buổi thực hành tại phòng thí nghiệm Khoa học tự nhiên, một nhóm học sinh tiến hành lấy một lượng nhỏ dung dịch kiềm, đun nóng ống nghiệm bằng đèn cồn và ghi chép số liệu để lập báo cáo khoa học. Dựa trên cơ sở khoa học của hiện tượng trên, nhận định nào sau đây là ĐÚNG?",
+          "originalOptionIndices": [
+            3,
+            1,
+            2,
+            0
+          ],
+          "shuffledOptions": [
+            "Khi số liệu thực nghiệm đo được có sai lệch nhỏ so với công thức lí thuyết, người làm thí nghiệm được phép tự ý sửa lại số liệu trong báo cáo cho khớp hoàn toàn.",
+            "Có thể dùng miệng hút trực tiếp các dung dịch acid và kiềm đặc qua pipet thuỷ tinh để rút ngắn thời gian thao tác thí nghiệm.",
+            "Sau khi kết thúc thí nghiệm, toàn bộ hoá chất độc hại và kim loại nặng dư thừa đều được đổ trực tiếp xuống bồn rửa dân dụng mà không cần thu gom xử lí.",
+            "Dụng cụ quang học & điện từ: Nguồn sáng, bản bán trụ, bảng chia độ (nghiên cứu khúc xạ/phản xạ toàn phần); tiêu bản NST người; cuộn dây dẫn có đèn LED."
+          ]
+        },
+        {
+          "questionId": "q-les-18-mcq-biet-1-v2",
+          "orderIndex": 5,
+          "type": "mcq",
+          "level": "biet",
+          "lessonId": 18,
+          "points": 0.25,
+          "prompt": "Trong kĩ thuật điện và chế tác cơ khí, đồng và nhôm được kéo thành sợi dây dẫn điện mảnh, vàng và bạc được dát mỏng làm đồ trang sức, còn воlfram (W) được dùng làm dây tóc bóng đèn chịu nhiệt độ rất cao. Khi phân tích bản chất khoa học của quá trình trên, kết luận nào dưới đây là CHÍNH XÁC?",
+          "originalOptionIndices": [
+            0,
+            1,
+            3,
+            2
+          ],
+          "shuffledOptions": [
+            "Khi dẫn sản phẩm khí qua dung dịch nước bromine hoặc nước vôi trong thì dung dịch chuyển sang màu tím sẫm và toả khí hydrogen.",
+            "Tính chất vật lí: Dẻo – Dẫn điện – Dẫn nhiệt – Ánh kim.",
+            "Quá trình biến đổi làm thay đổi số proton trong hạt nhân nguyên tử carbon tạo thành nguyên tố kim loại nặng tương ứng.",
+            "Kim loại hoạt động yếu hơn như đồng (Cu), bạc (Ag) luôn đẩy được các kim loại kiềm và kiềm thổ ra khỏi dung dịch muối ở nhiệt độ thường."
+          ]
+        },
+        {
+          "questionId": "q-les-20-mcq-biet-2",
+          "orderIndex": 6,
+          "type": "mcq",
+          "level": "biet",
+          "lessonId": 20,
+          "points": 0.25,
+          "prompt": "Khi lựa chọn phương pháp tách kim loại (điện phân nóng chảy, nhiệt luyện, thuỷ luyện) phù hợp với mức độ hoạt động hoá học và ứng dụng hợp kim, các nhà khoa học đã xác lập được các tính chất và quy luật đặc trưng. Phát biểu nào sau đây phản ánh ĐÚNG bản chất khoa học của quá trình này?",
+          "originalOptionIndices": [
+            2,
+            1,
+            3,
+            0
+          ],
+          "shuffledOptions": [
+            "1. Phương pháp điện phân nóng chảy: Dùng để tách các kim loại hoạt động hoá học mạnh như K, Na, Ca, Mg, Al (ví dụ điện phân nóng chảy Al₂O₃ có mặt cryolite thu được Al).",
+            "Kim loại hoạt động yếu hơn như đồng (Cu), bạc (Ag) luôn đẩy được các kim loại kiềm và kiềm thổ ra khỏi dung dịch muối ở nhiệt độ thường.",
+            "Quá trình biến đổi làm thay đổi số proton trong hạt nhân nguyên tử carbon tạo thành nguyên tố kim loại nặng tương ứng.",
+            "Khi dẫn sản phẩm khí qua dung dịch nước bromine hoặc nước vôi trong thì dung dịch chuyển sang màu tím sẫm và toả khí hydrogen."
+          ]
+        },
+        {
+          "questionId": "q-les-36-mcq-biet-2",
+          "orderIndex": 7,
+          "type": "mcq",
+          "level": "biet",
+          "lessonId": 36,
+          "points": 0.25,
+          "prompt": "Khi phân tích khái niệm di truyền, biến dị, các thuật ngữ cơ bản (tính trạng, nhân tố di truyền/gene, kiểu gene, kiểu hình) và vai trò trung tâm của gene, các nhà khoa học đã xác lập được các tính chất và quy luật đặc trưng. Phát biểu nào sau đây phản ánh ĐÚNG bản chất khoa học của quá trình này?",
+          "originalOptionIndices": [
+            1,
+            0,
+            3,
+            2
+          ],
+          "shuffledOptions": [
+            "Quá trình tổng hợp chuỗi polypeptide diễn ra bên trong nhân con với nguyên liệu trực tiếp là các đơn phân deoxyribonucleotide (A, T, G, C).",
+            "Mọi biến đổi kiểu hình do điều kiện dinh dưỡng và thời tiết (thường biến) đều làm thay đổi trình tự nucleotide của gene trong giao tử và di truyền nguyên vẹn cho đời con.",
+            "Trong phép lai giữa hai dòng thuần chủng tương phản, thế hệ F₁ luôn phân li đồng loạt theo tỉ lệ 9 trội : 7 lặn ngay ở mọi loài sinh vật nhân sơ.",
+            "Biến dị là hiện tượng con sinh ra có các đặc điểm khác với bố mẹ và khác nhau ở nhiều chi tiết."
+          ]
+        },
+        {
+          "questionId": "q-les-19-mcq-hieu-1-v2",
+          "orderIndex": 8,
+          "type": "mcq",
+          "level": "hieu",
+          "lessonId": 19,
+          "points": 0.25,
+          "prompt": "Để bảo vệ phần vỏ tàu biển bằng thép (chứa sắt) ngâm thường xuyên trong nước biển khỏi bị ăn mòn điện hoá, các kĩ sư đóng tàu gắn các khối kẽm (Zn) vào phía ngoài vỏ tàu làm \"cực hi sinh\". Để đảm bảo độ chính xác khi xử lí số liệu đo đạc và giải thích kết quả thực nghiệm trên, nguyên tắc khoa học nào sau đây cần được tuân thủ?",
+          "originalOptionIndices": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "shuffledOptions": [
+            "Dung dịch thu được sau phản ứng luôn có môi trường kiềm mạnh (pH = 14) làm giấy quỳ tím chuyển sang màu đỏ tươi và hoà tan được vàng nguyên chất.",
+            "Trong phân tử chỉ tồn tại liên kết ion bền vững giữa các nguyên tử kim loại chuyển tiếp, không có sự góp chung electron hoá trị.",
+            "Đứng trước H đẩy được H₂ khỏi acid loãng; đứng trước (từ Mg trở đi) đẩy được kim loại đứng sau khỏi dung dịch muối. (Lưu ý kiểm soát sai số: Viết Na + CuSO₄ → Na₂SO₄ + Cu (Sai vì Na tác dụng với H₂O trong dung dịch trước tạo NaOH + H₂, sau đó 2NaOH + CuSO₄ → Cu(OH)₂↓ + Na₂SO₄).)",
+            "Khi dẫn sản phẩm khí qua dung dịch nước bromine hoặc nước vôi trong thì dung dịch chuyển sang màu tím sẫm và toả khí hydrogen."
+          ]
+        },
+        {
+          "questionId": "q-docx-108",
+          "orderIndex": 9,
+          "type": "mcq",
+          "level": "biet",
+          "lessonId": 21,
+          "points": 0.25,
+          "prompt": "Phi kim nào sau đây được trộn với cao su để tăng cường tính đàn hồi trong quá trình lưu hóa cao su?",
+          "originalOptionIndices": [
+            0,
+            3,
+            1,
+            2
+          ],
+          "shuffledOptions": [
+            "Carbon.",
+            "Lưu huỳnh.",
+            "Oxygen.",
+            "Nitrogen."
+          ]
+        },
+        {
+          "questionId": "q-docx-111",
+          "orderIndex": 10,
+          "type": "mcq",
+          "level": "biet",
+          "lessonId": 37,
+          "points": 0.25,
+          "prompt": "Khi phân tích kiểu gene quy định màu sắc hạt ở cây đậu Hà Lan, người ta xác định được những cây mang cặp allele giống nhau (ví dụ AA quy định hạt vàng hoặc aa quy định hạt xanh). Cơ thể mang cặp allele giống nhau như vậy được gọi là:",
+          "originalOptionIndices": [
+            0,
+            2,
+            3,
+            1
+          ],
+          "shuffledOptions": [
+            "Cơ thể dị hợp.",
+            "Cơ thể đa bội.",
+            "Cơ thể đột biến.",
+            "Cơ thể thuần chủng."
+          ]
+        },
+        {
+          "questionId": "q-les-3-mcq-biet-1-v2",
+          "orderIndex": 11,
+          "type": "mcq",
+          "level": "biet",
+          "lessonId": 3,
+          "points": 0.25,
+          "prompt": "Một vận động viên trượt ván bắt đầu trượt không vận tốc đầu từ đỉnh dốc của lòng máng hình chữ U xuống đáy lòng máng rồi lại vọt lên phía bên kia. Khi phân tích bản chất khoa học của quá trình trên, kết luận nào dưới đây là CHÍNH XÁC?",
+          "originalOptionIndices": [
+            0,
+            3,
+            1,
+            2
+          ],
+          "shuffledOptions": [
+            "Khi tăng gấp đôi hiệu điện thế hoặc lực tác dụng thì đại lượng kết quả giảm đi bốn lần do sự tiêu hao năng lượng nội tại.",
+            "Giá trị đo được của đại lượng luôn bằng 0 khi vật chuyển động thẳng đều hoặc khi ánh sáng truyền qua mặt phân cách bất kì.",
+            "Cơ năng = Động năng + Thế năng (W = Wđ + Wt).",
+            "Chiều của quá trình vật lí luôn cố định theo một chiều duy nhất, không phụ thuộc vào chiều của lực từ hay hướng truyền tia sáng."
+          ]
+        },
+        {
+          "questionId": "q-les-37-mcq-biet-2",
+          "orderIndex": 12,
+          "type": "mcq",
+          "level": "biet",
+          "lessonId": 37,
+          "points": 0.25,
+          "prompt": "Khi vận dụng quy luật phân li và quy luật phân li độc lập của Mendel để xác định tỉ lệ kiểu gene, tỉ lệ kiểu hình ở đời con F₁, F₂, các nhà khoa học đã xác lập được các tính chất và quy luật đặc trưng. Phát biểu nào sau đây phản ánh ĐÚNG bản chất khoa học của quá trình này?",
+          "originalOptionIndices": [
+            0,
+            2,
+            1,
+            3
+          ],
+          "shuffledOptions": [
+            "Mọi biến đổi kiểu hình do điều kiện dinh dưỡng và thời tiết (thường biến) đều làm thay đổi trình tự nucleotide của gene trong giao tử và di truyền nguyên vẹn cho đời con.",
+            "Cơ thể thuần chủng (đồng hợp tử) có cặp allele giống nhau (AA hoặc aa); cơ thể dị hợp tử có cặp allele khác nhau (Aa).",
+            "Quá trình tổng hợp chuỗi polypeptide diễn ra bên trong nhân con với nguyên liệu trực tiếp là các đơn phân deoxyribonucleotide (A, T, G, C).",
+            "Trong phép lai giữa hai dòng thuần chủng tương phản, thế hệ F₁ luôn phân li đồng loạt theo tỉ lệ 9 trội : 7 lặn ngay ở mọi loài sinh vật nhân sơ."
+          ]
+        },
+        {
+          "questionId": "q-les-1-tf-1-v2",
+          "orderIndex": 13,
+          "type": "true_false",
+          "level": "hieu",
+          "lessonId": 1,
+          "points": 1,
+          "prompt": "Một nhóm nghiên cứu học sinh chuẩn bị dụng cụ quang học (nguồn sáng laser, bản bán trụ, bảng chia độ) và dụng cụ đo thể tích chất lỏng để thực hiện đề tài thực nghiệm và thuyết trình kết quả trước hội đồng. Dựa trên các quy luật khoa học tự nhiên và kết quả khảo sát thực tế, hãy xác định mỗi phát biểu dưới đây là Đúng (Đ) hay Sai (S):",
+          "statements": [
+            {
+              "id": "a",
+              "text": "Có thể dùng miệng hút trực tiếp các dung dịch acid và kiềm đặc qua pipet thuỷ tinh để rút ngắn thời gian thao tác thí nghiệm."
+            },
+            {
+              "id": "b",
+              "text": "Dụng cụ thí nghiệm hoá học: Pipet (lấy chính xác thể tích nhỏ chất lỏng), ống đong (đo thể tích dung dịch), bình cầu, bát sứ, phễu chiết, đèn cồn (đun nóng hoá chất)."
+            },
+            {
+              "id": "c",
+              "text": "Báo cáo khoa học phải trung thực, rõ ràng và kết luận bám sát kết quả quan sát."
+            },
+            {
+              "id": "d",
+              "text": "Có thể dùng miệng hút trực tiếp các dung dịch acid và kiềm đặc qua pipet thuỷ tinh để rút ngắn thời gian thao tác thí nghiệm."
+            }
+          ]
+        },
+        {
+          "questionId": "q-docx-114",
+          "orderIndex": 14,
+          "type": "true_false",
+          "level": "hieu",
+          "lessonId": 3,
+          "points": 1,
+          "prompt": "Một con lắc đơn đang dao động, bỏ qua ma sát với không khí. Khi ở vị trí cao nhất, quả nặng của con lắc dừng lại trong khoảnh khắc trước khi đổi chiều; khi đi qua vị trí cân bằng (thấp nhất), quả nặng có tốc độ lớn nhất. Xét chuyển động của con lắc, hãy xác định tính đúng/sai của mỗi nhận định sau:",
+          "statements": [
+            {
+              "id": "a",
+              "text": "Cơ năng của con lắc tại một điểm bất kì là tổng của năng lượng do chuyển động và năng lượng do vị trí của nó."
+            },
+            {
+              "id": "b",
+              "text": "Cơ năng của con lắc tại vị trí cân bằng chỉ là thế năng của nó."
+            },
+            {
+              "id": "c",
+              "text": "Tại vị trí cao nhất, động năng của quả nặng là lớn nhất và thế năng của nó bằng không."
+            },
+            {
+              "id": "d",
+              "text": "Cơ năng được tính bằng động năng cộng với thế năng của vật."
+            }
+          ]
+        },
+        {
+          "questionId": "q-docx-218",
+          "orderIndex": 15,
+          "type": "short_answer",
+          "level": "biet",
+          "lessonId": 36,
+          "points": 0.5,
+          "prompt": "Khi quan sát các thế hệ trong một gia đình hoặc một giống cây trồng, người ta thấy con cái thường mang nhiều đặc điểm hình thái và sinh lí giống với bố mẹ, tổ tiên. Hiện tượng truyền đạt các tính trạng từ bố mẹ sang các thế hệ con cháu được gọi là gì?"
+        },
+        {
+          "questionId": "q-les-19-sa-hieu-1-v2",
+          "orderIndex": 16,
+          "type": "short_answer",
+          "level": "hieu",
+          "lessonId": 19,
+          "points": 0.5,
+          "prompt": "Khi so sánh mức độ hoạt động hoá học giữa các kim loại qua hiện tượng đẩy kim loại yếu hơn ra khỏi dung dịch muối và giải phóng khí H₂ từ acid, để kết quả đo đạc và tính toán không bị sai lệch, người thực hiện cần đặc biệt lưu ý tránh sai sót phổ biến nào?"
+        },
+        {
+          "questionId": "q-docx-215",
+          "orderIndex": 17,
+          "type": "short_answer",
+          "level": "biet",
+          "lessonId": 18,
+          "points": 0.5,
+          "prompt": "Trong thí nghiệm đốt nóng đỏ một đoạn dây sắt cuộn hình lò xo rồi đưa vào bình chứa khí oxygen tinh khiết, sắt cháy sáng mạnh tạo ra các hạt rắn màu nâu đen. Hợp chất được tạo thành trong thí nghiệm này là gì?"
+        },
+        {
+          "questionId": "q-docx-217",
+          "orderIndex": 18,
+          "type": "short_answer",
+          "level": "biet",
+          "lessonId": 20,
+          "points": 0.5,
+          "prompt": "Dụng cụ phẫu thuật y tế thường làm bằng thép không gỉ (inox) thay vì sắt nguyên chất. So với sắt nguyên chất, đặc tính quan trọng nào của thép không gỉ giúp nó không bị ăn mòn (ghi ngắn gọn, ví dụ: Chống gỉ / Dễ gỉ)?"
+        },
+        {
+          "questionId": "q-docx-120",
+          "orderIndex": 19,
+          "type": "essay",
+          "level": "van_dung",
+          "lessonId": 21,
+          "points": 1,
+          "prompt": "Trong phòng thí nghiệm, học sinh đốt cháy hoàn toàn 2,4 gam bột magnesium (Mg – một kim loại) trong khí oxygen dư, thu được hợp chất A. Tương tự, học sinh đốt cháy hoàn toàn 3,2 gam bột sulfur (S – một phi kim) trong khí oxygen dư, thu được hợp chất B. Hãy tính khối lượng của hợp chất A và hợp chất B tạo thành. Dựa vào bản chất của magnesium và sulfur, hãy dự đoán khi hòa tan A và B vào nước thì dung dịch nào làm quỳ tím hóa xanh, dung dịch nào làm quỳ tím hóa đỏ? (Cho nguyên tử khối: Mg = 24; S = 32; O = 16.)",
+          "rubricSteps": [
+            {
+              "id": "step-1",
+              "description": "Bước chấm (0.25 điểm)",
+              "points": 0.25
+            },
+            {
+              "id": "step-2",
+              "description": "Bước chấm (0.25 điểm)",
+              "points": 0.25
+            },
+            {
+              "id": "step-3",
+              "description": "Bước chấm (0.25 điểm)",
+              "points": 0.25
+            },
+            {
+              "id": "step-4",
+              "description": "Bước chấm (0.25 điểm)",
+              "points": 0.25
+            }
+          ]
+        },
+        {
+          "questionId": "q-docx-119",
+          "orderIndex": 20,
+          "type": "essay",
+          "level": "van_dung",
+          "lessonId": 2,
+          "points": 1,
+          "prompt": "Một tàu lượn siêu tốc trong công viên giải trí có khối lượng 800 kg. Tại một thời điểm, nó đang di chuyển trên một đoạn đường ray thẳng nằm ngang với vận tốc 15 m/s. Bỏ qua sức cản của không khí, hãy tính động năng của tàu lượn tại thời điểm đó.",
+          "rubricSteps": [
+            {
+              "id": "step-1",
+              "description": "Bước chấm (0.25 điểm)",
+              "points": 0.25
+            },
+            {
+              "id": "step-2",
+              "description": "Bước chấm (0.25 điểm)",
+              "points": 0.25
+            },
+            {
+              "id": "step-3",
+              "description": "Bước chấm (0.25 điểm)",
+              "points": 0.25
+            },
+            {
+              "id": "step-4",
+              "description": "Bước chấm (0.25 điểm)",
+              "points": 0.25
+            }
+          ]
+        },
+        {
+          "questionId": "q-docx-121",
+          "orderIndex": 21,
+          "type": "essay",
+          "level": "van_dung",
+          "lessonId": 37,
+          "points": 1,
+          "prompt": "Ở đậu Hà Lan, người ta thực hiện phép lai giữa hai dòng thuần chủng: cây hạt vàng, trơn (trội) với cây hạt xanh, nhăn (lặn). Kết quả F₁ thu được 100% cây hạt vàng, trơn. Sau đó, cho các cá thể F₁ tự thụ phấn, thu được thế hệ F₂ gồm 640 hạt. Dựa vào quy luật phân li độc lập của Mendel, hãy tính số hạt ở thế hệ F₂ dự kiến sẽ có kiểu hình hạt vàng, nhăn.",
+          "rubricSteps": [
+            {
+              "id": "step-1",
+              "description": "Bước chấm (0.25 điểm)",
+              "points": 0.25
+            },
+            {
+              "id": "step-2",
+              "description": "Bước chấm (0.25 điểm)",
+              "points": 0.25
+            },
+            {
+              "id": "step-3",
+              "description": "Bước chấm (0.25 điểm)",
+              "points": 0.25
+            },
+            {
+              "id": "step-4",
+              "description": "Bước chấm (0.25 điểm)",
+              "points": 0.25
+            }
+          ]
+        }
+      ],
+      "answers": {
+        "q-les-37-mcq-hieu-2-v2": {
+          "questionId": "q-les-37-mcq-hieu-2-v2",
+          "type": "mcq",
+          "maxPoints": 0.25,
+          "textAnswer": "",
+          "autoScore": 0,
+          "finalScore": 0,
+          "isCorrect": false,
+          "needsManualGrading": false,
+          "gradedByTeacher": false,
+          "checkedRubricStepIds": [],
+          "teacherComment": "",
+          "timeSpentSeconds": 0
+        },
+        "q-docx-204": {
+          "questionId": "q-docx-204",
+          "type": "mcq",
+          "maxPoints": 0.25,
+          "textAnswer": "",
+          "autoScore": 0,
+          "finalScore": 0,
+          "isCorrect": false,
+          "needsManualGrading": false,
+          "gradedByTeacher": false,
+          "checkedRubricStepIds": [],
+          "teacherComment": "",
+          "timeSpentSeconds": 0
+        },
+        "q-les-1-mcq-biet-3": {
+          "questionId": "q-les-1-mcq-biet-3",
+          "type": "mcq",
+          "maxPoints": 0.25,
+          "textAnswer": "",
+          "autoScore": 0,
+          "finalScore": 0,
+          "isCorrect": false,
+          "needsManualGrading": false,
+          "gradedByTeacher": false,
+          "checkedRubricStepIds": [],
+          "teacherComment": "",
+          "timeSpentSeconds": 0
+        },
+        "q-les-1-mcq-biet-1": {
+          "questionId": "q-les-1-mcq-biet-1",
+          "type": "mcq",
+          "maxPoints": 0.25,
+          "textAnswer": "",
+          "autoScore": 0,
+          "finalScore": 0,
+          "isCorrect": false,
+          "needsManualGrading": false,
+          "gradedByTeacher": false,
+          "checkedRubricStepIds": [],
+          "teacherComment": "",
+          "timeSpentSeconds": 0
+        },
+        "q-les-18-mcq-biet-1-v2": {
+          "questionId": "q-les-18-mcq-biet-1-v2",
+          "type": "mcq",
+          "maxPoints": 0.25,
+          "textAnswer": "",
+          "autoScore": 0,
+          "finalScore": 0,
+          "isCorrect": false,
+          "needsManualGrading": false,
+          "gradedByTeacher": false,
+          "checkedRubricStepIds": [],
+          "teacherComment": "",
+          "timeSpentSeconds": 0
+        },
+        "q-les-20-mcq-biet-2": {
+          "questionId": "q-les-20-mcq-biet-2",
+          "type": "mcq",
+          "maxPoints": 0.25,
+          "textAnswer": "",
+          "autoScore": 0,
+          "finalScore": 0,
+          "isCorrect": false,
+          "needsManualGrading": false,
+          "gradedByTeacher": false,
+          "checkedRubricStepIds": [],
+          "teacherComment": "",
+          "timeSpentSeconds": 0
+        },
+        "q-les-36-mcq-biet-2": {
+          "questionId": "q-les-36-mcq-biet-2",
+          "type": "mcq",
+          "maxPoints": 0.25,
+          "textAnswer": "",
+          "autoScore": 0,
+          "finalScore": 0,
+          "isCorrect": false,
+          "needsManualGrading": false,
+          "gradedByTeacher": false,
+          "checkedRubricStepIds": [],
+          "teacherComment": "",
+          "timeSpentSeconds": 0
+        },
+        "q-les-19-mcq-hieu-1-v2": {
+          "questionId": "q-les-19-mcq-hieu-1-v2",
+          "type": "mcq",
+          "maxPoints": 0.25,
+          "textAnswer": "",
+          "autoScore": 0,
+          "finalScore": 0,
+          "isCorrect": false,
+          "needsManualGrading": false,
+          "gradedByTeacher": false,
+          "checkedRubricStepIds": [],
+          "teacherComment": "",
+          "timeSpentSeconds": 0
+        },
+        "q-docx-108": {
+          "questionId": "q-docx-108",
+          "type": "mcq",
+          "maxPoints": 0.25,
+          "textAnswer": "",
+          "autoScore": 0,
+          "finalScore": 0,
+          "isCorrect": false,
+          "needsManualGrading": false,
+          "gradedByTeacher": false,
+          "checkedRubricStepIds": [],
+          "teacherComment": "",
+          "timeSpentSeconds": 0
+        },
+        "q-docx-111": {
+          "questionId": "q-docx-111",
+          "type": "mcq",
+          "maxPoints": 0.25,
+          "textAnswer": "",
+          "autoScore": 0,
+          "finalScore": 0,
+          "isCorrect": false,
+          "needsManualGrading": false,
+          "gradedByTeacher": false,
+          "checkedRubricStepIds": [],
+          "teacherComment": "",
+          "timeSpentSeconds": 0
+        },
+        "q-les-3-mcq-biet-1-v2": {
+          "questionId": "q-les-3-mcq-biet-1-v2",
+          "type": "mcq",
+          "maxPoints": 0.25,
+          "textAnswer": "",
+          "autoScore": 0,
+          "finalScore": 0,
+          "isCorrect": false,
+          "needsManualGrading": false,
+          "gradedByTeacher": false,
+          "checkedRubricStepIds": [],
+          "teacherComment": "",
+          "timeSpentSeconds": 0
+        },
+        "q-les-37-mcq-biet-2": {
+          "questionId": "q-les-37-mcq-biet-2",
+          "type": "mcq",
+          "maxPoints": 0.25,
+          "textAnswer": "",
+          "autoScore": 0,
+          "finalScore": 0,
+          "isCorrect": false,
+          "needsManualGrading": false,
+          "gradedByTeacher": false,
+          "checkedRubricStepIds": [],
+          "teacherComment": "",
+          "timeSpentSeconds": 0
+        },
+        "q-les-1-tf-1-v2": {
+          "questionId": "q-les-1-tf-1-v2",
+          "type": "true_false",
+          "maxPoints": 1,
+          "textAnswer": "",
+          "autoScore": 0,
+          "finalScore": 0,
+          "isCorrect": false,
+          "trueFalseCorrectCount": 0,
+          "needsManualGrading": false,
+          "gradedByTeacher": false,
+          "checkedRubricStepIds": [],
+          "teacherComment": "",
+          "timeSpentSeconds": 0
+        },
+        "q-docx-114": {
+          "questionId": "q-docx-114",
+          "type": "true_false",
+          "maxPoints": 1,
+          "textAnswer": "",
+          "autoScore": 0,
+          "finalScore": 0,
+          "isCorrect": false,
+          "trueFalseCorrectCount": 0,
+          "needsManualGrading": false,
+          "gradedByTeacher": false,
+          "checkedRubricStepIds": [],
+          "teacherComment": "",
+          "timeSpentSeconds": 0
+        },
+        "q-docx-218": {
+          "questionId": "q-docx-218",
+          "type": "short_answer",
+          "maxPoints": 0.5,
+          "textAnswer": "",
+          "autoScore": 0,
+          "finalScore": 0,
+          "isCorrect": false,
+          "needsManualGrading": false,
+          "gradedByTeacher": false,
+          "checkedRubricStepIds": [],
+          "teacherComment": "",
+          "timeSpentSeconds": 0
+        },
+        "q-les-19-sa-hieu-1-v2": {
+          "questionId": "q-les-19-sa-hieu-1-v2",
+          "type": "short_answer",
+          "maxPoints": 0.5,
+          "textAnswer": "",
+          "autoScore": 0,
+          "finalScore": 0,
+          "isCorrect": false,
+          "needsManualGrading": false,
+          "gradedByTeacher": false,
+          "checkedRubricStepIds": [],
+          "teacherComment": "",
+          "timeSpentSeconds": 0
+        },
+        "q-docx-215": {
+          "questionId": "q-docx-215",
+          "type": "short_answer",
+          "maxPoints": 0.5,
+          "textAnswer": "",
+          "autoScore": 0,
+          "finalScore": 0,
+          "isCorrect": false,
+          "needsManualGrading": false,
+          "gradedByTeacher": false,
+          "checkedRubricStepIds": [],
+          "teacherComment": "",
+          "timeSpentSeconds": 0
+        },
+        "q-docx-217": {
+          "questionId": "q-docx-217",
+          "type": "short_answer",
+          "maxPoints": 0.5,
+          "textAnswer": "",
+          "autoScore": 0,
+          "finalScore": 0,
+          "isCorrect": false,
+          "needsManualGrading": false,
+          "gradedByTeacher": false,
+          "checkedRubricStepIds": [],
+          "teacherComment": "",
+          "timeSpentSeconds": 0
+        },
+        "q-docx-120": {
+          "questionId": "q-docx-120",
+          "type": "essay",
+          "maxPoints": 1,
+          "textAnswer": "",
+          "autoScore": 0,
+          "finalScore": 0,
+          "isCorrect": false,
+          "needsManualGrading": true,
+          "gradedByTeacher": false,
+          "checkedRubricStepIds": [],
+          "teacherComment": "",
+          "timeSpentSeconds": 0
+        },
+        "q-docx-119": {
+          "questionId": "q-docx-119",
+          "type": "essay",
+          "maxPoints": 1,
+          "textAnswer": "",
+          "autoScore": 0,
+          "finalScore": 0,
+          "isCorrect": false,
+          "needsManualGrading": true,
+          "gradedByTeacher": false,
+          "checkedRubricStepIds": [],
+          "teacherComment": "",
+          "timeSpentSeconds": 0
+        },
+        "q-docx-121": {
+          "questionId": "q-docx-121",
+          "type": "essay",
+          "maxPoints": 1,
+          "textAnswer": "",
+          "autoScore": 0,
+          "finalScore": 0,
+          "isCorrect": false,
+          "needsManualGrading": true,
+          "gradedByTeacher": false,
+          "checkedRubricStepIds": [],
+          "teacherComment": "",
+          "timeSpentSeconds": 0
+        }
+      },
+      "status": "submitted_pending_grading",
+      "startedAt": "2026-11-01T07:57:16.347Z",
+      "autoGradedScore": 0,
+      "manualGradedScore": 0,
+      "totalScore": 0,
+      "violationCount": 0,
+      "flaggedForReview": false,
+      "deviceInfo": {
+        "userAgent": "test"
+      },
+      "activityLogs": [
+        {
+          "timestamp": "2026-11-01T07:57:16.347Z",
+          "eventType": "exam_start",
+          "detail": "Bắt đầu làm bài. Mã đề cá nhân: MĐ-9A-67FF (Chữ ký đề: 67FFE525CDAC)"
+        },
+        {
+          "timestamp": "2026-11-01T07:57:16.397Z",
+          "eventType": "auto_submit_timeout",
+          "detail": "Hết thời gian làm bài - Hệ thống tự động nộp bài."
+        }
+      ],
+      "submittedAt": "2026-11-01T07:57:16.397Z"
     }
   ]
 }
