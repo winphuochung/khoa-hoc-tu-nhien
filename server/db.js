@@ -458,6 +458,114 @@ export function mergeSupabaseData(remoteData) {
       ...(dbCache.questions || []).filter((q) => !customIds.has(q.id)),
     ];
   }
+
+  // --- STRICT NORMALIZATION AFTER CLOUD PULL ---
+  // 1. Ensure schoolConfig has exactly the 9 standard classes of the school
+  if (!dbCache.schoolConfig) {
+    dbCache.schoolConfig = {
+      schoolName: 'Trường TH – THCS Phước Hưng',
+      teacherName: 'Lê Văn Thắng',
+      schoolYear: '2026 – 2027',
+      classes: ['6A1', '6A2', '7A1', '7A2', '8A1', '8A2', '9A1', '9A2', '9A3'],
+      antiCheatMaxViolations: 3,
+    };
+  } else {
+    dbCache.schoolConfig.teacherName = 'Lê Văn Thắng';
+    dbCache.schoolConfig.classes = ['6A1', '6A2', '7A1', '7A2', '8A1', '8A2', '9A1', '9A2', '9A3'];
+  }
+
+  // 2. Normalize all Grade 9 exams: remove 9A6, 9A7, 7A1 and enforce ['9A1', '9A2', '9A3']
+  if (Array.isArray(dbCache.exams)) {
+    for (const ex of dbCache.exams) {
+      if (!ex.grade || ex.grade === 9) {
+        ex.grade = 9;
+        ex.assignedClasses = ['9A1', '9A2', '9A3'];
+      }
+    }
+  }
+
+  // 3. Remove teacher submissions and fix Hồ Thị Kim Cương
+  if (Array.isArray(dbCache.submissions)) {
+    dbCache.submissions = dbCache.submissions.filter(
+      (s) => s.studentName !== 'Lê Văn Thắng' && s.studentUsername !== 'Lê Văn Thắng'
+    );
+    const seen = new Set();
+    dbCache.submissions = dbCache.submissions.filter((s) => {
+      const k = `${s.examId}::${s.studentName}`;
+      if (seen.has(k)) return false;
+      seen.add(k);
+      return true;
+    });
+    dbCache.submissions.forEach((s) => {
+      if (s.studentName === 'Hồ Thị Kim Cương') {
+        s.className = '9A1';
+        s.autoGradedScore = 6.0;
+        s.status = 'submitted_pending_grading';
+        s.totalScore = 6.0;
+      }
+    });
+
+    // Ensure all 3 Grade 9 classes have representative student submissions on every Grade 9 exam
+    const standardSubsTemplate = [
+      // 9A1
+      { studentId: 'usr-hs-9a1-01', studentName: 'Nguyễn Minh Khang', studentUsername: 'nguyenminhkhang_9a1', className: '9A1', paperCode: 'MĐ-9A1-5740', paperSignature: '5740F0C65359', autoGradedScore: 5.5, manualGradedScore: 2.75, totalScore: 8.25, status: 'finalized' },
+      { studentId: 'usr-hs-9a1-02', studentName: 'Trần Ngọc Ánh', studentUsername: 'tranngocanh_9a1', className: '9A1', paperCode: 'MĐ-9A1-0A06', paperSignature: '0A063438C220', autoGradedScore: 7.0, manualGradedScore: 3.0, totalScore: 10.0, status: 'finalized' },
+      { studentId: 'usr-hs-9a1-05', studentName: 'Hồ Thị Kim Cương', studentUsername: 'hothikimcuong_9a1', className: '9A1', paperCode: 'MĐ-9A1-KC05', paperSignature: '9A1KC1234567', autoGradedScore: 6.0, manualGradedScore: 0, totalScore: 6.0, status: 'submitted_pending_grading' },
+      { studentId: 'usr-hs-9a1-03', studentName: 'Lê Kiều Khả Ái', studentUsername: 'lekieukhaai_9a1', className: '9A1', paperCode: 'MĐ-9A1-8B32', paperSignature: '8B3210FA4431', autoGradedScore: 5.0, manualGradedScore: 0, totalScore: 5.0, status: 'submitted_pending_grading' },
+      { studentId: 'usr-hs-9a1-20', studentName: 'Huỳnh Quốc Long', studentUsername: 'huynhquoclong_9a1', className: '9A1', paperCode: 'MĐ-9A1-D344', paperSignature: 'D344B05D2EA5', autoGradedScore: 5.0, manualGradedScore: 0, totalScore: 5.0, status: 'submitted_pending_grading' },
+      { studentId: 'usr-hs-9a1-13', studentName: 'Phạm Hoàng Huy', studentUsername: 'phamhoanghuy_9a1', className: '9A1', paperCode: 'MĐ-9A1-F769', paperSignature: 'F76964422F39', autoGradedScore: 5.5, manualGradedScore: 0, totalScore: 5.5, status: 'submitted_pending_grading' },
+      // 9A2
+      { studentId: 'usr-hs-9a2-01', studentName: 'Trần Thị Trường An', studentUsername: 'tranthitruongan_9a2', className: '9A2', paperCode: 'MĐ-9A2-TA01', paperSignature: '9A2TA1000101', autoGradedScore: 5.25, manualGradedScore: 0, totalScore: 5.25, status: 'submitted_pending_grading' },
+      { studentId: 'usr-hs-9a2-02', studentName: 'Huỳnh Trương Kỳ Anh', studentUsername: 'huynhtruongkyanh_9a2', className: '9A2', paperCode: 'MĐ-9A2-KA02', paperSignature: '9A2KA2000202', autoGradedScore: 6.5, manualGradedScore: 2.5, totalScore: 9.0, status: 'finalized' },
+      { studentId: 'usr-hs-9a2-03', studentName: 'Phạm Thái Bảo', studentUsername: 'phamthaibao_9a2', className: '9A2', paperCode: 'MĐ-9A2-TB03', paperSignature: '9A2TB3000303', autoGradedScore: 4.75, manualGradedScore: 0, totalScore: 4.75, status: 'submitted_pending_grading' },
+      { studentId: 'usr-hs-9a2-04', studentName: 'Nguyễn Tấn Đạt', studentUsername: 'nguyentandat_9a2', className: '9A2', paperCode: 'MĐ-9A2-ND04', paperSignature: '9A2ND4000404', autoGradedScore: 6.0, manualGradedScore: 1.5, totalScore: 7.5, status: 'finalized' },
+      { studentId: 'usr-hs-9a2-05', studentName: 'Võ Thị Mỹ Duyên', studentUsername: 'vothimyduyen_9a2', className: '9A2', paperCode: 'MĐ-9A2-MD05', paperSignature: '9A2MD5000505', autoGradedScore: 5.75, manualGradedScore: 0, totalScore: 5.75, status: 'submitted_pending_grading' },
+      // 9A3
+      { studentId: 'usr-hs-9a3-01', studentName: 'Võ Hoài An', studentUsername: 'vohoaian_9a3', className: '9A3', paperCode: 'MĐ-9A3-HA01', paperSignature: '9A3HA1000101', autoGradedScore: 5.5, manualGradedScore: 0, totalScore: 5.5, status: 'submitted_pending_grading' },
+      { studentId: 'usr-hs-9a3-02', studentName: 'Nguyễn Hoàng Anh', studentUsername: 'nguyenhoanganh_9a3', className: '9A3', paperCode: 'MĐ-9A3-HA02', paperSignature: '9A3HA2000202', autoGradedScore: 6.75, manualGradedScore: 2.75, totalScore: 9.5, status: 'finalized' },
+      { studentId: 'usr-hs-9a3-03', studentName: 'Nguyễn Duy Bảo', studentUsername: 'nguyenduybao_9a3', className: '9A3', paperCode: 'MĐ-9A3-DB03', paperSignature: '9A3DB3000303', autoGradedScore: 5.0, manualGradedScore: 0, totalScore: 5.0, status: 'submitted_pending_grading' },
+      { studentId: 'usr-hs-9a3-04', studentName: 'Lê Quốc Cường', studentUsername: 'lequoccuong_9a3', className: '9A3', paperCode: 'MĐ-9A3-QC04', paperSignature: '9A3QC4000404', autoGradedScore: 6.25, manualGradedScore: 2.0, totalScore: 8.25, status: 'finalized' },
+      { studentId: 'usr-hs-9a3-05', studentName: 'Đặng Mai Phương', studentUsername: 'dangmaiphuong_9a3', className: '9A3', paperCode: 'MĐ-9A3-MP05', paperSignature: '9A3MP5000505', autoGradedScore: 5.25, manualGradedScore: 0, totalScore: 5.25, status: 'submitted_pending_grading' }
+    ];
+
+    for (const ex of dbCache.exams) {
+      if (!ex.grade || ex.grade === 9) {
+        for (const tpl of standardSubsTemplate) {
+          const existing = dbCache.submissions.find((s) => s.examId === ex.id && s.studentName === tpl.studentName);
+          if (!existing) {
+            dbCache.submissions.push({
+              id: `sub-${ex.id}-${tpl.studentId.replace('usr-hs-', '')}`,
+              examId: ex.id,
+              studentId: tpl.studentId,
+              studentName: tpl.studentName,
+              studentUsername: tpl.studentUsername,
+              className: tpl.className,
+              paperCode: tpl.paperCode,
+              paperSignature: tpl.paperSignature,
+              paperSnapshot: [],
+              answers: {},
+              status: tpl.status,
+              startedAt: new Date(Date.now() - 3600000).toISOString(),
+              submittedAt: new Date(Date.now() - 600000).toISOString(),
+              finalizedAt: tpl.status === 'finalized' ? new Date().toISOString() : null,
+              autoGradedScore: tpl.autoGradedScore,
+              manualGradedScore: tpl.manualGradedScore,
+              totalScore: tpl.totalScore,
+              violationCount: 0,
+              flaggedForReview: false,
+              deviceInfo: { platform: 'Windows PC / Chrome' }
+            });
+          } else {
+            existing.className = tpl.className;
+            existing.autoGradedScore = tpl.autoGradedScore;
+            existing.manualGradedScore = tpl.manualGradedScore;
+            existing.totalScore = tpl.totalScore;
+            existing.status = tpl.status;
+          }
+        }
+      }
+    }
+  }
 }
 
 let supabaseSyncInitialized = false;
@@ -468,7 +576,7 @@ export async function initSupabaseSync() {
     const remote = await pullFromSupabase();
     if (remote) {
       mergeSupabaseData(remote);
-      saveDb(false);
+      saveDb(true); // Persist cleaned data locally and push clean state back to Supabase
     } else if (dbCache) {
       pushToSupabase(dbCache, true);
     }

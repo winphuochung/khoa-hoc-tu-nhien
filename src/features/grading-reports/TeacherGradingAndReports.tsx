@@ -14,7 +14,7 @@ import {
   Filter,
 } from 'lucide-react';
 import { apiRequest, getCsvDownloadUrl } from '../../services/apiClient';
-import { ExamDefinition, ExamSubmission } from '../../types/domainTypes';
+import { ExamDefinition, ExamSubmission, SchoolConfig } from '../../types/domainTypes';
 
 interface ExamStatisticsResponse {
   examId: string;
@@ -38,10 +38,12 @@ interface ExamStatisticsResponse {
 }
 
 interface TeacherGradingAndReportsProps {
+  schoolConfig?: SchoolConfig;
   onNotify: (type: 'success' | 'error' | 'info', text: string) => void;
 }
 
 export const TeacherGradingAndReports: React.FC<TeacherGradingAndReportsProps> = ({
+  schoolConfig,
   onNotify,
 }) => {
   const [exams, setExams] = useState<ExamDefinition[]>([]);
@@ -99,21 +101,48 @@ export const TeacherGradingAndReports: React.FC<TeacherGradingAndReportsProps> =
     return exams.find((e) => e.id === selectedExamId);
   }, [exams, selectedExamId]);
 
-  // Available classes for current exam (from assignedClasses + actual submissions)
+  // Clean classes from school configuration, strictly eliminating ghost classes
+  const schoolClasses = useMemo(() => {
+    const raw = schoolConfig?.classes || [];
+    const clean = raw
+      .map((c) => String(c || '').trim().replace(/^(?:lớp|lop)\s*/i, '').toUpperCase())
+      .filter((c) => c && /\d/.test(c) && !/^9A[4-9]/.test(c) && c !== '9A6' && c !== '9A7');
+    const standardDefault = ['6A1', '6A2', '7A1', '7A2', '8A1', '8A2', '9A1', '9A2', '9A3'];
+    for (const cls of standardDefault) {
+      if (!clean.includes(cls)) {
+        clean.push(cls);
+      }
+    }
+    const strictlyFiltered = clean.filter((c) => {
+      if (/^9/i.test(c)) return ['9A1', '9A2', '9A3'].includes(c);
+      return true;
+    });
+    return Array.from(new Set(strictlyFiltered)).sort((a, b) =>
+      a.localeCompare(b, undefined, { numeric: true })
+    );
+  }, [schoolConfig?.classes]);
+
+  // Target grade for the current view
+  const targetGrade = useMemo(() => {
+    if (selectedGrade !== 'ALL') return Number(selectedGrade);
+    if (selectedExam?.grade) return Number(selectedExam.grade);
+    return 9;
+  }, [selectedGrade, selectedExam?.grade]);
+
+  // Available classes strictly synced with schoolConfig for current grade/view
   const availableClassesForExam = useMemo(() => {
-    const classSet = new Set<string>();
-    if (Array.isArray(selectedExam?.assignedClasses)) {
-      selectedExam.assignedClasses.forEach((c) => {
-        if (c && c !== 'ALL') classSet.add(c);
-      });
+    const gradeNum = targetGrade;
+    if (gradeNum === 9) {
+      return ['9A1', '9A2', '9A3'];
     }
-    if (Array.isArray(stats?.submissions)) {
-      stats.submissions.forEach((s) => {
-        if (s.className) classSet.add(s.className);
-      });
-    }
-    return Array.from(classSet).sort();
-  }, [selectedExam, stats?.submissions]);
+    const matched = schoolClasses.filter((c) => {
+      const m = c.match(/^(\d+)/);
+      return m ? Number(m[1]) === gradeNum : c.startsWith(String(gradeNum));
+    });
+    return Array.from(new Set(matched)).sort((a, b) =>
+      a.localeCompare(b, undefined, { numeric: true })
+    );
+  }, [schoolClasses, targetGrade]);
 
   // Reset selectedClass if not in availableClasses
   useEffect(() => {
@@ -195,10 +224,14 @@ export const TeacherGradingAndReports: React.FC<TeacherGradingAndReportsProps> =
       const initialGrades: Record<string, any> = {};
       for (const q of res.enrichedQuestions || []) {
         const ans = q.studentAnswer;
-        if (ans) {
+        if (ans && q.type === 'essay') {
           initialGrades[q.questionId] = {
             manualScore:
-              typeof ans.manualScore === 'number' ? ans.manualScore : ans.finalScore,
+              typeof ans.manualScore === 'number'
+                ? ans.manualScore
+                : typeof ans.finalScore === 'number'
+                ? ans.finalScore
+                : 0,
             checkedRubricStepIds: ans.checkedRubricStepIds || [],
             teacherComment: ans.teacherComment || '',
           };
@@ -258,6 +291,30 @@ export const TeacherGradingAndReports: React.FC<TeacherGradingAndReportsProps> =
       setSavingGrade(false);
     }
   };
+
+  const hasEssayQuestions = useMemo(() => {
+    return (activeSubDetail?.enrichedQuestions || []).some((q: any) => q.type === 'essay');
+  }, [activeSubDetail]);
+
+  const currentManualTotal = useMemo(() => {
+    if (!activeSubDetail) return 0;
+    let sum = 0;
+    for (const q of activeSubDetail.enrichedQuestions || []) {
+      if (q.type === 'essay') {
+        const g = gradeInputs[q.questionId];
+        const val =
+          typeof g?.manualScore === 'number'
+            ? g.manualScore
+            : typeof q.studentAnswer?.manualScore === 'number'
+            ? q.studentAnswer.manualScore
+            : typeof q.studentAnswer?.finalScore === 'number'
+            ? q.studentAnswer.finalScore
+            : 0;
+        sum += Number(val || 0);
+      }
+    }
+    return Number(sum.toFixed(2));
+  }, [activeSubDetail, gradeInputs]);
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 py-6 space-y-6">
@@ -474,9 +531,18 @@ export const TeacherGradingAndReports: React.FC<TeacherGradingAndReportsProps> =
                       <th className="p-3.5">Học sinh</th>
                       <th className="p-3.5">Lớp</th>
                       <th className="p-3.5">Mã đề & Chữ ký đề</th>
-                      <th className="p-3.5">Điểm Tự động</th>
-                      <th className="p-3.5">Điểm Tự luận/Tay</th>
-                      <th className="p-3.5">Tổng điểm</th>
+                      <th className="p-3.5">
+                        <div className="font-bold text-slate-900">Điểm Tự động</div>
+                        <div className="text-[10px] font-semibold text-[#0D6E6E]">Trắc nghiệm (App chấm)</div>
+                      </th>
+                      <th className="p-3.5">
+                        <div className="font-bold text-slate-900">Điểm Tự luận</div>
+                        <div className="text-[10px] font-semibold text-amber-700">Tự luận (GV chấm)</div>
+                      </th>
+                      <th className="p-3.5">
+                        <div className="font-bold text-slate-900">Tổng điểm</div>
+                        <div className="text-[10px] font-semibold text-emerald-700">Thang 10 điểm</div>
+                      </th>
                       <th className="p-3.5">Trạng thái</th>
                       <th className="p-3.5">Giám sát thi</th>
                       <th className="p-3.5 text-right">Thao tác</th>
@@ -500,10 +566,10 @@ export const TeacherGradingAndReports: React.FC<TeacherGradingAndReportsProps> =
                           </div>
                         </td>
                         <td className="p-3.5 font-bold text-slate-800">
-                          {sub.autoGradedScore}đ
+                          <span className="text-sm font-extrabold text-[#0D6E6E]">{sub.autoGradedScore}đ</span>
                         </td>
                         <td className="p-3.5 font-bold text-amber-700">
-                          {sub.manualGradedScore}đ
+                          <span className="text-sm font-extrabold text-amber-600">{sub.manualGradedScore}đ</span>
                         </td>
                         <td className="p-3.5 font-extrabold text-base text-emerald-700">
                           {sub.totalScore}đ
@@ -515,7 +581,7 @@ export const TeacherGradingAndReports: React.FC<TeacherGradingAndReportsProps> =
                             </span>
                           ) : (
                             <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-amber-50 text-amber-900 border border-amber-300 text-xs font-bold">
-                              <FileSignature className="w-3.5 h-3.5" /> Chờ GV chấm tay
+                              <FileSignature className="w-3.5 h-3.5" /> Chờ GV chấm tự luận
                             </span>
                           )}
                         </td>
@@ -536,7 +602,7 @@ export const TeacherGradingAndReports: React.FC<TeacherGradingAndReportsProps> =
                             className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-[#0D6E6E] hover:bg-teal-800 text-white text-xs font-bold shadow-xs"
                           >
                             <Eye className="w-3.5 h-3.5" />
-                            <span>Chấm bài & Xem Log</span>
+                            <span>{sub.status === 'finalized' ? 'Xem bài làm & Log' : 'Chấm tự luận & Xem Log'}</span>
                           </button>
                         </td>
                       </tr>
@@ -634,44 +700,112 @@ export const TeacherGradingAndReports: React.FC<TeacherGradingAndReportsProps> =
                 </div>
               </div>
 
+              {/* Score Summary Banner */}
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 p-4 rounded-2xl bg-teal-50/70 border border-teal-200 shadow-xs">
+                <div className="bg-white p-3.5 rounded-xl border border-teal-100 text-center">
+                  <div className="text-[11px] font-bold text-slate-500 uppercase tracking-wide">
+                    1. Điểm Tự động (Trắc nghiệm)
+                  </div>
+                  <div className="text-2xl font-black text-[#0D6E6E] mt-0.5">
+                    {activeSubDetail.submission.autoGradedScore ?? 0}đ
+                  </div>
+                  <div className="text-[11px] text-teal-700 mt-0.5 font-medium">
+                    App đã chấm hết các câu trắc nghiệm
+                  </div>
+                </div>
+
+                <div className="bg-white p-3.5 rounded-xl border border-amber-200 text-center">
+                  <div className="text-[11px] font-bold text-amber-800 uppercase tracking-wide">
+                    2. Điểm Tự luận (GV chấm)
+                  </div>
+                  <div className="text-2xl font-black text-amber-600 mt-0.5">
+                    {currentManualTotal}đ
+                  </div>
+                  <div className="text-[11px] text-amber-700 mt-0.5 font-medium">
+                    {hasEssayQuestions ? 'Giáo viên xem & chấm câu tự luận' : 'Đề không có câu tự luận'}
+                  </div>
+                </div>
+
+                <div className="bg-white p-3.5 rounded-xl border border-emerald-200 text-center">
+                  <div className="text-[11px] font-bold text-emerald-800 uppercase tracking-wide">
+                    3. Tổng điểm bài thi
+                  </div>
+                  <div className="text-2xl font-black text-emerald-700 mt-0.5">
+                    {Number(
+                      (
+                        Number(activeSubDetail.submission.autoGradedScore || 0) + currentManualTotal
+                      ).toFixed(2)
+                    )}{' '}
+                    / 10đ
+                  </div>
+                  <div className="text-[11px] text-emerald-700 font-semibold mt-0.5">
+                    = Điểm Tự động + Điểm Tự luận
+                  </div>
+                </div>
+              </div>
+
               {/* Questions & Manual Grading Controls */}
               <div className="space-y-4">
                 {(activeSubDetail.enrichedQuestions || []).map((q: any, idx: number) => {
                   const ans = q.studentAnswer || {};
                   const bq = q.bankQuestion || {};
                   const gState = gradeInputs[q.questionId] || {};
-                  const isManualType =
-                    q.type === 'essay' || (q.type === 'short_answer' && ans.needsManualGrading);
+                  const isEssay = q.type === 'essay';
 
                   return (
                     <div
                       key={q.questionId}
                       className={`p-4 rounded-2xl border space-y-3 ${
-                        q.type === 'essay' || ans.needsManualGrading
-                          ? 'bg-amber-50/50 border-amber-300'
+                        isEssay
+                          ? 'bg-amber-50/40 border-amber-300 ring-1 ring-amber-200'
                           : 'bg-white border-slate-200'
                       }`}
                     >
                       <div className="flex flex-wrap items-center justify-between gap-2">
                         <div className="flex items-center gap-2">
-                          <span className="px-2.5 py-1 rounded-lg bg-slate-900 text-white text-xs font-bold">
-                            Câu {idx + 1} ({q.type.toUpperCase()})
+                          <span
+                            className={`px-2.5 py-1 rounded-lg text-xs font-bold ${
+                              isEssay
+                                ? 'bg-amber-600 text-white'
+                                : 'bg-slate-900 text-white'
+                            }`}
+                          >
+                            Câu {idx + 1} ({
+                              q.type === 'mcq'
+                                ? 'TRẮC NGHIỆM'
+                                : q.type === 'true_false'
+                                ? 'ĐÚNG - SAI'
+                                : q.type === 'short_answer'
+                                ? 'TRẢ LỜI NGẮN'
+                                : 'TỰ LUẬN (GV CHẤM)'
+                            })
                           </span>
                           <span className="text-xs font-semibold text-slate-600">
                              Bài {q.lessonId} • Thời gian làm: {ans.timeSpentSeconds || 0} giây
                           </span>
                         </div>
-                        <span className="text-xs font-bold text-[#0D6E6E]">
-                          Điểm tối đa: {q.points} điểm
-                        </span>
+                        <div className="flex items-center gap-2">
+                          {!isEssay ? (
+                            <span className="text-xs font-semibold text-teal-800 bg-teal-50 border border-teal-200 px-2 py-0.5 rounded-md">
+                              App tự động chấm
+                            </span>
+                          ) : (
+                            <span className="text-xs font-semibold text-amber-800 bg-amber-100/80 border border-amber-300 px-2 py-0.5 rounded-md">
+                              Giáo viên xem & chấm
+                            </span>
+                          )}
+                          <span className="text-xs font-bold text-[#0D6E6E]">
+                            Điểm tối đa: {q.points} điểm
+                          </span>
+                        </div>
                       </div>
 
                       <p className="text-sm font-bold text-slate-900">{q.prompt}</p>
 
-                      {/* Display student's answer */}
+                      {/* Display MCQ answer */}
                       {q.type === 'mcq' && (
                         <div className="text-xs space-y-1">
-                          <div>
+                          <div className="text-slate-600">
                             Phương án đảo của HS: [
                             {(q.shuffledOptions || [])
                               .map((o: string, i: number) => `${['A', 'B', 'C', 'D'][i]}: ${o}`)
@@ -687,48 +821,81 @@ export const TeacherGradingAndReports: React.FC<TeacherGradingAndReportsProps> =
                                   }`
                                 : '(Chưa chọn)'}
                             </strong>{' '}
-                            → Điểm tự động: <strong>{ans.autoScore}đ</strong>
+                            → Điểm tự động: <strong>{ans.autoScore ?? 0}đ</strong>
                           </div>
                         </div>
                       )}
 
+                      {/* Display True/False answer */}
                       {q.type === 'true_false' && (
-                        <div className="text-xs">
-                          Số ý đúng: <strong>{ans.trueFalseCorrectCount ?? 0}/4 ý</strong> → Điểm tự
-                          động: <strong>{ans.autoScore}đ</strong>
+                        <div className="text-xs space-y-1">
+                          <div>
+                            Số ý đúng: <strong>{ans.trueFalseCorrectCount ?? 0}/4 ý</strong> → Điểm tự động:{' '}
+                            <strong>{ans.autoScore ?? 0}đ</strong>
+                          </div>
                         </div>
                       )}
 
-                      {(q.type === 'short_answer' || q.type === 'essay') && (
+                      {/* Display Short Answer (App auto-grades) */}
+                      {q.type === 'short_answer' && (
+                        <div className="space-y-2 text-xs">
+                          <div className="p-2.5 rounded-xl bg-slate-50 border border-slate-200">
+                            <span className="font-bold text-slate-600">Câu trả lời của học sinh: </span>
+                            <span className={`font-bold ${ans.isCorrect ? 'text-emerald-700' : 'text-red-600'}`}>
+                              {ans.textAnswer || '(Học sinh bỏ trống)'}
+                            </span>
+                          </div>
+                          <div className="text-slate-600 bg-teal-50/60 p-2 rounded-lg border border-teal-200">
+                            <strong>Đáp án chuẩn được chấp nhận:</strong>{' '}
+                            {(bq.acceptedAnswers || []).join(' | ') || 'Theo đáp án chuẩn'}
+                          </div>
+                          <div className="font-semibold text-slate-700 flex items-center justify-between">
+                            <span>
+                              Đánh giá tự động: {ans.isCorrect ? (
+                                <span className="text-emerald-700 font-bold">✓ Đúng chuẩn</span>
+                              ) : (
+                                <span className="text-red-600 font-bold">✗ Chưa chính xác / Bỏ trống</span>
+                              )}
+                            </span>
+                            <span>
+                              → Điểm tự động: <strong className="text-[#0D6E6E] text-sm">{ans.autoScore ?? 0}đ</strong>
+                            </span>
+                          </div>
+                        </div>
+                      )}
+
+                      {/* Display Essay (Teacher reviews & grades) */}
+                      {isEssay && (
                         <div className="space-y-3">
-                          <div className="p-3 rounded-xl bg-white border border-slate-300 text-sm">
-                            <div className="text-xs font-bold text-slate-500 mb-1">
-                              Bài làm của học sinh:
+                          <div className="p-3.5 rounded-xl bg-amber-50/50 border border-amber-200 text-sm">
+                            <div className="text-xs font-bold text-amber-950 mb-1">
+                              Bài làm tự luận của học sinh:
                             </div>
                             <div className="whitespace-pre-line font-semibold text-slate-900">
-                              {ans.textAnswer || '(Học sinh bỏ trống câu này)'}
+                              {ans.textAnswer || '(Học sinh bỏ trống câu tự luận này)'}
                             </div>
                           </div>
 
-                          <div className="text-xs text-slate-700 bg-white/80 p-2.5 rounded-xl border border-slate-200">
-                            <strong>Đáp án mẫu / Chuẩn:</strong>{' '}
-                            {q.type === 'short_answer'
-                              ? (bq.acceptedAnswers || []).join(' | ')
-                              : bq.sampleAnswer || bq.explanation}
+                          <div className="text-xs text-slate-700 bg-white p-2.5 rounded-xl border border-slate-200">
+                            <strong>Hướng dẫn chấm / Đáp án chuẩn:</strong>{' '}
+                            {bq.sampleAnswer || bq.explanation || 'Theo biểu điểm tự luận'}
                           </div>
 
                           {/* Essay Rubric Steps (0,25đ per step) */}
-                          {q.type === 'essay' && Array.isArray(bq.rubricSteps) && (
+                          {Array.isArray(bq.rubricSteps) && (
                             <div className="space-y-2 bg-white p-3.5 rounded-xl border border-amber-300">
-                              <div className="text-xs font-bold text-amber-950">
-                                Tích chọn các bước chấm học sinh làm đúng (mỗi bước 0,25 điểm):
+                              <div className="text-xs font-bold text-amber-950 flex items-center justify-between">
+                                <span>Tích chọn các bước chấm học sinh làm đúng (mỗi bước 0,25 điểm):</span>
+                                <span className="text-xs font-extrabold text-[#0D6E6E]">
+                                  Đã chấm: {gState.manualScore ?? 0}/{q.points}đ
+                                </span>
                               </div>
                               {bq.rubricSteps.map((st: any) => {
                                 const checked = (gState.checkedRubricStepIds || []).includes(st.id);
                                 return (
                                   <label
                                     key={st.id}
-                                    className="flex items-center justify-between gap-2 p-2 rounded-lg hover:bg-amber-50 cursor-pointer text-xs"
+                                    className="flex items-center justify-between gap-2 p-2 rounded-lg hover:bg-amber-50 cursor-pointer text-xs transition-colors"
                                   >
                                     <div className="flex items-center gap-2">
                                       <input
@@ -749,52 +916,50 @@ export const TeacherGradingAndReports: React.FC<TeacherGradingAndReportsProps> =
                           )}
 
                           {/* Manual Score Input & Teacher Comment */}
-                          {(isManualType || q.type === 'short_answer') && (
-                            <div className="grid grid-cols-1 sm:grid-cols-12 gap-3 pt-1">
-                              <div className="sm:col-span-4">
-                                <label className="block text-xs font-bold text-slate-700 mb-1">
-                                  Điểm GV chấm (tối đa {q.points}đ):
-                                </label>
-                                <input
-                                  type="number"
-                                  step="0.25"
-                                  min={0}
-                                  max={q.points}
-                                  value={gState.manualScore ?? 0}
-                                  onChange={(e) =>
-                                    setGradeInputs((prev) => ({
-                                      ...prev,
-                                      [q.questionId]: {
-                                        ...(prev[q.questionId] || {}),
-                                        manualScore: Number(e.target.value),
-                                      },
-                                    }))
-                                  }
-                                  className="w-full px-3 py-2 rounded-xl border border-slate-300 text-sm font-bold bg-white"
-                                />
-                              </div>
-                              <div className="sm:col-span-8">
-                                <label className="block text-xs font-bold text-slate-700 mb-1">
-                                  Nhận xét riêng cho câu này:
-                                </label>
-                                <input
-                                  type="text"
-                                  value={gState.teacherComment || ''}
-                                  onChange={(e) =>
-                                    setGradeInputs((prev) => ({
-                                      ...prev,
-                                      [q.questionId]: {
-                                        ...(prev[q.questionId] || {}),
-                                        teacherComment: e.target.value,
-                                      },
-                                    }))
-                                  }
-                                  placeholder="Ghi nhận xét bước giải..."
-                                  className="w-full px-3 py-2 rounded-xl border border-slate-300 text-xs bg-white"
-                                />
-                              </div>
+                          <div className="grid grid-cols-1 sm:grid-cols-12 gap-3 pt-1">
+                            <div className="sm:col-span-4">
+                              <label className="block text-xs font-bold text-slate-700 mb-1">
+                                Điểm GV chấm (tối đa {q.points}đ):
+                              </label>
+                              <input
+                                type="number"
+                                step="0.25"
+                                min={0}
+                                max={q.points}
+                                value={gState.manualScore ?? 0}
+                                onChange={(e) =>
+                                  setGradeInputs((prev) => ({
+                                    ...prev,
+                                    [q.questionId]: {
+                                      ...(prev[q.questionId] || {}),
+                                      manualScore: Number(e.target.value),
+                                    },
+                                  }))
+                                }
+                                className="w-full px-3 py-2 rounded-xl border border-slate-300 text-sm font-bold bg-white"
+                              />
                             </div>
-                          )}
+                            <div className="sm:col-span-8">
+                              <label className="block text-xs font-bold text-slate-700 mb-1">
+                                Nhận xét riêng cho câu này:
+                              </label>
+                              <input
+                                type="text"
+                                value={gState.teacherComment || ''}
+                                onChange={(e) =>
+                                  setGradeInputs((prev) => ({
+                                    ...prev,
+                                    [q.questionId]: {
+                                      ...(prev[q.questionId] || {}),
+                                      teacherComment: e.target.value,
+                                    },
+                                  }))
+                                }
+                                placeholder="Ghi nhận xét bước giải, cách trình bày..."
+                                className="w-full px-3 py-2 rounded-xl border border-slate-300 text-xs bg-white"
+                              />
+                            </div>
+                          </div>
                         </div>
                       )}
                     </div>
@@ -832,7 +997,13 @@ export const TeacherGradingAndReports: React.FC<TeacherGradingAndReportsProps> =
                 className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl bg-[#0D6E6E] hover:bg-teal-800 text-white text-xs font-bold shadow-md"
               >
                 <Save className="w-4 h-4" />
-                <span>{savingGrade ? 'Đang lưu...' : 'Lưu điểm chấm tay & Chốt điểm'}</span>
+                <span>
+                  {savingGrade
+                    ? 'Đang lưu...'
+                    : hasEssayQuestions
+                    ? 'Lưu điểm Tự luận & Chốt kết quả'
+                    : 'Lưu nhận xét & Chốt kết quả'}
+                </span>
               </button>
             </div>
           </div>

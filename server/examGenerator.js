@@ -18,6 +18,7 @@ export function normalizeAnswerText(str) {
   return String(str)
     .trim()
     .toLowerCase()
+    .replace(/,/g, '.')
     .replace(/\s+/g, ' ')
     .replace(/[.,;!?]+$/g, '')
     .trim();
@@ -883,12 +884,6 @@ export function gradeSubmissionAutomatically(paperSnapshot, rawAnswers, allBankQ
         detail.finalScore = maxPoints;
         detail.needsManualGrading = false;
         autoGradedScore += detail.autoScore;
-      } else if (normalizedStudent.length > 0) {
-        detail.isCorrect = false;
-        detail.autoScore = 0;
-        detail.finalScore = 0;
-        detail.needsManualGrading = true;
-        hasPendingManual = true;
       } else {
         detail.isCorrect = false;
         detail.autoScore = 0;

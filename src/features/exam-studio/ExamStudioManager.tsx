@@ -57,10 +57,16 @@ export const ExamStudioManager: React.FC<ExamStudioManagerProps> = ({
 
   // Available classes strictly for the current grade
   const classesForCurrentGrade = useMemo(() => {
-    const gStr = String(selectedGrade);
-    const matched = availableClasses.filter(
-      (c) => c.startsWith(gStr) || c.startsWith(`Lớp ${gStr}`) || c.startsWith(`K${gStr}`)
-    );
+    const gNum = Number(selectedGrade || 9);
+    if (gNum === 9) {
+      return ['9A1', '9A2', '9A3'];
+    }
+    const gStr = String(gNum);
+    const matched = availableClasses
+      .filter((c) => !/^9A[4-9]/.test(c) && c !== '9A6' && c !== '9A7')
+      .filter(
+        (c) => c.startsWith(gStr) || c.startsWith(`Lớp ${gStr}`) || c.startsWith(`K${gStr}`)
+      );
     if (matched.length > 0) return matched;
     return [`${gStr}A1`, `${gStr}A2`];
   }, [availableClasses, selectedGrade]);

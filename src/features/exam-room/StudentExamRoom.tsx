@@ -36,6 +36,7 @@ interface StudentExamSummaryItem {
     submittedAt?: string;
     totalScore: number | null;
     autoGradedScore: number | null;
+    manualGradedScore?: number | null;
   } | null;
 }
 
@@ -761,18 +762,33 @@ export const StudentExamRoom: React.FC<StudentExamRoomProps> = ({ onNotify }) =>
                   </p>
 
                   {isCompleted && (
-                    <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200 text-xs space-y-1">
-                      <div>
-                        Trạng thái chấm:{' '}
+                    <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200 text-xs space-y-1.5">
+                      <div className="flex items-center justify-between">
+                        <span className="text-slate-600 font-medium">Trạng thái:</span>
                         <strong className="text-[#0D6E6E]">
                           {sub.status === 'finalized'
-                            ? 'Đã chốt điểm chính thức'
-                            : 'Đã chấm tự động phần trắc nghiệm — Đang chờ giáo viên chấm tự luận'}
+                            ? 'Đã chốt điểm'
+                            : 'Đã chấm tự động trắc nghiệm — Chờ GV chấm tự luận'}
+                        </strong>
+                      </div>
+                      <div className="flex items-center justify-between text-slate-800">
+                        <span>Điểm tự động (Trắc nghiệm):</span>
+                        <strong className="text-sm font-extrabold text-[#0D6E6E]">
+                          {sub.autoGradedScore ?? 0}đ
+                        </strong>
+                      </div>
+                      <div className="flex items-center justify-between text-slate-800">
+                        <span>Điểm tự luận (GV chấm):</span>
+                        <strong className="text-amber-700 font-bold">
+                          {sub.status === 'finalized' ? `${sub.manualGradedScore ?? 0}đ` : 'Chờ GV chấm'}
                         </strong>
                       </div>
                       {sub.totalScore !== null && (
-                        <div className="text-sm font-bold text-emerald-700">
-                          Tổng điểm: {sub.totalScore} / {ex.totalPoints} điểm
+                        <div className="flex items-center justify-between text-emerald-800 pt-1 border-t border-slate-200">
+                          <span className="font-bold">Tổng điểm:</span>
+                          <strong className="text-base font-black text-emerald-700">
+                            {sub.totalScore} / {ex.totalPoints}đ
+                          </strong>
                         </div>
                       )}
                     </div>
@@ -836,19 +852,30 @@ export const StudentExamRoom: React.FC<StudentExamRoomProps> = ({ onNotify }) =>
 
             <div className="p-6 overflow-y-auto space-y-4 flex-1">
               {!reviewDetail.allowReview ? (
-                <div className="p-6 rounded-2xl bg-amber-50 border border-amber-200 text-center space-y-2">
+                <div className="p-6 rounded-2xl bg-amber-50 border border-amber-200 text-center space-y-3">
                   <Lock className="w-8 h-8 text-amber-600 mx-auto" />
                   <h4 className="font-bold text-base text-amber-950">
-                    Giáo viên chưa mở xem đáp án & lời giải cho đợt thi này
+                    Bài làm đã được ghi nhận & Chấm tự động phần trắc nghiệm
                   </h4>
-                  <p className="text-sm text-amber-900 leading-relaxed">
-                    {reviewDetail.message}
-                  </p>
-                  {reviewDetail.submission?.totalScore !== null && (
-                    <div className="pt-2 text-lg font-extrabold text-emerald-700">
-                      Điểm đã chốt của em: {reviewDetail.submission.totalScore} điểm
+                  <div className="p-4 rounded-xl bg-white border border-amber-200 max-w-md mx-auto text-center space-y-2">
+                    <div className="text-xs text-slate-500 uppercase font-bold">Kết quả chấm tự động:</div>
+                    <div className="text-2xl font-black text-[#0D6E6E]">
+                      Điểm trắc nghiệm: {reviewDetail.submission?.autoGradedScore ?? 0}đ
                     </div>
-                  )}
+                    {reviewDetail.submission?.status === 'finalized' ? (
+                      <div className="text-emerald-700 font-bold text-sm">
+                        Tổng điểm chính thức: {reviewDetail.submission?.totalScore} / 10đ
+                      </div>
+                    ) : (
+                      <div className="text-xs text-amber-800 font-medium">
+                        (Phần tự luận đang chờ thầy/cô chấm để cộng vào tổng điểm)
+                      </div>
+                    )}
+                  </div>
+                  <p className="text-xs text-slate-500 leading-relaxed max-w-md mx-auto">
+                    {reviewDetail.message ||
+                      'Đáp án chi tiết từng câu sẽ được mở sau khi giáo viên hoàn tất chấm bài cho cả lớp.'}
+                  </p>
                 </div>
               ) : (
                 <>
@@ -862,8 +889,9 @@ export const StudentExamRoom: React.FC<StudentExamRoomProps> = ({ onNotify }) =>
                         {reviewDetail.exam?.totalPoints || 10} điểm
                       </div>
                       <div className="text-xs text-slate-600">
-                        Chấm tự động TN: {reviewDetail.submission.autoGradedScore}đ • Chấm tự luận/tay:{' '}
-                        {reviewDetail.submission.manualGradedScore}đ
+                        Điểm tự động (Trắc nghiệm):{' '}
+                        <strong>{reviewDetail.submission.autoGradedScore ?? 0}đ</strong> • Điểm tự luận (GV chấm):{' '}
+                        <strong>{reviewDetail.submission.manualGradedScore ?? 0}đ</strong>
                       </div>
                     </div>
                     {reviewDetail.submission.teacherOverallFeedback && (
@@ -917,10 +945,23 @@ export const StudentExamRoom: React.FC<StudentExamRoomProps> = ({ onNotify }) =>
                               </div>
                             </div>
                           )}
-                          {(q.type === 'short_answer' || q.type === 'essay') && (
+                          {q.type === 'short_answer' && (
                             <div className="space-y-1">
                               <div>
-                                Bài làm của em: <strong>{ans?.textAnswer || '(Bỏ trống)'}</strong>
+                                Bài làm của em:{' '}
+                                <strong className={ans?.isCorrect ? 'text-emerald-700' : 'text-red-600'}>
+                                  {ans?.textAnswer || '(Bỏ trống)'}
+                                </strong>
+                              </div>
+                              <div className="text-emerald-800 font-semibold">
+                                Đáp án chuẩn: {(bq?.acceptedAnswers || []).join(' | ') || 'Theo đáp án chuẩn'}
+                              </div>
+                            </div>
+                          )}
+                          {q.type === 'essay' && (
+                            <div className="space-y-1">
+                              <div>
+                                Bài làm tự luận của em: <strong>{ans?.textAnswer || '(Bỏ trống)'}</strong>
                               </div>
                               {ans?.teacherComment && (
                                 <div className="text-amber-900">

@@ -163,18 +163,19 @@ export const StudentAccountsManager: React.FC<StudentAccountsManagerProps> = ({
   const [students, setStudents] = useState<StudentWithStats[]>([]);
   const [loading, setLoading] = useState(false);
 
-  // Clean class list from schoolConfig + any valid Grade 9 classes existing on students (must contain a digit)
+  // Clean class list from schoolConfig + any valid classes existing on students (Khối 9 chỉ có 3 lớp: 9A1, 9A2, 9A3)
   const allAvailableClasses = useMemo(() => {
     const cfgList = (schoolConfig.classes || [])
       .map((c) => cleanClassNameInput(c))
-      .filter((c) => c && /\d/.test(c));
+      .filter((c) => c && /\d/.test(c) && !/^9A[4-9]/.test(c) && !/^9\/[4-9]/.test(c));
     const studentList = students
       .map((s) => cleanClassNameInput(s.className || ''))
-      .filter((c) => c && /\d/.test(c));
-    const merged = Array.from(new Set([...cfgList, ...studentList])).sort((a, b) =>
-      a.localeCompare(b, undefined, { numeric: true })
-    );
-    return merged.length > 0 ? merged : ['9A1', '9A2'];
+      .filter((c) => c && /\d/.test(c) && !/^9A[4-9]/.test(c) && !/^9\/[4-9]/.test(c));
+    const standardDefaults = ['6A1', '6A2', '7A1', '7A2', '8A1', '8A2', '9A1', '9A2', '9A3'];
+    const merged = Array.from(new Set([...standardDefaults, ...cfgList, ...studentList]))
+      .filter((c) => !/^9A[4-9]/.test(c))
+      .sort((a, b) => a.localeCompare(b, undefined, { numeric: true }));
+    return merged;
   }, [schoolConfig.classes, students]);
 
   // Single student form (Super easy: only FullName & Class needed, username & unique password auto-generated)
@@ -277,7 +278,7 @@ export const StudentAccountsManager: React.FC<StudentAccountsManagerProps> = ({
   const handleAddClassTag = async () => {
     const raw = newClassInput.trim();
     if (!raw) {
-      onNotify('info', 'Vui lòng nhập tên lớp cần thêm (VD: 9A6, 9A7, 9/1)...');
+      onNotify('info', 'Vui lòng nhập tên lớp cần thêm (VD: 9A1, 9A2, 9A3, 6A1)...');
       return;
     }
     const parts = raw
@@ -298,11 +299,13 @@ export const StudentAccountsManager: React.FC<StudentAccountsManagerProps> = ({
   };
 
   const handleQuickAddNextGrade9Class = async () => {
-    let n = 1;
-    while (classListTags.includes(`9A${n}`)) {
-      n++;
+    const standardGrade9 = ['9A1', '9A2', '9A3'];
+    const missing = standardGrade9.filter((c) => !classListTags.includes(c));
+    if (missing.length === 0) {
+      onNotify('info', 'Khối 9 chỉ có 3 lớp chuẩn: 9A1, 9A2, 9A3.');
+      return;
     }
-    const nextCls = `9A${n}`;
+    const nextCls = missing[0];
     const next = [...classListTags, nextCls];
     await persistClassTags(next);
     setClassName(nextCls);
@@ -576,7 +579,7 @@ export const StudentAccountsManager: React.FC<StudentAccountsManagerProps> = ({
                 Danh sách các Lớp học của trường ({classListTags.length} lớp):
               </span>
               <span className="text-xs text-teal-800 ml-2">
-                Hỗ trợ mọi khối lớp (VD: 6A1, 7A1, 8A1, 9A1, 9A6, 9/1... - Không giới hạn số lượng).
+                Khối 9 gồm 3 lớp: 9A1, 9A2, 9A3 và các khối 6, 7, 8.
               </span>
             </div>
             <button
@@ -626,7 +629,7 @@ export const StudentAccountsManager: React.FC<StudentAccountsManagerProps> = ({
                     handleAddClassTag();
                   }
                 }}
-                placeholder="Nhập tên lớp mới (VD: 9A6, 9A7, 9/1, 6A1)..."
+                placeholder="Nhập tên lớp mới (VD: 9A1, 9A2, 9A3, 6A1)..."
                 className="px-3 py-1.5 rounded-xl border border-slate-300 bg-white text-xs w-64 focus:ring-2 focus:ring-teal-500"
               />
               <button
@@ -683,7 +686,7 @@ export const StudentAccountsManager: React.FC<StudentAccountsManagerProps> = ({
                 type="text"
                 value={className}
                 onChange={(e) => setClassName(e.target.value)}
-                placeholder="Gõ tên lớp 9 bất kỳ (VD: 9A1, 9A6, 9A10...)"
+                placeholder="Gõ tên lớp (VD: 9A1, 9A2, 9A3)..."
                 className="w-full px-3.5 py-2 rounded-xl border border-slate-300 text-sm font-semibold"
                 required
               />
@@ -761,7 +764,7 @@ export const StudentAccountsManager: React.FC<StudentAccountsManagerProps> = ({
 
             <div>
               <label className="block text-xs font-bold text-slate-700 mb-1.5">
-                1. Chọn Lớp 9 cần nhập danh sách (hoặc gõ lớp mới: 9A6, 9A7, 9A8...)
+                1. Chọn Lớp 9 cần nhập danh sách (Lớp 9A1, 9A2, 9A3)
               </label>
               <div className="flex flex-wrap gap-1.5 mb-2">
                 {classListTags.map((cls) => (

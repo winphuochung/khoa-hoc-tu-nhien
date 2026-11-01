@@ -42,7 +42,7 @@ export const App: React.FC = () => {
     schoolName: 'Trường TH – THCS Phước Hưng',
     teacherName: 'Lê Văn Thắng',
     schoolYear: '2026 – 2027',
-    classes: ['9A1', '9A2'],
+    classes: ['6A1', '6A2', '7A1', '7A2', '8A1', '8A2', '9A1', '9A2', '9A3'],
     antiCheatMaxViolations: 3,
   });
   const [currentUser, setCurrentUser] = useState<UserAccount | null>(null);
@@ -248,7 +248,7 @@ export const App: React.FC = () => {
         )}
 
         {activeTab === 'grading-reports' && currentUser.role === 'teacher' && (
-          <TeacherGradingAndReports onNotify={notify} />
+          <TeacherGradingAndReports onNotify={notify} schoolConfig={schoolConfig} />
         )}
 
         {activeTab === 'students-admin' && currentUser.role === 'teacher' && (

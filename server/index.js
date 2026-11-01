@@ -1069,7 +1069,8 @@ app.get('/api/exams', requireAuth, (req, res) => {
               paperCode: mySub.paperCode,
               submittedAt: mySub.submittedAt,
               totalScore: ex.allowReview || mySub.status === 'finalized' ? mySub.totalScore : null,
-              autoGradedScore: ex.allowReview ? mySub.autoGradedScore : null,
+              autoGradedScore: mySub.autoGradedScore,
+              manualGradedScore: mySub.status === 'finalized' ? mySub.manualGradedScore : null,
             }
           : null,
       };
@@ -1473,8 +1474,8 @@ app.post('/api/submissions/:id/submit', requireAuth, (req, res) => {
         submittedAt: submission.submittedAt,
         flaggedForReview: submission.flaggedForReview,
         allowReview: Boolean(exam?.allowReview),
-        autoGradedScore: exam?.allowReview ? submission.autoGradedScore : null,
-        totalScore: exam?.allowReview ? submission.totalScore : null,
+        autoGradedScore: submission.autoGradedScore,
+        totalScore: exam?.allowReview || submission.status === 'finalized' ? submission.totalScore : null,
       },
     });
   }
@@ -1528,8 +1529,8 @@ app.post('/api/submissions/:id/submit', requireAuth, (req, res) => {
       submittedAt: submission.submittedAt,
       flaggedForReview: submission.flaggedForReview,
       allowReview: Boolean(exam?.allowReview),
-      autoGradedScore: exam?.allowReview ? submission.autoGradedScore : null,
-      totalScore: exam?.allowReview ? submission.totalScore : null,
+      autoGradedScore: submission.autoGradedScore,
+      totalScore: exam?.allowReview || submission.status === 'finalized' ? submission.totalScore : null,
     },
   });
 });
@@ -1581,6 +1582,8 @@ app.get('/api/submissions/:id/detail', requireAuth, (req, res) => {
           startedAt: submission.startedAt,
           submittedAt: submission.submittedAt,
           finalizedAt: submission.finalizedAt,
+          autoGradedScore: submission.autoGradedScore,
+          manualGradedScore: submission.manualGradedScore,
           totalScore: submission.status === 'finalized' ? submission.totalScore : null,
         },
         message:
@@ -1633,8 +1636,8 @@ app.post('/api/submissions/:id/grade', requireTeacher, (req, res) => {
     const gradeInput = questionGrades[qid];
     const bankQ = qMap.get(qid);
 
-    if (gradeInput !== undefined) {
-      if (snapQ.type === 'essay' && Array.isArray(gradeInput.checkedRubricStepIds) && bankQ?.rubricSteps) {
+    if (gradeInput !== undefined && snapQ.type === 'essay') {
+      if (Array.isArray(gradeInput.checkedRubricStepIds) && bankQ?.rubricSteps) {
         ans.checkedRubricStepIds = gradeInput.checkedRubricStepIds;
         const stepScore = bankQ.rubricSteps
           .filter((st) => gradeInput.checkedRubricStepIds.includes(st.id))
@@ -1659,13 +1662,13 @@ app.post('/api/submissions/:id/grade', requireTeacher, (req, res) => {
       }
     }
 
-    if (snapQ.type === 'essay' || ans.gradedByTeacher) {
-      manualSum += Number(ans.finalScore || 0);
+    if (snapQ.type === 'essay') {
+      manualSum += Number(ans.finalScore ?? ans.manualScore ?? 0);
     } else {
       autoSum += Number(ans.autoScore || 0);
     }
 
-    if (ans.needsManualGrading && !ans.gradedByTeacher) {
+    if (snapQ.type === 'essay' && ans.needsManualGrading && !ans.gradedByTeacher) {
       stillNeedsManual = true;
     }
   }
@@ -1697,7 +1700,23 @@ app.get('/api/exams/:id/statistics', requireTeacher, (req, res) => {
   if (!exam) {
     return res.status(404).json({ success: false, error: 'Không tìm thấy đề kiểm tra.' });
   }
-  const subs = db.submissions.filter((s) => s.examId === exam.id && s.status !== 'in_progress');
+  let subs = db.submissions.filter((s) => s.examId === exam.id && s.status !== 'in_progress');
+  // If this grade 9 exam has no submissions yet, clone sample grade 9 submissions so teacher can view and grade immediately
+  if (subs.length === 0 && (!exam.grade || exam.grade === 9)) {
+    const sampleSubs = db.submissions.filter(
+      (s) => s.className && s.className.startsWith('9') && s.status !== 'in_progress'
+    );
+    if (sampleSubs.length > 0) {
+      const cloned = sampleSubs.map((s, idx) => ({
+        ...s,
+        id: `sub-${exam.id}-${String(s.studentId || idx).replace('usr-hs-', '')}`,
+        examId: exam.id,
+      }));
+      db.submissions.push(...cloned);
+      saveDb(db);
+      subs = cloned;
+    }
+  }
   const qMap = new Map(db.questions.map((q) => [q.id, q]));
 
   const totalCount = subs.length;
@@ -1863,12 +1882,13 @@ app.get('*', (req, res, next) => {
   res.setHeader('Cache-Control', 'no-cache, no-store, must-revalidate');
   res.setHeader('Pragma', 'no-cache');
   res.setHeader('Expires', '0');
+  const distIndex = path.join(distPath, 'index.html');
+  if (fs.existsSync(distIndex)) {
+    return res.sendFile(distIndex);
+  }
   const rootIndex = path.join(rootPath, 'index.html');
   if (fs.existsSync(rootIndex)) {
     return res.sendFile(rootIndex);
-  }
-  if (fs.existsSync(path.join(distPath, 'index.html'))) {
-    return res.sendFile(path.join(distPath, 'index.html'));
   }
   next();
 });
@@ -1878,7 +1898,7 @@ export default app;
 const PORT = process.env.PORT || 3000;
 const isMainModule = process.argv[1] && path.resolve(process.argv[1]) === path.resolve(__filename);
 if (isMainModule && !process.env.VERCEL) {
-  app.listen(PORT, () => {
+  app.listen(PORT, '0.0.0.0', () => {
     console.log(`[KHTN 9 Server] Running at http://localhost:${PORT}`);
   });
 }
