@@ -19,6 +19,7 @@ import {
 
 interface StudentExamSummaryItem {
   id: string;
+  grade?: number;
   title: string;
   category: string;
   schoolYear: string;
@@ -730,9 +731,14 @@ export const StudentExamRoom: React.FC<StudentExamRoomProps> = ({ onNotify }) =>
               >
                 <div className="space-y-2">
                   <div className="flex items-center justify-between gap-2">
-                    <span className="px-3 py-1 rounded-full bg-teal-50 text-[#0D6E6E] border border-teal-200 text-xs font-bold">
-                      Thời gian: {ex.durationMinutes} phút • {ex.questionCount} câu
-                    </span>
+                    <div className="flex items-center gap-1.5 flex-wrap">
+                      <span className="px-2.5 py-0.5 rounded-full bg-teal-800 text-white text-xs font-bold">
+                        Khối {ex.grade || 9}
+                      </span>
+                      <span className="px-3 py-1 rounded-full bg-teal-50 text-[#0D6E6E] border border-teal-200 text-xs font-bold">
+                        Thời gian: {ex.durationMinutes} phút • {ex.questionCount} câu
+                      </span>
+                    </div>
                     {isCompleted ? (
                       <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-200 text-xs font-bold">
                         <CheckCircle2 className="w-3.5 h-3.5" /> Đã nộp bài ({sub.paperCode})

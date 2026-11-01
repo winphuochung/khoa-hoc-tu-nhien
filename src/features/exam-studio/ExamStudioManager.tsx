@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useMemo } from 'react';
 import {
   Sparkles,
   FileSpreadsheet,
@@ -54,7 +54,22 @@ export const ExamStudioManager: React.FC<ExamStudioManagerProps> = ({
   const [totalPoints, setTotalPoints] = useState<number>(10);
   const [variantCount, setVariantCount] = useState<number>(2);
   const [maxTabViolations, setMaxTabViolations] = useState<number>(3);
-  const [assignedClasses, setAssignedClasses] = useState<string[]>(availableClasses);
+
+  // Available classes strictly for the current grade
+  const classesForCurrentGrade = useMemo(() => {
+    const gStr = String(selectedGrade);
+    const matched = availableClasses.filter(
+      (c) => c.startsWith(gStr) || c.startsWith(`Lớp ${gStr}`) || c.startsWith(`K${gStr}`)
+    );
+    if (matched.length > 0) return matched;
+    return [`${gStr}A1`, `${gStr}A2`];
+  }, [availableClasses, selectedGrade]);
+
+  const [assignedClasses, setAssignedClasses] = useState<string[]>(classesForCurrentGrade);
+
+  useEffect(() => {
+    setAssignedClasses(classesForCurrentGrade);
+  }, [classesForCurrentGrade]);
 
   // Scope of lessons (Default: 9 lessons of Official Midterm Sample)
   const [selectedLessons, setSelectedLessons] = useState<number[]>([
@@ -217,15 +232,23 @@ export const ExamStudioManager: React.FC<ExamStudioManagerProps> = ({
       onNotify('error', 'Vui lòng bấm "Sinh Đề, Ma trận & Bản đặc tả" trước khi lưu đề.');
       return;
     }
+
+    const gStr = String(selectedGrade);
+    const validClasses = assignedClasses.filter(
+      (c) => c.startsWith(gStr) || c.startsWith(`Lớp ${gStr}`) || c.startsWith(`K${gStr}`)
+    );
+    const finalClasses = validClasses.length > 0 ? validClasses : classesForCurrentGrade;
+
     try {
       const created = await apiRequest<ExamDefinition>('/api/exams', {
         method: 'POST',
         body: JSON.stringify({
+          grade: selectedGrade,
           title: examTitle,
           category,
           durationMinutes,
           totalPoints,
-          assignedClasses,
+          assignedClasses: finalClasses,
           lessonScope: selectedLessons,
           questionIds: selectedQuestionIds,
           variantCount,
@@ -236,7 +259,7 @@ export const ExamStudioManager: React.FC<ExamStudioManagerProps> = ({
       setExams((prev) => [created, ...prev]);
       onNotify(
         'success',
-        `Đã lưu và phát hành "${created.title}" (${created.paperVariants.length} mã đề tương đương, đúng nội dung ${created.lessonScope.length} bài đã chọn)!`
+        `Đã lưu và phát hành "${created.title}" cho Khối ${selectedGrade} (Lớp: ${finalClasses.join(', ')}). Học sinh các khối khác sẽ không thấy đề này!`
       );
     } catch (err: any) {
       onNotify('error', err.message || 'Không thể lưu đề kiểm tra.');
@@ -490,6 +513,59 @@ export const ExamStudioManager: React.FC<ExamStudioManagerProps> = ({
               onChange={(e) => setMaxTabViolations(Number(e.target.value))}
               className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm"
             />
+          </div>
+        </div>
+
+        {/* Khối lớp & Lớp phân công phát hành đề */}
+        <div className="bg-teal-50/80 border border-teal-200 rounded-2xl p-4 space-y-2.5">
+          <div className="flex flex-wrap items-center justify-between gap-2">
+            <div className="flex items-center gap-2">
+              <span className="px-2.5 py-1 rounded-lg bg-teal-800 text-white text-xs font-black uppercase tracking-wider">
+                Khối {selectedGrade}
+              </span>
+              <span className="text-xs font-bold text-teal-950">
+                Phát hành đề dành riêng cho Khối {selectedGrade} (Học sinh khối 6, 7, 8 sẽ không thấy đề này)
+              </span>
+            </div>
+            <button
+              type="button"
+              onClick={() => {
+                if (assignedClasses.length === classesForCurrentGrade.length) {
+                  setAssignedClasses([]);
+                } else {
+                  setAssignedClasses([...classesForCurrentGrade]);
+                }
+              }}
+              className="text-xs font-bold text-teal-800 hover:text-teal-950 underline"
+            >
+              {assignedClasses.length === classesForCurrentGrade.length
+                ? 'Bỏ chọn tất cả'
+                : `Chọn tất cả lớp Khối ${selectedGrade}`}
+            </button>
+          </div>
+          <div className="flex flex-wrap items-center gap-2">
+            <span className="text-xs text-slate-600 font-semibold">Lớp nhận đề thi:</span>
+            {classesForCurrentGrade.map((cls) => {
+              const isChecked = assignedClasses.includes(cls);
+              return (
+                <button
+                  key={cls}
+                  type="button"
+                  onClick={() => {
+                    setAssignedClasses((prev) =>
+                      prev.includes(cls) ? prev.filter((c) => c !== cls) : [...prev, cls]
+                    );
+                  }}
+                  className={`px-3 py-1.5 rounded-xl text-xs font-extrabold border transition-all ${
+                    isChecked
+                      ? 'bg-teal-700 text-white border-teal-800 shadow-sm'
+                      : 'bg-white text-slate-700 border-slate-300 hover:border-teal-500'
+                  }`}
+                >
+                  {isChecked ? '✓ ' : '+ '}Lớp {cls}
+                </button>
+              );
+            })}
           </div>
         </div>
 
@@ -874,6 +950,9 @@ export const ExamStudioManager: React.FC<ExamStudioManagerProps> = ({
               >
                 <div className="space-y-1.5">
                   <div className="flex items-center gap-2 flex-wrap">
+                    <span className="px-2.5 py-0.5 rounded-full bg-teal-800 text-white text-xs font-black">
+                      Khối {ex.grade || 9}
+                    </span>
                     <span className="px-2.5 py-0.5 rounded-full bg-teal-50 text-[#0D6E6E] border border-teal-200 text-xs font-bold">
                       {ex.category === '15min'
                         ? 'Kiểm tra 15 phút'

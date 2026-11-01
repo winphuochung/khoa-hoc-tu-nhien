@@ -2006,6 +2006,36 @@
       "userId": "usr-hs-5011bd36",
       "role": "student",
       "createdAt": "2026-11-01T07:57:23.100Z"
+    },
+    "tk-teacher__usr-teacher-0ae981a1__d54c440e872cf4f18d1a1fb0": {
+      "userId": "usr-teacher-0ae981a1",
+      "role": "teacher",
+      "createdAt": "2026-11-01T08:15:22.334Z"
+    },
+    "tk-student__usr-hs-9a1-01__dfc6c6020032db29ee72b514": {
+      "userId": "usr-hs-9a1-01",
+      "role": "student",
+      "createdAt": "2026-11-01T08:15:22.447Z"
+    },
+    "tk-student__usr-hs-d687f097__7b5be9db551af67f83ceb207": {
+      "userId": "usr-hs-d687f097",
+      "role": "student",
+      "createdAt": "2026-11-01T08:16:20.695Z"
+    },
+    "tk-student__usr-hs-5011bd36__7e82ea6704b4f89ef5eaf248": {
+      "userId": "usr-hs-5011bd36",
+      "role": "student",
+      "createdAt": "2026-11-01T08:16:20.816Z"
+    },
+    "tk-student__usr-hs-d687f097__8d147a2a4f8e4f68f26f67e5": {
+      "userId": "usr-hs-d687f097",
+      "role": "student",
+      "createdAt": "2026-11-01T08:16:48.762Z"
+    },
+    "tk-student__usr-hs-5011bd36__9e8ce4ae8d8d8225b1b688ec": {
+      "userId": "usr-hs-5011bd36",
+      "role": "student",
+      "createdAt": "2026-11-01T08:16:48.922Z"
     }
   },
   "chapters": [
@@ -119876,6 +119906,473 @@
         }
       ],
       "submittedAt": "2026-11-01T07:57:16.397Z"
+    },
+    {
+      "id": "sub-5b5d9d3e",
+      "examId": "exam-ea26785e",
+      "studentId": "usr-teacher-0ae981a1",
+      "studentName": "Lê Văn Thắng",
+      "studentUsername": "Lê Văn Thắng",
+      "className": "9A1",
+      "paperCode": "MĐ-9A-38C1",
+      "paperSignature": "38C140A1F8AC",
+      "paperSnapshot": [
+        {
+          "questionId": "q-les-14-mcq-biet-2-v2",
+          "orderIndex": 1,
+          "type": "mcq",
+          "level": "biet",
+          "lessonId": 14,
+          "points": 0.25,
+          "prompt": "Khi phân tích sự biến thiên số đường sức từ xuyên qua tiết diện cuộn dây dẫn kín làm đổi chiều dòng điện cảm ứng, người thực hiện cần nắm vững đặc điểm cốt lõi của các đại lượng và chất tham gia. Phát biểu nào dưới đây là ĐÚNG?",
+          "originalOptionIndices": [
+            2,
+            3,
+            0,
+            1
+          ],
+          "shuffledOptions": [
+            "Góc khúc xạ và góc phản xạ luôn bằng 90° đối với mọi góc tới của chùm tia sáng chiếu tới mặt phân cách.",
+            "Dòng điện xoay chiều là dòng điện có chiều luân phiên thay đổi theo thời gian.",
+            "Mọi vật liệu cách điện và dẫn điện đều có cùng giá trị điện trở suất và chiết suất quang học ở cùng nhiệt độ phòng.",
+            "Năng lượng cơ học và năng lượng điện trong mạch luôn tự động triệt tiêu lẫn nhau ngay khi đóng công tắc nguồn."
+          ]
+        },
+        {
+          "questionId": "q-les-35-mcq-biet-2-v2",
+          "orderIndex": 2,
+          "type": "mcq",
+          "level": "biet",
+          "lessonId": 35,
+          "points": 0.25,
+          "prompt": "Khi đề xuất các giải pháp khoa học giảm phát thải khí nhà kính (trồng rừng, chuyển đổi năng lượng tái tạo, tiết kiệm năng lượng) hướng tới phát thải ròng bằng 0 (Net Zero), người thực hiện cần nắm vững đặc điểm cốt lõi của các đại lượng và chất tham gia. Phát biểu nào dưới đây là ĐÚNG?",
+          "originalOptionIndices": [
+            2,
+            1,
+            3,
+            0
+          ],
+          "shuffledOptions": [
+            "Khi đun nóng ở áp suất thường, hợp chất tự phân huỷ hoàn toàn thành khí nitrogen và kim loại nguyên chất mà không cần tác nhân khử.",
+            "Tất cả các hợp chất trong dãy đồng đẳng đều có cùng phân tử khối và chỉ tan trong dung môi nước mà không tan trong dung môi hữu cơ.",
+            "Khí nhà kính chính là CO₂ và CH₄; giảm đốt nhiên liệu hoá thạch và trồng rừng giúp hạn chế sự ấm lên toàn cầu.",
+            "Dung dịch thu được sau phản ứng luôn có môi trường kiềm mạnh (pH = 14) làm giấy quỳ tím chuyển sang màu đỏ tươi và hoà tan được vàng nguyên chất."
+          ]
+        },
+        {
+          "questionId": "q-les-47-mcq-biet-2-v2",
+          "orderIndex": 3,
+          "type": "mcq",
+          "level": "biet",
+          "lessonId": 47,
+          "points": 0.25,
+          "prompt": "Khi giải thích cơ sở di truyền học của Luật Hôn nhân và Gia đình (cấm kết hôn gần trong phạm vi 3 đời, hôn nhân một vợ một chồng) và các biện pháp bảo vệ vốn gene loài người, người thực hiện cần nắm vững đặc điểm cốt lõi của các đại lượng và chất tham gia. Phát biểu nào dưới đây là ĐÚNG?",
+          "originalOptionIndices": [
+            2,
+            0,
+            3,
+            1
+          ],
+          "shuffledOptions": [
+            "Trong quá trình tái bản DNA, nguyên tắc bổ sung được thực hiện bằng cách liên kết trực tiếp hai purine (A liên kết với G) thông qua liên kết cộng hoá trị.",
+            "Chọn lọc tự nhiên trực tiếp tạo ra các kiểu gene thích nghi mới chỉ trong một thế hệ cá thể để đáp ứng tức thời với nguyện vọng của con người.",
+            "Hội chứng do đột biến số lượng NST: Down (3 NST 21, 47 NST), Turner (XO, 45 NST).",
+            "Ở mọi loài động vật có vú, giới tính của hợp tử chỉ được quyết định bởi nhiệt độ môi trường nước sau khi cơ thể non đã trưởng thành."
+          ]
+        },
+        {
+          "questionId": "q-les-47-mcq-biet-2",
+          "orderIndex": 4,
+          "type": "mcq",
+          "level": "biet",
+          "lessonId": 47,
+          "points": 0.25,
+          "prompt": "Khi phân tích một số bệnh, tật và hội chứng di truyền ở người (Down, Turner, bạch tạng, câm điếc bẩm sinh), vai trò của di truyền học với hôn nhân và kế hoạch hoá gia đình, các nhà khoa học đã xác lập được các tính chất và quy luật đặc trưng. Phát biểu nào sau đây phản ánh ĐÚNG bản chất khoa học của quá trình này?",
+          "originalOptionIndices": [
+            3,
+            1,
+            0,
+            2
+          ],
+          "shuffledOptions": [
+            "Trong phép lai giữa hai dòng thuần chủng tương phản, thế hệ F₁ luôn phân li đồng loạt theo tỉ lệ 9 trội : 7 lặn ngay ở mọi loài sinh vật nhân sơ.",
+            "Quá trình tổng hợp chuỗi polypeptide diễn ra bên trong nhân con với nguyên liệu trực tiếp là các đơn phân deoxyribonucleotide (A, T, G, C).",
+            "Mọi biến đổi kiểu hình do điều kiện dinh dưỡng và thời tiết (thường biến) đều làm thay đổi trình tự nucleotide của gene trong giao tử và di truyền nguyên vẹn cho đời con.",
+            "Một số bệnh, hội chứng tiêu biểu: Bệnh bạch tạng và bệnh câm điếc bẩm sinh (thường do đột biến gene lặn trên NST thường); Bệnh máu khó đông và mù màu đỏ – lục (do gene lặn trên NST giới tính X); Hội chứng Down (thừa 1 NST số 21, tổng 47 NST); Hội chứng Turner (chỉ có 1 NST X dạng XO, tổng 45 NST)."
+          ]
+        },
+        {
+          "questionId": "q-les-35-mcq-biet-1-v2",
+          "orderIndex": 5,
+          "type": "mcq",
+          "level": "biet",
+          "lessonId": 35,
+          "points": 0.25,
+          "prompt": "Trong chu trình carbon của sinh quyển, nguyên tố carbon liên tục luân chuyển giữa khí quyển (dạng CO₂), sinh vật sản xuất – tiêu thụ – phân giải, đại dương (dạng muối hòa tan và trầm tích carbonate) và lớp vỏ Trái Đất. Khi phân tích bản chất khoa học của quá trình trên, kết luận nào dưới đây là CHÍNH XÁC?",
+          "originalOptionIndices": [
+            1,
+            0,
+            2,
+            3
+          ],
+          "shuffledOptions": [
+            "Chu trình carbon luân chuyển qua quang hợp, hô hấp, phân huỷ, hoà tan đại dương và đốt nhiên liệu.",
+            "Khi dẫn sản phẩm khí qua dung dịch nước bromine hoặc nước vôi trong thì dung dịch chuyển sang màu tím sẫm và toả khí hydrogen.",
+            "Kim loại hoạt động yếu hơn như đồng (Cu), bạc (Ag) luôn đẩy được các kim loại kiềm và kiềm thổ ra khỏi dung dịch muối ở nhiệt độ thường.",
+            "Quá trình biến đổi làm thay đổi số proton trong hạt nhân nguyên tử carbon tạo thành nguyên tố kim loại nặng tương ứng."
+          ]
+        },
+        {
+          "questionId": "q-les-13-mcq-biet-2",
+          "orderIndex": 6,
+          "type": "mcq",
+          "level": "biet",
+          "lessonId": 13,
+          "points": 0.25,
+          "prompt": "Khi xác định công suất tiêu thụ điện, năng lượng dòng điện (điện năng) và số tiền điện phải trả thông qua chỉ số công tơ điện, các nhà khoa học đã xác lập được các tính chất và quy luật đặc trưng. Phát biểu nào sau đây phản ánh ĐÚNG bản chất khoa học của quá trình này?",
+          "originalOptionIndices": [
+            3,
+            0,
+            2,
+            1
+          ],
+          "shuffledOptions": [
+            "Giá trị đo được của đại lượng luôn bằng 0 khi vật chuyển động thẳng đều hoặc khi ánh sáng truyền qua mặt phân cách bất kì.",
+            "Khi tăng gấp đôi hiệu điện thế hoặc lực tác dụng thì đại lượng kết quả giảm đi bốn lần do sự tiêu hao năng lượng nội tại.",
+            "Công suất điện (P) đặc trưng cho tốc độ tiêu thụ năng lượng điện của đoạn mạch hoặc dụng cụ điện.",
+            "Chiều của quá trình vật lí luôn cố định theo một chiều duy nhất, không phụ thuộc vào chiều của lực từ hay hướng truyền tia sáng."
+          ]
+        },
+        {
+          "questionId": "q-les-34-mcq-biet-1-v2",
+          "orderIndex": 7,
+          "type": "mcq",
+          "level": "biet",
+          "lessonId": 34,
+          "points": 0.25,
+          "prompt": "Trong phòng thí nghiệm, học sinh nhỏ vài giọt dung dịch hydrochloric acid (HCl) lên bề mặt một mẫu đá vôi trắng thì thấy sủi bọt khí không màu mạnh mẽ, khí này dẫn qua nước vôi trong dư lại tạo kết tủa trắng CaCO₃. Khi phân tích bản chất khoa học của quá trình trên, kết luận nào dưới đây là CHÍNH XÁC?",
+          "originalOptionIndices": [
+            0,
+            3,
+            2,
+            1
+          ],
+          "shuffledOptions": [
+            "Khi dẫn sản phẩm khí qua dung dịch nước bromine hoặc nước vôi trong thì dung dịch chuyển sang màu tím sẫm và toả khí hydrogen.",
+            "Quá trình biến đổi làm thay đổi số proton trong hạt nhân nguyên tử carbon tạo thành nguyên tố kim loại nặng tương ứng.",
+            "Kim loại hoạt động yếu hơn như đồng (Cu), bạc (Ag) luôn đẩy được các kim loại kiềm và kiềm thổ ra khỏi dung dịch muối ở nhiệt độ thường.",
+            "Đá vôi chứa chính là CaCO₃; nung đá vôi tạo vôi sống (CaO) và CO₂."
+          ]
+        },
+        {
+          "questionId": "q-les-48-mcq-biet-2",
+          "orderIndex": 8,
+          "type": "mcq",
+          "level": "biet",
+          "lessonId": 48,
+          "points": 0.25,
+          "prompt": "Khi phân tích nguyên lí công nghệ gene (công nghệ DNA tái tổ hợp), quy trình tạo sinh vật biến đổi gene (GMO) và các ứng dụng trong y dược, nông nghiệp, xử lí môi trường, các nhà khoa học đã xác lập được các tính chất và quy luật đặc trưng. Phát biểu nào sau đây phản ánh ĐÚNG bản chất khoa học của quá trình này?",
+          "originalOptionIndices": [
+            3,
+            1,
+            2,
+            0
+          ],
+          "shuffledOptions": [
+            "Trong phép lai giữa hai dòng thuần chủng tương phản, thế hệ F₁ luôn phân li đồng loạt theo tỉ lệ 9 trội : 7 lặn ngay ở mọi loài sinh vật nhân sơ.",
+            "Quá trình tổng hợp chuỗi polypeptide diễn ra bên trong nhân con với nguyên liệu trực tiếp là các đơn phân deoxyribonucleotide (A, T, G, C).",
+            "Ứng dụng trong y dược: Sử dụng vi khuẩn E. coli mang gene người để sản xuất hormone insulin điều trị bệnh tiểu đường, sản xuất vaccine, kháng thể và chẩn đoán bệnh di truyền.",
+            "Mọi biến đổi kiểu hình do điều kiện dinh dưỡng và thời tiết (thường biến) đều làm thay đổi trình tự nucleotide của gene trong giao tử và di truyền nguyên vẹn cho đời con."
+          ]
+        },
+        {
+          "questionId": "q-les-14-mcq-hieu-2",
+          "orderIndex": 9,
+          "type": "mcq",
+          "level": "hieu",
+          "lessonId": 14,
+          "points": 0.25,
+          "prompt": "Khi khảo sát hiện tượng cảm ứng điện từ, điều kiện xuất hiện dòng điện cảm ứng và nguyên tắc cấu tạo máy phát điện xoay chiều, khi phân tích mối liên hệ nhân quả giữa các đại lượng và điều kiện thực nghiệm, giải thích nào sau đây là phù hợp với cơ sở khoa học?",
+          "originalOptionIndices": [
+            2,
+            1,
+            3,
+            0
+          ],
+          "shuffledOptions": [
+            "Góc khúc xạ và góc phản xạ luôn bằng 90° đối với mọi góc tới của chùm tia sáng chiếu tới mặt phân cách.",
+            "Giá trị đo được của đại lượng luôn bằng 0 khi vật chuyển động thẳng đều hoặc khi ánh sáng truyền qua mặt phân cách bất kì.",
+            "Điều kiện có dòng điện cảm ứng: Cuộn dây kín + Số đường sức từ xuyên qua tiết diện cuộn dây biến thiên.",
+            "Đại lượng nghiên cứu luôn tỉ lệ nghịch với cả khối lượng của vật và thời gian thực hiện quá trình trong mọi hệ quy chiếu."
+          ]
+        },
+        {
+          "questionId": "q-les-48-mcq-biet-1-v2",
+          "orderIndex": 10,
+          "type": "mcq",
+          "level": "biet",
+          "lessonId": 48,
+          "points": 0.25,
+          "prompt": "Tại viện nghiên cứu nông nghiệp công nghệ cao, các nhà khoa học ứng dụng công nghệ di truyền để tạo ra giống \"lúa vàng\" tổng hợp được tiền chất vitamin A (β-carotene), giống ngô kháng sâu đục thân và giống cừu chuyển gene tiết protein chữa bệnh trong sữa. Khi phân tích bản chất khoa học của quá trình trên, kết luận nào dưới đây là CHÍNH XÁC?",
+          "originalOptionIndices": [
+            2,
+            0,
+            3,
+            1
+          ],
+          "shuffledOptions": [
+            "Quá trình tổng hợp chuỗi polypeptide diễn ra bên trong nhân con với nguyên liệu trực tiếp là các đơn phân deoxyribonucleotide (A, T, G, C).",
+            "Mọi biến đổi kiểu hình do điều kiện dinh dưỡng và thời tiết (thường biến) đều làm thay đổi trình tự nucleotide của gene trong giao tử và di truyền nguyên vẹn cho đời con.",
+            "Trong phép lai giữa hai dòng thuần chủng tương phản, thế hệ F₁ luôn phân li đồng loạt theo tỉ lệ 9 trội : 7 lặn ngay ở mọi loài sinh vật nhân sơ.",
+            "Công nghệ di truyền sử dụng kĩ thuật DNA tái tổ hợp để tạo sinh vật biến đổi gene (GMO)."
+          ]
+        },
+        {
+          "questionId": "q-les-13-mcq-biet-2-v2",
+          "orderIndex": 11,
+          "type": "mcq",
+          "level": "biet",
+          "lessonId": 13,
+          "points": 0.25,
+          "prompt": "Khi vận dụng các công thức công suất điện (P = U·I) và năng lượng điện (W = P·t) để kiểm tra mức tiêu thụ điện của đồ gia dụng, người thực hiện cần nắm vững đặc điểm cốt lõi của các đại lượng và chất tham gia. Phát biểu nào dưới đây là ĐÚNG?",
+          "originalOptionIndices": [
+            3,
+            2,
+            0,
+            1
+          ],
+          "shuffledOptions": [
+            "Năng lượng điện: W = P·t = U·I·t (J). Đổi đơn vị: 1 kW·h = 3,6·10⁶ J.",
+            "Góc khúc xạ và góc phản xạ luôn bằng 90° đối với mọi góc tới của chùm tia sáng chiếu tới mặt phân cách.",
+            "Mọi vật liệu cách điện và dẫn điện đều có cùng giá trị điện trở suất và chiết suất quang học ở cùng nhiệt độ phòng.",
+            "Năng lượng cơ học và năng lượng điện trong mạch luôn tự động triệt tiêu lẫn nhau ngay khi đóng công tắc nguồn."
+          ]
+        },
+        {
+          "questionId": "q-les-34-mcq-hieu-1-v2",
+          "orderIndex": 12,
+          "type": "mcq",
+          "level": "hieu",
+          "lessonId": 34,
+          "points": 0.25,
+          "prompt": "Trong phòng thí nghiệm, học sinh nhỏ vài giọt dung dịch hydrochloric acid (HCl) lên bề mặt một mẫu đá vôi trắng thì thấy sủi bọt khí không màu mạnh mẽ, khí này dẫn qua nước vôi trong dư lại tạo kết tủa trắng CaCO₃. Để đảm bảo độ chính xác khi xử lí số liệu đo đạc và giải thích kết quả thực nghiệm trên, nguyên tắc khoa học nào sau đây cần được tuân thủ?",
+          "originalOptionIndices": [
+            3,
+            0,
+            1,
+            2
+          ],
+          "shuffledOptions": [
+            "Trong phân tử chỉ tồn tại liên kết ion bền vững giữa các nguyên tử kim loại chuyển tiếp, không có sự góp chung electron hoá trị.",
+            "Khi dẫn sản phẩm khí qua dung dịch nước bromine hoặc nước vôi trong thì dung dịch chuyển sang màu tím sẫm và toả khí hydrogen.",
+            "Dung dịch thu được sau phản ứng luôn có môi trường kiềm mạnh (pH = 14) làm giấy quỳ tím chuyển sang màu đỏ tươi và hoà tan được vàng nguyên chất.",
+            "Công nghiệp silicate gồm 3 ngành chính: Gốm sứ – Thuỷ tinh – Xi măng. (Lưu ý kiểm soát sai số: Quên nhân với tỉ lệ phần trăm tinh khiết của đá vôi (hoặc hiệu suất phản ứng) khi tính khối lượng CaO thu được.)"
+          ]
+        },
+        {
+          "questionId": "q-les-35-tf-1-v2",
+          "orderIndex": 13,
+          "type": "true_false",
+          "level": "hieu",
+          "lessonId": 35,
+          "points": 1,
+          "prompt": "Trong chu trình carbon của sinh quyển, nguyên tố carbon liên tục luân chuyển giữa khí quyển (dạng CO₂), sinh vật sản xuất – tiêu thụ – phân giải, đại dương (dạng muối hòa tan và trầm tích carbonate) và lớp vỏ Trái Đất. Dựa trên các quy luật khoa học tự nhiên và kết quả khảo sát thực tế, hãy xác định mỗi phát biểu dưới đây là Đúng (Đ) hay Sai (S):",
+          "statements": [
+            {
+              "id": "a",
+              "text": "Khi dẫn sản phẩm khí qua dung dịch nước bromine hoặc nước vôi trong thì dung dịch chuyển sang màu tím sẫm và toả khí hydrogen."
+            },
+            {
+              "id": "b",
+              "text": "Sự đốt cháy quá mức nhiên liệu hoá thạch (than đá, dầu mỏ, khí đốt) và nạn phá rừng làm nồng độ khí CO₂ và CH₄ trong khí quyển tăng nhanh."
+            },
+            {
+              "id": "c",
+              "text": "Khí nhà kính chính là CO₂ và CH₄; giảm đốt nhiên liệu hoá thạch và trồng rừng giúp hạn chế sự ấm lên toàn cầu."
+            },
+            {
+              "id": "d",
+              "text": "Dung dịch thu được sau phản ứng luôn có môi trường kiềm mạnh (pH = 14) làm giấy quỳ tím chuyển sang màu đỏ tươi và hoà tan được vàng nguyên chất."
+            }
+          ]
+        },
+        {
+          "questionId": "q-les-47-tf-1-v2",
+          "orderIndex": 14,
+          "type": "true_false",
+          "level": "hieu",
+          "lessonId": 47,
+          "points": 1,
+          "prompt": "Các thống kê y học và dịch tễ học chứng minh rằng phụ nữ sinh con khi tuổi đã cao (trên 35 tuổi), người làm việc trong môi trường tiếp xúc với chất độc hoá học, thuốc trừ sâu, chất độc màu da cam (dioxin) hoặc kết hôn cận huyết thống có nguy cơ cao sinh con mắc bệnh, tật di truyền. Dựa trên các quy luật khoa học tự nhiên và kết quả khảo sát thực tế, hãy xác định mỗi phát biểu dưới đây là Đúng (Đ) hay Sai (S):",
+          "statements": [
+            {
+              "id": "a",
+              "text": "Mọi biến đổi kiểu hình do điều kiện dinh dưỡng và thời tiết (thường biến) đều làm thay đổi trình tự nucleotide của gene trong giao tử và di truyền nguyên vẹn cho đời con."
+            },
+            {
+              "id": "b",
+              "text": "Một số bệnh, hội chứng tiêu biểu: Bệnh bạch tạng và bệnh câm điếc bẩm sinh (thường do đột biến gene lặn trên NST thường); Bệnh máu khó đông và mù màu đỏ – lục (do gene lặn trên NST giới tính X); Hội chứng Down (thừa 1 NST số 21, tổng 47 NST); Hội chứng Turner (chỉ có 1 NST X dạng XO, tổng 45 NST)."
+            },
+            {
+              "id": "c",
+              "text": "Hội chứng do đột biến số lượng NST: Down (3 NST 21, 47 NST), Turner (XO, 45 NST)."
+            },
+            {
+              "id": "d",
+              "text": "Chọn lọc tự nhiên trực tiếp tạo ra các kiểu gene thích nghi mới chỉ trong một thế hệ cá thể để đáp ứng tức thời với nguyện vọng của con người."
+            }
+          ]
+        },
+        {
+          "questionId": "q-les-48-sa-biet-1",
+          "orderIndex": 15,
+          "type": "short_answer",
+          "level": "biet",
+          "lessonId": 48,
+          "points": 0.5,
+          "prompt": "Trong công nghiệp dược phẩm hiện đại, các nhà công nghệ sinh học chuyển gene quy định tổng hợp hormone insulin của người vào tế bào vi khuẩn đường ruột E. coli thông qua thể truyền plasmid, giúp nuôi cấy vi khuẩn sản xuất insulin tinh khiết số lượng lớn điều trị bệnh tiểu đường. Hãy viết biểu thức hoặc quy luật chuẩn của \"Quy trình cơ bản tạo DNA tái tổ hợp và chuyển gene\" dùng để xác định đại lượng/quá trình trong hiện tượng trên."
+        },
+        {
+          "questionId": "q-les-14-sa-biet-1",
+          "orderIndex": 16,
+          "type": "short_answer",
+          "level": "biet",
+          "lessonId": 14,
+          "points": 0.5,
+          "prompt": "Trong thí nghiệm về cảm ứng điện từ, học sinh đưa một thanh nam châm vĩnh cửu dịch chuyển lại gần hoặc ra xa một cuộn dây dẫn kín nối với hai đèn LED mắc song song ngược chiều và quan sát sự phát sáng của đèn. Hãy viết biểu thức hoặc quy luật chuẩn của \"Điều kiện xuất hiện dòng điện cảm ứng\" dùng để xác định đại lượng/quá trình trong hiện tượng trên."
+        },
+        {
+          "questionId": "q-les-13-sa-biet-1",
+          "orderIndex": 17,
+          "type": "short_answer",
+          "level": "biet",
+          "lessonId": 13,
+          "points": 0.5,
+          "prompt": "Trên nhãn kỹ thuật của một ấm đun nước siêu tốc dùng trong gia đình có ghi thông số định mức \"220 V – 1 500 W\", thiết bị được cắm vào ổ điện đúng hiệu điện thế 220 V để đun sôi nước mỗi ngày. Hãy viết biểu thức hoặc quy luật chuẩn của \"Công thức tính công suất điện\" dùng để xác định đại lượng/quá trình trong hiện tượng trên."
+        },
+        {
+          "questionId": "q-les-34-sa-hieu-1",
+          "orderIndex": 18,
+          "type": "short_answer",
+          "level": "hieu",
+          "lessonId": 34,
+          "points": 0.5,
+          "prompt": "Khi khảo sát thành phần, tính chất hoá học của đá vôi (CaCO₃), quy trình nung vôi và công nghệ sản xuất xi măng, thuỷ tinh, đồ gốm trong công nghiệp silicate, dựa vào \"Các phản ứng hoá học trong nung vôi và sản xuất thuỷ tinh\" (CaCO₃ →(900–1000°C) CaO + CO₂↑  |  CaO + SiO₂ →(t°) CaSiO₃ ;  Na₂CO₃ + SiO₂ →(t°) Na₂SiO₃ + CO₂↑), hãy nêu ngắn gọn ý nghĩa khoa học hoặc mối quan hệ tỉ lệ chính của quy luật này."
+        },
+        {
+          "questionId": "q-les-14-essay-1",
+          "orderIndex": 19,
+          "type": "essay",
+          "level": "van_dung",
+          "lessonId": 14,
+          "points": 1,
+          "prompt": "Trong thí nghiệm về cảm ứng điện từ, học sinh đưa một thanh nam châm vĩnh cửu dịch chuyển lại gần hoặc ra xa một cuộn dây dẫn kín nối với hai đèn LED mắc song song ngược chiều và quan sát sự phát sáng của đèn. Xét bài toán thực nghiệm cụ thể sau: Đưa cực Bắc của thanh nam châm lại gần cuộn dây dẫn kín gắn đèn LED rồi giữ nam châm đứng yên trước cuộn dây. Đèn LED sáng khi nào? Hãy nêu cơ sở khoa học, viết biểu thức/quy luật áp dụng và trình bày các bước giải chi tiết.",
+          "rubricSteps": [
+            {
+              "id": "rub-14-1a",
+              "description": "Bước chấm (0.25 điểm)",
+              "points": 0.25
+            },
+            {
+              "id": "rub-14-1b",
+              "description": "Bước chấm (0.25 điểm)",
+              "points": 0.25
+            },
+            {
+              "id": "rub-14-1c",
+              "description": "Bước chấm (0.25 điểm)",
+              "points": 0.25
+            },
+            {
+              "id": "rub-14-1d",
+              "description": "Bước chấm (0.25 điểm)",
+              "points": 0.25
+            }
+          ]
+        },
+        {
+          "questionId": "q-les-34-essay-1",
+          "orderIndex": 20,
+          "type": "essay",
+          "level": "van_dung",
+          "lessonId": 34,
+          "points": 1,
+          "prompt": "Tại các lò nung vôi công nghiệp, đá vôi (thành phần chính là CaCO₃) được nung ở nhiệt độ khoảng 900 – 1 000 °C tạo ra vôi sống (CaO) và khí CO₂; trong khi tại nhà máy xi măng và thuỷ tinh, đá vôi, đất sét và cát trắng (SiO₂) được nghiền mịn và nung chảy ở nhiệt độ cao. Xét bài toán thực nghiệm cụ thể sau: Nung 100 kg đá vôi chứa 80% CaCO₃ (còn lại là tạp chất trơ). Biết hiệu suất phản ứng đạt 100%, tính khối lượng vôi sống CaO thu được. Hãy nêu cơ sở khoa học, viết biểu thức/quy luật áp dụng và trình bày các bước giải chi tiết.",
+          "rubricSteps": [
+            {
+              "id": "rub-34-1a",
+              "description": "Bước chấm (0.25 điểm)",
+              "points": 0.25
+            },
+            {
+              "id": "rub-34-1b",
+              "description": "Bước chấm (0.25 điểm)",
+              "points": 0.25
+            },
+            {
+              "id": "rub-34-1c",
+              "description": "Bước chấm (0.25 điểm)",
+              "points": 0.25
+            },
+            {
+              "id": "rub-34-1d",
+              "description": "Bước chấm (0.25 điểm)",
+              "points": 0.25
+            }
+          ]
+        },
+        {
+          "questionId": "q-les-13-essay-1",
+          "orderIndex": 21,
+          "type": "essay",
+          "level": "van_dung",
+          "lessonId": 13,
+          "points": 1,
+          "prompt": "Trên nhãn kỹ thuật của một ấm đun nước siêu tốc dùng trong gia đình có ghi thông số định mức \"220 V – 1 500 W\", thiết bị được cắm vào ổ điện đúng hiệu điện thế 220 V để đun sôi nước mỗi ngày. Xét bài toán thực nghiệm cụ thể sau: Một bếp điện ghi 220 V – 1100 W hoạt động bình thường ở hiệu điện thế 220 V trong 2 giờ. Tính cường độ dòng điện qua bếp và số kW·h điện tiêu thụ. Hãy nêu cơ sở khoa học, viết biểu thức/quy luật áp dụng và trình bày các bước giải chi tiết.",
+          "rubricSteps": [
+            {
+              "id": "rub-13-1a",
+              "description": "Bước chấm (0.25 điểm)",
+              "points": 0.25
+            },
+            {
+              "id": "rub-13-1b",
+              "description": "Bước chấm (0.25 điểm)",
+              "points": 0.25
+            },
+            {
+              "id": "rub-13-1c",
+              "description": "Bước chấm (0.25 điểm)",
+              "points": 0.25
+            },
+            {
+              "id": "rub-13-1d",
+              "description": "Bước chấm (0.25 điểm)",
+              "points": 0.25
+            }
+          ]
+        }
+      ],
+      "answers": {},
+      "status": "in_progress",
+      "startedAt": "2026-11-01T08:15:22.626Z",
+      "autoGradedScore": 0,
+      "manualGradedScore": 0,
+      "totalScore": 0,
+      "violationCount": 0,
+      "flaggedForReview": false,
+      "deviceInfo": {
+        "userAgent": "node",
+        "platform": "Web Client",
+        "screenResolution": "Responsive"
+      },
+      "activityLogs": [
+        {
+          "timestamp": "2026-11-01T08:15:22.626Z",
+          "eventType": "exam_start",
+          "detail": "Bắt đầu làm bài. Mã đề cá nhân: MĐ-9A-38C1 (Chữ ký đề: 38C140A1F8AC)"
+        }
+      ]
     }
   ]
 }

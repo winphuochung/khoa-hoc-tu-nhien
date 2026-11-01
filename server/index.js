@@ -1024,10 +1024,20 @@ app.get('/api/exams', requireAuth, (req, res) => {
     return res.json({ success: true, data: examsWithStats });
   }
 
-  // Student view: filter by assignedClasses and strip questionIds & sensitive data
-  const studentClass = req.user.className || '';
+  // Student view: filter strictly by grade and assignedClasses
+  const studentClass = String(req.user.className || '').trim();
+  const classGradeMatch = studentClass.match(/^(\d+)/);
+  const studentGrade = Number(req.user.grade || (classGradeMatch ? classGradeMatch[1] : 9));
+
   const visibleExams = db.exams
     .filter((ex) => {
+      // 1. Strict Grade Isolation: Grade 9 exams only for Grade 9 students, etc.
+      const exGrade = Number(ex.grade || 9);
+      if (exGrade !== studentGrade) {
+        return false;
+      }
+
+      // 2. Class-level filter within the grade
       if (!ex.assignedClasses || ex.assignedClasses.length === 0 || ex.assignedClasses.includes('ALL')) {
         return true;
       }
@@ -1094,10 +1104,22 @@ app.post('/api/exams', requireTeacher, (req, res) => {
   const qMap = new Map(db.questions.map((q) => [q.id, q]));
   const selectedQuestions = questionIds.map((id) => qMap.get(id)).filter(Boolean);
 
-  const detectedGrade =
+  const detectedGrade = Number(
     grade ||
     selectedQuestions[0]?.grade ||
-    (lessonScope[0] >= 800 ? 8 : lessonScope[0] >= 700 ? 7 : lessonScope[0] >= 600 ? 6 : 9);
+    (lessonScope[0] >= 800 ? 8 : lessonScope[0] >= 700 ? 7 : lessonScope[0] >= 600 ? 6 : 9)
+  );
+
+  // Sanitize assignedClasses strictly to detectedGrade (never leak to other grades)
+  const gStr = String(detectedGrade);
+  let finalAssignedClasses = (Array.isArray(assignedClasses) ? assignedClasses : [])
+    .filter((c) => String(c).startsWith(gStr) || String(c).startsWith(`Lớp ${gStr}`) || String(c).startsWith(`K${gStr}`));
+  if (finalAssignedClasses.length === 0) {
+    const gradeClasses = (db.schoolConfig?.classes || []).filter(
+      (c) => String(c).startsWith(gStr) || String(c).startsWith(`Lớp ${gStr}`) || String(c).startsWith(`K${gStr}`)
+    );
+    finalAssignedClasses = gradeClasses.length > 0 ? gradeClasses : [`${detectedGrade}A1`, `${detectedGrade}A2`];
+  }
 
   const { matrixRows, specificationRows } = buildMatrixAndSpecification(
     selectedQuestions,
@@ -1121,7 +1143,7 @@ app.post('/api/exams', requireTeacher, (req, res) => {
     schoolYear: db.schoolConfig.schoolYear || '2026 – 2027',
     durationMinutes: Number(durationMinutes),
     totalPoints: Number(totalPoints),
-    assignedClasses: Array.isArray(assignedClasses) && assignedClasses.length > 0 ? assignedClasses : ['ALL'],
+    assignedClasses: finalAssignedClasses,
     lessonScope:
       Array.isArray(lessonScope) && lessonScope.length > 0
         ? lessonScope.map(Number)
@@ -1213,6 +1235,33 @@ app.post('/api/exams/:id/start', requireAuth, (req, res) => {
       success: false,
       error: 'Đợt kiểm tra này hiện đang đóng.',
     });
+  }
+
+  if (req.user.role === 'student') {
+    const studentClass = String(req.user.className || '').trim();
+    const classGradeMatch = studentClass.match(/^(\d+)/);
+    const studentGrade = Number(req.user.grade || (classGradeMatch ? classGradeMatch[1] : 9));
+    const exGrade = Number(exam.grade || 9);
+
+    if (studentGrade !== exGrade) {
+      return res.status(403).json({
+        success: false,
+        error: `Đề kiểm tra này dành riêng cho Khối ${exGrade}. Bạn thuộc Khối ${studentGrade} nên không được phép tham gia.`,
+      });
+    }
+
+    if (
+      Array.isArray(exam.assignedClasses) &&
+      exam.assignedClasses.length > 0 &&
+      !exam.assignedClasses.includes('ALL')
+    ) {
+      if (studentClass && !exam.assignedClasses.includes(studentClass)) {
+        return res.status(403).json({
+          success: false,
+          error: `Đề kiểm tra này chưa được phân công cho lớp ${studentClass}.`,
+        });
+      }
+    }
   }
 
   let submission = db.submissions.find(

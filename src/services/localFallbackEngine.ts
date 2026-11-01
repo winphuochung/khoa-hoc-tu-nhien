@@ -1462,9 +1462,19 @@ export async function handleLocalApiRequest<T>(
       }) as T;
     }
 
-    const studentClass = user.className || '';
+    const studentClass = String(user.className || '').trim();
+    const classGradeMatch = studentClass.match(/^(\d+)/);
+    const studentGrade = Number(user.grade || (classGradeMatch ? classGradeMatch[1] : 9));
+
     return db.exams
       .filter((ex: any) => {
+        // 1. Strict Grade Isolation: Grade 9 exams only for Grade 9 students, etc.
+        const exGrade = Number(ex.grade || 9);
+        if (exGrade !== studentGrade) {
+          return false;
+        }
+
+        // 2. Class check within the grade
         if (!ex.assignedClasses || ex.assignedClasses.length === 0 || ex.assignedClasses.includes('ALL')) {
           return true;
         }
@@ -1474,6 +1484,7 @@ export async function handleLocalApiRequest<T>(
         const mySub = db.submissions.find((s: any) => s.examId === ex.id && s.studentId === user.id);
         return {
           id: ex.id,
+          grade: ex.grade || 9,
           title: ex.title,
           category: ex.category,
           schoolYear: ex.schoolYear,
@@ -1503,6 +1514,7 @@ export async function handleLocalApiRequest<T>(
   if (method === 'POST' && pathname === '/api/exams') {
     requireTeacherUser();
     const {
+      grade,
       title,
       category = 'midterm',
       durationMinutes = 90,
@@ -1519,6 +1531,24 @@ export async function handleLocalApiRequest<T>(
     }
     const qMap = new Map(db.questions.map((q: any) => [q.id, q]));
     const selectedQuestions = questionIds.map((id: string) => qMap.get(id)).filter(Boolean);
+
+    const detectedGrade = Number(
+      grade ||
+      selectedQuestions[0]?.grade ||
+      (lessonScope[0] >= 800 ? 8 : lessonScope[0] >= 700 ? 7 : lessonScope[0] >= 600 ? 6 : 9)
+    );
+
+    // Sanitize assignedClasses strictly to detectedGrade
+    const gStr = String(detectedGrade);
+    let finalAssignedClasses = (Array.isArray(assignedClasses) ? assignedClasses : [])
+      .filter((c: any) => String(c).startsWith(gStr) || String(c).startsWith(`Lớp ${gStr}`) || String(c).startsWith(`K${gStr}`));
+    if (finalAssignedClasses.length === 0) {
+      const gradeClasses = (db.schoolConfig?.classes || []).filter(
+        (c: any) => String(c).startsWith(gStr) || String(c).startsWith(`Lớp ${gStr}`) || String(c).startsWith(`K${gStr}`)
+      );
+      finalAssignedClasses = gradeClasses.length > 0 ? gradeClasses : [`${detectedGrade}A1`, `${detectedGrade}A2`];
+    }
+
     const { matrixRows, specificationRows } = buildMatrixAndSpecification(
       selectedQuestions,
       db.chapters,
@@ -1530,12 +1560,13 @@ export async function handleLocalApiRequest<T>(
     const now = new Date().toISOString();
     const newExam = {
       id: randomId('exam'),
+      grade: Number(detectedGrade || 9),
       title: String(title).trim(),
       category,
       schoolYear: db.schoolConfig.schoolYear || '2026 – 2027',
       durationMinutes: Number(durationMinutes),
       totalPoints: Number(totalPoints),
-      assignedClasses: Array.isArray(assignedClasses) && assignedClasses.length > 0 ? assignedClasses : ['ALL'],
+      assignedClasses: finalAssignedClasses,
       lessonScope:
         Array.isArray(lessonScope) && lessonScope.length > 0
           ? lessonScope.map(Number)
@@ -1581,6 +1612,23 @@ export async function handleLocalApiRequest<T>(
     const exam = db.exams.find((e: any) => e.id === examStartMatch[1]);
     if (!exam) throw new Error('Không tìm thấy đợt kiểm tra.');
     if (!exam.isOpen) throw new Error('Đợt kiểm tra này hiện đang đóng.');
+
+    if (user.role === 'student') {
+      const studentClass = String(user.className || '').trim();
+      const classGradeMatch = studentClass.match(/^(\d+)/);
+      const studentGrade = Number(user.grade || (classGradeMatch ? classGradeMatch[1] : 9));
+      const exGrade = Number(exam.grade || 9);
+
+      if (studentGrade !== exGrade) {
+        throw new Error(`Đề kiểm tra này dành riêng cho Khối ${exGrade}. Bạn thuộc Khối ${studentGrade} nên không được phép tham gia.`);
+      }
+
+      if (Array.isArray(exam.assignedClasses) && exam.assignedClasses.length > 0 && !exam.assignedClasses.includes('ALL')) {
+        if (studentClass && !exam.assignedClasses.includes(studentClass)) {
+          throw new Error(`Đề kiểm tra này chưa được phân công cho lớp ${studentClass}.`);
+        }
+      }
+    }
 
     let submission = db.submissions.find((s: any) => s.examId === exam.id && s.studentId === user.id);
     if (submission && submission.status !== 'in_progress') {
