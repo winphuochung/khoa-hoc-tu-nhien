@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useMemo } from 'react';
 import {
   Download,
   CheckCircle2,
@@ -9,6 +9,9 @@ import {
   Eye,
   X,
   Save,
+  GraduationCap,
+  Users,
+  Filter,
 } from 'lucide-react';
 import { apiRequest, getCsvDownloadUrl } from '../../services/apiClient';
 import { ExamDefinition, ExamSubmission } from '../../types/domainTypes';
@@ -42,7 +45,9 @@ export const TeacherGradingAndReports: React.FC<TeacherGradingAndReportsProps> =
   onNotify,
 }) => {
   const [exams, setExams] = useState<ExamDefinition[]>([]);
+  const [selectedGrade, setSelectedGrade] = useState<number | 'ALL'>('ALL');
   const [selectedExamId, setSelectedExamId] = useState<string>('');
+  const [selectedClass, setSelectedClass] = useState<string>('ALL');
   const [stats, setStats] = useState<ExamStatisticsResponse | null>(null);
   const [loading, setLoading] = useState(false);
 
@@ -71,6 +76,94 @@ export const TeacherGradingAndReports: React.FC<TeacherGradingAndReportsProps> =
       })
       .catch((err) => onNotify('error', err.message || 'Lỗi tải danh sách đợt kiểm tra.'));
   }, []);
+
+  // Filter exams strictly by selected Grade
+  const filteredExams = useMemo(() => {
+    if (selectedGrade === 'ALL') return exams;
+    return exams.filter((ex) => Number(ex.grade || 9) === selectedGrade);
+  }, [exams, selectedGrade]);
+
+  // Keep selectedExamId in sync with filteredExams
+  useEffect(() => {
+    if (filteredExams.length > 0) {
+      if (!filteredExams.some((e) => e.id === selectedExamId)) {
+        setSelectedExamId(filteredExams[0].id);
+      }
+    } else {
+      setSelectedExamId('');
+      setStats(null);
+    }
+  }, [filteredExams, selectedExamId]);
+
+  const selectedExam = useMemo(() => {
+    return exams.find((e) => e.id === selectedExamId);
+  }, [exams, selectedExamId]);
+
+  // Available classes for current exam (from assignedClasses + actual submissions)
+  const availableClassesForExam = useMemo(() => {
+    const classSet = new Set<string>();
+    if (Array.isArray(selectedExam?.assignedClasses)) {
+      selectedExam.assignedClasses.forEach((c) => {
+        if (c && c !== 'ALL') classSet.add(c);
+      });
+    }
+    if (Array.isArray(stats?.submissions)) {
+      stats.submissions.forEach((s) => {
+        if (s.className) classSet.add(s.className);
+      });
+    }
+    return Array.from(classSet).sort();
+  }, [selectedExam, stats?.submissions]);
+
+  // Reset selectedClass if not in availableClasses
+  useEffect(() => {
+    if (selectedClass !== 'ALL' && !availableClassesForExam.includes(selectedClass)) {
+      setSelectedClass('ALL');
+    }
+  }, [availableClassesForExam, selectedClass]);
+
+  // Filtered submissions based on selectedClass
+  const filteredSubmissions = useMemo(() => {
+    if (!stats?.submissions) return [];
+    let list = stats.submissions;
+    if (selectedClass !== 'ALL') {
+      list = list.filter((s) => s.className === selectedClass);
+    }
+    return [...list].sort((a, b) => {
+      if (a.className !== b.className) return a.className.localeCompare(b.className);
+      return a.studentName.localeCompare(b.studentName, 'vi');
+    });
+  }, [stats?.submissions, selectedClass]);
+
+  // Recalculate statistics for the selected class
+  const classStats = useMemo(() => {
+    const total = filteredSubmissions.length;
+    if (total === 0) {
+      return {
+        total: 0,
+        pending: 0,
+        average: 0,
+        passCount: 0,
+        passRatePercent: 0,
+        flaggedCount: 0,
+      };
+    }
+    const pending = filteredSubmissions.filter((s) => s.status === 'submitted_pending_grading').length;
+    const avg = Number(
+      (filteredSubmissions.reduce((acc, s) => acc + (s.totalScore || 0), 0) / total).toFixed(2)
+    );
+    const passCount = filteredSubmissions.filter((s) => (s.totalScore || 0) >= 5.0).length;
+    const passRatePercent = Math.round((passCount / total) * 100);
+    const flaggedCount = filteredSubmissions.filter((s) => s.flaggedForReview).length;
+    return {
+      total,
+      pending,
+      average: avg,
+      passCount,
+      passRatePercent,
+      flaggedCount,
+    };
+  }, [filteredSubmissions]);
 
   const loadExamStatistics = async (examId: string) => {
     if (!examId) return;
@@ -176,32 +269,73 @@ export const TeacherGradingAndReports: React.FC<TeacherGradingAndReportsProps> =
           </h2>
           <p className="text-sm text-slate-600 mt-1">
             Chấm tự động TN nhiều lựa chọn, Đúng–Sai, Trả lời ngắn; Giáo viên chấm tay Tự luận theo
-            bước 0,25đ và chốt điểm, xuất CSV.
+            bước 0,25đ và chốt điểm, xuất CSV theo từng khối và lớp.
           </p>
         </div>
 
         <div className="flex flex-wrap items-center gap-3">
+          {/* Lọc Khối */}
+          <div className="flex items-center gap-1.5 bg-slate-50 border border-slate-300 rounded-xl px-3 py-2 shadow-2xs">
+            <GraduationCap className="w-4 h-4 text-[#0D6E6E]" />
+            <span className="text-xs font-bold text-slate-600">Khối:</span>
+            <select
+              value={selectedGrade}
+              onChange={(e) =>
+                setSelectedGrade(e.target.value === 'ALL' ? 'ALL' : Number(e.target.value))
+              }
+              className="bg-transparent text-sm font-bold text-slate-900 focus:outline-none cursor-pointer"
+            >
+              <option value="ALL">Tất cả các khối</option>
+              <option value="6">Khối 6</option>
+              <option value="7">Khối 7</option>
+              <option value="8">Khối 8</option>
+              <option value="9">Khối 9</option>
+            </select>
+          </div>
+
+          {/* Chọn Đề kiểm tra */}
           <select
             value={selectedExamId}
             onChange={(e) => setSelectedExamId(e.target.value)}
-            className="px-4 py-2.5 rounded-xl border border-slate-300 text-sm font-bold bg-white"
+            className="px-4 py-2.5 rounded-xl border border-slate-300 text-sm font-bold bg-white max-w-sm truncate shadow-2xs"
           >
-            {exams.length === 0 && <option value="">Chưa có đợt kiểm tra</option>}
-            {exams.map((ex) => (
+            {filteredExams.length === 0 && (
+              <option value="">Chưa có đợt kiểm tra {selectedGrade !== 'ALL' ? `Khối ${selectedGrade}` : ''}</option>
+            )}
+            {filteredExams.map((ex) => (
               <option key={ex.id} value={ex.id}>
-                {ex.title} ({ex.durationMinutes}p)
+                [Khối {ex.grade || 9}] {ex.title} ({ex.durationMinutes}p)
               </option>
             ))}
           </select>
 
+          {/* Lọc Lớp */}
+          <div className="flex items-center gap-1.5 bg-slate-50 border border-slate-300 rounded-xl px-3 py-2 shadow-2xs">
+            <Users className="w-4 h-4 text-[#0D6E6E]" />
+            <span className="text-xs font-bold text-slate-600">Lớp:</span>
+            <select
+              value={selectedClass}
+              onChange={(e) => setSelectedClass(e.target.value)}
+              className="bg-transparent text-sm font-bold text-slate-900 focus:outline-none cursor-pointer"
+            >
+              <option value="ALL">Tất cả các lớp</option>
+              {availableClassesForExam.map((cls) => (
+                <option key={cls} value={cls}>
+                  Lớp {cls}
+                </option>
+              ))}
+            </select>
+          </div>
+
           {selectedExamId && (
             <a
-              href={getCsvDownloadUrl(selectedExamId)}
+              href={getCsvDownloadUrl(selectedExamId, selectedClass)}
               download
               className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-[#0D6E6E] hover:bg-teal-800 text-white text-sm font-bold shadow-sm"
+              title={selectedClass !== 'ALL' ? `Xuất kết quả lớp ${selectedClass}` : 'Xuất kết quả tất cả các lớp'}
             >
               <Download className="w-4 h-4" />
-              <span>Xuất kết quả lớp (CSV)</span>
+              <span>Xuất kết quả {selectedClass !== 'ALL' ? `lớp ${selectedClass}` : 'lớp'} (CSV)</span>
             </a>
           )}
         </div>
@@ -221,27 +355,22 @@ export const TeacherGradingAndReports: React.FC<TeacherGradingAndReportsProps> =
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             <div className="bg-white rounded-2xl border border-slate-200 p-5 shadow-xs">
               <div className="text-xs font-bold text-slate-500 uppercase">
-                TỔNG SỐ BÀI ĐÃ NỘP
+                TỔNG SỐ BÀI ĐÃ NỘP {selectedClass !== 'ALL' ? `(LỚP ${selectedClass})` : ''}
               </div>
               <div className="text-3xl font-extrabold text-slate-900 mt-1">
-                {stats.totalSubmissions} bài
+                {classStats.total} bài
               </div>
               <div className="text-xs text-slate-500 mt-1">
-                Chờ chấm tay:{' '}
-                {
-                  stats.submissions.filter((s) => s.status === 'submitted_pending_grading')
-                    .length
-                }{' '}
-                bài
+                Chờ chấm tay: {classStats.pending} bài
               </div>
             </div>
 
             <div className="bg-white rounded-2xl border border-slate-200 p-5 shadow-xs">
               <div className="text-xs font-bold text-slate-500 uppercase">
-                ĐIỂM TRUNG BÌNH LỚP
+                ĐIỂM TRUNG BÌNH {selectedClass !== 'ALL' ? `LỚP ${selectedClass}` : 'LỚP'}
               </div>
               <div className="text-3xl font-extrabold text-[#0D6E6E] mt-1">
-                {stats.averageScore} / 10
+                {classStats.average} / 10
               </div>
               <div className="text-xs text-slate-500 mt-1">Tính trên các bài đã nộp</div>
             </div>
@@ -251,10 +380,10 @@ export const TeacherGradingAndReports: React.FC<TeacherGradingAndReportsProps> =
                 TỈ LỆ ĐẠT (≥ 5,0 ĐIỂM)
               </div>
               <div className="text-3xl font-extrabold text-emerald-700 mt-1">
-                {stats.passRatePercent}%
+                {classStats.passRatePercent}%
               </div>
               <div className="text-xs text-slate-500 mt-1">
-                Số HS đạt: {stats.passCount} / {stats.totalSubmissions} học sinh
+                Số HS đạt: {classStats.passCount} / {classStats.total} học sinh
               </div>
             </div>
 
@@ -263,7 +392,7 @@ export const TeacherGradingAndReports: React.FC<TeacherGradingAndReportsProps> =
                 CẢNH BÁO KỸ THUẬT CẦN XEM
               </div>
               <div className="text-3xl font-extrabold text-amber-600 mt-1">
-                {stats.submissions.filter((s) => s.flaggedForReview).length} bài
+                {classStats.flaggedCount} bài
               </div>
               <div className="text-[11px] text-slate-500 mt-1">
                 Chỉ để GV xem xét, không tự kết luận gian lận
@@ -273,22 +402,68 @@ export const TeacherGradingAndReports: React.FC<TeacherGradingAndReportsProps> =
 
           {/* Student Submissions Table */}
           <div className="bg-white rounded-2xl border border-slate-200 shadow-xs overflow-hidden">
-            <div className="px-6 py-4 border-b border-slate-200 flex flex-wrap items-center justify-between gap-2">
+            <div className="px-6 py-4 border-b border-slate-200 flex flex-wrap items-center justify-between gap-3">
               <div>
-                <h3 className="text-lg font-bold text-slate-900">
-                  Danh sách bài làm của học sinh ({stats.submissions.length})
-                </h3>
-                <p className="text-xs text-slate-500">
+                <div className="flex items-center gap-2">
+                  <h3 className="text-lg font-bold text-slate-900">
+                    Danh sách bài làm của học sinh ({filteredSubmissions.length})
+                  </h3>
+                  {selectedClass !== 'ALL' && (
+                    <span className="px-2.5 py-0.5 rounded-full bg-teal-100 text-[#0D6E6E] text-xs font-extrabold">
+                      Lớp {selectedClass}
+                    </span>
+                  )}
+                  {selectedExam && (
+                    <span className="px-2.5 py-0.5 rounded-full bg-slate-100 text-slate-700 text-xs font-bold">
+                      Khối {selectedExam.grade || 9}
+                    </span>
+                  )}
+                </div>
+                <p className="text-xs text-slate-500 mt-0.5">
                   Mỗi học sinh có một <strong>Mã đề cá nhân</strong> và{' '}
                   <strong>Chữ ký đề</strong> riêng biệt (chứng minh không có 2 em nào nhận cùng 1 đề
                   nguyên vẹn).
                 </p>
               </div>
+
+              {/* Class Filter Tabs Quick Pills */}
+              {availableClassesForExam.length > 0 && (
+                <div className="flex flex-wrap items-center gap-1.5">
+                  <button
+                    type="button"
+                    onClick={() => setSelectedClass('ALL')}
+                    className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all ${
+                      selectedClass === 'ALL'
+                        ? 'bg-[#0D6E6E] text-white shadow-xs'
+                        : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
+                    }`}
+                  >
+                    Tất cả ({stats.submissions.length})
+                  </button>
+                  {availableClassesForExam.map((cls) => {
+                    const count = stats.submissions.filter((s) => s.className === cls).length;
+                    return (
+                      <button
+                        key={cls}
+                        type="button"
+                        onClick={() => setSelectedClass(cls)}
+                        className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all ${
+                          selectedClass === cls
+                            ? 'bg-[#0D6E6E] text-white shadow-xs'
+                            : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
+                        }`}
+                      >
+                        Lớp {cls} ({count})
+                      </button>
+                    );
+                  })}
+                </div>
+              )}
             </div>
 
-            {stats.submissions.length === 0 ? (
+            {filteredSubmissions.length === 0 ? (
               <div className="p-8 text-center text-sm text-slate-500">
-                Chưa có học sinh nào nộp bài trong đợt kiểm tra này.
+                Chưa có học sinh nào {selectedClass !== 'ALL' ? `lớp ${selectedClass}` : ''} nộp bài trong đợt kiểm tra này.
               </div>
             ) : (
               <div className="overflow-x-auto">
@@ -308,7 +483,7 @@ export const TeacherGradingAndReports: React.FC<TeacherGradingAndReportsProps> =
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-slate-100">
-                    {stats.submissions.map((sub, idx) => (
+                    {filteredSubmissions.map((sub, idx) => (
                       <tr key={sub.id} className="hover:bg-slate-50/80">
                         <td className="p-3.5 font-bold">{idx + 1}</td>
                         <td className="p-3.5">

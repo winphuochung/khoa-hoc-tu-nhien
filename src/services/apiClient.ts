@@ -108,12 +108,13 @@ export async function apiRequest<T>(
   }
 }
 
-export function getCsvDownloadUrl(examId: string): string {
+export function getCsvDownloadUrl(examId: string, className?: string): string {
   const isFileProtocol = typeof window !== 'undefined' && window.location.protocol === 'file:';
   if (isFileProtocol || useLocalEngineOnly) {
-    const csvContent = buildLocalCsvForExam(examId);
+    const csvContent = buildLocalCsvForExam(examId, className);
     return `data:text/csv;charset=utf-8,${encodeURIComponent(csvContent)}`;
   }
   const token = getStoredToken();
-  return `/api/exams/${encodeURIComponent(examId)}/export-csv?token=${encodeURIComponent(token)}`;
+  const classParam = className && className !== 'ALL' ? `&className=${encodeURIComponent(className)}` : '';
+  return `/api/exams/${encodeURIComponent(examId)}/export-csv?token=${encodeURIComponent(token)}${classParam}`;
 }

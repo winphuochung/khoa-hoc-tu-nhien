@@ -2049,9 +2049,12 @@ export async function handleLocalApiRequest<T>(
   throw new Error(`Endpoint không tồn tại: ${method} ${pathname}`);
 }
 
-export function buildLocalCsvForExam(examId: string): string {
+export function buildLocalCsvForExam(examId: string, targetClass?: string): string {
   const db = getLocalDb();
-  const subs = db.submissions.filter((s: any) => s.examId === examId);
+  let subs = db.submissions.filter((s: any) => s.examId === examId);
+  if (targetClass && targetClass !== 'ALL') {
+    subs = subs.filter((s: any) => s.className === targetClass);
+  }
   const escapeCsv = (val: any) => {
     const s = String(val ?? '');
     if (s.includes(',') || s.includes('"') || s.includes('\n')) {

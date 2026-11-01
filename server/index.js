@@ -1765,7 +1765,11 @@ app.get('/api/exams/:id/export-csv', requireTeacher, (req, res) => {
   if (!exam) {
     return res.status(404).json({ success: false, error: 'Không tìm thấy đề kiểm tra.' });
   }
-  const subs = db.submissions.filter((s) => s.examId === exam.id);
+  let subs = db.submissions.filter((s) => s.examId === exam.id);
+  const targetClass = req.query.className;
+  if (targetClass && targetClass !== 'ALL') {
+    subs = subs.filter((s) => s.className === targetClass);
+  }
 
   const escapeCsv = (val) => {
     const s = String(val ?? '');
