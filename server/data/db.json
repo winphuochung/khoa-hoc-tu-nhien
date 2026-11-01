@@ -115411,11 +115411,11 @@
           }
         }
       ],
-      "allowReview": false,
+      "allowReview": true,
       "isOpen": true,
       "maxTabViolations": 3,
       "createdAt": "2026-10-28T13:10:09.512Z",
-      "updatedAt": "2026-10-28T13:10:09.512Z"
+      "updatedAt": "2026-11-01T08:30:54.453Z"
     },
     {
       "id": "exam-42a03202",

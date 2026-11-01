@@ -16,6 +16,7 @@ import {
   generatePaperVariants,
   selectQuestionsForLessonScope,
 } from './examGenerator.js';
+import { pullFromSupabase, pushToSupabase } from './supabaseSync.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -420,6 +421,7 @@ export function getDb() {
         }
       }
       if (migrated) saveDb();
+      initSupabaseSync();
       return dbCache;
     } catch (err) {
       console.error('Error reading db.json, re-initializing:', err);
@@ -427,10 +429,55 @@ export function getDb() {
   }
   dbCache = buildInitialDatabase();
   saveDb();
+  initSupabaseSync();
   return dbCache;
 }
 
-export function saveDb() {
+export function mergeSupabaseData(remoteData) {
+  if (!dbCache || !remoteData) return;
+  if (remoteData.schoolConfig) dbCache.schoolConfig = remoteData.schoolConfig;
+  if (Array.isArray(remoteData.users) && remoteData.users.length > 0) {
+    dbCache.users = remoteData.users;
+  }
+  if (remoteData.sessions) {
+    dbCache.sessions = { ...dbCache.sessions, ...remoteData.sessions };
+  }
+  if (Array.isArray(remoteData.exams) && remoteData.exams.length > 0) {
+    dbCache.exams = remoteData.exams;
+  }
+  if (Array.isArray(remoteData.submissions) && remoteData.submissions.length > 0) {
+    dbCache.submissions = remoteData.submissions;
+  }
+  if (remoteData.studentProgress) {
+    dbCache.studentProgress = { ...dbCache.studentProgress, ...remoteData.studentProgress };
+  }
+  if (Array.isArray(remoteData.customQuestions) && remoteData.customQuestions.length > 0) {
+    const customIds = new Set(remoteData.customQuestions.map((q) => q.id));
+    dbCache.questions = [
+      ...remoteData.customQuestions,
+      ...(dbCache.questions || []).filter((q) => !customIds.has(q.id)),
+    ];
+  }
+}
+
+let supabaseSyncInitialized = false;
+export async function initSupabaseSync() {
+  if (supabaseSyncInitialized) return;
+  supabaseSyncInitialized = true;
+  try {
+    const remote = await pullFromSupabase();
+    if (remote) {
+      mergeSupabaseData(remote);
+      saveDb(false);
+    } else if (dbCache) {
+      pushToSupabase(dbCache, true);
+    }
+  } catch (err) {
+    console.warn('[Supabase] Đồng bộ ban đầu bị bỏ qua:', err?.message || err);
+  }
+}
+
+export function saveDb(syncToSupabase = true) {
   if (!dbCache) return;
   const isVercel = Boolean(process.env.VERCEL);
   const targetFile = isVercel ? VERCEL_TMP_FILE : DB_FILE;
@@ -442,6 +489,10 @@ export function saveDb() {
     fs.writeFileSync(targetFile, JSON.stringify(dbCache, null, 2), 'utf-8');
   } catch (err) {
     console.warn('[DB] Cannot write to filesystem:', err?.message || err);
+  }
+
+  if (syncToSupabase) {
+    pushToSupabase(dbCache);
   }
 }
 
