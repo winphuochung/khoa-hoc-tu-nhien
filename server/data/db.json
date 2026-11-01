@@ -2184,7 +2184,7 @@
     "tk-student__usr-hs-9a1-40__8c2690376a41f1990b1eb092": {
       "userId": "usr-hs-9a1-40",
       "role": "student",
-      "createdAt": "2026-11-01T14:04:54.480Z"
+      "createdAt": "2026-11-01T14:03:52.426Z"
     },
     "tk-student__usr-hs-9a1-14__bb536e7f1757b769344b4a48": {
       "userId": "usr-hs-9a1-14",
@@ -2209,7 +2209,22 @@
     "tk-student__usr-hs-9a1-14__e4ca067f4c15188ccf79b89f": {
       "userId": "usr-hs-9a1-14",
       "role": "student",
-      "createdAt": "2026-11-01T14:18:57.687Z"
+      "createdAt": "2026-11-01T14:16:07.632Z"
+    },
+    "tk-student__usr-hs-9a1-14__4fef21796c61c4ef24ff0060": {
+      "userId": "usr-hs-9a1-14",
+      "role": "student",
+      "createdAt": "2026-11-01T14:39:35.766Z"
+    },
+    "tk-student__usr-hs-9a1-30__e2ee4c81724aedefa84cf1fb": {
+      "userId": "usr-hs-9a1-30",
+      "role": "student",
+      "createdAt": "2026-11-01T14:27:06.760Z"
+    },
+    "tk-student__usr-hs-78b32047__dc8a6b4844595011f056cb11": {
+      "userId": "usr-hs-78b32047",
+      "role": "student",
+      "createdAt": "2026-11-01T14:39:34.986Z"
     }
   },
   "chapters": [
@@ -114577,10 +114592,20 @@
       "1": {
         "lessonId": 1,
         "studied": true,
-        "totalAttempted": 18,
-        "correctCount": 17,
-        "studiedAt": "2026-11-01T14:21:31.879Z",
-        "lastPracticedAt": "2026-11-01T14:21:31.879Z"
+        "totalAttempted": 26,
+        "correctCount": 23,
+        "studiedAt": "2026-11-01T14:39:35.882Z",
+        "lastPracticedAt": "2026-11-01T14:39:35.882Z"
+      }
+    },
+    "usr-hs-9a1-30": {
+      "1": {
+        "lessonId": 1,
+        "studied": true,
+        "totalAttempted": 22,
+        "correctCount": 21,
+        "studiedAt": "2026-11-01T14:39:22.824Z",
+        "lastPracticedAt": "2026-11-01T14:39:22.824Z"
       }
     }
   },
@@ -144709,8 +144734,20 @@
           "timeSpentSeconds": 110
         },
         "q-les-3-essay-1-v2": {
-          "textAnswer": "Wc = Wđ + Wt = hằng số ( cơ năng",
-          "timeSpentSeconds": 79
+          "textAnswer": "Wc = Wđ + Wt = hằng số ( cơ năng đc bảo toàn bỏ qua lực ma sát ",
+          "timeSpentSeconds": 143
+        },
+        "q-les-37-essay-1-v2": {
+          "textAnswer": "3/4 vàng × 1/4 nhăn =3/16\n3/16×640=120 hạt\nHạt vàng, nhăn dự kiến ở F2 là 120 hạt",
+          "timeSpentSeconds": 139
+        },
+        "q-les-1-essay-1-v2": {
+          "textAnswer": "Để lấy chính xác thể tích lớn hơn 50ml đ HCl nên sd cốc có mỏ kết hợp với ống đong dung tích 50ml để đong tương đối",
+          "timeSpentSeconds": 192
+        },
+        "q-les-19-sa-biet-1-v2": {
+          "textAnswer": "Đại lượng cơ bản thường dùng lquan đến thí nghiệm bao gổm: khối lượng (kg) , chiều dài (m) thời gian(s) nhiệt độ(k) l",
+          "timeSpentSeconds": 219
         }
       },
       "status": "in_progress",
@@ -144720,557 +144757,1331 @@
       "totalScore": 0,
       "violationCount": 1,
       "flaggedForReview": false,
-      "deviceInfo": {},
+      "deviceInfo": {
+        "userAgent": "Mozilla/5.0 (Linux; Android 16; SM-S711B Build/BP4A.251205.006;) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/156.0.8078.47 Mobile Safari/537.36 Zalo android/261002903 ZaloTheme/light ZaloLanguage/vi",
+        "platform": "Linux aarch64",
+        "screenResolution": "384x832"
+      },
       "activityLogs": [
         {
-          "timestamp": "2026-11-01T14:07:25.715Z",
-          "eventType": "answer_change",
-          "detail": "Cập nhật câu trả lời (q-docx-111)"
+          "timestamp": "2026-11-01T14:04:53.388Z",
+          "eventType": "exam_start",
+          "detail": "Bắt đầu làm bài. Mã đề cá nhân: MĐ-9A1-673E (Chữ ký đề: 673EF31B5C4E)"
         },
         {
-          "timestamp": "2026-11-01T14:07:45.999Z",
+          "timestamp": "2026-11-01T14:11:39.774Z",
           "eventType": "answer_change",
-          "detail": "Cập nhật câu trả lời (q-docx-210)"
+          "detail": "Cập nhật câu trả lời (q-docx-115)"
         },
         {
-          "timestamp": "2026-11-01T14:07:47.227Z",
+          "timestamp": "2026-11-01T14:11:39.961Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-docx-115)"
+        },
+        {
+          "timestamp": "2026-11-01T14:11:40.435Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-docx-115)"
+        },
+        {
+          "timestamp": "2026-11-01T14:11:40.774Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-docx-115)"
+        },
+        {
+          "timestamp": "2026-11-01T14:11:41.430Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-docx-115)"
+        },
+        {
+          "timestamp": "2026-11-01T14:11:41.706Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-docx-115)"
+        },
+        {
+          "timestamp": "2026-11-01T14:11:42.213Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-docx-115)"
+        },
+        {
+          "timestamp": "2026-11-01T14:11:43.596Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-docx-115)"
+        },
+        {
+          "timestamp": "2026-11-01T14:14:18.362Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-docx-117)"
+        },
+        {
+          "timestamp": "2026-11-01T14:14:19.190Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-docx-117)"
+        },
+        {
+          "timestamp": "2026-11-01T14:14:20.203Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-docx-117)"
+        },
+        {
+          "timestamp": "2026-11-01T14:14:23.027Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-docx-117)"
+        },
+        {
+          "timestamp": "2026-11-01T14:14:24.587Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-docx-117)"
+        },
+        {
+          "timestamp": "2026-11-01T14:14:26.044Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-docx-117)"
+        },
+        {
+          "timestamp": "2026-11-01T14:14:26.372Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-docx-117)"
+        },
+        {
+          "timestamp": "2026-11-01T14:14:27.247Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-docx-117)"
+        },
+        {
+          "timestamp": "2026-11-01T14:14:27.564Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-docx-117)"
+        },
+        {
+          "timestamp": "2026-11-01T14:14:27.889Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-docx-117)"
+        },
+        {
+          "timestamp": "2026-11-01T14:14:28.430Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-docx-117)"
+        },
+        {
+          "timestamp": "2026-11-01T14:14:29.423Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-docx-117)"
+        },
+        {
+          "timestamp": "2026-11-01T14:14:29.816Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-docx-117)"
+        },
+        {
+          "timestamp": "2026-11-01T14:14:30.642Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-docx-117)"
+        },
+        {
+          "timestamp": "2026-11-01T14:14:31.802Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-docx-117)"
+        },
+        {
+          "timestamp": "2026-11-01T14:14:32.343Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-docx-117)"
+        },
+        {
+          "timestamp": "2026-11-01T14:14:32.676Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-docx-117)"
+        },
+        {
+          "timestamp": "2026-11-01T14:14:33.305Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-docx-117)"
+        },
+        {
+          "timestamp": "2026-11-01T14:14:34.602Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-docx-117)"
+        },
+        {
+          "timestamp": "2026-11-01T14:14:35.729Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-docx-117)"
+        },
+        {
+          "timestamp": "2026-11-01T14:14:36.353Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-docx-117)"
+        },
+        {
+          "timestamp": "2026-11-01T14:14:37.410Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-docx-117)"
+        },
+        {
+          "timestamp": "2026-11-01T14:14:39.872Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-docx-117)"
+        },
+        {
+          "timestamp": "2026-11-01T14:14:40.436Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-docx-117)"
+        },
+        {
+          "timestamp": "2026-11-01T14:14:41.506Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-docx-117)"
+        },
+        {
+          "timestamp": "2026-11-01T14:14:42.836Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-docx-117)"
+        },
+        {
+          "timestamp": "2026-11-01T14:14:43.843Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-docx-117)"
+        },
+        {
+          "timestamp": "2026-11-01T14:14:45.451Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-docx-117)"
+        },
+        {
+          "timestamp": "2026-11-01T14:14:46.080Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-docx-117)"
+        },
+        {
+          "timestamp": "2026-11-01T14:14:46.317Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-docx-117)"
+        },
+        {
+          "timestamp": "2026-11-01T14:14:50.350Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-docx-117)"
+        },
+        {
+          "timestamp": "2026-11-01T14:14:51.486Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-docx-117)"
+        },
+        {
+          "timestamp": "2026-11-01T14:14:51.903Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-docx-117)"
+        },
+        {
+          "timestamp": "2026-11-01T14:16:03.500Z",
           "eventType": "tab_blur",
           "detail": "Học sinh chuyển sang tab khác hoặc ẩn trình duyệt"
         },
         {
-          "timestamp": "2026-11-01T14:08:33.250Z",
-          "eventType": "answer_change",
-          "detail": "Cập nhật câu trả lời (q-les-3-mcq-biet-3)"
-        },
-        {
-          "timestamp": "2026-11-01T14:09:10.391Z",
-          "eventType": "answer_change",
-          "detail": "Cập nhật câu trả lời (q-les-19-mcq-biet-3)"
-        },
-        {
-          "timestamp": "2026-11-01T14:09:15.139Z",
-          "eventType": "answer_change",
-          "detail": "Cập nhật câu trả lời (q-les-18-mcq-biet-1-v2)"
-        },
-        {
-          "timestamp": "2026-11-01T14:09:40.751Z",
-          "eventType": "answer_change",
-          "detail": "Cập nhật câu trả lời (q-les-2-mcq-hieu-1)"
-        },
-        {
-          "timestamp": "2026-11-01T14:09:58.667Z",
-          "eventType": "answer_change",
-          "detail": "Cập nhật câu trả lời (q-les-3-mcq-biet-1)"
-        },
-        {
-          "timestamp": "2026-11-01T14:10:28.104Z",
-          "eventType": "answer_change",
-          "detail": "Cập nhật câu trả lời (q-les-21-tf-extra)"
-        },
-        {
-          "timestamp": "2026-11-01T14:10:29.537Z",
-          "eventType": "answer_change",
-          "detail": "Cập nhật câu trả lời (q-les-21-tf-extra)"
-        },
-        {
-          "timestamp": "2026-11-01T14:10:30.156Z",
-          "eventType": "answer_change",
-          "detail": "Cập nhật câu trả lời (q-les-21-tf-extra)"
-        },
-        {
-          "timestamp": "2026-11-01T14:10:30.688Z",
-          "eventType": "answer_change",
-          "detail": "Cập nhật câu trả lời (q-les-21-tf-extra)"
-        },
-        {
-          "timestamp": "2026-11-01T14:10:49.827Z",
-          "eventType": "answer_change",
-          "detail": "Cập nhật câu trả lời (q-les-2-tf-extra-v2)"
-        },
-        {
-          "timestamp": "2026-11-01T14:10:51.271Z",
-          "eventType": "answer_change",
-          "detail": "Cập nhật câu trả lời (q-les-2-tf-extra-v2)"
-        },
-        {
-          "timestamp": "2026-11-01T14:10:57.492Z",
-          "eventType": "answer_change",
-          "detail": "Cập nhật câu trả lời (q-les-2-tf-extra-v2)"
-        },
-        {
-          "timestamp": "2026-11-01T14:11:07.928Z",
-          "eventType": "answer_change",
-          "detail": "Cập nhật câu trả lời (q-les-2-tf-extra-v2)"
-        },
-        {
-          "timestamp": "2026-11-01T14:11:34.792Z",
-          "eventType": "answer_change",
-          "detail": "Cập nhật câu trả lời (q-docx-115)"
-        },
-        {
-          "timestamp": "2026-11-01T14:11:35.474Z",
-          "eventType": "answer_change",
-          "detail": "Cập nhật câu trả lời (q-docx-115)"
-        },
-        {
-          "timestamp": "2026-11-01T14:11:37.323Z",
-          "eventType": "answer_change",
-          "detail": "Cập nhật câu trả lời (q-docx-115)"
-        },
-        {
-          "timestamp": "2026-11-01T14:11:37.782Z",
-          "eventType": "answer_change",
-          "detail": "Cập nhật câu trả lời (q-docx-115)"
-        },
-        {
-          "timestamp": "2026-11-01T14:11:38.104Z",
-          "eventType": "answer_change",
-          "detail": "Cập nhật câu trả lời (q-docx-115)"
-        },
-        {
-          "timestamp": "2026-11-01T14:11:38.727Z",
-          "eventType": "answer_change",
-          "detail": "Cập nhật câu trả lời (q-docx-115)"
-        },
-        {
-          "timestamp": "2026-11-01T14:11:39.065Z",
-          "eventType": "answer_change",
-          "detail": "Cập nhật câu trả lời (q-docx-115)"
-        },
-        {
-          "timestamp": "2026-11-01T14:11:39.913Z",
-          "eventType": "answer_change",
-          "detail": "Cập nhật câu trả lời (q-docx-115)"
-        },
-        {
-          "timestamp": "2026-11-01T14:18:54.032Z",
+          "timestamp": "2026-11-01T14:18:40.303Z",
           "eventType": "answer_change",
           "detail": "Cập nhật câu trả lời (q-les-36-sa-hieu-1-v2)"
         },
         {
-          "timestamp": "2026-11-01T14:18:57.495Z",
+          "timestamp": "2026-11-01T14:18:41.382Z",
           "eventType": "answer_change",
           "detail": "Cập nhật câu trả lời (q-les-36-sa-hieu-1-v2)"
         },
         {
-          "timestamp": "2026-11-01T14:19:06.197Z",
+          "timestamp": "2026-11-01T14:18:42.404Z",
           "eventType": "answer_change",
           "detail": "Cập nhật câu trả lời (q-les-36-sa-hieu-1-v2)"
         },
         {
-          "timestamp": "2026-11-01T14:19:06.672Z",
+          "timestamp": "2026-11-01T14:18:44.898Z",
           "eventType": "answer_change",
           "detail": "Cập nhật câu trả lời (q-les-36-sa-hieu-1-v2)"
         },
         {
-          "timestamp": "2026-11-01T14:19:07.136Z",
+          "timestamp": "2026-11-01T14:18:45.699Z",
           "eventType": "answer_change",
           "detail": "Cập nhật câu trả lời (q-les-36-sa-hieu-1-v2)"
         },
         {
-          "timestamp": "2026-11-01T14:19:09.336Z",
+          "timestamp": "2026-11-01T14:18:45.926Z",
           "eventType": "answer_change",
           "detail": "Cập nhật câu trả lời (q-les-36-sa-hieu-1-v2)"
         },
         {
-          "timestamp": "2026-11-01T14:19:10.460Z",
+          "timestamp": "2026-11-01T14:18:47.293Z",
           "eventType": "answer_change",
           "detail": "Cập nhật câu trả lời (q-les-36-sa-hieu-1-v2)"
         },
         {
-          "timestamp": "2026-11-01T14:19:11.257Z",
+          "timestamp": "2026-11-01T14:18:48.078Z",
           "eventType": "answer_change",
           "detail": "Cập nhật câu trả lời (q-les-36-sa-hieu-1-v2)"
         },
         {
-          "timestamp": "2026-11-01T14:19:11.685Z",
+          "timestamp": "2026-11-01T14:18:48.910Z",
           "eventType": "answer_change",
           "detail": "Cập nhật câu trả lời (q-les-36-sa-hieu-1-v2)"
         },
         {
-          "timestamp": "2026-11-01T14:19:12.165Z",
+          "timestamp": "2026-11-01T14:18:49.389Z",
           "eventType": "answer_change",
           "detail": "Cập nhật câu trả lời (q-les-36-sa-hieu-1-v2)"
         },
         {
-          "timestamp": "2026-11-01T14:19:12.912Z",
+          "timestamp": "2026-11-01T14:18:51.844Z",
           "eventType": "answer_change",
           "detail": "Cập nhật câu trả lời (q-les-36-sa-hieu-1-v2)"
         },
         {
-          "timestamp": "2026-11-01T14:19:13.298Z",
+          "timestamp": "2026-11-01T14:18:52.243Z",
           "eventType": "answer_change",
           "detail": "Cập nhật câu trả lời (q-les-36-sa-hieu-1-v2)"
         },
         {
-          "timestamp": "2026-11-01T14:19:14.326Z",
+          "timestamp": "2026-11-01T14:18:52.876Z",
           "eventType": "answer_change",
           "detail": "Cập nhật câu trả lời (q-les-36-sa-hieu-1-v2)"
         },
         {
-          "timestamp": "2026-11-01T14:19:15.071Z",
+          "timestamp": "2026-11-01T14:18:56.139Z",
           "eventType": "answer_change",
           "detail": "Cập nhật câu trả lời (q-les-36-sa-hieu-1-v2)"
         },
         {
-          "timestamp": "2026-11-01T14:19:15.594Z",
+          "timestamp": "2026-11-01T14:18:56.871Z",
           "eventType": "answer_change",
           "detail": "Cập nhật câu trả lời (q-les-36-sa-hieu-1-v2)"
         },
         {
-          "timestamp": "2026-11-01T14:19:16.131Z",
+          "timestamp": "2026-11-01T14:18:57.797Z",
           "eventType": "answer_change",
           "detail": "Cập nhật câu trả lời (q-les-36-sa-hieu-1-v2)"
         },
         {
-          "timestamp": "2026-11-01T14:19:17.609Z",
+          "timestamp": "2026-11-01T14:18:58.352Z",
           "eventType": "answer_change",
           "detail": "Cập nhật câu trả lời (q-les-36-sa-hieu-1-v2)"
         },
         {
-          "timestamp": "2026-11-01T14:19:18.744Z",
+          "timestamp": "2026-11-01T14:18:58.783Z",
           "eventType": "answer_change",
           "detail": "Cập nhật câu trả lời (q-les-36-sa-hieu-1-v2)"
         },
         {
-          "timestamp": "2026-11-01T14:19:19.205Z",
+          "timestamp": "2026-11-01T14:19:02.337Z",
           "eventType": "answer_change",
           "detail": "Cập nhật câu trả lời (q-les-36-sa-hieu-1-v2)"
         },
         {
-          "timestamp": "2026-11-01T14:19:19.773Z",
+          "timestamp": "2026-11-01T14:19:02.484Z",
           "eventType": "answer_change",
           "detail": "Cập nhật câu trả lời (q-les-36-sa-hieu-1-v2)"
         },
         {
-          "timestamp": "2026-11-01T14:19:23.201Z",
+          "timestamp": "2026-11-01T14:19:03.525Z",
           "eventType": "answer_change",
           "detail": "Cập nhật câu trả lời (q-les-36-sa-hieu-1-v2)"
         },
         {
-          "timestamp": "2026-11-01T14:19:23.945Z",
+          "timestamp": "2026-11-01T14:19:37.683Z",
           "eventType": "answer_change",
           "detail": "Cập nhật câu trả lời (q-les-36-sa-hieu-1-v2)"
         },
         {
-          "timestamp": "2026-11-01T14:19:24.847Z",
+          "timestamp": "2026-11-01T14:19:38.245Z",
           "eventType": "answer_change",
           "detail": "Cập nhật câu trả lời (q-les-36-sa-hieu-1-v2)"
         },
         {
-          "timestamp": "2026-11-01T14:19:25.526Z",
+          "timestamp": "2026-11-01T14:19:41.304Z",
           "eventType": "answer_change",
           "detail": "Cập nhật câu trả lời (q-les-36-sa-hieu-1-v2)"
         },
         {
-          "timestamp": "2026-11-01T14:19:26.106Z",
+          "timestamp": "2026-11-01T14:19:49.493Z",
           "eventType": "answer_change",
           "detail": "Cập nhật câu trả lời (q-les-36-sa-hieu-1-v2)"
         },
         {
-          "timestamp": "2026-11-01T14:19:27.357Z",
+          "timestamp": "2026-11-01T14:19:58.399Z",
           "eventType": "answer_change",
           "detail": "Cập nhật câu trả lời (q-les-36-sa-hieu-1-v2)"
         },
         {
-          "timestamp": "2026-11-01T14:19:28.917Z",
+          "timestamp": "2026-11-01T14:20:01.275Z",
           "eventType": "answer_change",
           "detail": "Cập nhật câu trả lời (q-les-36-sa-hieu-1-v2)"
         },
         {
-          "timestamp": "2026-11-01T14:19:30.011Z",
+          "timestamp": "2026-11-01T14:20:01.413Z",
           "eventType": "answer_change",
           "detail": "Cập nhật câu trả lời (q-les-36-sa-hieu-1-v2)"
         },
         {
-          "timestamp": "2026-11-01T14:19:31.031Z",
+          "timestamp": "2026-11-01T14:20:02.653Z",
           "eventType": "answer_change",
           "detail": "Cập nhật câu trả lời (q-les-36-sa-hieu-1-v2)"
         },
         {
-          "timestamp": "2026-11-01T14:19:36.213Z",
+          "timestamp": "2026-11-01T14:20:02.866Z",
           "eventType": "answer_change",
           "detail": "Cập nhật câu trả lời (q-les-36-sa-hieu-1-v2)"
         },
         {
-          "timestamp": "2026-11-01T14:19:37.066Z",
+          "timestamp": "2026-11-01T14:20:09.369Z",
           "eventType": "answer_change",
           "detail": "Cập nhật câu trả lời (q-les-36-sa-hieu-1-v2)"
         },
         {
-          "timestamp": "2026-11-01T14:19:37.433Z",
+          "timestamp": "2026-11-01T14:20:10.515Z",
           "eventType": "answer_change",
           "detail": "Cập nhật câu trả lời (q-les-36-sa-hieu-1-v2)"
         },
         {
-          "timestamp": "2026-11-01T14:19:37.652Z",
+          "timestamp": "2026-11-01T14:20:11.610Z",
           "eventType": "answer_change",
           "detail": "Cập nhật câu trả lời (q-les-36-sa-hieu-1-v2)"
         },
         {
-          "timestamp": "2026-11-01T14:20:12.248Z",
+          "timestamp": "2026-11-01T14:20:12.182Z",
           "eventType": "answer_change",
           "detail": "Cập nhật câu trả lời (q-les-36-sa-hieu-1-v2)"
         },
         {
-          "timestamp": "2026-11-01T14:20:12.968Z",
+          "timestamp": "2026-11-01T14:20:21.708Z",
           "eventType": "answer_change",
           "detail": "Cập nhật câu trả lời (q-les-36-sa-hieu-1-v2)"
         },
         {
-          "timestamp": "2026-11-01T14:20:15.337Z",
+          "timestamp": "2026-11-01T14:20:23.534Z",
           "eventType": "answer_change",
           "detail": "Cập nhật câu trả lời (q-les-36-sa-hieu-1-v2)"
         },
         {
-          "timestamp": "2026-11-01T14:20:18.012Z",
+          "timestamp": "2026-11-01T14:20:24.167Z",
           "eventType": "answer_change",
           "detail": "Cập nhật câu trả lời (q-les-36-sa-hieu-1-v2)"
         },
         {
-          "timestamp": "2026-11-01T14:20:19.625Z",
+          "timestamp": "2026-11-01T14:20:25.383Z",
           "eventType": "answer_change",
           "detail": "Cập nhật câu trả lời (q-les-36-sa-hieu-1-v2)"
         },
         {
-          "timestamp": "2026-11-01T14:20:20.197Z",
+          "timestamp": "2026-11-01T14:20:25.519Z",
           "eventType": "answer_change",
           "detail": "Cập nhật câu trả lời (q-les-36-sa-hieu-1-v2)"
         },
         {
-          "timestamp": "2026-11-01T14:20:21.412Z",
+          "timestamp": "2026-11-01T14:20:25.960Z",
           "eventType": "answer_change",
           "detail": "Cập nhật câu trả lời (q-les-36-sa-hieu-1-v2)"
         },
         {
-          "timestamp": "2026-11-01T14:20:21.703Z",
-          "eventType": "answer_change",
-          "detail": "Cập nhật câu trả lời (q-les-36-sa-hieu-1-v2)"
-        },
-        {
-          "timestamp": "2026-11-01T14:20:23.545Z",
-          "eventType": "answer_change",
-          "detail": "Cập nhật câu trả lời (q-les-36-sa-hieu-1-v2)"
-        },
-        {
-          "timestamp": "2026-11-01T14:20:24.073Z",
-          "eventType": "answer_change",
-          "detail": "Cập nhật câu trả lời (q-les-36-sa-hieu-1-v2)"
-        },
-        {
-          "timestamp": "2026-11-01T14:20:25.433Z",
-          "eventType": "answer_change",
-          "detail": "Cập nhật câu trả lời (q-les-36-sa-hieu-1-v2)"
-        },
-        {
-          "timestamp": "2026-11-01T14:20:34.927Z",
-          "eventType": "answer_change",
-          "detail": "Cập nhật câu trả lời (q-les-36-sa-hieu-1-v2)"
-        },
-        {
-          "timestamp": "2026-11-01T14:20:35.840Z",
-          "eventType": "answer_change",
-          "detail": "Cập nhật câu trả lời (q-les-36-sa-hieu-1-v2)"
-        },
-        {
-          "timestamp": "2026-11-01T14:20:45.705Z",
+          "timestamp": "2026-11-01T14:20:31.525Z",
           "eventType": "answer_change",
           "detail": "Cập nhật câu trả lời (q-les-3-essay-1-v2)"
         },
         {
-          "timestamp": "2026-11-01T14:20:45.814Z",
+          "timestamp": "2026-11-01T14:20:31.725Z",
           "eventType": "answer_change",
           "detail": "Cập nhật câu trả lời (q-les-36-sa-hieu-1-v2)"
         },
         {
-          "timestamp": "2026-11-01T14:20:46.568Z",
+          "timestamp": "2026-11-01T14:20:32.504Z",
           "eventType": "answer_change",
           "detail": "Cập nhật câu trả lời (q-les-36-sa-hieu-1-v2)"
         },
         {
-          "timestamp": "2026-11-01T14:20:46.673Z",
+          "timestamp": "2026-11-01T14:20:34.836Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-3-essay-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:20:35.902Z",
           "eventType": "answer_change",
           "detail": "Cập nhật câu trả lời (q-les-36-sa-hieu-1-v2)"
         },
         {
-          "timestamp": "2026-11-01T14:20:50.346Z",
+          "timestamp": "2026-11-01T14:20:36.845Z",
           "eventType": "answer_change",
           "detail": "Cập nhật câu trả lời (q-les-36-sa-hieu-1-v2)"
         },
         {
-          "timestamp": "2026-11-01T14:20:56.326Z",
+          "timestamp": "2026-11-01T14:20:40.139Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-36-sa-hieu-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:20:40.254Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-36-sa-hieu-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:20:44.602Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-36-sa-hieu-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:20:45.063Z",
           "eventType": "answer_change",
           "detail": "Cập nhật câu trả lời (q-les-3-essay-1-v2)"
         },
         {
-          "timestamp": "2026-11-01T14:20:56.908Z",
+          "timestamp": "2026-11-01T14:20:45.684Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-36-sa-hieu-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:20:45.863Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-36-sa-hieu-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:20:46.559Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-36-sa-hieu-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:20:46.663Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-36-sa-hieu-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:20:50.379Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-36-sa-hieu-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:20:51.040Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-36-sa-hieu-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:20:51.988Z",
           "eventType": "answer_change",
           "detail": "Cập nhật câu trả lời (q-les-3-essay-1-v2)"
         },
         {
-          "timestamp": "2026-11-01T14:20:59.758Z",
+          "timestamp": "2026-11-01T14:20:52.257Z",
           "eventType": "answer_change",
           "detail": "Cập nhật câu trả lời (q-les-3-essay-1-v2)"
         },
         {
-          "timestamp": "2026-11-01T14:21:00.138Z",
+          "timestamp": "2026-11-01T14:20:52.812Z",
           "eventType": "answer_change",
           "detail": "Cập nhật câu trả lời (q-les-3-essay-1-v2)"
         },
         {
-          "timestamp": "2026-11-01T14:21:01.180Z",
+          "timestamp": "2026-11-01T14:20:54.482Z",
           "eventType": "answer_change",
           "detail": "Cập nhật câu trả lời (q-les-3-essay-1-v2)"
         },
         {
-          "timestamp": "2026-11-01T14:21:03.946Z",
+          "timestamp": "2026-11-01T14:20:56.184Z",
           "eventType": "answer_change",
           "detail": "Cập nhật câu trả lời (q-les-3-essay-1-v2)"
         },
         {
-          "timestamp": "2026-11-01T14:21:04.103Z",
+          "timestamp": "2026-11-01T14:20:56.404Z",
           "eventType": "answer_change",
           "detail": "Cập nhật câu trả lời (q-les-3-essay-1-v2)"
         },
         {
-          "timestamp": "2026-11-01T14:21:11.989Z",
+          "timestamp": "2026-11-01T14:20:56.907Z",
           "eventType": "answer_change",
           "detail": "Cập nhật câu trả lời (q-les-3-essay-1-v2)"
         },
         {
-          "timestamp": "2026-11-01T14:21:12.871Z",
+          "timestamp": "2026-11-01T14:21:03.918Z",
           "eventType": "answer_change",
           "detail": "Cập nhật câu trả lời (q-les-3-essay-1-v2)"
         },
         {
-          "timestamp": "2026-11-01T14:21:14.969Z",
+          "timestamp": "2026-11-01T14:22:23.136Z",
           "eventType": "answer_change",
           "detail": "Cập nhật câu trả lời (q-les-3-essay-1-v2)"
         },
         {
-          "timestamp": "2026-11-01T14:21:31.337Z",
+          "timestamp": "2026-11-01T14:22:23.575Z",
           "eventType": "answer_change",
           "detail": "Cập nhật câu trả lời (q-les-3-essay-1-v2)"
         },
         {
-          "timestamp": "2026-11-01T14:21:31.619Z",
+          "timestamp": "2026-11-01T14:22:23.919Z",
           "eventType": "answer_change",
           "detail": "Cập nhật câu trả lời (q-les-3-essay-1-v2)"
         },
         {
-          "timestamp": "2026-11-01T14:21:33.835Z",
+          "timestamp": "2026-11-01T14:22:24.499Z",
           "eventType": "answer_change",
           "detail": "Cập nhật câu trả lời (q-les-3-essay-1-v2)"
         },
         {
-          "timestamp": "2026-11-01T14:21:36.772Z",
+          "timestamp": "2026-11-01T14:22:24.632Z",
           "eventType": "answer_change",
           "detail": "Cập nhật câu trả lời (q-les-3-essay-1-v2)"
         },
         {
-          "timestamp": "2026-11-01T14:21:37.953Z",
+          "timestamp": "2026-11-01T14:22:26.904Z",
           "eventType": "answer_change",
           "detail": "Cập nhật câu trả lời (q-les-3-essay-1-v2)"
         },
         {
-          "timestamp": "2026-11-01T14:21:43.577Z",
+          "timestamp": "2026-11-01T14:22:27.070Z",
           "eventType": "answer_change",
           "detail": "Cập nhật câu trả lời (q-les-3-essay-1-v2)"
         },
         {
-          "timestamp": "2026-11-01T14:21:49.386Z",
+          "timestamp": "2026-11-01T14:22:27.311Z",
           "eventType": "answer_change",
           "detail": "Cập nhật câu trả lời (q-les-3-essay-1-v2)"
         },
         {
-          "timestamp": "2026-11-01T14:21:53.781Z",
+          "timestamp": "2026-11-01T14:22:27.560Z",
           "eventType": "answer_change",
           "detail": "Cập nhật câu trả lời (q-les-3-essay-1-v2)"
         },
         {
-          "timestamp": "2026-11-01T14:21:55.174Z",
+          "timestamp": "2026-11-01T14:22:27.667Z",
           "eventType": "answer_change",
           "detail": "Cập nhật câu trả lời (q-les-3-essay-1-v2)"
         },
         {
-          "timestamp": "2026-11-01T14:21:55.453Z",
+          "timestamp": "2026-11-01T14:22:27.859Z",
           "eventType": "answer_change",
           "detail": "Cập nhật câu trả lời (q-les-3-essay-1-v2)"
         },
         {
-          "timestamp": "2026-11-01T14:22:06.127Z",
+          "timestamp": "2026-11-01T14:22:28.057Z",
           "eventType": "answer_change",
           "detail": "Cập nhật câu trả lời (q-les-3-essay-1-v2)"
         },
         {
-          "timestamp": "2026-11-01T14:22:06.889Z",
+          "timestamp": "2026-11-01T14:22:38.135Z",
           "eventType": "answer_change",
           "detail": "Cập nhật câu trả lời (q-les-3-essay-1-v2)"
         },
         {
-          "timestamp": "2026-11-01T14:22:07.124Z",
+          "timestamp": "2026-11-01T14:22:39.238Z",
           "eventType": "answer_change",
           "detail": "Cập nhật câu trả lời (q-les-3-essay-1-v2)"
         },
         {
-          "timestamp": "2026-11-01T14:22:07.523Z",
+          "timestamp": "2026-11-01T14:22:40.562Z",
           "eventType": "answer_change",
           "detail": "Cập nhật câu trả lời (q-les-3-essay-1-v2)"
         },
         {
-          "timestamp": "2026-11-01T14:22:07.719Z",
+          "timestamp": "2026-11-01T14:22:41.988Z",
           "eventType": "answer_change",
           "detail": "Cập nhật câu trả lời (q-les-3-essay-1-v2)"
         },
         {
-          "timestamp": "2026-11-01T14:22:07.952Z",
+          "timestamp": "2026-11-01T14:22:42.293Z",
           "eventType": "answer_change",
           "detail": "Cập nhật câu trả lời (q-les-3-essay-1-v2)"
         },
         {
-          "timestamp": "2026-11-01T14:22:10.303Z",
+          "timestamp": "2026-11-01T14:22:42.448Z",
           "eventType": "answer_change",
           "detail": "Cập nhật câu trả lời (q-les-3-essay-1-v2)"
         },
         {
-          "timestamp": "2026-11-01T14:22:11.492Z",
+          "timestamp": "2026-11-01T14:22:43.402Z",
           "eventType": "answer_change",
           "detail": "Cập nhật câu trả lời (q-les-3-essay-1-v2)"
         },
         {
-          "timestamp": "2026-11-01T14:22:13.117Z",
+          "timestamp": "2026-11-01T14:22:43.556Z",
           "eventType": "answer_change",
           "detail": "Cập nhật câu trả lời (q-les-3-essay-1-v2)"
         },
         {
-          "timestamp": "2026-11-01T14:22:13.280Z",
+          "timestamp": "2026-11-01T14:22:43.769Z",
           "eventType": "answer_change",
           "detail": "Cập nhật câu trả lời (q-les-3-essay-1-v2)"
         },
         {
-          "timestamp": "2026-11-01T14:22:16.754Z",
+          "timestamp": "2026-11-01T14:22:43.971Z",
           "eventType": "answer_change",
           "detail": "Cập nhật câu trả lời (q-les-3-essay-1-v2)"
         },
         {
-          "timestamp": "2026-11-01T14:22:23.032Z",
+          "timestamp": "2026-11-01T14:23:33.737Z",
           "eventType": "answer_change",
           "detail": "Cập nhật câu trả lời (q-les-3-essay-1-v2)"
         },
         {
-          "timestamp": "2026-11-01T14:22:28.153Z",
+          "timestamp": "2026-11-01T14:23:34.293Z",
           "eventType": "answer_change",
-          "detail": "Cập nhật câu trả lời (q-les-3-essay-1-v2)"
+          "detail": "Cập nhật câu trả lời (q-les-37-essay-1-v2)"
         },
         {
-          "timestamp": "2026-11-01T14:22:29.260Z",
+          "timestamp": "2026-11-01T14:23:35.449Z",
           "eventType": "answer_change",
-          "detail": "Cập nhật câu trả lời (q-les-3-essay-1-v2)"
+          "detail": "Cập nhật câu trả lời (q-les-37-essay-1-v2)"
         },
         {
-          "timestamp": "2026-11-01T14:22:29.430Z",
+          "timestamp": "2026-11-01T14:23:35.919Z",
           "eventType": "answer_change",
-          "detail": "Cập nhật câu trả lời (q-les-3-essay-1-v2)"
+          "detail": "Cập nhật câu trả lời (q-les-37-essay-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:23:37.266Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-37-essay-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:23:37.955Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-37-essay-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:23:46.364Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-37-essay-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:23:49.255Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-37-essay-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:23:50.318Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-37-essay-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:23:50.484Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-37-essay-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:23:51.704Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-37-essay-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:23:51.974Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-37-essay-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:23:56.755Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-37-essay-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:23:58.617Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-37-essay-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:24:00.898Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-37-essay-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:24:01.084Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-37-essay-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:24:11.058Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-37-essay-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:24:12.461Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-37-essay-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:24:13.309Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-37-essay-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:24:15.616Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-37-essay-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:24:17.683Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-37-essay-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:24:24.256Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-37-essay-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:24:24.376Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-37-essay-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:24:24.765Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-37-essay-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:24:27.628Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-37-essay-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:24:27.855Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-37-essay-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:24:28.018Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-37-essay-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:24:34.507Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-37-essay-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:24:34.652Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-37-essay-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:24:36.179Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-37-essay-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:24:37.533Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-37-essay-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:24:38.957Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-37-essay-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:24:40.027Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-37-essay-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:24:41.077Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-37-essay-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:24:42.828Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-37-essay-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:24:54.943Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-37-essay-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:24:55.319Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-1-essay-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:25:07.212Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-1-essay-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:25:07.629Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-1-essay-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:25:07.869Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-1-essay-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:25:15.953Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-1-essay-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:25:16.239Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-1-essay-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:25:18.616Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-1-essay-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:25:20.617Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-1-essay-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:25:21.207Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-1-essay-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:25:25.342Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-1-essay-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:25:37.341Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-1-essay-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:25:40.445Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-1-essay-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:25:40.994Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-1-essay-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:25:41.200Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-1-essay-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:25:42.877Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-1-essay-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:25:58.065Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-1-essay-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:25:58.506Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-1-essay-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:26:05.607Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-1-essay-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:26:27.392Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-1-essay-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:26:28.724Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-1-essay-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:26:30.141Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-1-essay-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:26:46.159Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-1-essay-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:26:46.279Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-1-essay-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:26:47.217Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-1-essay-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:26:47.908Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-1-essay-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:26:48.906Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-1-essay-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:26:50.158Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-1-essay-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:26:51.736Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-1-essay-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:26:54.534Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-1-essay-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:26:54.686Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-1-essay-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:26:54.815Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-1-essay-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:26:59.311Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-1-essay-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:27:00.541Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-1-essay-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:27:08.096Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-1-essay-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:27:08.728Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-1-essay-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:27:08.981Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-1-essay-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:27:09.913Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-1-essay-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:27:10.150Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-1-essay-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:27:10.619Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-1-essay-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:27:42.863Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-1-essay-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:27:43.396Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-1-essay-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:27:43.614Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-1-essay-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:27:43.769Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-1-essay-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:27:44.873Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-1-essay-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:27:47.115Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-1-essay-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:27:48.501Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-1-essay-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:27:56.984Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-1-essay-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:27:57.313Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-1-essay-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:28:02.020Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-1-essay-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:28:02.299Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-1-essay-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:28:04.025Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-1-essay-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:28:06.624Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-1-essay-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:29:00.385Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-19-sa-biet-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:29:05.292Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-19-sa-biet-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:29:05.723Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-19-sa-biet-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:29:07.695Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-19-sa-biet-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:29:18.444Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-19-sa-biet-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:29:28.419Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-1-essay-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:29:30.530Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-19-sa-biet-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:29:30.768Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-19-sa-biet-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:29:31.974Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-19-sa-biet-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:29:32.372Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-19-sa-biet-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:29:38.357Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-1-essay-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:29:40.965Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-19-sa-biet-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:29:41.501Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-19-sa-biet-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:29:42.561Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-1-essay-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:29:45.826Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-19-sa-biet-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:29:46.895Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-19-sa-biet-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:29:47.375Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-19-sa-biet-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:30:11.478Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-19-sa-biet-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:30:11.780Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-19-sa-biet-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:30:14.159Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-19-sa-biet-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:30:14.387Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-19-sa-biet-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:30:16.221Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-19-sa-biet-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:30:17.124Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-19-sa-biet-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:30:17.368Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-19-sa-biet-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:30:21.902Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-19-sa-biet-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:30:23.599Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-19-sa-biet-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:30:27.768Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-19-sa-biet-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:30:29.349Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-19-sa-biet-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:30:32.783Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-19-sa-biet-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:30:33.828Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-19-sa-biet-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:30:36.434Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-19-sa-biet-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:30:43.382Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-19-sa-biet-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:30:44.986Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-19-sa-biet-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:30:45.463Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-19-sa-biet-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:31:46.936Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-19-sa-biet-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:31:47.641Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-19-sa-biet-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:31:48.452Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-19-sa-biet-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:31:48.854Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-19-sa-biet-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:31:48.984Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-19-sa-biet-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:31:49.133Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-19-sa-biet-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:31:51.387Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-19-sa-biet-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:31:51.786Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-19-sa-biet-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:31:52.478Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-19-sa-biet-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:31:52.662Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-19-sa-biet-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:31:55.489Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-19-sa-biet-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:32:00.254Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-19-sa-biet-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:32:00.436Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-19-sa-biet-1-v2)"
         }
       ]
     },
@@ -145286,9 +146097,9 @@
       "paperSnapshot": [],
       "answers": {},
       "status": "finalized",
-      "startedAt": "2026-11-01T13:22:32.063Z",
-      "submittedAt": "2026-11-01T14:12:32.063Z",
-      "finalizedAt": "2026-11-01T14:22:32.063Z",
+      "startedAt": "2026-11-01T13:27:42.454Z",
+      "submittedAt": "2026-11-01T14:17:42.454Z",
+      "finalizedAt": "2026-11-01T14:27:42.454Z",
       "autoGradedScore": 5.5,
       "manualGradedScore": 2.75,
       "totalScore": 8.25,
@@ -145310,9 +146121,9 @@
       "paperSnapshot": [],
       "answers": {},
       "status": "finalized",
-      "startedAt": "2026-11-01T13:22:32.063Z",
-      "submittedAt": "2026-11-01T14:12:32.063Z",
-      "finalizedAt": "2026-11-01T14:22:32.063Z",
+      "startedAt": "2026-11-01T13:27:42.454Z",
+      "submittedAt": "2026-11-01T14:17:42.454Z",
+      "finalizedAt": "2026-11-01T14:27:42.454Z",
       "autoGradedScore": 7,
       "manualGradedScore": 3,
       "totalScore": 10,
@@ -145334,8 +146145,8 @@
       "paperSnapshot": [],
       "answers": {},
       "status": "submitted_pending_grading",
-      "startedAt": "2026-11-01T13:22:32.063Z",
-      "submittedAt": "2026-11-01T14:12:32.063Z",
+      "startedAt": "2026-11-01T13:27:42.454Z",
+      "submittedAt": "2026-11-01T14:17:42.454Z",
       "finalizedAt": null,
       "autoGradedScore": 6,
       "manualGradedScore": 0,
@@ -145358,8 +146169,8 @@
       "paperSnapshot": [],
       "answers": {},
       "status": "submitted_pending_grading",
-      "startedAt": "2026-11-01T13:22:32.063Z",
-      "submittedAt": "2026-11-01T14:12:32.063Z",
+      "startedAt": "2026-11-01T13:27:42.454Z",
+      "submittedAt": "2026-11-01T14:17:42.454Z",
       "finalizedAt": null,
       "autoGradedScore": 5,
       "manualGradedScore": 0,
@@ -145382,8 +146193,8 @@
       "paperSnapshot": [],
       "answers": {},
       "status": "submitted_pending_grading",
-      "startedAt": "2026-11-01T13:22:32.063Z",
-      "submittedAt": "2026-11-01T14:12:32.063Z",
+      "startedAt": "2026-11-01T13:27:42.454Z",
+      "submittedAt": "2026-11-01T14:17:42.454Z",
       "finalizedAt": null,
       "autoGradedScore": 5.25,
       "manualGradedScore": 0,
@@ -145406,9 +146217,9 @@
       "paperSnapshot": [],
       "answers": {},
       "status": "finalized",
-      "startedAt": "2026-11-01T13:22:32.063Z",
-      "submittedAt": "2026-11-01T14:12:32.063Z",
-      "finalizedAt": "2026-11-01T14:22:32.063Z",
+      "startedAt": "2026-11-01T13:27:42.454Z",
+      "submittedAt": "2026-11-01T14:17:42.454Z",
+      "finalizedAt": "2026-11-01T14:27:42.454Z",
       "autoGradedScore": 6.5,
       "manualGradedScore": 2.5,
       "totalScore": 9,
@@ -145430,8 +146241,8 @@
       "paperSnapshot": [],
       "answers": {},
       "status": "submitted_pending_grading",
-      "startedAt": "2026-11-01T13:22:32.063Z",
-      "submittedAt": "2026-11-01T14:12:32.063Z",
+      "startedAt": "2026-11-01T13:27:42.454Z",
+      "submittedAt": "2026-11-01T14:17:42.454Z",
       "finalizedAt": null,
       "autoGradedScore": 4.75,
       "manualGradedScore": 0,
@@ -145454,9 +146265,9 @@
       "paperSnapshot": [],
       "answers": {},
       "status": "finalized",
-      "startedAt": "2026-11-01T13:22:32.063Z",
-      "submittedAt": "2026-11-01T14:12:32.063Z",
-      "finalizedAt": "2026-11-01T14:22:32.063Z",
+      "startedAt": "2026-11-01T13:27:42.454Z",
+      "submittedAt": "2026-11-01T14:17:42.454Z",
+      "finalizedAt": "2026-11-01T14:27:42.454Z",
       "autoGradedScore": 6,
       "manualGradedScore": 1.5,
       "totalScore": 7.5,
@@ -145478,8 +146289,8 @@
       "paperSnapshot": [],
       "answers": {},
       "status": "submitted_pending_grading",
-      "startedAt": "2026-11-01T13:22:32.063Z",
-      "submittedAt": "2026-11-01T14:12:32.063Z",
+      "startedAt": "2026-11-01T13:27:42.454Z",
+      "submittedAt": "2026-11-01T14:17:42.454Z",
       "finalizedAt": null,
       "autoGradedScore": 5.75,
       "manualGradedScore": 0,
@@ -145502,8 +146313,8 @@
       "paperSnapshot": [],
       "answers": {},
       "status": "submitted_pending_grading",
-      "startedAt": "2026-11-01T13:22:32.063Z",
-      "submittedAt": "2026-11-01T14:12:32.063Z",
+      "startedAt": "2026-11-01T13:27:42.454Z",
+      "submittedAt": "2026-11-01T14:17:42.454Z",
       "finalizedAt": null,
       "autoGradedScore": 5.5,
       "manualGradedScore": 0,
@@ -145526,9 +146337,9 @@
       "paperSnapshot": [],
       "answers": {},
       "status": "finalized",
-      "startedAt": "2026-11-01T13:22:32.063Z",
-      "submittedAt": "2026-11-01T14:12:32.063Z",
-      "finalizedAt": "2026-11-01T14:22:32.063Z",
+      "startedAt": "2026-11-01T13:27:42.454Z",
+      "submittedAt": "2026-11-01T14:17:42.454Z",
+      "finalizedAt": "2026-11-01T14:27:42.454Z",
       "autoGradedScore": 6.75,
       "manualGradedScore": 2.75,
       "totalScore": 9.5,
@@ -145550,8 +146361,8 @@
       "paperSnapshot": [],
       "answers": {},
       "status": "submitted_pending_grading",
-      "startedAt": "2026-11-01T13:22:32.063Z",
-      "submittedAt": "2026-11-01T14:12:32.063Z",
+      "startedAt": "2026-11-01T13:27:42.454Z",
+      "submittedAt": "2026-11-01T14:17:42.454Z",
       "finalizedAt": null,
       "autoGradedScore": 5,
       "manualGradedScore": 0,
@@ -145574,9 +146385,9 @@
       "paperSnapshot": [],
       "answers": {},
       "status": "finalized",
-      "startedAt": "2026-11-01T13:22:32.063Z",
-      "submittedAt": "2026-11-01T14:12:32.063Z",
-      "finalizedAt": "2026-11-01T14:22:32.063Z",
+      "startedAt": "2026-11-01T13:27:42.454Z",
+      "submittedAt": "2026-11-01T14:17:42.454Z",
+      "finalizedAt": "2026-11-01T14:27:42.454Z",
       "autoGradedScore": 6.25,
       "manualGradedScore": 2,
       "totalScore": 8.25,
@@ -145598,8 +146409,8 @@
       "paperSnapshot": [],
       "answers": {},
       "status": "submitted_pending_grading",
-      "startedAt": "2026-11-01T13:22:32.063Z",
-      "submittedAt": "2026-11-01T14:12:32.063Z",
+      "startedAt": "2026-11-01T13:27:42.454Z",
+      "submittedAt": "2026-11-01T14:17:42.454Z",
       "finalizedAt": null,
       "autoGradedScore": 5.25,
       "manualGradedScore": 0,
@@ -145622,9 +146433,9 @@
       "paperSnapshot": [],
       "answers": {},
       "status": "finalized",
-      "startedAt": "2026-11-01T13:22:32.063Z",
-      "submittedAt": "2026-11-01T14:12:32.063Z",
-      "finalizedAt": "2026-11-01T14:22:32.063Z",
+      "startedAt": "2026-11-01T13:27:42.454Z",
+      "submittedAt": "2026-11-01T14:17:42.454Z",
+      "finalizedAt": "2026-11-01T14:27:42.454Z",
       "autoGradedScore": 5.5,
       "manualGradedScore": 2.75,
       "totalScore": 8.25,
@@ -145646,9 +146457,9 @@
       "paperSnapshot": [],
       "answers": {},
       "status": "finalized",
-      "startedAt": "2026-11-01T13:22:32.063Z",
-      "submittedAt": "2026-11-01T14:12:32.063Z",
-      "finalizedAt": "2026-11-01T14:22:32.063Z",
+      "startedAt": "2026-11-01T13:27:42.454Z",
+      "submittedAt": "2026-11-01T14:17:42.454Z",
+      "finalizedAt": "2026-11-01T14:27:42.454Z",
       "autoGradedScore": 7,
       "manualGradedScore": 3,
       "totalScore": 10,
@@ -145670,8 +146481,8 @@
       "paperSnapshot": [],
       "answers": {},
       "status": "submitted_pending_grading",
-      "startedAt": "2026-11-01T13:22:32.063Z",
-      "submittedAt": "2026-11-01T14:12:32.063Z",
+      "startedAt": "2026-11-01T13:27:42.454Z",
+      "submittedAt": "2026-11-01T14:17:42.454Z",
       "finalizedAt": null,
       "autoGradedScore": 6,
       "manualGradedScore": 0,
@@ -145694,8 +146505,8 @@
       "paperSnapshot": [],
       "answers": {},
       "status": "submitted_pending_grading",
-      "startedAt": "2026-11-01T13:22:32.063Z",
-      "submittedAt": "2026-11-01T14:12:32.063Z",
+      "startedAt": "2026-11-01T13:27:42.454Z",
+      "submittedAt": "2026-11-01T14:17:42.454Z",
       "finalizedAt": null,
       "autoGradedScore": 5,
       "manualGradedScore": 0,
@@ -145718,8 +146529,8 @@
       "paperSnapshot": [],
       "answers": {},
       "status": "submitted_pending_grading",
-      "startedAt": "2026-11-01T13:22:32.063Z",
-      "submittedAt": "2026-11-01T14:12:32.063Z",
+      "startedAt": "2026-11-01T13:27:42.454Z",
+      "submittedAt": "2026-11-01T14:17:42.454Z",
       "finalizedAt": null,
       "autoGradedScore": 5,
       "manualGradedScore": 0,
@@ -145742,8 +146553,8 @@
       "paperSnapshot": [],
       "answers": {},
       "status": "submitted_pending_grading",
-      "startedAt": "2026-11-01T13:22:32.063Z",
-      "submittedAt": "2026-11-01T14:12:32.063Z",
+      "startedAt": "2026-11-01T13:27:42.454Z",
+      "submittedAt": "2026-11-01T14:17:42.454Z",
       "finalizedAt": null,
       "autoGradedScore": 5.25,
       "manualGradedScore": 0,
@@ -145766,9 +146577,9 @@
       "paperSnapshot": [],
       "answers": {},
       "status": "finalized",
-      "startedAt": "2026-11-01T13:22:32.063Z",
-      "submittedAt": "2026-11-01T14:12:32.063Z",
-      "finalizedAt": "2026-11-01T14:22:32.063Z",
+      "startedAt": "2026-11-01T13:27:42.454Z",
+      "submittedAt": "2026-11-01T14:17:42.454Z",
+      "finalizedAt": "2026-11-01T14:27:42.454Z",
       "autoGradedScore": 6.5,
       "manualGradedScore": 2.5,
       "totalScore": 9,
@@ -145790,8 +146601,8 @@
       "paperSnapshot": [],
       "answers": {},
       "status": "submitted_pending_grading",
-      "startedAt": "2026-11-01T13:22:32.063Z",
-      "submittedAt": "2026-11-01T14:12:32.063Z",
+      "startedAt": "2026-11-01T13:27:42.454Z",
+      "submittedAt": "2026-11-01T14:17:42.454Z",
       "finalizedAt": null,
       "autoGradedScore": 4.75,
       "manualGradedScore": 0,
@@ -145814,9 +146625,9 @@
       "paperSnapshot": [],
       "answers": {},
       "status": "finalized",
-      "startedAt": "2026-11-01T13:22:32.063Z",
-      "submittedAt": "2026-11-01T14:12:32.063Z",
-      "finalizedAt": "2026-11-01T14:22:32.063Z",
+      "startedAt": "2026-11-01T13:27:42.454Z",
+      "submittedAt": "2026-11-01T14:17:42.454Z",
+      "finalizedAt": "2026-11-01T14:27:42.454Z",
       "autoGradedScore": 6,
       "manualGradedScore": 1.5,
       "totalScore": 7.5,
@@ -145838,8 +146649,8 @@
       "paperSnapshot": [],
       "answers": {},
       "status": "submitted_pending_grading",
-      "startedAt": "2026-11-01T13:22:32.063Z",
-      "submittedAt": "2026-11-01T14:12:32.063Z",
+      "startedAt": "2026-11-01T13:27:42.455Z",
+      "submittedAt": "2026-11-01T14:17:42.455Z",
       "finalizedAt": null,
       "autoGradedScore": 5.75,
       "manualGradedScore": 0,
@@ -145862,8 +146673,8 @@
       "paperSnapshot": [],
       "answers": {},
       "status": "submitted_pending_grading",
-      "startedAt": "2026-11-01T13:22:32.063Z",
-      "submittedAt": "2026-11-01T14:12:32.063Z",
+      "startedAt": "2026-11-01T13:27:42.455Z",
+      "submittedAt": "2026-11-01T14:17:42.455Z",
       "finalizedAt": null,
       "autoGradedScore": 5.5,
       "manualGradedScore": 0,
@@ -145886,9 +146697,9 @@
       "paperSnapshot": [],
       "answers": {},
       "status": "finalized",
-      "startedAt": "2026-11-01T13:22:32.063Z",
-      "submittedAt": "2026-11-01T14:12:32.063Z",
-      "finalizedAt": "2026-11-01T14:22:32.063Z",
+      "startedAt": "2026-11-01T13:27:42.455Z",
+      "submittedAt": "2026-11-01T14:17:42.455Z",
+      "finalizedAt": "2026-11-01T14:27:42.455Z",
       "autoGradedScore": 6.75,
       "manualGradedScore": 2.75,
       "totalScore": 9.5,
@@ -145910,8 +146721,8 @@
       "paperSnapshot": [],
       "answers": {},
       "status": "submitted_pending_grading",
-      "startedAt": "2026-11-01T13:22:32.063Z",
-      "submittedAt": "2026-11-01T14:12:32.063Z",
+      "startedAt": "2026-11-01T13:27:42.455Z",
+      "submittedAt": "2026-11-01T14:17:42.455Z",
       "finalizedAt": null,
       "autoGradedScore": 5,
       "manualGradedScore": 0,
@@ -145934,9 +146745,9 @@
       "paperSnapshot": [],
       "answers": {},
       "status": "finalized",
-      "startedAt": "2026-11-01T13:22:32.063Z",
-      "submittedAt": "2026-11-01T14:12:32.063Z",
-      "finalizedAt": "2026-11-01T14:22:32.063Z",
+      "startedAt": "2026-11-01T13:27:42.455Z",
+      "submittedAt": "2026-11-01T14:17:42.455Z",
+      "finalizedAt": "2026-11-01T14:27:42.455Z",
       "autoGradedScore": 6.25,
       "manualGradedScore": 2,
       "totalScore": 8.25,
@@ -145958,8 +146769,8 @@
       "paperSnapshot": [],
       "answers": {},
       "status": "submitted_pending_grading",
-      "startedAt": "2026-11-01T13:22:32.063Z",
-      "submittedAt": "2026-11-01T14:12:32.063Z",
+      "startedAt": "2026-11-01T13:27:42.455Z",
+      "submittedAt": "2026-11-01T14:17:42.455Z",
       "finalizedAt": null,
       "autoGradedScore": 5.25,
       "manualGradedScore": 0,
@@ -145982,9 +146793,9 @@
       "paperSnapshot": [],
       "answers": {},
       "status": "finalized",
-      "startedAt": "2026-11-01T13:22:32.063Z",
-      "submittedAt": "2026-11-01T14:12:32.063Z",
-      "finalizedAt": "2026-11-01T14:22:32.063Z",
+      "startedAt": "2026-11-01T13:27:42.455Z",
+      "submittedAt": "2026-11-01T14:17:42.455Z",
+      "finalizedAt": "2026-11-01T14:27:42.455Z",
       "autoGradedScore": 5.5,
       "manualGradedScore": 2.75,
       "totalScore": 8.25,
@@ -146006,9 +146817,9 @@
       "paperSnapshot": [],
       "answers": {},
       "status": "finalized",
-      "startedAt": "2026-11-01T13:22:32.063Z",
-      "submittedAt": "2026-11-01T14:12:32.063Z",
-      "finalizedAt": "2026-11-01T14:22:32.063Z",
+      "startedAt": "2026-11-01T13:27:42.455Z",
+      "submittedAt": "2026-11-01T14:17:42.455Z",
+      "finalizedAt": "2026-11-01T14:27:42.455Z",
       "autoGradedScore": 7,
       "manualGradedScore": 3,
       "totalScore": 10,
@@ -146030,8 +146841,8 @@
       "paperSnapshot": [],
       "answers": {},
       "status": "submitted_pending_grading",
-      "startedAt": "2026-11-01T13:22:32.063Z",
-      "submittedAt": "2026-11-01T14:12:32.063Z",
+      "startedAt": "2026-11-01T13:27:42.455Z",
+      "submittedAt": "2026-11-01T14:17:42.455Z",
       "finalizedAt": null,
       "autoGradedScore": 6,
       "manualGradedScore": 0,
@@ -146054,8 +146865,8 @@
       "paperSnapshot": [],
       "answers": {},
       "status": "submitted_pending_grading",
-      "startedAt": "2026-11-01T13:22:32.063Z",
-      "submittedAt": "2026-11-01T14:12:32.063Z",
+      "startedAt": "2026-11-01T13:27:42.455Z",
+      "submittedAt": "2026-11-01T14:17:42.455Z",
       "finalizedAt": null,
       "autoGradedScore": 5,
       "manualGradedScore": 0,
@@ -146078,8 +146889,8 @@
       "paperSnapshot": [],
       "answers": {},
       "status": "submitted_pending_grading",
-      "startedAt": "2026-11-01T13:22:32.063Z",
-      "submittedAt": "2026-11-01T14:12:32.063Z",
+      "startedAt": "2026-11-01T13:27:42.455Z",
+      "submittedAt": "2026-11-01T14:17:42.455Z",
       "finalizedAt": null,
       "autoGradedScore": 5,
       "manualGradedScore": 0,
@@ -146102,8 +146913,8 @@
       "paperSnapshot": [],
       "answers": {},
       "status": "submitted_pending_grading",
-      "startedAt": "2026-11-01T13:22:32.063Z",
-      "submittedAt": "2026-11-01T14:12:32.063Z",
+      "startedAt": "2026-11-01T13:27:42.455Z",
+      "submittedAt": "2026-11-01T14:17:42.455Z",
       "finalizedAt": null,
       "autoGradedScore": 5.5,
       "manualGradedScore": 0,
@@ -146126,8 +146937,8 @@
       "paperSnapshot": [],
       "answers": {},
       "status": "submitted_pending_grading",
-      "startedAt": "2026-11-01T13:22:32.063Z",
-      "submittedAt": "2026-11-01T14:12:32.063Z",
+      "startedAt": "2026-11-01T13:27:42.455Z",
+      "submittedAt": "2026-11-01T14:17:42.455Z",
       "finalizedAt": null,
       "autoGradedScore": 5.25,
       "manualGradedScore": 0,
@@ -146150,9 +146961,9 @@
       "paperSnapshot": [],
       "answers": {},
       "status": "finalized",
-      "startedAt": "2026-11-01T13:22:32.063Z",
-      "submittedAt": "2026-11-01T14:12:32.063Z",
-      "finalizedAt": "2026-11-01T14:22:32.063Z",
+      "startedAt": "2026-11-01T13:27:42.455Z",
+      "submittedAt": "2026-11-01T14:17:42.455Z",
+      "finalizedAt": "2026-11-01T14:27:42.455Z",
       "autoGradedScore": 6.5,
       "manualGradedScore": 2.5,
       "totalScore": 9,
@@ -146174,8 +146985,8 @@
       "paperSnapshot": [],
       "answers": {},
       "status": "submitted_pending_grading",
-      "startedAt": "2026-11-01T13:22:32.063Z",
-      "submittedAt": "2026-11-01T14:12:32.063Z",
+      "startedAt": "2026-11-01T13:27:42.455Z",
+      "submittedAt": "2026-11-01T14:17:42.455Z",
       "finalizedAt": null,
       "autoGradedScore": 4.75,
       "manualGradedScore": 0,
@@ -146198,9 +147009,9 @@
       "paperSnapshot": [],
       "answers": {},
       "status": "finalized",
-      "startedAt": "2026-11-01T13:22:32.063Z",
-      "submittedAt": "2026-11-01T14:12:32.063Z",
-      "finalizedAt": "2026-11-01T14:22:32.063Z",
+      "startedAt": "2026-11-01T13:27:42.455Z",
+      "submittedAt": "2026-11-01T14:17:42.455Z",
+      "finalizedAt": "2026-11-01T14:27:42.455Z",
       "autoGradedScore": 6,
       "manualGradedScore": 1.5,
       "totalScore": 7.5,
@@ -146222,8 +147033,8 @@
       "paperSnapshot": [],
       "answers": {},
       "status": "submitted_pending_grading",
-      "startedAt": "2026-11-01T13:22:32.063Z",
-      "submittedAt": "2026-11-01T14:12:32.063Z",
+      "startedAt": "2026-11-01T13:27:42.455Z",
+      "submittedAt": "2026-11-01T14:17:42.455Z",
       "finalizedAt": null,
       "autoGradedScore": 5.75,
       "manualGradedScore": 0,
@@ -146246,8 +147057,8 @@
       "paperSnapshot": [],
       "answers": {},
       "status": "submitted_pending_grading",
-      "startedAt": "2026-11-01T13:22:32.063Z",
-      "submittedAt": "2026-11-01T14:12:32.063Z",
+      "startedAt": "2026-11-01T13:27:42.455Z",
+      "submittedAt": "2026-11-01T14:17:42.455Z",
       "finalizedAt": null,
       "autoGradedScore": 5.5,
       "manualGradedScore": 0,
@@ -146270,9 +147081,9 @@
       "paperSnapshot": [],
       "answers": {},
       "status": "finalized",
-      "startedAt": "2026-11-01T13:22:32.063Z",
-      "submittedAt": "2026-11-01T14:12:32.063Z",
-      "finalizedAt": "2026-11-01T14:22:32.063Z",
+      "startedAt": "2026-11-01T13:27:42.455Z",
+      "submittedAt": "2026-11-01T14:17:42.455Z",
+      "finalizedAt": "2026-11-01T14:27:42.455Z",
       "autoGradedScore": 6.75,
       "manualGradedScore": 2.75,
       "totalScore": 9.5,
@@ -146294,8 +147105,8 @@
       "paperSnapshot": [],
       "answers": {},
       "status": "submitted_pending_grading",
-      "startedAt": "2026-11-01T13:22:32.063Z",
-      "submittedAt": "2026-11-01T14:12:32.063Z",
+      "startedAt": "2026-11-01T13:27:42.455Z",
+      "submittedAt": "2026-11-01T14:17:42.455Z",
       "finalizedAt": null,
       "autoGradedScore": 5,
       "manualGradedScore": 0,
@@ -146318,9 +147129,9 @@
       "paperSnapshot": [],
       "answers": {},
       "status": "finalized",
-      "startedAt": "2026-11-01T13:22:32.064Z",
-      "submittedAt": "2026-11-01T14:12:32.064Z",
-      "finalizedAt": "2026-11-01T14:22:32.064Z",
+      "startedAt": "2026-11-01T13:27:42.455Z",
+      "submittedAt": "2026-11-01T14:17:42.455Z",
+      "finalizedAt": "2026-11-01T14:27:42.455Z",
       "autoGradedScore": 6.25,
       "manualGradedScore": 2,
       "totalScore": 8.25,
@@ -146342,8 +147153,8 @@
       "paperSnapshot": [],
       "answers": {},
       "status": "submitted_pending_grading",
-      "startedAt": "2026-11-01T13:22:32.064Z",
-      "submittedAt": "2026-11-01T14:12:32.064Z",
+      "startedAt": "2026-11-01T13:27:42.455Z",
+      "submittedAt": "2026-11-01T14:17:42.455Z",
       "finalizedAt": null,
       "autoGradedScore": 5.25,
       "manualGradedScore": 0,
@@ -146366,8 +147177,8 @@
       "paperSnapshot": [],
       "answers": {},
       "status": "submitted_pending_grading",
-      "startedAt": "2026-11-01T13:22:32.064Z",
-      "submittedAt": "2026-11-01T14:12:32.064Z",
+      "startedAt": "2026-11-01T13:27:42.455Z",
+      "submittedAt": "2026-11-01T14:17:42.455Z",
       "finalizedAt": null,
       "autoGradedScore": 5,
       "manualGradedScore": 0,
@@ -146390,8 +147201,8 @@
       "paperSnapshot": [],
       "answers": {},
       "status": "submitted_pending_grading",
-      "startedAt": "2026-11-01T13:22:32.064Z",
-      "submittedAt": "2026-11-01T14:12:32.064Z",
+      "startedAt": "2026-11-01T13:27:42.455Z",
+      "submittedAt": "2026-11-01T14:17:42.455Z",
       "finalizedAt": null,
       "autoGradedScore": 5.5,
       "manualGradedScore": 0,
@@ -146414,8 +147225,8 @@
       "paperSnapshot": [],
       "answers": {},
       "status": "submitted_pending_grading",
-      "startedAt": "2026-11-01T13:22:32.064Z",
-      "submittedAt": "2026-11-01T14:12:32.064Z",
+      "startedAt": "2026-11-01T13:27:42.455Z",
+      "submittedAt": "2026-11-01T14:17:42.455Z",
       "finalizedAt": null,
       "autoGradedScore": 5.25,
       "manualGradedScore": 0,
@@ -146438,9 +147249,9 @@
       "paperSnapshot": [],
       "answers": {},
       "status": "finalized",
-      "startedAt": "2026-11-01T13:22:32.064Z",
-      "submittedAt": "2026-11-01T14:12:32.064Z",
-      "finalizedAt": "2026-11-01T14:22:32.064Z",
+      "startedAt": "2026-11-01T13:27:42.455Z",
+      "submittedAt": "2026-11-01T14:17:42.455Z",
+      "finalizedAt": "2026-11-01T14:27:42.455Z",
       "autoGradedScore": 6.5,
       "manualGradedScore": 2.5,
       "totalScore": 9,
@@ -146462,8 +147273,8 @@
       "paperSnapshot": [],
       "answers": {},
       "status": "submitted_pending_grading",
-      "startedAt": "2026-11-01T13:22:32.064Z",
-      "submittedAt": "2026-11-01T14:12:32.064Z",
+      "startedAt": "2026-11-01T13:27:42.455Z",
+      "submittedAt": "2026-11-01T14:17:42.455Z",
       "finalizedAt": null,
       "autoGradedScore": 4.75,
       "manualGradedScore": 0,
@@ -146486,9 +147297,9 @@
       "paperSnapshot": [],
       "answers": {},
       "status": "finalized",
-      "startedAt": "2026-11-01T13:22:32.064Z",
-      "submittedAt": "2026-11-01T14:12:32.064Z",
-      "finalizedAt": "2026-11-01T14:22:32.064Z",
+      "startedAt": "2026-11-01T13:27:42.455Z",
+      "submittedAt": "2026-11-01T14:17:42.455Z",
+      "finalizedAt": "2026-11-01T14:27:42.455Z",
       "autoGradedScore": 6,
       "manualGradedScore": 1.5,
       "totalScore": 7.5,
@@ -146510,8 +147321,8 @@
       "paperSnapshot": [],
       "answers": {},
       "status": "submitted_pending_grading",
-      "startedAt": "2026-11-01T13:22:32.064Z",
-      "submittedAt": "2026-11-01T14:12:32.064Z",
+      "startedAt": "2026-11-01T13:27:42.455Z",
+      "submittedAt": "2026-11-01T14:17:42.455Z",
       "finalizedAt": null,
       "autoGradedScore": 5.75,
       "manualGradedScore": 0,
@@ -146534,8 +147345,8 @@
       "paperSnapshot": [],
       "answers": {},
       "status": "submitted_pending_grading",
-      "startedAt": "2026-11-01T13:22:32.064Z",
-      "submittedAt": "2026-11-01T14:12:32.064Z",
+      "startedAt": "2026-11-01T13:27:42.455Z",
+      "submittedAt": "2026-11-01T14:17:42.455Z",
       "finalizedAt": null,
       "autoGradedScore": 5.5,
       "manualGradedScore": 0,
@@ -146558,9 +147369,9 @@
       "paperSnapshot": [],
       "answers": {},
       "status": "finalized",
-      "startedAt": "2026-11-01T13:22:32.064Z",
-      "submittedAt": "2026-11-01T14:12:32.064Z",
-      "finalizedAt": "2026-11-01T14:22:32.064Z",
+      "startedAt": "2026-11-01T13:27:42.455Z",
+      "submittedAt": "2026-11-01T14:17:42.455Z",
+      "finalizedAt": "2026-11-01T14:27:42.455Z",
       "autoGradedScore": 6.75,
       "manualGradedScore": 2.75,
       "totalScore": 9.5,
@@ -146582,8 +147393,8 @@
       "paperSnapshot": [],
       "answers": {},
       "status": "submitted_pending_grading",
-      "startedAt": "2026-11-01T13:22:32.064Z",
-      "submittedAt": "2026-11-01T14:12:32.064Z",
+      "startedAt": "2026-11-01T13:27:42.455Z",
+      "submittedAt": "2026-11-01T14:17:42.455Z",
       "finalizedAt": null,
       "autoGradedScore": 5,
       "manualGradedScore": 0,
@@ -146606,9 +147417,9 @@
       "paperSnapshot": [],
       "answers": {},
       "status": "finalized",
-      "startedAt": "2026-11-01T13:22:32.064Z",
-      "submittedAt": "2026-11-01T14:12:32.064Z",
-      "finalizedAt": "2026-11-01T14:22:32.064Z",
+      "startedAt": "2026-11-01T13:27:42.455Z",
+      "submittedAt": "2026-11-01T14:17:42.455Z",
+      "finalizedAt": "2026-11-01T14:27:42.455Z",
       "autoGradedScore": 6.25,
       "manualGradedScore": 2,
       "totalScore": 8.25,
@@ -146630,8 +147441,8 @@
       "paperSnapshot": [],
       "answers": {},
       "status": "submitted_pending_grading",
-      "startedAt": "2026-11-01T13:22:32.064Z",
-      "submittedAt": "2026-11-01T14:12:32.064Z",
+      "startedAt": "2026-11-01T13:27:42.455Z",
+      "submittedAt": "2026-11-01T14:17:42.455Z",
       "finalizedAt": null,
       "autoGradedScore": 5.25,
       "manualGradedScore": 0,
@@ -146654,9 +147465,9 @@
       "paperSnapshot": [],
       "answers": {},
       "status": "finalized",
-      "startedAt": "2026-11-01T13:22:32.064Z",
-      "submittedAt": "2026-11-01T14:12:32.064Z",
-      "finalizedAt": "2026-11-01T14:22:32.064Z",
+      "startedAt": "2026-11-01T13:27:42.455Z",
+      "submittedAt": "2026-11-01T14:17:42.455Z",
+      "finalizedAt": "2026-11-01T14:27:42.455Z",
       "autoGradedScore": 5.5,
       "manualGradedScore": 2.75,
       "totalScore": 8.25,
@@ -146678,9 +147489,9 @@
       "paperSnapshot": [],
       "answers": {},
       "status": "finalized",
-      "startedAt": "2026-11-01T13:22:32.064Z",
-      "submittedAt": "2026-11-01T14:12:32.064Z",
-      "finalizedAt": "2026-11-01T14:22:32.064Z",
+      "startedAt": "2026-11-01T13:27:42.455Z",
+      "submittedAt": "2026-11-01T14:17:42.455Z",
+      "finalizedAt": "2026-11-01T14:27:42.455Z",
       "autoGradedScore": 7,
       "manualGradedScore": 3,
       "totalScore": 10,
@@ -146702,8 +147513,8 @@
       "paperSnapshot": [],
       "answers": {},
       "status": "submitted_pending_grading",
-      "startedAt": "2026-11-01T13:22:32.064Z",
-      "submittedAt": "2026-11-01T14:12:32.064Z",
+      "startedAt": "2026-11-01T13:27:42.455Z",
+      "submittedAt": "2026-11-01T14:17:42.455Z",
       "finalizedAt": null,
       "autoGradedScore": 6,
       "manualGradedScore": 0,
@@ -146726,8 +147537,8 @@
       "paperSnapshot": [],
       "answers": {},
       "status": "submitted_pending_grading",
-      "startedAt": "2026-11-01T13:22:32.064Z",
-      "submittedAt": "2026-11-01T14:12:32.064Z",
+      "startedAt": "2026-11-01T13:27:42.455Z",
+      "submittedAt": "2026-11-01T14:17:42.455Z",
       "finalizedAt": null,
       "autoGradedScore": 5,
       "manualGradedScore": 0,
@@ -146750,8 +147561,8 @@
       "paperSnapshot": [],
       "answers": {},
       "status": "submitted_pending_grading",
-      "startedAt": "2026-11-01T13:22:32.064Z",
-      "submittedAt": "2026-11-01T14:12:32.064Z",
+      "startedAt": "2026-11-01T13:27:42.455Z",
+      "submittedAt": "2026-11-01T14:17:42.455Z",
       "finalizedAt": null,
       "autoGradedScore": 5,
       "manualGradedScore": 0,
@@ -146774,8 +147585,8 @@
       "paperSnapshot": [],
       "answers": {},
       "status": "submitted_pending_grading",
-      "startedAt": "2026-11-01T13:22:32.064Z",
-      "submittedAt": "2026-11-01T14:12:32.064Z",
+      "startedAt": "2026-11-01T13:27:42.455Z",
+      "submittedAt": "2026-11-01T14:17:42.455Z",
       "finalizedAt": null,
       "autoGradedScore": 5.5,
       "manualGradedScore": 0,
@@ -146798,8 +147609,8 @@
       "paperSnapshot": [],
       "answers": {},
       "status": "submitted_pending_grading",
-      "startedAt": "2026-11-01T13:22:32.064Z",
-      "submittedAt": "2026-11-01T14:12:32.064Z",
+      "startedAt": "2026-11-01T13:27:42.455Z",
+      "submittedAt": "2026-11-01T14:17:42.455Z",
       "finalizedAt": null,
       "autoGradedScore": 5.25,
       "manualGradedScore": 0,
@@ -146822,9 +147633,9 @@
       "paperSnapshot": [],
       "answers": {},
       "status": "finalized",
-      "startedAt": "2026-11-01T13:22:32.064Z",
-      "submittedAt": "2026-11-01T14:12:32.064Z",
-      "finalizedAt": "2026-11-01T14:22:32.064Z",
+      "startedAt": "2026-11-01T13:27:42.455Z",
+      "submittedAt": "2026-11-01T14:17:42.455Z",
+      "finalizedAt": "2026-11-01T14:27:42.455Z",
       "autoGradedScore": 6.5,
       "manualGradedScore": 2.5,
       "totalScore": 9,
@@ -146846,8 +147657,8 @@
       "paperSnapshot": [],
       "answers": {},
       "status": "submitted_pending_grading",
-      "startedAt": "2026-11-01T13:22:32.064Z",
-      "submittedAt": "2026-11-01T14:12:32.064Z",
+      "startedAt": "2026-11-01T13:27:42.455Z",
+      "submittedAt": "2026-11-01T14:17:42.455Z",
       "finalizedAt": null,
       "autoGradedScore": 4.75,
       "manualGradedScore": 0,
@@ -146870,9 +147681,9 @@
       "paperSnapshot": [],
       "answers": {},
       "status": "finalized",
-      "startedAt": "2026-11-01T13:22:32.064Z",
-      "submittedAt": "2026-11-01T14:12:32.064Z",
-      "finalizedAt": "2026-11-01T14:22:32.064Z",
+      "startedAt": "2026-11-01T13:27:42.455Z",
+      "submittedAt": "2026-11-01T14:17:42.455Z",
+      "finalizedAt": "2026-11-01T14:27:42.455Z",
       "autoGradedScore": 6,
       "manualGradedScore": 1.5,
       "totalScore": 7.5,
@@ -146894,8 +147705,8 @@
       "paperSnapshot": [],
       "answers": {},
       "status": "submitted_pending_grading",
-      "startedAt": "2026-11-01T13:22:32.064Z",
-      "submittedAt": "2026-11-01T14:12:32.064Z",
+      "startedAt": "2026-11-01T13:27:42.455Z",
+      "submittedAt": "2026-11-01T14:17:42.455Z",
       "finalizedAt": null,
       "autoGradedScore": 5.75,
       "manualGradedScore": 0,
@@ -146918,8 +147729,8 @@
       "paperSnapshot": [],
       "answers": {},
       "status": "submitted_pending_grading",
-      "startedAt": "2026-11-01T13:22:32.064Z",
-      "submittedAt": "2026-11-01T14:12:32.064Z",
+      "startedAt": "2026-11-01T13:27:42.455Z",
+      "submittedAt": "2026-11-01T14:17:42.455Z",
       "finalizedAt": null,
       "autoGradedScore": 5.5,
       "manualGradedScore": 0,
@@ -146942,9 +147753,9 @@
       "paperSnapshot": [],
       "answers": {},
       "status": "finalized",
-      "startedAt": "2026-11-01T13:22:32.064Z",
-      "submittedAt": "2026-11-01T14:12:32.064Z",
-      "finalizedAt": "2026-11-01T14:22:32.064Z",
+      "startedAt": "2026-11-01T13:27:42.455Z",
+      "submittedAt": "2026-11-01T14:17:42.455Z",
+      "finalizedAt": "2026-11-01T14:27:42.455Z",
       "autoGradedScore": 6.75,
       "manualGradedScore": 2.75,
       "totalScore": 9.5,
@@ -146966,8 +147777,8 @@
       "paperSnapshot": [],
       "answers": {},
       "status": "submitted_pending_grading",
-      "startedAt": "2026-11-01T13:22:32.064Z",
-      "submittedAt": "2026-11-01T14:12:32.064Z",
+      "startedAt": "2026-11-01T13:27:42.455Z",
+      "submittedAt": "2026-11-01T14:17:42.455Z",
       "finalizedAt": null,
       "autoGradedScore": 5,
       "manualGradedScore": 0,
@@ -146990,9 +147801,9 @@
       "paperSnapshot": [],
       "answers": {},
       "status": "finalized",
-      "startedAt": "2026-11-01T13:22:32.064Z",
-      "submittedAt": "2026-11-01T14:12:32.064Z",
-      "finalizedAt": "2026-11-01T14:22:32.064Z",
+      "startedAt": "2026-11-01T13:27:42.455Z",
+      "submittedAt": "2026-11-01T14:17:42.455Z",
+      "finalizedAt": "2026-11-01T14:27:42.455Z",
       "autoGradedScore": 6.25,
       "manualGradedScore": 2,
       "totalScore": 8.25,
@@ -147014,8 +147825,8 @@
       "paperSnapshot": [],
       "answers": {},
       "status": "submitted_pending_grading",
-      "startedAt": "2026-11-01T13:22:32.064Z",
-      "submittedAt": "2026-11-01T14:12:32.064Z",
+      "startedAt": "2026-11-01T13:27:42.455Z",
+      "submittedAt": "2026-11-01T14:17:42.455Z",
       "finalizedAt": null,
       "autoGradedScore": 5.25,
       "manualGradedScore": 0,
@@ -147025,6 +147836,570 @@
       "deviceInfo": {
         "platform": "Windows PC / Chrome"
       }
+    },
+    {
+      "id": "sub-25453c22",
+      "examId": "exam-eb19bb45",
+      "studentId": "usr-hs-9a1-17",
+      "studentName": "Võ Hạ Lam",
+      "studentUsername": "vohalam_9a1",
+      "className": "9A1",
+      "paperCode": "MĐ-9A1-F14A",
+      "paperSignature": "F14A7652282F",
+      "paperSnapshot": [
+        {
+          "questionId": "q-les-21-mcq-hieu-1",
+          "orderIndex": 1,
+          "type": "mcq",
+          "level": "hieu",
+          "lessonId": 21,
+          "points": 0.25,
+          "prompt": "Trong phòng thí nghiệm, học sinh so sánh trạng thái, tính dẫn điện của mẫu than chì (carbon), bột lưu huỳnh (sulfur), khí chlorine và đốt cháy lần lượt bột magnesium (kim loại) cùng bột lưu huỳnh (phi kim) trong khí oxygen dư rồi thử sản phẩm với nước và giấy quỳ tím. Để định lượng hoặc mô tả chuẩn xác mối quan hệ giữa các yếu tố trong hiện tượng trên (So sánh phản ứng đốt cháy kim loại và phi kim với Oxygen), biểu thức hoặc cơ chế nào dưới đây là CHÍNH XÁC?",
+          "originalOptionIndices": [
+            3,
+            0,
+            2,
+            1
+          ],
+          "shuffledOptions": [
+            "Tất cả các hợp chất trong dãy đồng đẳng đều có cùng phân tử khối và chỉ tan trong dung môi nước mà không tan trong dung môi hữu cơ.",
+            "Hợp chất khảo sát hoàn toàn trơ về mặt hoá học, không tham gia phản ứng cháy với oxygen cũng như không tác dụng với acid hay kiềm ở mọi điều kiện.",
+            "Kim loại hoạt động yếu hơn như đồng (Cu), bạc (Ag) luôn đẩy được các kim loại kiềm và kiềm thổ ra khỏi dung dịch muối ở nhiệt độ thường.",
+            "2Mg + O₂ →(t°) 2MgO (oxide base) ;  S + O₂ →(t°) SO₂ (oxide acid) — Dung dịch base (từ oxide base tan/tác dụng nước) làm quỳ tím hoá xanh; dung dịch acid (từ oxide acid + H₂O) làm quỳ tím hoá đỏ."
+          ]
+        },
+        {
+          "questionId": "q-les-3-mcq-biet-1-v2",
+          "orderIndex": 2,
+          "type": "mcq",
+          "level": "biet",
+          "lessonId": 3,
+          "points": 0.25,
+          "prompt": "Một vận động viên trượt ván bắt đầu trượt không vận tốc đầu từ đỉnh dốc của lòng máng hình chữ U xuống đáy lòng máng rồi lại vọt lên phía bên kia. Khi phân tích bản chất khoa học của quá trình trên, kết luận nào dưới đây là CHÍNH XÁC?",
+          "originalOptionIndices": [
+            3,
+            2,
+            0,
+            1
+          ],
+          "shuffledOptions": [
+            "Giá trị đo được của đại lượng luôn bằng 0 khi vật chuyển động thẳng đều hoặc khi ánh sáng truyền qua mặt phân cách bất kì.",
+            "Chiều của quá trình vật lí luôn cố định theo một chiều duy nhất, không phụ thuộc vào chiều của lực từ hay hướng truyền tia sáng.",
+            "Khi tăng gấp đôi hiệu điện thế hoặc lực tác dụng thì đại lượng kết quả giảm đi bốn lần do sự tiêu hao năng lượng nội tại.",
+            "Cơ năng = Động năng + Thế năng (W = Wđ + Wt)."
+          ]
+        },
+        {
+          "questionId": "q-les-1-mcq-biet-1",
+          "orderIndex": 3,
+          "type": "mcq",
+          "level": "biet",
+          "lessonId": 1,
+          "points": 0.25,
+          "prompt": "Trong buổi thực hành tại phòng thí nghiệm Khoa học tự nhiên, một nhóm học sinh tiến hành lấy một lượng nhỏ dung dịch kiềm, đun nóng ống nghiệm bằng đèn cồn và ghi chép số liệu để lập báo cáo khoa học. Dựa trên cơ sở khoa học của hiện tượng trên, nhận định nào sau đây là ĐÚNG?",
+          "originalOptionIndices": [
+            1,
+            0,
+            3,
+            2
+          ],
+          "shuffledOptions": [
+            "Có thể dùng miệng hút trực tiếp các dung dịch acid và kiềm đặc qua pipet thuỷ tinh để rút ngắn thời gian thao tác thí nghiệm.",
+            "Dụng cụ quang học & điện từ: Nguồn sáng, bản bán trụ, bảng chia độ (nghiên cứu khúc xạ/phản xạ toàn phần); tiêu bản NST người; cuộn dây dẫn có đèn LED.",
+            "Khi số liệu thực nghiệm đo được có sai lệch nhỏ so với công thức lí thuyết, người làm thí nghiệm được phép tự ý sửa lại số liệu trong báo cáo cho khớp hoàn toàn.",
+            "Sau khi kết thúc thí nghiệm, toàn bộ hoá chất độc hại và kim loại nặng dư thừa đều được đổ trực tiếp xuống bồn rửa dân dụng mà không cần thu gom xử lí."
+          ]
+        },
+        {
+          "questionId": "q-les-2-mcq-hieu-2",
+          "orderIndex": 4,
+          "type": "mcq",
+          "level": "hieu",
+          "lessonId": 2,
+          "points": 0.25,
+          "prompt": "Khi khảo sát năng lượng cơ học của phương tiện giao thông đang chạy trên đường và vật nặng ở trên cao so với mốc tính độ cao, khi phân tích mối liên hệ nhân quả giữa các đại lượng và điều kiện thực nghiệm, giải thích nào sau đây là phù hợp với cơ sở khoa học?",
+          "originalOptionIndices": [
+            2,
+            1,
+            0,
+            3
+          ],
+          "shuffledOptions": [
+            "Góc khúc xạ và góc phản xạ luôn bằng 90° đối với mọi góc tới của chùm tia sáng chiếu tới mặt phân cách.",
+            "Giá trị đo được của đại lượng luôn bằng 0 khi vật chuyển động thẳng đều hoặc khi ánh sáng truyền qua mặt phân cách bất kì.",
+            "Đại lượng nghiên cứu luôn tỉ lệ nghịch với cả khối lượng của vật và thời gian thực hiện quá trình trong mọi hệ quy chiếu.",
+            "Động năng: Wđ = ½mv² (đơn vị: J)."
+          ]
+        },
+        {
+          "questionId": "q-les-37-mcq-biet-3-v2",
+          "orderIndex": 5,
+          "type": "mcq",
+          "level": "biet",
+          "lessonId": 37,
+          "points": 0.25,
+          "prompt": "Xét tình huống thực tiễn sau: \"Tại một trại giống cây trồng, để kiểm tra một cây đậu Hà Lan có kiểu hình hạt vàng (tính trạng trội) là thuần chủng (AA) hay không thuần chủng (Aa), cán bộ kĩ thuật tiến hành phép lai phân tích bằng cách cho cây đó lai với cây hạt xanh (aa).\" — phát biểu nào dưới đây mô tả ĐÚNG quy luật tự nhiên chi phối hiện tượng trên?",
+          "originalOptionIndices": [
+            0,
+            2,
+            1,
+            3
+          ],
+          "shuffledOptions": [
+            "Phép lai phân tích là phép lai giữa cơ thể mang tính trạng trội cần xác định kiểu gene (AA hoặc Aa) với cơ thể mang tính trạng lặn (aa). Nếu đời con đồng tính (100% trội) thì cơ thể trội đem lai thuần chủng (AA); nếu đời con phân tính (1 trội : 1 lặn) thì cơ thể trội đem lai dị hợp (Aa).",
+            "Bộ nhiễm sắc thể của tế bào con sau phân bào luôn tăng gấp bốn lần (4n) ở mọi mô sinh dưỡng nhằm tăng kích thước cơ thể trưởng thành.",
+            "Thông tin di truyền được truyền trực tiếp từ phân tử protein sang phân tử DNA trong không bào mà không cần sự tham gia của enzyme hay nucleic acid.",
+            "Các allele nằm trên các cặp nhiễm sắc thể tương đồng khác nhau luôn hoán vị trực tiếp với các phân tử lipid của màng sinh chất trong kì trung gian."
+          ]
+        },
+        {
+          "questionId": "q-les-19-mcq-biet-1",
+          "orderIndex": 6,
+          "type": "mcq",
+          "level": "biet",
+          "lessonId": 19,
+          "points": 0.25,
+          "prompt": "Học sinh tiến hành thí nghiệm cho ba mẩu kim loại Mg, Fe, Cu có kích thước tương đương vào ba ống nghiệm đựng dung dịch HCl loãng, đồng thời nhúng đinh sắt sạch vào dung dịch CuSO₄ màu xanh lam. Dựa trên cơ sở khoa học của hiện tượng trên, nhận định nào sau đây là ĐÚNG?",
+          "originalOptionIndices": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "shuffledOptions": [
+            "Phản ứng chỉ xảy ra khi có mặt chất xúc tác sinh học ở nhiệt độ âm và giải phóng trực tiếp kim loại kiềm tự do trong dung dịch nước.",
+            "Trong phân tử chỉ tồn tại liên kết ion bền vững giữa các nguyên tử kim loại chuyển tiếp, không có sự góp chung electron hoá trị.",
+            "Hợp chất khảo sát hoàn toàn trơ về mặt hoá học, không tham gia phản ứng cháy với oxygen cũng như không tác dụng với acid hay kiềm ở mọi điều kiện.",
+            "Dãy hoạt động hoá học của một số kim loại tiêu biểu theo chiều giảm dần: K, Na, Ca, Mg, Al, Zn, Fe, Pb, (H), Cu, Ag, Au."
+          ]
+        },
+        {
+          "questionId": "q-docx-207",
+          "orderIndex": 7,
+          "type": "mcq",
+          "level": "biet",
+          "lessonId": 20,
+          "points": 0.25,
+          "prompt": "Thép không gỉ (inox) được tạo ra bằng cách nấu chảy sắt với các nguyên tố khác như Crom (Cr) và Niken (Ni). Khái niệm nào được dùng để gọi tên các vật liệu kim loại tạo thành từ sự kết hợp của một kim loại với các nguyên tố khác như thép không gỉ?",
+          "originalOptionIndices": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "shuffledOptions": [
+            "Hợp kim.",
+            "Hợp chất.",
+            "Khoáng vật.",
+            "Đơn chất."
+          ]
+        },
+        {
+          "questionId": "q-docx-109",
+          "orderIndex": 8,
+          "type": "mcq",
+          "level": "biet",
+          "lessonId": 36,
+          "points": 0.25,
+          "prompt": "Khi nghiên cứu sự truyền đạt màu hoa và hình dạng hạt qua nhiều thế hệ thực vật cũng như sự xuất hiện các đặc điểm mới ở đời con, các nhà khoa học khẳng định gene được xem là trung tâm của di truyền học vì:",
+          "originalOptionIndices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "shuffledOptions": [
+            "Gene quy định sự di truyền và tạo ra biến dị ở sinh vật.",
+            "Gene chỉ là tác nhân gây bệnh cho sinh vật.",
+            "Gene chỉ quy định sự di truyền ở vi khuẩn.",
+            "Gene bị biến đổi tùy theo môi trường đất trồng."
+          ]
+        },
+        {
+          "questionId": "q-les-1-mcq-biet-2",
+          "orderIndex": 9,
+          "type": "mcq",
+          "level": "biet",
+          "lessonId": 1,
+          "points": 0.25,
+          "prompt": "Khi thiết kế quy trình thực hành an toàn với các hoá chất có tính ăn mòn và lập báo cáo thực nghiệm khoa học, các nhà khoa học đã xác lập được các tính chất và quy luật đặc trưng. Phát biểu nào sau đây phản ánh ĐÚNG bản chất khoa học của quá trình này?",
+          "originalOptionIndices": [
+            2,
+            3,
+            1,
+            0
+          ],
+          "shuffledOptions": [
+            "Dụng cụ thí nghiệm hoá học: Pipet (lấy chính xác thể tích nhỏ chất lỏng), ống đong (đo thể tích dung dịch), bình cầu, bát sứ, phễu chiết, đèn cồn (đun nóng hoá chất).",
+            "Khi số liệu thực nghiệm đo được có sai lệch nhỏ so với công thức lí thuyết, người làm thí nghiệm được phép tự ý sửa lại số liệu trong báo cáo cho khớp hoàn toàn.",
+            "Sau khi kết thúc thí nghiệm, toàn bộ hoá chất độc hại và kim loại nặng dư thừa đều được đổ trực tiếp xuống bồn rửa dân dụng mà không cần thu gom xử lí.",
+            "Có thể dùng miệng hút trực tiếp các dung dịch acid và kiềm đặc qua pipet thuỷ tinh để rút ngắn thời gian thao tác thí nghiệm."
+          ]
+        },
+        {
+          "questionId": "q-les-37-mcq-biet-1",
+          "orderIndex": 10,
+          "type": "mcq",
+          "level": "biet",
+          "lessonId": 37,
+          "points": 0.25,
+          "prompt": "Trong thí nghiệm kinh điển trên cây đậu Hà Lan (Pisum sativum) có hoa lưỡng tính tự thụ phấn nghiêm ngặt, Gregor Mendel tiến hành lai các dòng thuần chủng khác nhau về một cặp tính trạng (hoa tím × hoa trắng) và hai cặp tính trạng tương phản (hạt vàng, vỏ trơn × hạt xanh, vỏ nhăn). Dựa trên cơ sở khoa học của hiện tượng trên, nhận định nào sau đây là ĐÚNG?",
+          "originalOptionIndices": [
+            1,
+            3,
+            0,
+            2
+          ],
+          "shuffledOptions": [
+            "Thông tin di truyền được truyền trực tiếp từ phân tử protein sang phân tử DNA trong không bào mà không cần sự tham gia của enzyme hay nucleic acid.",
+            "Các allele nằm trên các cặp nhiễm sắc thể tương đồng khác nhau luôn hoán vị trực tiếp với các phân tử lipid của màng sinh chất trong kì trung gian.",
+            "Các thuật ngữ cơ bản: Tính trạng là đặc điểm hình thái, cấu tạo, sinh lí của cơ thể. Nhân tố di truyền (nay gọi là gene) quy định tính trạng. Các trạng thái khác nhau của cùng một gene gọi là các allele (ví dụ A quy định hạt vàng, a quy định hạt xanh).",
+            "Bộ nhiễm sắc thể của tế bào con sau phân bào luôn tăng gấp bốn lần (4n) ở mọi mô sinh dưỡng nhằm tăng kích thước cơ thể trưởng thành."
+          ]
+        },
+        {
+          "questionId": "q-les-3-mcq-biet-1",
+          "orderIndex": 11,
+          "type": "mcq",
+          "level": "biet",
+          "lessonId": 3,
+          "points": 0.25,
+          "prompt": "Một con lắc đơn gồm quả cầu kim loại treo vào sợi dây mảnh được kéo lệch khỏi vị trí cân bằng rồi thả nhẹ cho dao động qua lại trong không khí (khi bỏ qua sức cản). Dựa trên cơ sở khoa học của hiện tượng trên, nhận định nào sau đây là ĐÚNG?",
+          "originalOptionIndices": [
+            0,
+            3,
+            2,
+            1
+          ],
+          "shuffledOptions": [
+            "Tổng động năng và thế năng của vật được gọi là cơ năng: W = Wđ + Wt.",
+            "Hiện tượng chỉ xảy ra trong môi trường chân không tuyệt đối và hoàn toàn không phụ thuộc vào bản chất vật lí của môi trường truyền.",
+            "Trong quá trình biến đổi, tổng năng lượng của hệ tự sinh ra thêm mà không cần có công cơ học hay nhiệt lượng truyền vào.",
+            "Đại lượng nghiên cứu luôn tỉ lệ nghịch với cả khối lượng của vật và thời gian thực hiện quá trình trong mọi hệ quy chiếu."
+          ]
+        },
+        {
+          "questionId": "q-les-18-mcq-biet-2-v2",
+          "orderIndex": 12,
+          "type": "mcq",
+          "level": "biet",
+          "lessonId": 18,
+          "points": 0.25,
+          "prompt": "Khi viết phương trình hoá học của kim loại tác dụng với phi kim, nước, dung dịch acid và dung dịch muối trong thực nghiệm, người thực hiện cần nắm vững đặc điểm cốt lõi của các đại lượng và chất tham gia. Phát biểu nào dưới đây là ĐÚNG?",
+          "originalOptionIndices": [
+            2,
+            1,
+            3,
+            0
+          ],
+          "shuffledOptions": [
+            "Khi đun nóng ở áp suất thường, hợp chất tự phân huỷ hoàn toàn thành khí nitrogen và kim loại nguyên chất mà không cần tác nhân khử.",
+            "Tất cả các hợp chất trong dãy đồng đẳng đều có cùng phân tử khối và chỉ tan trong dung môi nước mà không tan trong dung môi hữu cơ.",
+            "Tính chất hoá học: Tác dụng với phi kim, nước, dung dịch acid loãng (trước H) và dung dịch muối.",
+            "Dung dịch thu được sau phản ứng luôn có môi trường kiềm mạnh (pH = 14) làm giấy quỳ tím chuyển sang màu đỏ tươi và hoà tan được vàng nguyên chất."
+          ]
+        },
+        {
+          "questionId": "q-les-2-tf-extra-v2",
+          "orderIndex": 13,
+          "type": "true_false",
+          "level": "hieu",
+          "lessonId": 2,
+          "points": 1,
+          "prompt": "Khi tính toán động năng của viên đạn đang bay và thế năng trọng trường của búa máy đóng cọc được nâng cao so với mặt đất, các chuyên gia đưa ra 4 nhận định đánh giá quy trình kỹ thuật sau đây. Hãy xác định tính Đúng (Đ) / Sai (S) của từng nhận định:",
+          "statements": [
+            {
+              "id": "a",
+              "text": "Đổi đơn vị chuẩn SI trước khi thay số: m (kg), v (m/s), h (m)."
+            },
+            {
+              "id": "b",
+              "text": "Năng lượng cơ học và năng lượng điện trong mạch luôn tự động triệt tiêu lẫn nhau ngay khi đóng công tắc nguồn."
+            },
+            {
+              "id": "c",
+              "text": "Để đảm bảo kết quả thực nghiệm chính xác, người thực hiện cần kiểm soát chặt chẽ sai số: Quên đổi đơn vị khối lượng từ gam (g) hoặc tấn sang kilôgam (kg), hoặc quên đổi tốc độ từ km/h sang m/s (chia cho 3,6)."
+            },
+            {
+              "id": "d",
+              "text": "Động năng: Wđ = ½mv² (đơn vị: J)."
+            }
+          ]
+        },
+        {
+          "questionId": "q-les-21-tf-1-v2",
+          "orderIndex": 14,
+          "type": "true_false",
+          "level": "hieu",
+          "lessonId": 21,
+          "points": 1,
+          "prompt": "Trong công nghiệp sản xuất vật liệu và xử lí nước, lưu huỳnh được dùng để lưu hoá cao su làm lốp xe, khí chlorine được dùng khử trùng nước sinh hoạt, còn than hoạt tính được dùng trong mặt nạ phòng độc và máy lọc nước. Dựa trên các quy luật khoa học tự nhiên và kết quả khảo sát thực tế, hãy xác định mỗi phát biểu dưới đây là Đúng (Đ) hay Sai (S):",
+          "statements": [
+            {
+              "id": "a",
+              "text": "Khi dẫn sản phẩm khí qua dung dịch nước bromine hoặc nước vôi trong thì dung dịch chuyển sang màu tím sẫm và toả khí hydrogen."
+            },
+            {
+              "id": "b",
+              "text": "Sự khác nhau về tính chất vật lí: Kim loại dẫn điện, dẫn nhiệt tốt, có ánh kim, nhiệt độ nóng chảy cao (thể rắn trừ Hg); Phi kim thường không dẫn điện, dẫn nhiệt kém, không có ánh kim, tồn tại ở cả 3 thể (khí: O₂, Cl₂, N₂; lỏng: Br₂; rắn: C, S, P)."
+            },
+            {
+              "id": "c",
+              "text": "Kim loại + O₂ → thường tạo oxide base; Phi kim + O₂ → thường tạo oxide acid."
+            },
+            {
+              "id": "d",
+              "text": "Dung dịch thu được sau phản ứng luôn có môi trường kiềm mạnh (pH = 14) làm giấy quỳ tím chuyển sang màu đỏ tươi và hoà tan được vàng nguyên chất."
+            }
+          ]
+        },
+        {
+          "questionId": "q-les-19-sa-biet-1",
+          "orderIndex": 15,
+          "type": "short_answer",
+          "level": "biet",
+          "lessonId": 19,
+          "points": 0.5,
+          "prompt": "Học sinh tiến hành thí nghiệm cho ba mẩu kim loại Mg, Fe, Cu có kích thước tương đương vào ba ống nghiệm đựng dung dịch HCl loãng, đồng thời nhúng đinh sắt sạch vào dung dịch CuSO₄ màu xanh lam. Hãy viết biểu thức hoặc quy luật chuẩn của \"Dãy hoạt động hoá học của kim loại\" dùng để xác định đại lượng/quá trình trong hiện tượng trên."
+        },
+        {
+          "questionId": "q-les-20-sa-biet-1-v2",
+          "orderIndex": 16,
+          "type": "short_answer",
+          "level": "biet",
+          "lessonId": 20,
+          "points": 0.5,
+          "prompt": "Trong ngành hàng không và y tế, người ta sử dụng hợp kim duralumin (nhôm – đồng – magnesium) làm vỏ máy bay và thép không gỉ (inox chứa sắt, chromium, nickel) làm dụng cụ phẫu thuật thay vì dùng kim loại nguyên chất. Khi áp dụng quy luật \"Phương trình tách kim loại tiêu biểu\" (2Al₂O₃ →(đpnc, cryolite) 4Al + 3O₂↑ ;  Fe₂O₃ + 3CO →(t°) 2Fe + 3CO₂) để xử lí dữ liệu thực nghiệm, các đại lượng và đơn vị chuẩn trong hệ SI được quy ước như thế nào?"
+        },
+        {
+          "questionId": "q-les-36-sa-hieu-1",
+          "orderIndex": 17,
+          "type": "short_answer",
+          "level": "hieu",
+          "lessonId": 36,
+          "points": 0.5,
+          "prompt": "Khi phân tích khái niệm di truyền, biến dị, các thuật ngữ cơ bản (tính trạng, nhân tố di truyền/gene, kiểu gene, kiểu hình) và vai trò trung tâm của gene, dựa vào \"Sơ đồ vai trò trung tâm của Gene trong di truyền học\" (Gene (DNA) → Truyền đạt nguyên vẹn (Di truyền)  |  Gene biến đổi / tổ hợp lại → Tạo đặc điểm mới (Biến dị)), hãy nêu ngắn gọn ý nghĩa khoa học hoặc mối quan hệ tỉ lệ chính của quy luật này."
+        },
+        {
+          "questionId": "q-les-18-sa-biet-1-v2",
+          "orderIndex": 18,
+          "type": "short_answer",
+          "level": "biet",
+          "lessonId": 18,
+          "points": 0.5,
+          "prompt": "Trong kĩ thuật điện và chế tác cơ khí, đồng và nhôm được kéo thành sợi dây dẫn điện mảnh, vàng và bạc được dát mỏng làm đồ trang sức, còn воlfram (W) được dùng làm dây tóc bóng đèn chịu nhiệt độ rất cao. Khi áp dụng quy luật \"Các phương trình hoá học trọng tâm của kim loại\" (2Mg + O₂ →(t°) 2MgO ;  Fe + 2HCl → FeCl₂ + H₂↑ ;  Fe + CuSO₄ → FeSO₄ + Cu↓) để xử lí dữ liệu thực nghiệm, các đại lượng và đơn vị chuẩn trong hệ SI được quy ước như thế nào?"
+        },
+        {
+          "questionId": "q-docx-121",
+          "orderIndex": 19,
+          "type": "essay",
+          "level": "van_dung",
+          "lessonId": 37,
+          "points": 1,
+          "prompt": "Ở đậu Hà Lan, người ta thực hiện phép lai giữa hai dòng thuần chủng: cây hạt vàng, trơn (trội) với cây hạt xanh, nhăn (lặn). Kết quả F₁ thu được 100% cây hạt vàng, trơn. Sau đó, cho các cá thể F₁ tự thụ phấn, thu được thế hệ F₂ gồm 640 hạt. Dựa vào quy luật phân li độc lập của Mendel, hãy tính số hạt ở thế hệ F₂ dự kiến sẽ có kiểu hình hạt vàng, nhăn.",
+          "rubricSteps": [
+            {
+              "id": "step-1",
+              "description": "Bước chấm (0.25 điểm)",
+              "points": 0.25
+            },
+            {
+              "id": "step-2",
+              "description": "Bước chấm (0.25 điểm)",
+              "points": 0.25
+            },
+            {
+              "id": "step-3",
+              "description": "Bước chấm (0.25 điểm)",
+              "points": 0.25
+            },
+            {
+              "id": "step-4",
+              "description": "Bước chấm (0.25 điểm)",
+              "points": 0.25
+            }
+          ]
+        },
+        {
+          "questionId": "q-les-1-essay-1",
+          "orderIndex": 20,
+          "type": "essay",
+          "level": "van_dung",
+          "lessonId": 1,
+          "points": 1,
+          "prompt": "Trong buổi thực hành tại phòng thí nghiệm Khoa học tự nhiên, một nhóm học sinh tiến hành lấy một lượng nhỏ dung dịch kiềm, đun nóng ống nghiệm bằng đèn cồn và ghi chép số liệu để lập báo cáo khoa học. Xét bài toán thực nghiệm cụ thể sau: Cần lấy 50 mL dung dịch HCl để làm thí nghiệm và lấy chính xác 2 mL dung dịch NaOH nhỏ vào ống nghiệm. Nên chọn dụng cụ nào? Hãy nêu cơ sở khoa học, viết biểu thức/quy luật áp dụng và trình bày các bước giải chi tiết.",
+          "rubricSteps": [
+            {
+              "id": "rub-1-1a",
+              "description": "Bước chấm (0.25 điểm)",
+              "points": 0.25
+            },
+            {
+              "id": "rub-1-1b",
+              "description": "Bước chấm (0.25 điểm)",
+              "points": 0.25
+            },
+            {
+              "id": "rub-1-1c",
+              "description": "Bước chấm (0.25 điểm)",
+              "points": 0.25
+            },
+            {
+              "id": "rub-1-1d",
+              "description": "Bước chấm (0.25 điểm)",
+              "points": 0.25
+            }
+          ]
+        },
+        {
+          "questionId": "q-les-3-essay-1",
+          "orderIndex": 21,
+          "type": "essay",
+          "level": "van_dung",
+          "lessonId": 3,
+          "points": 1,
+          "prompt": "Một con lắc đơn gồm quả cầu kim loại treo vào sợi dây mảnh được kéo lệch khỏi vị trí cân bằng rồi thả nhẹ cho dao động qua lại trong không khí (khi bỏ qua sức cản). Xét bài toán thực nghiệm cụ thể sau: Một con lắc đơn dao động không ma sát. Ở vị trí cao nhất và vị trí thấp nhất (cân bằng), động năng và thế năng như thế nào? Hãy nêu cơ sở khoa học, viết biểu thức/quy luật áp dụng và trình bày các bước giải chi tiết.",
+          "rubricSteps": [
+            {
+              "id": "rub-3-1a",
+              "description": "Bước chấm (0.25 điểm)",
+              "points": 0.25
+            },
+            {
+              "id": "rub-3-1b",
+              "description": "Bước chấm (0.25 điểm)",
+              "points": 0.25
+            },
+            {
+              "id": "rub-3-1c",
+              "description": "Bước chấm (0.25 điểm)",
+              "points": 0.25
+            },
+            {
+              "id": "rub-3-1d",
+              "description": "Bước chấm (0.25 điểm)",
+              "points": 0.25
+            }
+          ]
+        }
+      ],
+      "answers": {
+        "q-les-21-mcq-hieu-1": {
+          "selectedShuffledIndex": 3,
+          "timeSpentSeconds": 0
+        },
+        "q-les-3-mcq-biet-1-v2": {
+          "selectedShuffledIndex": 3,
+          "timeSpentSeconds": 0
+        },
+        "q-les-1-mcq-biet-1": {
+          "selectedShuffledIndex": 1,
+          "timeSpentSeconds": 0
+        },
+        "q-les-2-mcq-hieu-2": {
+          "selectedShuffledIndex": 3,
+          "timeSpentSeconds": 0
+        },
+        "q-les-37-mcq-biet-3-v2": {
+          "selectedShuffledIndex": 0,
+          "timeSpentSeconds": 0
+        },
+        "q-les-19-mcq-biet-1": {
+          "selectedShuffledIndex": 3,
+          "timeSpentSeconds": 0
+        },
+        "q-docx-207": {
+          "selectedShuffledIndex": 0,
+          "timeSpentSeconds": 13
+        },
+        "q-docx-109": {
+          "selectedShuffledIndex": 0,
+          "timeSpentSeconds": 0
+        },
+        "q-les-1-mcq-biet-2": {
+          "selectedShuffledIndex": 0,
+          "timeSpentSeconds": 0
+        },
+        "q-les-37-mcq-biet-1": {
+          "selectedShuffledIndex": 0,
+          "timeSpentSeconds": 0
+        },
+        "q-les-3-mcq-biet-1": {
+          "selectedShuffledIndex": 0,
+          "timeSpentSeconds": 0
+        },
+        "q-les-18-mcq-biet-2-v2": {
+          "selectedShuffledIndex": 2,
+          "timeSpentSeconds": 6
+        },
+        "q-les-2-tf-extra-v2": {
+          "trueFalseAnswers": {
+            "a": true,
+            "b": false,
+            "c": true,
+            "d": true
+          },
+          "timeSpentSeconds": 19
+        },
+        "q-les-21-tf-1-v2": {
+          "trueFalseAnswers": {
+            "a": false,
+            "b": true,
+            "c": true,
+            "d": false
+          },
+          "timeSpentSeconds": 20
+        }
+      },
+      "status": "in_progress",
+      "startedAt": "2026-11-01T14:27:54.397Z",
+      "autoGradedScore": 0,
+      "manualGradedScore": 0,
+      "totalScore": 0,
+      "violationCount": 0,
+      "flaggedForReview": false,
+      "deviceInfo": {
+        "userAgent": "Mozilla/5.0 (Linux; Android 15; NIC-LX2 Build/HONORNIC-L52;) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/156.0.8078.47 Mobile Safari/537.36 Zalo android/261002903 ZaloTheme/light ZaloLanguage/vi",
+        "platform": "Linux aarch64",
+        "screenResolution": "320x713"
+      },
+      "activityLogs": [
+        {
+          "timestamp": "2026-11-01T14:27:54.397Z",
+          "eventType": "exam_start",
+          "detail": "Bắt đầu làm bài. Mã đề cá nhân: MĐ-9A1-F14A (Chữ ký đề: F14A7652282F)"
+        },
+        {
+          "timestamp": "2026-11-01T14:37:15.064Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-2-tf-extra-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:37:22.684Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-2-tf-extra-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:37:40.636Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-21-tf-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:37:43.679Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-21-tf-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:37:57.751Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-21-tf-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:38:00.571Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-21-tf-1-v2)"
+        }
+      ]
     }
   ]
 }

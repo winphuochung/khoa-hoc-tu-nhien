@@ -878,11 +878,11 @@ export const TeacherGradingAndReports: React.FC<TeacherGradingAndReportsProps> =
 
                           <div className="text-xs text-slate-700 bg-white p-2.5 rounded-xl border border-slate-200">
                             <strong>Hướng dẫn chấm / Đáp án chuẩn:</strong>{' '}
-                            {bq.sampleAnswer || bq.explanation || 'Theo biểu điểm tự luận'}
+                            {bq.sampleAnswer || q.sampleAnswer || bq.explanation || q.explanation || 'Theo biểu điểm tự luận'}
                           </div>
 
                           {/* Essay Rubric Steps (0,25đ per step) */}
-                          {Array.isArray(bq.rubricSteps) && (
+                          {Array.isArray(bq.rubricSteps || q.rubricSteps) && (bq.rubricSteps || q.rubricSteps).length > 0 && (
                             <div className="space-y-2 bg-white p-3.5 rounded-xl border border-amber-300">
                               <div className="text-xs font-bold text-amber-950 flex items-center justify-between">
                                 <span>Tích chọn các bước chấm học sinh làm đúng (mỗi bước 0,25 điểm):</span>
@@ -890,7 +890,7 @@ export const TeacherGradingAndReports: React.FC<TeacherGradingAndReportsProps> =
                                   Đã chấm: {gState.manualScore ?? 0}/{q.points}đ
                                 </span>
                               </div>
-                              {bq.rubricSteps.map((st: any) => {
+                              {(bq.rubricSteps || q.rubricSteps).map((st: any) => {
                                 const checked = (gState.checkedRubricStepIds || []).includes(st.id);
                                 return (
                                   <label
@@ -902,7 +902,7 @@ export const TeacherGradingAndReports: React.FC<TeacherGradingAndReportsProps> =
                                         type="checkbox"
                                         checked={checked}
                                         onChange={() =>
-                                          toggleRubricStep(q.questionId, st.id, bq.rubricSteps)
+                                          toggleRubricStep(q.questionId, st.id, bq.rubricSteps || q.rubricSteps)
                                         }
                                         className="w-4 h-4 accent-[#0D6E6E]"
                                       />

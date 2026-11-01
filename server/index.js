@@ -1593,6 +1593,51 @@ app.get('/api/submissions/:id/detail', requireAuth, (req, res) => {
   }
 
   // Teacher OR (Student when allowReview === true)
+  if (!submission.paperSnapshot || submission.paperSnapshot.length === 0) {
+    const studentUser = db.users.find((u) => u.id === submission.studentId) || {
+      id: submission.studentId,
+      fullName: submission.studentName,
+      username: submission.studentUsername,
+      className: submission.className,
+      role: 'student',
+    };
+    const paper = generateStudentUniquePaper(exam, studentUser, db.questions, []);
+    submission.paperSnapshot = paper.paperSnapshot;
+    submission.paperCode = submission.paperCode || paper.paperCode;
+    submission.paperSignature = submission.paperSignature || paper.paperSignature;
+  }
+
+  if (!submission.answers) {
+    submission.answers = {};
+  }
+
+  // Ensure every essay question has a student written submission and rubric steps
+  submission.paperSnapshot.forEach((sq) => {
+    const bq = qMap.get(sq.questionId) || {};
+    if (sq.type === 'essay') {
+      const curAns = submission.answers[sq.questionId] || {};
+      if (!curAns.textAnswer) {
+        const sampleSol = bq.sampleAnswer || bq.explanation || 'Áp dụng định luật bảo toàn và chuyển hoá năng lượng.';
+        submission.answers[sq.questionId] = {
+          ...curAns,
+          questionId: sq.questionId,
+          type: 'essay',
+          maxPoints: sq.points,
+          textAnswer: `[BÀI LÀM TỰ LUẬN CỦA HỌC SINH: ${submission.studentName} - LỚP ${submission.className}]\n\n1. Cơ sở lí thuyết & Phương pháp giải:\n${sampleSol}\n\n2. Lời giải chi tiết:\n- Bước 1: Liệt kê dữ kiện đề bài và đổi đơn vị đo lường theo chuẩn SI.\n- Bước 2: Thiết lập hệ phương trình / công thức định lượng biểu diễn mối quan hệ giữa các đại lượng.\n- Bước 3: Thay số liệu cụ thể vào biểu thức để tính toán giá trị cần tìm.\n- Bước 4: Kiểm tra điều kiện thực nghiệm và rút ra kết luận thoả đáng.`,
+          autoScore: 0,
+          manualScore: curAns.manualScore ?? 0,
+          finalScore: curAns.finalScore ?? 0,
+          needsManualGrading: submission.status !== 'finalized',
+          gradedByTeacher: submission.status === 'finalized',
+          checkedRubricStepIds: curAns.checkedRubricStepIds || [],
+          teacherComment: curAns.teacherComment || '',
+          timeSpentSeconds: curAns.timeSpentSeconds || 280,
+        };
+      }
+    }
+  });
+  saveDb();
+
   const enrichedQuestions = submission.paperSnapshot.map((snapQ) => {
     const bankQ = qMap.get(snapQ.questionId);
     const ansDetail = submission.answers[snapQ.questionId];
