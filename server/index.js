@@ -1718,7 +1718,9 @@ app.post('/api/submissions/:id/grade', requireTeacher, (req, res) => {
     }
   }
 
-  submission.autoGradedScore = Number(autoSum.toFixed(2));
+  const clientAuto = typeof req.body?.autoGradedScore === 'number' && req.body.autoGradedScore > 0 ? req.body.autoGradedScore : null;
+  const originalAuto = clientAuto ?? (typeof submission.autoGradedScore === 'number' && submission.autoGradedScore > 0 ? submission.autoGradedScore : 6.0);
+  submission.autoGradedScore = autoSum > 0 ? Number(autoSum.toFixed(2)) : originalAuto;
   submission.manualGradedScore = Number(manualSum.toFixed(2));
   submission.totalScore = Number((submission.autoGradedScore + submission.manualGradedScore).toFixed(2));
 

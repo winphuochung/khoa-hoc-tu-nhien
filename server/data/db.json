@@ -114592,20 +114592,20 @@
       "1": {
         "lessonId": 1,
         "studied": true,
-        "totalAttempted": 26,
-        "correctCount": 23,
-        "studiedAt": "2026-11-01T14:39:35.882Z",
-        "lastPracticedAt": "2026-11-01T14:39:35.882Z"
+        "totalAttempted": 28,
+        "correctCount": 25,
+        "studiedAt": "2026-11-01T14:43:27.512Z",
+        "lastPracticedAt": "2026-11-01T14:43:27.512Z"
       }
     },
     "usr-hs-9a1-30": {
       "1": {
         "lessonId": 1,
         "studied": true,
-        "totalAttempted": 22,
-        "correctCount": 21,
-        "studiedAt": "2026-11-01T14:39:22.824Z",
-        "lastPracticedAt": "2026-11-01T14:39:22.824Z"
+        "totalAttempted": 27,
+        "correctCount": 24,
+        "studiedAt": "2026-11-01T14:44:48.998Z",
+        "lastPracticedAt": "2026-11-01T14:44:48.998Z"
       }
     }
   },
@@ -146142,12 +146142,509 @@
       "className": "9A1",
       "paperCode": "MĐ-9A1-KC05",
       "paperSignature": "9A1KC1234567",
-      "paperSnapshot": [],
-      "answers": {},
+      "paperSnapshot": [
+        {
+          "questionId": "q-les-21-mcq-hieu-2",
+          "orderIndex": 1,
+          "type": "mcq",
+          "level": "hieu",
+          "lessonId": 21,
+          "points": 0.25,
+          "prompt": "Khi phân biệt sự khác nhau cơ bản về tính chất vật lí và tính chất hoá học (bản chất oxide acid / oxide base) giữa phi kim và kim loại, khi phân tích mối liên hệ nhân quả giữa các đại lượng và điều kiện thực nghiệm, giải thích nào sau đây là phù hợp với cơ sở khoa học?",
+          "originalOptionIndices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "shuffledOptions": [
+            "Phản ứng chỉ xảy ra khi có mặt chất xúc tác sinh học ở nhiệt độ âm và giải phóng trực tiếp kim loại kiềm tự do trong dung dịch nước.",
+            "Quá trình biến đổi làm thay đổi số proton trong hạt nhân nguyên tử carbon tạo thành nguyên tố kim loại nặng tương ứng.",
+            "Khi đun nóng ở áp suất thường, hợp chất tự phân huỷ hoàn toàn thành khí nitrogen và kim loại nguyên chất mà không cần tác nhân khử.",
+            "Ứng dụng phi kim: Lưu huỳnh lưu hoá cao su; Chlorine khử trùng nước; Carbon hoạt tính khử mùi/lọc nước."
+          ]
+        },
+        {
+          "questionId": "q-les-2-mcq-hieu-2-v2",
+          "orderIndex": 2,
+          "type": "mcq",
+          "level": "hieu",
+          "lessonId": 2,
+          "points": 0.25,
+          "prompt": "Khi tính toán động năng của viên đạn đang bay và thế năng trọng trường của búa máy đóng cọc được nâng cao so với mặt đất, vì sao trong thực tế một số kết quả tính toán hoặc thực nghiệm lại bị sai lệch nếu người thực hiện không kiểm tra kĩ các điều kiện chuẩn?",
+          "originalOptionIndices": [
+            0,
+            2,
+            1,
+            3
+          ],
+          "shuffledOptions": [
+            "Vì dễ gặp sai sót kỹ thuật: \"Quên bình phương tốc độ v trong công thức Wđ = ½mv².\" — do đó bắt buộc phải chuẩn hoá đơn vị và kiểm tra điều kiện áp dụng.",
+            "Mọi vật liệu cách điện và dẫn điện đều có cùng giá trị điện trở suất và chiết suất quang học ở cùng nhiệt độ phòng.",
+            "Khi tăng gấp đôi hiệu điện thế hoặc lực tác dụng thì đại lượng kết quả giảm đi bốn lần do sự tiêu hao năng lượng nội tại.",
+            "Trong quá trình biến đổi, tổng năng lượng của hệ tự sinh ra thêm mà không cần có công cơ học hay nhiệt lượng truyền vào."
+          ]
+        },
+        {
+          "questionId": "q-les-18-mcq-biet-1",
+          "orderIndex": 3,
+          "type": "mcq",
+          "level": "biet",
+          "lessonId": 18,
+          "points": 0.25,
+          "prompt": "Trong phòng thí nghiệm Hoá học, học sinh tiến hành đốt nóng dây sắt trong bình chứa khí oxygen, cho viên kẽm vào ống nghiệm đựng dung dịch hydrochloric acid (HCl) loãng và nhúng dây đồng vào dung dịch silver nitrate (AgNO₃). Dựa trên cơ sở khoa học của hiện tượng trên, nhận định nào sau đây là ĐÚNG?",
+          "originalOptionIndices": [
+            1,
+            3,
+            0,
+            2
+          ],
+          "shuffledOptions": [
+            "Phản ứng chỉ xảy ra khi có mặt chất xúc tác sinh học ở nhiệt độ âm và giải phóng trực tiếp kim loại kiềm tự do trong dung dịch nước.",
+            "Trong phân tử chỉ tồn tại liên kết ion bền vững giữa các nguyên tử kim loại chuyển tiếp, không có sự góp chung electron hoá trị.",
+            "Tính chất vật lí chung: Kim loại có tính dẻo (dễ rèn, kéo sợi, dát mỏng như Au, Ag, Al, Cu), tính dẫn điện (Ag > Cu > Au > Al > Fe), tính dẫn nhiệt và có ánh kim.",
+            "Hợp chất khảo sát hoàn toàn trơ về mặt hoá học, không tham gia phản ứng cháy với oxygen cũng như không tác dụng với acid hay kiềm ở mọi điều kiện."
+          ]
+        },
+        {
+          "questionId": "q-les-1-mcq-biet-2-v2",
+          "orderIndex": 4,
+          "type": "mcq",
+          "level": "biet",
+          "lessonId": 1,
+          "points": 0.25,
+          "prompt": "Khi phân loại dụng cụ đo thể tích chính xác trong phòng thí nghiệm và trình bày kết luận nghiên cứu khoa học, người thực hiện cần nắm vững đặc điểm cốt lõi của các đại lượng và chất tham gia. Phát biểu nào dưới đây là ĐÚNG?",
+          "originalOptionIndices": [
+            1,
+            3,
+            2,
+            0
+          ],
+          "shuffledOptions": [
+            "Sau khi kết thúc thí nghiệm, toàn bộ hoá chất độc hại và kim loại nặng dư thừa đều được đổ trực tiếp xuống bồn rửa dân dụng mà không cần thu gom xử lí.",
+            "Báo cáo khoa học phải trung thực, rõ ràng và kết luận bám sát kết quả quan sát.",
+            "Khi số liệu thực nghiệm đo được có sai lệch nhỏ so với công thức lí thuyết, người làm thí nghiệm được phép tự ý sửa lại số liệu trong báo cáo cho khớp hoàn toàn.",
+            "Có thể dùng miệng hút trực tiếp các dung dịch acid và kiềm đặc qua pipet thuỷ tinh để rút ngắn thời gian thao tác thí nghiệm."
+          ]
+        },
+        {
+          "questionId": "q-les-3-mcq-biet-1",
+          "orderIndex": 5,
+          "type": "mcq",
+          "level": "biet",
+          "lessonId": 3,
+          "points": 0.25,
+          "prompt": "Một con lắc đơn gồm quả cầu kim loại treo vào sợi dây mảnh được kéo lệch khỏi vị trí cân bằng rồi thả nhẹ cho dao động qua lại trong không khí (khi bỏ qua sức cản). Dựa trên cơ sở khoa học của hiện tượng trên, nhận định nào sau đây là ĐÚNG?",
+          "originalOptionIndices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "shuffledOptions": [
+            "Tổng động năng và thế năng của vật được gọi là cơ năng: W = Wđ + Wt.",
+            "Đại lượng nghiên cứu luôn tỉ lệ nghịch với cả khối lượng của vật và thời gian thực hiện quá trình trong mọi hệ quy chiếu.",
+            "Trong quá trình biến đổi, tổng năng lượng của hệ tự sinh ra thêm mà không cần có công cơ học hay nhiệt lượng truyền vào.",
+            "Hiện tượng chỉ xảy ra trong môi trường chân không tuyệt đối và hoàn toàn không phụ thuộc vào bản chất vật lí của môi trường truyền."
+          ]
+        },
+        {
+          "questionId": "q-les-37-mcq-biet-3-v2",
+          "orderIndex": 6,
+          "type": "mcq",
+          "level": "biet",
+          "lessonId": 37,
+          "points": 0.25,
+          "prompt": "Xét tình huống thực tiễn sau: \"Tại một trại giống cây trồng, để kiểm tra một cây đậu Hà Lan có kiểu hình hạt vàng (tính trạng trội) là thuần chủng (AA) hay không thuần chủng (Aa), cán bộ kĩ thuật tiến hành phép lai phân tích bằng cách cho cây đó lai với cây hạt xanh (aa).\" — phát biểu nào dưới đây mô tả ĐÚNG quy luật tự nhiên chi phối hiện tượng trên?",
+          "originalOptionIndices": [
+            2,
+            0,
+            1,
+            3
+          ],
+          "shuffledOptions": [
+            "Bộ nhiễm sắc thể của tế bào con sau phân bào luôn tăng gấp bốn lần (4n) ở mọi mô sinh dưỡng nhằm tăng kích thước cơ thể trưởng thành.",
+            "Phép lai phân tích là phép lai giữa cơ thể mang tính trạng trội cần xác định kiểu gene (AA hoặc Aa) với cơ thể mang tính trạng lặn (aa). Nếu đời con đồng tính (100% trội) thì cơ thể trội đem lai thuần chủng (AA); nếu đời con phân tính (1 trội : 1 lặn) thì cơ thể trội đem lai dị hợp (Aa).",
+            "Thông tin di truyền được truyền trực tiếp từ phân tử protein sang phân tử DNA trong không bào mà không cần sự tham gia của enzyme hay nucleic acid.",
+            "Các allele nằm trên các cặp nhiễm sắc thể tương đồng khác nhau luôn hoán vị trực tiếp với các phân tử lipid của màng sinh chất trong kì trung gian."
+          ]
+        },
+        {
+          "questionId": "q-les-19-mcq-biet-2-v2",
+          "orderIndex": 7,
+          "type": "mcq",
+          "level": "biet",
+          "lessonId": 19,
+          "points": 0.25,
+          "prompt": "Khi so sánh mức độ hoạt động hoá học giữa các kim loại qua hiện tượng đẩy kim loại yếu hơn ra khỏi dung dịch muối và giải phóng khí H₂ từ acid, người thực hiện cần nắm vững đặc điểm cốt lõi của các đại lượng và chất tham gia. Phát biểu nào dưới đây là ĐÚNG?",
+          "originalOptionIndices": [
+            3,
+            1,
+            2,
+            0
+          ],
+          "shuffledOptions": [
+            "Đứng trước H đẩy được H₂ khỏi acid loãng; đứng trước (từ Mg trở đi) đẩy được kim loại đứng sau khỏi dung dịch muối.",
+            "Tất cả các hợp chất trong dãy đồng đẳng đều có cùng phân tử khối và chỉ tan trong dung môi nước mà không tan trong dung môi hữu cơ.",
+            "Khi đun nóng ở áp suất thường, hợp chất tự phân huỷ hoàn toàn thành khí nitrogen và kim loại nguyên chất mà không cần tác nhân khử.",
+            "Dung dịch thu được sau phản ứng luôn có môi trường kiềm mạnh (pH = 14) làm giấy quỳ tím chuyển sang màu đỏ tươi và hoà tan được vàng nguyên chất."
+          ]
+        },
+        {
+          "questionId": "q-les-37-mcq-biet-2-v2",
+          "orderIndex": 8,
+          "type": "mcq",
+          "level": "biet",
+          "lessonId": 37,
+          "points": 0.25,
+          "prompt": "Khi giải thích cơ sở tế bào học của các quy luật Mendel và sử dụng phép lai phân tích để kiểm tra độ thuần chủng của giống trong nông nghiệp, người thực hiện cần nắm vững đặc điểm cốt lõi của các đại lượng và chất tham gia. Phát biểu nào dưới đây là ĐÚNG?",
+          "originalOptionIndices": [
+            1,
+            3,
+            0,
+            2
+          ],
+          "shuffledOptions": [
+            "Ở mọi loài động vật có vú, giới tính của hợp tử chỉ được quyết định bởi nhiệt độ môi trường nước sau khi cơ thể non đã trưởng thành.",
+            "Lai phân tích (cơ thể trội × cơ thể lặn aa): Giúp xác định kiểu gene của cơ thể mang tính trạng trội.",
+            "Chọn lọc tự nhiên trực tiếp tạo ra các kiểu gene thích nghi mới chỉ trong một thế hệ cá thể để đáp ứng tức thời với nguyện vọng của con người.",
+            "Trong quá trình tái bản DNA, nguyên tắc bổ sung được thực hiện bằng cách liên kết trực tiếp hai purine (A liên kết với G) thông qua liên kết cộng hoá trị."
+          ]
+        },
+        {
+          "questionId": "q-les-36-mcq-biet-2-v2",
+          "orderIndex": 9,
+          "type": "mcq",
+          "level": "biet",
+          "lessonId": 36,
+          "points": 0.25,
+          "prompt": "Khi giải thích mối quan hệ biện chứng giữa hiện tượng di truyền và biến dị thông qua sự bảo toàn và đột biến của phân tử gene, người thực hiện cần nắm vững đặc điểm cốt lõi của các đại lượng và chất tham gia. Phát biểu nào dưới đây là ĐÚNG?",
+          "originalOptionIndices": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "shuffledOptions": [
+            "Ở mọi loài động vật có vú, giới tính của hợp tử chỉ được quyết định bởi nhiệt độ môi trường nước sau khi cơ thể non đã trưởng thành.",
+            "Trong quá trình tái bản DNA, nguyên tắc bổ sung được thực hiện bằng cách liên kết trực tiếp hai purine (A liên kết với G) thông qua liên kết cộng hoá trị.",
+            "Biến dị: Con sinh ra có đặc điểm khác bố mẹ và khác nhau.",
+            "Chọn lọc tự nhiên trực tiếp tạo ra các kiểu gene thích nghi mới chỉ trong một thế hệ cá thể để đáp ứng tức thời với nguyện vọng của con người."
+          ]
+        },
+        {
+          "questionId": "q-les-20-mcq-biet-2-v2",
+          "orderIndex": 10,
+          "type": "mcq",
+          "level": "biet",
+          "lessonId": 20,
+          "points": 0.25,
+          "prompt": "Khi giải thích ưu tính cơ học, độ cứng và khả năng chống ăn mòn vượt trội của hợp kim (gang, thép, duralumin) so với kim loại tinh khiết, người thực hiện cần nắm vững đặc điểm cốt lõi của các đại lượng và chất tham gia. Phát biểu nào dưới đây là ĐÚNG?",
+          "originalOptionIndices": [
+            2,
+            3,
+            0,
+            1
+          ],
+          "shuffledOptions": [
+            "Khi đun nóng ở áp suất thường, hợp chất tự phân huỷ hoàn toàn thành khí nitrogen và kim loại nguyên chất mà không cần tác nhân khử.",
+            "Kim loại trung bình/yếu (Zn, Fe, Cu): Nhiệt luyện (khử oxide bằng C, CO, H₂) hoặc thuỷ luyện.",
+            "Dung dịch thu được sau phản ứng luôn có môi trường kiềm mạnh (pH = 14) làm giấy quỳ tím chuyển sang màu đỏ tươi và hoà tan được vàng nguyên chất.",
+            "Tất cả các hợp chất trong dãy đồng đẳng đều có cùng phân tử khối và chỉ tan trong dung môi nước mà không tan trong dung môi hữu cơ."
+          ]
+        },
+        {
+          "questionId": "q-docx-202",
+          "orderIndex": 11,
+          "type": "mcq",
+          "level": "biet",
+          "lessonId": 1,
+          "points": 0.25,
+          "prompt": "Khi trình bày kết quả thí nghiệm trước lớp, phần trình bày cuối cùng, rút ra từ kết quả quan sát, được gọi là gì?",
+          "originalOptionIndices": [
+            3,
+            2,
+            0,
+            1
+          ],
+          "shuffledOptions": [
+            "Phương pháp thí nghiệm.",
+            "Kết luận.",
+            "Giả thuyết.",
+            "Kết quả thí nghiệm."
+          ]
+        },
+        {
+          "questionId": "q-docx-203",
+          "orderIndex": 12,
+          "type": "mcq",
+          "level": "biet",
+          "lessonId": 3,
+          "points": 0.25,
+          "prompt": "Một con lắc đồng hồ đang dao động qua lại quanh vị trí cân bằng. Tại một thời điểm bất kì, con lắc vừa có độ cao, vừa có tốc độ. Tổng năng lượng do độ cao và năng lượng do tốc độ của nó tạo thành được gọi là gì?",
+          "originalOptionIndices": [
+            2,
+            0,
+            1,
+            3
+          ],
+          "shuffledOptions": [
+            "Quang năng.",
+            "Động năng.",
+            "Thế năng.",
+            "Cơ năng."
+          ]
+        },
+        {
+          "questionId": "q-les-21-tf-1",
+          "orderIndex": 13,
+          "type": "true_false",
+          "level": "hieu",
+          "lessonId": 21,
+          "points": 1,
+          "prompt": "Trong phòng thí nghiệm, học sinh so sánh trạng thái, tính dẫn điện của mẫu than chì (carbon), bột lưu huỳnh (sulfur), khí chlorine và đốt cháy lần lượt bột magnesium (kim loại) cùng bột lưu huỳnh (phi kim) trong khí oxygen dư rồi thử sản phẩm với nước và giấy quỳ tím. Sau khi quan sát và thu thập dữ liệu, nhóm nghiên cứu đưa ra 4 nhận định phân tích dưới đây. Hãy xác định mỗi nhận định là Đúng (Đ) hay Sai (S):",
+          "statements": [
+            {
+              "id": "a",
+              "text": "Ứng dụng của các phi kim quan trọng: Carbon (than hoạt tính hấp phụ chất độc/khử mùi, kim cương làm mũi khoan/trang sức, than chì làm điện cực/ruột bút chì); Lưu huỳnh (lưu hoá cao su, sản xuất H₂SO₄, thuốc diệt nấm); Chlorine (khử trùng nước sinh hoạt/bể bơi, sản xuất nước Javel, nhựa PVC)."
+            },
+            {
+              "id": "b",
+              "text": "Mối quan hệ định lượng/quy luật chi phối quá trình trên được biểu diễn bởi: 2Mg + O₂ →(t°) 2MgO (oxide base) ;  S + O₂ →(t°) SO₂ (oxide acid) (Dung dịch base (từ oxide base tan/tác dụng nước) làm quỳ tím hoá xanh; dung dịch acid (từ oxide acid + H₂O) làm quỳ tím hoá đỏ.)."
+            },
+            {
+              "id": "c",
+              "text": "Phản ứng chỉ xảy ra khi có mặt chất xúc tác sinh học ở nhiệt độ âm và giải phóng trực tiếp kim loại kiềm tự do trong dung dịch nước."
+            },
+            {
+              "id": "d",
+              "text": "Ứng dụng phi kim: Lưu huỳnh lưu hoá cao su; Chlorine khử trùng nước; Carbon hoạt tính khử mùi/lọc nước."
+            }
+          ]
+        },
+        {
+          "questionId": "q-les-2-tf-1",
+          "orderIndex": 14,
+          "type": "true_false",
+          "level": "hieu",
+          "lessonId": 2,
+          "points": 1,
+          "prompt": "Một đoàn tàu lượn siêu tốc có khối lượng lớn đang chuyển động nhanh trên đường ray và một quả nặng được cần cẩu nâng lên độ cao xác định so với mặt đất tại công trường xây dựng. Sau khi quan sát và thu thập dữ liệu, nhóm nghiên cứu đưa ra 4 nhận định phân tích dưới đây. Hãy xác định mỗi nhận định là Đúng (Đ) hay Sai (S):",
+          "statements": [
+            {
+              "id": "a",
+              "text": "Động năng (Wđ) là năng lượng mà vật có được do chuyển động. Vật có khối lượng càng lớn và chuyển động càng nhanh thì động năng càng lớn."
+            },
+            {
+              "id": "b",
+              "text": "Mối quan hệ định lượng/quy luật chi phối quá trình trên được biểu diễn bởi: Wđ = ½mv² (Động năng tỉ lệ thuận với khối lượng m và bình phương tốc độ v của vật.)."
+            },
+            {
+              "id": "c",
+              "text": "Đại lượng nghiên cứu luôn tỉ lệ nghịch với cả khối lượng của vật và thời gian thực hiện quá trình trong mọi hệ quy chiếu."
+            },
+            {
+              "id": "d",
+              "text": "Động năng: Wđ = ½mv² (đơn vị: J)."
+            }
+          ]
+        },
+        {
+          "questionId": "q-les-18-sa-biet-1",
+          "orderIndex": 15,
+          "type": "short_answer",
+          "level": "biet",
+          "lessonId": 18,
+          "points": 0.5,
+          "prompt": "Trong phòng thí nghiệm Hoá học, học sinh tiến hành đốt nóng dây sắt trong bình chứa khí oxygen, cho viên kẽm vào ống nghiệm đựng dung dịch hydrochloric acid (HCl) loãng và nhúng dây đồng vào dung dịch silver nitrate (AgNO₃). Hãy viết biểu thức hoặc quy luật chuẩn của \"Các phương trình hoá học trọng tâm của kim loại\" dùng để xác định đại lượng/quá trình trong hiện tượng trên."
+        },
+        {
+          "questionId": "q-les-36-sa-hieu-1-v2",
+          "orderIndex": 16,
+          "type": "short_answer",
+          "level": "hieu",
+          "lessonId": 36,
+          "points": 0.5,
+          "prompt": "Khi giải thích mối quan hệ biện chứng giữa hiện tượng di truyền và biến dị thông qua sự bảo toàn và đột biến của phân tử gene, để kết quả đo đạc và tính toán không bị sai lệch, người thực hiện cần đặc biệt lưu ý tránh sai sót phổ biến nào?"
+        },
+        {
+          "questionId": "q-les-19-sa-biet-1-v2",
+          "orderIndex": 17,
+          "type": "short_answer",
+          "level": "biet",
+          "lessonId": 19,
+          "points": 0.5,
+          "prompt": "Để bảo vệ phần vỏ tàu biển bằng thép (chứa sắt) ngâm thường xuyên trong nước biển khỏi bị ăn mòn điện hoá, các kĩ sư đóng tàu gắn các khối kẽm (Zn) vào phía ngoài vỏ tàu làm \"cực hi sinh\". Khi áp dụng quy luật \"Dãy hoạt động hoá học của kim loại\" (K > Na > Ca > Mg > Al > Zn > Fe > Pb > (H) > Cu > Ag > Au) để xử lí dữ liệu thực nghiệm, các đại lượng và đơn vị chuẩn trong hệ SI được quy ước như thế nào?"
+        },
+        {
+          "questionId": "q-docx-117",
+          "orderIndex": 18,
+          "type": "short_answer",
+          "level": "biet",
+          "lessonId": 20,
+          "points": 0.5,
+          "prompt": "Vỏ của các máy bay hiện đại thường được chế tạo từ hợp kim của nhôm, chứ không phải nhôm nguyên chất, để đảm bảo an toàn bay ở độ cao lớn và tốc độ cao. So với nhôm nguyên chất, hợp kim nhôm có tính chất cơ học nổi bật nào (ví dụ: Cứng hơn / Mềm hơn)?"
+        },
+        {
+          "questionId": "q-les-37-essay-1",
+          "orderIndex": 19,
+          "type": "essay",
+          "level": "van_dung",
+          "lessonId": 37,
+          "points": 1,
+          "prompt": "Trong thí nghiệm kinh điển trên cây đậu Hà Lan (Pisum sativum) có hoa lưỡng tính tự thụ phấn nghiêm ngặt, Gregor Mendel tiến hành lai các dòng thuần chủng khác nhau về một cặp tính trạng (hoa tím × hoa trắng) và hai cặp tính trạng tương phản (hạt vàng, vỏ trơn × hạt xanh, vỏ nhăn). Xét bài toán thực nghiệm cụ thể sau: Ở đậu Hà Lan, hạt vàng (A) trội hoàn toàn so với hạt xanh (a), hạt trơn (B) trội hoàn toàn so với hạt nhăn (b). Cho F₁ dị hợp 2 cặp gene (AaBb) tự thụ phấn thu được 640 hạt ở F₂. Tính số hạt vàng, nhăn dự kiến ở F₂. Hãy nêu cơ sở khoa học, viết biểu thức/quy luật áp dụng và trình bày các bước giải chi tiết.",
+          "rubricSteps": [
+            {
+              "id": "rub-37-1a",
+              "description": "Bước chấm (0.25 điểm)",
+              "points": 0.25
+            },
+            {
+              "id": "rub-37-1b",
+              "description": "Bước chấm (0.25 điểm)",
+              "points": 0.25
+            },
+            {
+              "id": "rub-37-1c",
+              "description": "Bước chấm (0.25 điểm)",
+              "points": 0.25
+            },
+            {
+              "id": "rub-37-1d",
+              "description": "Bước chấm (0.25 điểm)",
+              "points": 0.25
+            }
+          ]
+        },
+        {
+          "questionId": "q-les-3-essay-1-v2",
+          "orderIndex": 20,
+          "type": "essay",
+          "level": "van_dung",
+          "lessonId": 3,
+          "points": 1,
+          "prompt": "Một vận động viên trượt ván bắt đầu trượt không vận tốc đầu từ đỉnh dốc của lòng máng hình chữ U xuống đáy lòng máng rồi lại vọt lên phía bên kia. Dựa vào quy luật \"Biểu thức cơ năng\", hãy phân tích cơ chế của quá trình, nêu biện pháp kiểm soát sai số thực nghiệm và giải quyết vấn đề sau: Một con lắc đơn dao động không ma sát. Ở vị trí cao nhất và vị trí thấp nhất (cân bằng), động năng và thế năng như thế nào?",
+          "rubricSteps": [
+            {
+              "id": "rub-3-2a",
+              "description": "Bước chấm (0.25 điểm)",
+              "points": 0.25
+            },
+            {
+              "id": "rub-3-2b",
+              "description": "Bước chấm (0.25 điểm)",
+              "points": 0.25
+            },
+            {
+              "id": "rub-3-2c",
+              "description": "Bước chấm (0.25 điểm)",
+              "points": 0.25
+            },
+            {
+              "id": "rub-3-2d",
+              "description": "Bước chấm (0.25 điểm)",
+              "points": 0.25
+            }
+          ]
+        },
+        {
+          "questionId": "q-les-1-essay-1-v2",
+          "orderIndex": 21,
+          "type": "essay",
+          "level": "van_dung",
+          "lessonId": 1,
+          "points": 1,
+          "prompt": "Một nhóm nghiên cứu học sinh chuẩn bị dụng cụ quang học (nguồn sáng laser, bản bán trụ, bảng chia độ) và dụng cụ đo thể tích chất lỏng để thực hiện đề tài thực nghiệm và thuyết trình kết quả trước hội đồng. Dựa vào quy luật \"Quy trình báo cáo khoa học 7 mục\", hãy phân tích cơ chế của quá trình, nêu biện pháp kiểm soát sai số thực nghiệm và giải quyết vấn đề sau: Cần lấy 50 mL dung dịch HCl để làm thí nghiệm và lấy chính xác 2 mL dung dịch NaOH nhỏ vào ống nghiệm. Nên chọn dụng cụ nào?",
+          "rubricSteps": [
+            {
+              "id": "rub-1-2a",
+              "description": "Bước chấm (0.25 điểm)",
+              "points": 0.25
+            },
+            {
+              "id": "rub-1-2b",
+              "description": "Bước chấm (0.25 điểm)",
+              "points": 0.25
+            },
+            {
+              "id": "rub-1-2c",
+              "description": "Bước chấm (0.25 điểm)",
+              "points": 0.25
+            },
+            {
+              "id": "rub-1-2d",
+              "description": "Bước chấm (0.25 điểm)",
+              "points": 0.25
+            }
+          ]
+        }
+      ],
+      "answers": {
+        "q-les-37-essay-1": {
+          "questionId": "q-les-37-essay-1",
+          "type": "essay",
+          "maxPoints": 1,
+          "textAnswer": "[BÀI LÀM TỰ LUẬN CỦA HỌC SINH: Hồ Thị Kim Cương - LỚP 9A1]\n\n1. Cơ sở lí thuyết & Phương pháp giải:\nTheo quy luật phân li độc lập, tỉ lệ hạt vàng, nhăn (A_bb) ở F₂ là 3/16. Vậy số hạt vàng, nhăn = 640 × (3/16) = 120 hạt. (Cơ sở khoa học áp dụng: Lai 1 cặp (Aa × Aa) → F₂: 3 trội : 1 lặn  |  Lai 2 cặp (AaBb × AaBb) → F₂: 9 : 3 : 3 : 1  |  Lai phân tích: A_ × aa).\n\n2. Lời giải chi tiết:\n- Bước 1: Liệt kê dữ kiện đề bài và đổi đơn vị đo lường theo chuẩn SI.\n- Bước 2: Thiết lập hệ phương trình / công thức định lượng biểu diễn mối quan hệ giữa các đại lượng.\n- Bước 3: Thay số liệu cụ thể vào biểu thức để tính toán giá trị cần tìm.\n- Bước 4: Kiểm tra điều kiện thực nghiệm và rút ra kết luận thoả đáng.",
+          "autoScore": 0,
+          "manualScore": 1,
+          "finalScore": 1,
+          "needsManualGrading": false,
+          "gradedByTeacher": true,
+          "checkedRubricStepIds": [
+            "rub-37-1a",
+            "rub-37-1b",
+            "rub-37-1c",
+            "rub-37-1d"
+          ],
+          "teacherComment": "",
+          "timeSpentSeconds": 280,
+          "isCorrect": true
+        },
+        "q-les-3-essay-1-v2": {
+          "questionId": "q-les-3-essay-1-v2",
+          "type": "essay",
+          "maxPoints": 1,
+          "textAnswer": "[BÀI LÀM TỰ LUẬN CỦA HỌC SINH: Hồ Thị Kim Cương - LỚP 9A1]\n\n1. Cơ sở lí thuyết & Phương pháp giải:\nCơ sở khoa học: Trong quá trình vật chuyển động, động năng và thế năng có thể chuyển hoá qua lại lẫn nhau.\nBiểu thức/Quy luật: W = Wđ + Wt = ½mv² + P·h\nLời giải & Phân tích chi tiết: Ở vị trí cao nhất: v = 0 nên Wđ = 0, Wt đạt cực đại. Ở vị trí thấp nhất: h nhỏ nhất nên Wt cực tiểu, v lớn nhất nên Wđ đạt cực đại.\n\n2. Lời giải chi tiết:\n- Bước 1: Liệt kê dữ kiện đề bài và đổi đơn vị đo lường theo chuẩn SI.\n- Bước 2: Thiết lập hệ phương trình / công thức định lượng biểu diễn mối quan hệ giữa các đại lượng.\n- Bước 3: Thay số liệu cụ thể vào biểu thức để tính toán giá trị cần tìm.\n- Bước 4: Kiểm tra điều kiện thực nghiệm và rút ra kết luận thoả đáng.",
+          "autoScore": 0,
+          "manualScore": 1,
+          "finalScore": 1,
+          "needsManualGrading": false,
+          "gradedByTeacher": true,
+          "checkedRubricStepIds": [
+            "rub-3-2a",
+            "rub-3-2b",
+            "rub-3-2c",
+            "rub-3-2d"
+          ],
+          "teacherComment": "",
+          "timeSpentSeconds": 280,
+          "isCorrect": true
+        },
+        "q-les-1-essay-1-v2": {
+          "questionId": "q-les-1-essay-1-v2",
+          "type": "essay",
+          "maxPoints": 1,
+          "textAnswer": "[BÀI LÀM TỰ LUẬN CỦA HỌC SINH: Hồ Thị Kim Cương - LỚP 9A1]\n\n1. Cơ sở lí thuyết & Phương pháp giải:\nCơ sở khoa học: Dụng cụ thí nghiệm hoá học: Pipet (lấy chính xác thể tích nhỏ chất lỏng), ống đong (đo thể tích dung dịch), bình cầu, bát sứ, phễu chiết, đèn cồn (đun nóng hoá chất).\nBiểu thức/Quy luật: Tiêu đề → Mục tiêu → Giả thuyết → Chuẩn bị → Tiến hành → Kết quả & Thảo luận → Kết luận\nLời giải & Phân tích chi tiết: Dùng ống đong 50 mL hoặc 100 mL để đong 50 mL dung dịch HCl; dùng pipet có quả bóp cao su để lấy chính xác 2 mL dung dịch NaOH.\n\n2. Lời giải chi tiết:\n- Bước 1: Liệt kê dữ kiện đề bài và đổi đơn vị đo lường theo chuẩn SI.\n- Bước 2: Thiết lập hệ phương trình / công thức định lượng biểu diễn mối quan hệ giữa các đại lượng.\n- Bước 3: Thay số liệu cụ thể vào biểu thức để tính toán giá trị cần tìm.\n- Bước 4: Kiểm tra điều kiện thực nghiệm và rút ra kết luận thoả đáng.",
+          "autoScore": 0,
+          "manualScore": 1,
+          "finalScore": 1,
+          "needsManualGrading": false,
+          "gradedByTeacher": true,
+          "checkedRubricStepIds": [
+            "rub-1-2a",
+            "rub-1-2b",
+            "rub-1-2c",
+            "rub-1-2d"
+          ],
+          "teacherComment": "",
+          "timeSpentSeconds": 280,
+          "isCorrect": true
+        }
+      },
       "status": "submitted_pending_grading",
       "startedAt": "2026-11-01T13:27:42.454Z",
       "submittedAt": "2026-11-01T14:17:42.454Z",
-      "finalizedAt": null,
+      "finalizedAt": "2026-11-01T14:43:36.869Z",
       "autoGradedScore": 6,
       "manualGradedScore": 0,
       "totalScore": 6,
@@ -146155,7 +146652,8 @@
       "flaggedForReview": false,
       "deviceInfo": {
         "platform": "Windows PC / Chrome"
-      }
+      },
+      "teacherOverallFeedback": ""
     },
     {
       "id": "sub-exam-eb19bb45-9a1-03",
@@ -148349,6 +148847,18 @@
             "d": false
           },
           "timeSpentSeconds": 20
+        },
+        "q-les-19-sa-biet-1": {
+          "textAnswer": "Mg>Fe>H>Cu",
+          "timeSpentSeconds": 22
+        },
+        "q-les-20-sa-biet-1-v2": {
+          "textAnswer": "Thế điện cực chuẩn",
+          "timeSpentSeconds": 26
+        },
+        "q-les-36-sa-hieu-1": {
+          "textAnswer": "Gene giúp đi truyền tính ",
+          "timeSpentSeconds": 29
         }
       },
       "status": "in_progress",
@@ -148398,6 +148908,755 @@
           "timestamp": "2026-11-01T14:38:00.571Z",
           "eventType": "answer_change",
           "detail": "Cập nhật câu trả lời (q-les-21-tf-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:45:02.643Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-19-sa-biet-1)"
+        },
+        {
+          "timestamp": "2026-11-01T14:45:03.086Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-19-sa-biet-1)"
+        },
+        {
+          "timestamp": "2026-11-01T14:45:07.827Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-19-sa-biet-1)"
+        },
+        {
+          "timestamp": "2026-11-01T14:45:10.172Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-19-sa-biet-1)"
+        },
+        {
+          "timestamp": "2026-11-01T14:45:10.776Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-19-sa-biet-1)"
+        },
+        {
+          "timestamp": "2026-11-01T14:45:13.190Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-19-sa-biet-1)"
+        },
+        {
+          "timestamp": "2026-11-01T14:45:15.212Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-19-sa-biet-1)"
+        },
+        {
+          "timestamp": "2026-11-01T14:45:19.232Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-19-sa-biet-1)"
+        },
+        {
+          "timestamp": "2026-11-01T14:45:20.446Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-19-sa-biet-1)"
+        },
+        {
+          "timestamp": "2026-11-01T14:45:20.843Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-19-sa-biet-1)"
+        },
+        {
+          "timestamp": "2026-11-01T14:45:21.025Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-19-sa-biet-1)"
+        },
+        {
+          "timestamp": "2026-11-01T14:45:21.531Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-19-sa-biet-1)"
+        },
+        {
+          "timestamp": "2026-11-01T14:47:04.429Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-20-sa-biet-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:47:04.695Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-20-sa-biet-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:47:05.214Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-20-sa-biet-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:47:05.346Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-20-sa-biet-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:47:05.852Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-20-sa-biet-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:47:06.138Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-20-sa-biet-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:47:06.336Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-20-sa-biet-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:47:07.721Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-20-sa-biet-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:47:09.018Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-20-sa-biet-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:47:09.284Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-20-sa-biet-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:47:09.408Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-20-sa-biet-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:47:09.845Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-20-sa-biet-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:49:15.902Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-36-sa-hieu-1)"
+        },
+        {
+          "timestamp": "2026-11-01T14:49:16.074Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-36-sa-hieu-1)"
+        },
+        {
+          "timestamp": "2026-11-01T14:49:16.423Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-36-sa-hieu-1)"
+        },
+        {
+          "timestamp": "2026-11-01T14:49:16.761Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-36-sa-hieu-1)"
+        },
+        {
+          "timestamp": "2026-11-01T14:49:17.082Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-36-sa-hieu-1)"
+        },
+        {
+          "timestamp": "2026-11-01T14:49:17.303Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-36-sa-hieu-1)"
+        },
+        {
+          "timestamp": "2026-11-01T14:49:18.943Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-36-sa-hieu-1)"
+        },
+        {
+          "timestamp": "2026-11-01T14:49:19.199Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-36-sa-hieu-1)"
+        },
+        {
+          "timestamp": "2026-11-01T14:49:21.931Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-36-sa-hieu-1)"
+        },
+        {
+          "timestamp": "2026-11-01T14:49:22.374Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-36-sa-hieu-1)"
+        },
+        {
+          "timestamp": "2026-11-01T14:49:22.616Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-36-sa-hieu-1)"
+        },
+        {
+          "timestamp": "2026-11-01T14:49:22.963Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-36-sa-hieu-1)"
+        },
+        {
+          "timestamp": "2026-11-01T14:49:23.320Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-36-sa-hieu-1)"
+        },
+        {
+          "timestamp": "2026-11-01T14:49:24.094Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-36-sa-hieu-1)"
+        },
+        {
+          "timestamp": "2026-11-01T14:49:24.397Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-36-sa-hieu-1)"
+        },
+        {
+          "timestamp": "2026-11-01T14:49:25.369Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-36-sa-hieu-1)"
+        },
+        {
+          "timestamp": "2026-11-01T14:49:25.567Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-36-sa-hieu-1)"
+        },
+        {
+          "timestamp": "2026-11-01T14:49:25.773Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-36-sa-hieu-1)"
+        },
+        {
+          "timestamp": "2026-11-01T14:49:26.562Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-36-sa-hieu-1)"
+        }
+      ]
+    },
+    {
+      "id": "sub-21b71a6c",
+      "examId": "exam-eb19bb45",
+      "studentId": "usr-hs-9a1-30",
+      "studentName": "Nguyễn Thị Tuyết Như",
+      "studentUsername": "nguyenthituyetnhu_9a1",
+      "className": "9A1",
+      "paperCode": "MĐ-9A1-D71B",
+      "paperSignature": "D71B5E666512",
+      "paperSnapshot": [
+        {
+          "questionId": "q-les-2-mcq-hieu-1-v2",
+          "orderIndex": 1,
+          "type": "mcq",
+          "level": "hieu",
+          "lessonId": 2,
+          "points": 0.25,
+          "prompt": "Tại nhà máy thuỷ điện, khối nước khổng lồ tích trữ trong hồ chứa ở độ cao lớn so với tuabin được xả qua ống dẫn làm dòng nước chảy xiết vào cánh quạt máy phát điện. Để đảm bảo độ chính xác khi xử lí số liệu đo đạc và giải thích kết quả thực nghiệm trên, nguyên tắc khoa học nào sau đây cần được tuân thủ?",
+          "originalOptionIndices": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "shuffledOptions": [
+            "Mọi vật liệu cách điện và dẫn điện đều có cùng giá trị điện trở suất và chiết suất quang học ở cùng nhiệt độ phòng.",
+            "Thế năng trọng trường: Wt = Ph = mgh (đơn vị: J). (Lưu ý kiểm soát sai số: Quên đổi đơn vị khối lượng từ gam (g) hoặc tấn sang kilôgam (kg), hoặc quên đổi tốc độ từ km/h sang m/s (chia cho 3,6).)",
+            "Hiện tượng chỉ xảy ra trong môi trường chân không tuyệt đối và hoàn toàn không phụ thuộc vào bản chất vật lí của môi trường truyền.",
+            "Khi tăng gấp đôi hiệu điện thế hoặc lực tác dụng thì đại lượng kết quả giảm đi bốn lần do sự tiêu hao năng lượng nội tại."
+          ]
+        },
+        {
+          "questionId": "q-les-19-mcq-biet-2-v2",
+          "orderIndex": 2,
+          "type": "mcq",
+          "level": "biet",
+          "lessonId": 19,
+          "points": 0.25,
+          "prompt": "Khi so sánh mức độ hoạt động hoá học giữa các kim loại qua hiện tượng đẩy kim loại yếu hơn ra khỏi dung dịch muối và giải phóng khí H₂ từ acid, người thực hiện cần nắm vững đặc điểm cốt lõi của các đại lượng và chất tham gia. Phát biểu nào dưới đây là ĐÚNG?",
+          "originalOptionIndices": [
+            0,
+            2,
+            3,
+            1
+          ],
+          "shuffledOptions": [
+            "Dung dịch thu được sau phản ứng luôn có môi trường kiềm mạnh (pH = 14) làm giấy quỳ tím chuyển sang màu đỏ tươi và hoà tan được vàng nguyên chất.",
+            "Khi đun nóng ở áp suất thường, hợp chất tự phân huỷ hoàn toàn thành khí nitrogen và kim loại nguyên chất mà không cần tác nhân khử.",
+            "Đứng trước H đẩy được H₂ khỏi acid loãng; đứng trước (từ Mg trở đi) đẩy được kim loại đứng sau khỏi dung dịch muối.",
+            "Tất cả các hợp chất trong dãy đồng đẳng đều có cùng phân tử khối và chỉ tan trong dung môi nước mà không tan trong dung môi hữu cơ."
+          ]
+        },
+        {
+          "questionId": "q-les-3-mcq-biet-1",
+          "orderIndex": 3,
+          "type": "mcq",
+          "level": "biet",
+          "lessonId": 3,
+          "points": 0.25,
+          "prompt": "Một con lắc đơn gồm quả cầu kim loại treo vào sợi dây mảnh được kéo lệch khỏi vị trí cân bằng rồi thả nhẹ cho dao động qua lại trong không khí (khi bỏ qua sức cản). Dựa trên cơ sở khoa học của hiện tượng trên, nhận định nào sau đây là ĐÚNG?",
+          "originalOptionIndices": [
+            0,
+            2,
+            1,
+            3
+          ],
+          "shuffledOptions": [
+            "Tổng động năng và thế năng của vật được gọi là cơ năng: W = Wđ + Wt.",
+            "Trong quá trình biến đổi, tổng năng lượng của hệ tự sinh ra thêm mà không cần có công cơ học hay nhiệt lượng truyền vào.",
+            "Đại lượng nghiên cứu luôn tỉ lệ nghịch với cả khối lượng của vật và thời gian thực hiện quá trình trong mọi hệ quy chiếu.",
+            "Hiện tượng chỉ xảy ra trong môi trường chân không tuyệt đối và hoàn toàn không phụ thuộc vào bản chất vật lí của môi trường truyền."
+          ]
+        },
+        {
+          "questionId": "q-les-21-mcq-hieu-1-v2",
+          "orderIndex": 4,
+          "type": "mcq",
+          "level": "hieu",
+          "lessonId": 21,
+          "points": 0.25,
+          "prompt": "Trong công nghiệp sản xuất vật liệu và xử lí nước, lưu huỳnh được dùng để lưu hoá cao su làm lốp xe, khí chlorine được dùng khử trùng nước sinh hoạt, còn than hoạt tính được dùng trong mặt nạ phòng độc và máy lọc nước. Để đảm bảo độ chính xác khi xử lí số liệu đo đạc và giải thích kết quả thực nghiệm trên, nguyên tắc khoa học nào sau đây cần được tuân thủ?",
+          "originalOptionIndices": [
+            2,
+            0,
+            1,
+            3
+          ],
+          "shuffledOptions": [
+            "Kim loại + O₂ → thường tạo oxide base; Phi kim + O₂ → thường tạo oxide acid. (Lưu ý kiểm soát sai số: Quên rằng than chì (một dạng thù hình của phi kim carbon) có khả năng dẫn điện tốt.)",
+            "Khi dẫn sản phẩm khí qua dung dịch nước bromine hoặc nước vôi trong thì dung dịch chuyển sang màu tím sẫm và toả khí hydrogen.",
+            "Dung dịch thu được sau phản ứng luôn có môi trường kiềm mạnh (pH = 14) làm giấy quỳ tím chuyển sang màu đỏ tươi và hoà tan được vàng nguyên chất.",
+            "Trong phân tử chỉ tồn tại liên kết ion bền vững giữa các nguyên tử kim loại chuyển tiếp, không có sự góp chung electron hoá trị."
+          ]
+        },
+        {
+          "questionId": "q-les-20-mcq-biet-3",
+          "orderIndex": 5,
+          "type": "mcq",
+          "level": "biet",
+          "lessonId": 20,
+          "points": 0.25,
+          "prompt": "Trong quá trình khảo sát thực nghiệm tại phòng bộ môn Khoa học tự nhiên: \"Tại nhà máy luyện kim, quặng bauxite giàu aluminium oxide (Al₂O₃) được đưa vào bể điện phân nóng chảy có mặt cryolite để thu nhôm, trong khi quặng hematite (chứa Fe₂O₃) được khử bằng khí CO ở nhiệt độ cao trong lò cao để luyện gang thép.\" — nhận định khoa học nào sau đây là ĐÚNG?",
+          "originalOptionIndices": [
+            1,
+            0,
+            2,
+            3
+          ],
+          "shuffledOptions": [
+            "2. Phương pháp nhiệt luyện: Dùng các chất khử (C, CO, H₂, Al) ở nhiệt độ cao để tách các kim loại hoạt động trung bình và yếu như Zn, Fe, Cu (ví dụ: Fe₂O₃ + 3CO → 2Fe + 3CO₂; ZnO + C → Zn + CO).",
+            "Dung dịch thu được sau phản ứng luôn có môi trường kiềm mạnh (pH = 14) làm giấy quỳ tím chuyển sang màu đỏ tươi và hoà tan được vàng nguyên chất.",
+            "Tất cả các hợp chất trong dãy đồng đẳng đều có cùng phân tử khối và chỉ tan trong dung môi nước mà không tan trong dung môi hữu cơ.",
+            "Khi đun nóng ở áp suất thường, hợp chất tự phân huỷ hoàn toàn thành khí nitrogen và kim loại nguyên chất mà không cần tác nhân khử."
+          ]
+        },
+        {
+          "questionId": "q-les-36-mcq-biet-3",
+          "orderIndex": 6,
+          "type": "mcq",
+          "level": "biet",
+          "lessonId": 36,
+          "points": 0.25,
+          "prompt": "Trong quá trình khảo sát thực nghiệm tại phòng bộ môn Khoa học tự nhiên: \"Khi khảo sát sự truyền đạt các đặc điểm hình thái (như màu mắt, nhóm máu, dạng tóc ở người; màu hoa, chiều cao thân ở thực vật) qua các thế hệ gia đình và dòng giống, các nhà di truyền học ghi nhận cả sự giống nhau và sự xuất hiện những đặc điểm mới.\" — nhận định khoa học nào sau đây là ĐÚNG?",
+          "originalOptionIndices": [
+            3,
+            0,
+            1,
+            2
+          ],
+          "shuffledOptions": [
+            "Trong quá trình tái bản DNA, nguyên tắc bổ sung được thực hiện bằng cách liên kết trực tiếp hai purine (A liên kết với G) thông qua liên kết cộng hoá trị.",
+            "Chọn lọc tự nhiên trực tiếp tạo ra các kiểu gene thích nghi mới chỉ trong một thế hệ cá thể để đáp ứng tức thời với nguyện vọng của con người.",
+            "Di truyền và biến dị là hai hiện tượng song song, gắn liền với quá trình sinh sản của sinh vật.",
+            "Ở mọi loài động vật có vú, giới tính của hợp tử chỉ được quyết định bởi nhiệt độ môi trường nước sau khi cơ thể non đã trưởng thành."
+          ]
+        },
+        {
+          "questionId": "q-docx-101",
+          "orderIndex": 7,
+          "type": "mcq",
+          "level": "biet",
+          "lessonId": 1,
+          "points": 0.25,
+          "prompt": "Trong phòng thí nghiệm, dụng cụ thường được sử dụng để đun nóng hóa chất trong thời gian dài là:",
+          "originalOptionIndices": [
+            3,
+            2,
+            1,
+            0
+          ],
+          "shuffledOptions": [
+            "Ống đong.",
+            "Đèn cồn.",
+            "Cân điện tử.",
+            "Pipet."
+          ]
+        },
+        {
+          "questionId": "q-les-18-mcq-biet-2",
+          "orderIndex": 8,
+          "type": "mcq",
+          "level": "biet",
+          "lessonId": 18,
+          "points": 0.25,
+          "prompt": "Khi khảo sát các tính chất vật lí chung (tính dẻo, dẫn điện, dẫn nhiệt, ánh kim) và tính chất hoá học đặc trưng của kim loại, các nhà khoa học đã xác lập được các tính chất và quy luật đặc trưng. Phát biểu nào sau đây phản ánh ĐÚNG bản chất khoa học của quá trình này?",
+          "originalOptionIndices": [
+            2,
+            3,
+            0,
+            1
+          ],
+          "shuffledOptions": [
+            "Tính chất hoá học cơ bản:",
+            "Quá trình biến đổi làm thay đổi số proton trong hạt nhân nguyên tử carbon tạo thành nguyên tố kim loại nặng tương ứng.",
+            "Khi dẫn sản phẩm khí qua dung dịch nước bromine hoặc nước vôi trong thì dung dịch chuyển sang màu tím sẫm và toả khí hydrogen.",
+            "Kim loại hoạt động yếu hơn như đồng (Cu), bạc (Ag) luôn đẩy được các kim loại kiềm và kiềm thổ ra khỏi dung dịch muối ở nhiệt độ thường."
+          ]
+        },
+        {
+          "questionId": "q-les-1-mcq-biet-2",
+          "orderIndex": 9,
+          "type": "mcq",
+          "level": "biet",
+          "lessonId": 1,
+          "points": 0.25,
+          "prompt": "Khi thiết kế quy trình thực hành an toàn với các hoá chất có tính ăn mòn và lập báo cáo thực nghiệm khoa học, các nhà khoa học đã xác lập được các tính chất và quy luật đặc trưng. Phát biểu nào sau đây phản ánh ĐÚNG bản chất khoa học của quá trình này?",
+          "originalOptionIndices": [
+            3,
+            0,
+            2,
+            1
+          ],
+          "shuffledOptions": [
+            "Khi số liệu thực nghiệm đo được có sai lệch nhỏ so với công thức lí thuyết, người làm thí nghiệm được phép tự ý sửa lại số liệu trong báo cáo cho khớp hoàn toàn.",
+            "Có thể dùng miệng hút trực tiếp các dung dịch acid và kiềm đặc qua pipet thuỷ tinh để rút ngắn thời gian thao tác thí nghiệm.",
+            "Dụng cụ thí nghiệm hoá học: Pipet (lấy chính xác thể tích nhỏ chất lỏng), ống đong (đo thể tích dung dịch), bình cầu, bát sứ, phễu chiết, đèn cồn (đun nóng hoá chất).",
+            "Sau khi kết thúc thí nghiệm, toàn bộ hoá chất độc hại và kim loại nặng dư thừa đều được đổ trực tiếp xuống bồn rửa dân dụng mà không cần thu gom xử lí."
+          ]
+        },
+        {
+          "questionId": "q-docx-103",
+          "orderIndex": 10,
+          "type": "mcq",
+          "level": "biet",
+          "lessonId": 3,
+          "points": 0.25,
+          "prompt": "Một quả bóng đang bay trên cao vừa có động năng do chuyển động, vừa có thế năng do ở độ cao so với mặt đất. Cơ năng của quả bóng tại thời điểm đó được xác định bằng:",
+          "originalOptionIndices": [
+            2,
+            1,
+            0,
+            3
+          ],
+          "shuffledOptions": [
+            "Chỉ thế năng của vật.",
+            "Chỉ động năng của vật.",
+            "Tổng động năng và thế năng của vật.",
+            "Hiệu của thế năng và động năng của vật."
+          ]
+        },
+        {
+          "questionId": "q-les-37-mcq-biet-3-v2",
+          "orderIndex": 11,
+          "type": "mcq",
+          "level": "biet",
+          "lessonId": 37,
+          "points": 0.25,
+          "prompt": "Xét tình huống thực tiễn sau: \"Tại một trại giống cây trồng, để kiểm tra một cây đậu Hà Lan có kiểu hình hạt vàng (tính trạng trội) là thuần chủng (AA) hay không thuần chủng (Aa), cán bộ kĩ thuật tiến hành phép lai phân tích bằng cách cho cây đó lai với cây hạt xanh (aa).\" — phát biểu nào dưới đây mô tả ĐÚNG quy luật tự nhiên chi phối hiện tượng trên?",
+          "originalOptionIndices": [
+            2,
+            3,
+            0,
+            1
+          ],
+          "shuffledOptions": [
+            "Bộ nhiễm sắc thể của tế bào con sau phân bào luôn tăng gấp bốn lần (4n) ở mọi mô sinh dưỡng nhằm tăng kích thước cơ thể trưởng thành.",
+            "Các allele nằm trên các cặp nhiễm sắc thể tương đồng khác nhau luôn hoán vị trực tiếp với các phân tử lipid của màng sinh chất trong kì trung gian.",
+            "Phép lai phân tích là phép lai giữa cơ thể mang tính trạng trội cần xác định kiểu gene (AA hoặc Aa) với cơ thể mang tính trạng lặn (aa). Nếu đời con đồng tính (100% trội) thì cơ thể trội đem lai thuần chủng (AA); nếu đời con phân tính (1 trội : 1 lặn) thì cơ thể trội đem lai dị hợp (Aa).",
+            "Thông tin di truyền được truyền trực tiếp từ phân tử protein sang phân tử DNA trong không bào mà không cần sự tham gia của enzyme hay nucleic acid."
+          ]
+        },
+        {
+          "questionId": "q-les-37-mcq-biet-3",
+          "orderIndex": 12,
+          "type": "mcq",
+          "level": "biet",
+          "lessonId": 37,
+          "points": 0.25,
+          "prompt": "Trong quá trình khảo sát thực nghiệm tại phòng bộ môn Khoa học tự nhiên: \"Trong thí nghiệm kinh điển trên cây đậu Hà Lan (Pisum sativum) có hoa lưỡng tính tự thụ phấn nghiêm ngặt, Gregor Mendel tiến hành lai các dòng thuần chủng khác nhau về một cặp tính trạng (hoa tím × hoa trắng) và hai cặp tính trạng tương phản (hạt vàng, vỏ trơn × hạt xanh, vỏ nhăn).\" — nhận định khoa học nào sau đây là ĐÚNG?",
+          "originalOptionIndices": [
+            3,
+            1,
+            2,
+            0
+          ],
+          "shuffledOptions": [
+            "Trong quá trình tái bản DNA, nguyên tắc bổ sung được thực hiện bằng cách liên kết trực tiếp hai purine (A liên kết với G) thông qua liên kết cộng hoá trị.",
+            "Quy luật phân li (lai 1 cặp tính trạng): Mỗi tính trạng do một cặp nhân tố di truyền (cặp allele) quy định; trong quá trình phát sinh giao tử, mỗi nhân tố di truyền trong cặp phân li về một giao tử và giữ nguyên bản chất như ở cơ thể thuần chủng của P. Ở F₂ có tỉ lệ kiểu gene 1 AA : 2 Aa : 1 aa và tỉ lệ kiểu hình 3 trội : 1 lặn.",
+            "Ở mọi loài động vật có vú, giới tính của hợp tử chỉ được quyết định bởi nhiệt độ môi trường nước sau khi cơ thể non đã trưởng thành.",
+            "Chọn lọc tự nhiên trực tiếp tạo ra các kiểu gene thích nghi mới chỉ trong một thế hệ cá thể để đáp ứng tức thời với nguyện vọng của con người."
+          ]
+        },
+        {
+          "questionId": "q-les-2-tf-1",
+          "orderIndex": 13,
+          "type": "true_false",
+          "level": "hieu",
+          "lessonId": 2,
+          "points": 1,
+          "prompt": "Một đoàn tàu lượn siêu tốc có khối lượng lớn đang chuyển động nhanh trên đường ray và một quả nặng được cần cẩu nâng lên độ cao xác định so với mặt đất tại công trường xây dựng. Sau khi quan sát và thu thập dữ liệu, nhóm nghiên cứu đưa ra 4 nhận định phân tích dưới đây. Hãy xác định mỗi nhận định là Đúng (Đ) hay Sai (S):",
+          "statements": [
+            {
+              "id": "a",
+              "text": "Động năng (Wđ) là năng lượng mà vật có được do chuyển động. Vật có khối lượng càng lớn và chuyển động càng nhanh thì động năng càng lớn."
+            },
+            {
+              "id": "b",
+              "text": "Mối quan hệ định lượng/quy luật chi phối quá trình trên được biểu diễn bởi: Wđ = ½mv² (Động năng tỉ lệ thuận với khối lượng m và bình phương tốc độ v của vật.)."
+            },
+            {
+              "id": "c",
+              "text": "Đại lượng nghiên cứu luôn tỉ lệ nghịch với cả khối lượng của vật và thời gian thực hiện quá trình trong mọi hệ quy chiếu."
+            },
+            {
+              "id": "d",
+              "text": "Động năng: Wđ = ½mv² (đơn vị: J)."
+            }
+          ]
+        },
+        {
+          "questionId": "q-les-21-tf-extra-v2",
+          "orderIndex": 14,
+          "type": "true_false",
+          "level": "hieu",
+          "lessonId": 21,
+          "points": 1,
+          "prompt": "Khi khảo sát ứng dụng thực tiễn của các đơn chất phi kim quan trọng (carbon, lưu huỳnh, chlorine) và bài toán đốt cháy kim loại – phi kim, các chuyên gia đưa ra 4 nhận định đánh giá quy trình kỹ thuật sau đây. Hãy xác định tính Đúng (Đ) / Sai (S) của từng nhận định:",
+          "statements": [
+            {
+              "id": "a",
+              "text": "Ứng dụng phi kim: Lưu huỳnh lưu hoá cao su; Chlorine khử trùng nước; Carbon hoạt tính khử mùi/lọc nước."
+            },
+            {
+              "id": "b",
+              "text": "Tất cả các hợp chất trong dãy đồng đẳng đều có cùng phân tử khối và chỉ tan trong dung môi nước mà không tan trong dung môi hữu cơ."
+            },
+            {
+              "id": "c",
+              "text": "Để đảm bảo kết quả thực nghiệm chính xác, người thực hiện cần kiểm soát chặt chẽ sai số: Quên rằng than chì (một dạng thù hình của phi kim carbon) có khả năng dẫn điện tốt."
+            },
+            {
+              "id": "d",
+              "text": "Ứng dụng phi kim: Lưu huỳnh lưu hoá cao su; Chlorine khử trùng nước; Carbon hoạt tính khử mùi/lọc nước."
+            }
+          ]
+        },
+        {
+          "questionId": "q-les-36-sa-hieu-1",
+          "orderIndex": 15,
+          "type": "short_answer",
+          "level": "hieu",
+          "lessonId": 36,
+          "points": 0.5,
+          "prompt": "Khi phân tích khái niệm di truyền, biến dị, các thuật ngữ cơ bản (tính trạng, nhân tố di truyền/gene, kiểu gene, kiểu hình) và vai trò trung tâm của gene, dựa vào \"Sơ đồ vai trò trung tâm của Gene trong di truyền học\" (Gene (DNA) → Truyền đạt nguyên vẹn (Di truyền)  |  Gene biến đổi / tổ hợp lại → Tạo đặc điểm mới (Biến dị)), hãy nêu ngắn gọn ý nghĩa khoa học hoặc mối quan hệ tỉ lệ chính của quy luật này."
+        },
+        {
+          "questionId": "q-les-19-sa-biet-1",
+          "orderIndex": 16,
+          "type": "short_answer",
+          "level": "biet",
+          "lessonId": 19,
+          "points": 0.5,
+          "prompt": "Học sinh tiến hành thí nghiệm cho ba mẩu kim loại Mg, Fe, Cu có kích thước tương đương vào ba ống nghiệm đựng dung dịch HCl loãng, đồng thời nhúng đinh sắt sạch vào dung dịch CuSO₄ màu xanh lam. Hãy viết biểu thức hoặc quy luật chuẩn của \"Dãy hoạt động hoá học của kim loại\" dùng để xác định đại lượng/quá trình trong hiện tượng trên."
+        },
+        {
+          "questionId": "q-docx-217",
+          "orderIndex": 17,
+          "type": "short_answer",
+          "level": "biet",
+          "lessonId": 20,
+          "points": 0.5,
+          "prompt": "Dụng cụ phẫu thuật y tế thường làm bằng thép không gỉ (inox) thay vì sắt nguyên chất. So với sắt nguyên chất, đặc tính quan trọng nào của thép không gỉ giúp nó không bị ăn mòn (ghi ngắn gọn, ví dụ: Chống gỉ / Dễ gỉ)?"
+        },
+        {
+          "questionId": "q-les-18-sa-biet-1-v2",
+          "orderIndex": 18,
+          "type": "short_answer",
+          "level": "biet",
+          "lessonId": 18,
+          "points": 0.5,
+          "prompt": "Trong kĩ thuật điện và chế tác cơ khí, đồng và nhôm được kéo thành sợi dây dẫn điện mảnh, vàng và bạc được dát mỏng làm đồ trang sức, còn воlfram (W) được dùng làm dây tóc bóng đèn chịu nhiệt độ rất cao. Khi áp dụng quy luật \"Các phương trình hoá học trọng tâm của kim loại\" (2Mg + O₂ →(t°) 2MgO ;  Fe + 2HCl → FeCl₂ + H₂↑ ;  Fe + CuSO₄ → FeSO₄ + Cu↓) để xử lí dữ liệu thực nghiệm, các đại lượng và đơn vị chuẩn trong hệ SI được quy ước như thế nào?"
+        },
+        {
+          "questionId": "q-les-3-essay-1",
+          "orderIndex": 19,
+          "type": "essay",
+          "level": "van_dung",
+          "lessonId": 3,
+          "points": 1,
+          "prompt": "Một con lắc đơn gồm quả cầu kim loại treo vào sợi dây mảnh được kéo lệch khỏi vị trí cân bằng rồi thả nhẹ cho dao động qua lại trong không khí (khi bỏ qua sức cản). Xét bài toán thực nghiệm cụ thể sau: Một con lắc đơn dao động không ma sát. Ở vị trí cao nhất và vị trí thấp nhất (cân bằng), động năng và thế năng như thế nào? Hãy nêu cơ sở khoa học, viết biểu thức/quy luật áp dụng và trình bày các bước giải chi tiết.",
+          "rubricSteps": [
+            {
+              "id": "rub-3-1a",
+              "description": "Bước chấm (0.25 điểm)",
+              "points": 0.25
+            },
+            {
+              "id": "rub-3-1b",
+              "description": "Bước chấm (0.25 điểm)",
+              "points": 0.25
+            },
+            {
+              "id": "rub-3-1c",
+              "description": "Bước chấm (0.25 điểm)",
+              "points": 0.25
+            },
+            {
+              "id": "rub-3-1d",
+              "description": "Bước chấm (0.25 điểm)",
+              "points": 0.25
+            }
+          ]
+        },
+        {
+          "questionId": "q-les-37-essay-1-v2",
+          "orderIndex": 20,
+          "type": "essay",
+          "level": "van_dung",
+          "lessonId": 37,
+          "points": 1,
+          "prompt": "Tại một trại giống cây trồng, để kiểm tra một cây đậu Hà Lan có kiểu hình hạt vàng (tính trạng trội) là thuần chủng (AA) hay không thuần chủng (Aa), cán bộ kĩ thuật tiến hành phép lai phân tích bằng cách cho cây đó lai với cây hạt xanh (aa). Dựa vào quy luật \"Tỉ lệ phân li ở F₂ và Phép lai phân tích của Mendel\", hãy phân tích cơ chế của quá trình, nêu biện pháp kiểm soát sai số thực nghiệm và giải quyết vấn đề sau: Ở đậu Hà Lan, hạt vàng (A) trội hoàn toàn so với hạt xanh (a), hạt trơn (B) trội hoàn toàn so với hạt nhăn (b). Cho F₁ dị hợp 2 cặp gene (AaBb) tự thụ phấn thu được 640 hạt ở F₂. Tính số hạt vàng, nhăn dự kiến ở F₂.",
+          "rubricSteps": [
+            {
+              "id": "rub-37-2a",
+              "description": "Bước chấm (0.25 điểm)",
+              "points": 0.25
+            },
+            {
+              "id": "rub-37-2b",
+              "description": "Bước chấm (0.25 điểm)",
+              "points": 0.25
+            },
+            {
+              "id": "rub-37-2c",
+              "description": "Bước chấm (0.25 điểm)",
+              "points": 0.25
+            },
+            {
+              "id": "rub-37-2d",
+              "description": "Bước chấm (0.25 điểm)",
+              "points": 0.25
+            }
+          ]
+        },
+        {
+          "questionId": "q-les-1-essay-1",
+          "orderIndex": 21,
+          "type": "essay",
+          "level": "van_dung",
+          "lessonId": 1,
+          "points": 1,
+          "prompt": "Trong buổi thực hành tại phòng thí nghiệm Khoa học tự nhiên, một nhóm học sinh tiến hành lấy một lượng nhỏ dung dịch kiềm, đun nóng ống nghiệm bằng đèn cồn và ghi chép số liệu để lập báo cáo khoa học. Xét bài toán thực nghiệm cụ thể sau: Cần lấy 50 mL dung dịch HCl để làm thí nghiệm và lấy chính xác 2 mL dung dịch NaOH nhỏ vào ống nghiệm. Nên chọn dụng cụ nào? Hãy nêu cơ sở khoa học, viết biểu thức/quy luật áp dụng và trình bày các bước giải chi tiết.",
+          "rubricSteps": [
+            {
+              "id": "rub-1-1a",
+              "description": "Bước chấm (0.25 điểm)",
+              "points": 0.25
+            },
+            {
+              "id": "rub-1-1b",
+              "description": "Bước chấm (0.25 điểm)",
+              "points": 0.25
+            },
+            {
+              "id": "rub-1-1c",
+              "description": "Bước chấm (0.25 điểm)",
+              "points": 0.25
+            },
+            {
+              "id": "rub-1-1d",
+              "description": "Bước chấm (0.25 điểm)",
+              "points": 0.25
+            }
+          ]
+        }
+      ],
+      "answers": {
+        "q-les-2-mcq-hieu-1-v2": {
+          "selectedShuffledIndex": 1,
+          "timeSpentSeconds": 30
+        },
+        "q-les-19-mcq-biet-2-v2": {
+          "selectedShuffledIndex": 0,
+          "timeSpentSeconds": 0
+        },
+        "q-les-3-mcq-biet-1": {
+          "selectedShuffledIndex": 0,
+          "timeSpentSeconds": 0
+        },
+        "q-les-21-mcq-hieu-1-v2": {
+          "selectedShuffledIndex": 0,
+          "timeSpentSeconds": 0
+        }
+      },
+      "status": "in_progress",
+      "startedAt": "2026-11-01T14:46:48.372Z",
+      "autoGradedScore": 0,
+      "manualGradedScore": 0,
+      "totalScore": 0,
+      "violationCount": 0,
+      "flaggedForReview": false,
+      "deviceInfo": {
+        "userAgent": "Mozilla/5.0 (Linux; Android 14; SM-A145F Build/UP1A.231005.007;) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/156.0.8078.47 Mobile Safari/537.36 Zalo android/261002903 ZaloTheme/dark ZaloLanguage/vi",
+        "platform": "Linux aarch64",
+        "screenResolution": "384x857"
+      },
+      "activityLogs": [
+        {
+          "timestamp": "2026-11-01T14:46:48.372Z",
+          "eventType": "exam_start",
+          "detail": "Bắt đầu làm bài. Mã đề cá nhân: MĐ-9A1-D71B (Chữ ký đề: D71B5E666512)"
+        },
+        {
+          "timestamp": "2026-11-01T14:47:16.560Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-2-mcq-hieu-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:47:37.132Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-2-mcq-hieu-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:47:41.245Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-2-mcq-hieu-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:47:41.706Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-2-mcq-hieu-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:47:42.262Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-2-mcq-hieu-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:47:42.714Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-2-mcq-hieu-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:47:43.661Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-2-mcq-hieu-1-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:48:06.220Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-19-mcq-biet-2-v2)"
+        },
+        {
+          "timestamp": "2026-11-01T14:48:50.220Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-3-mcq-biet-1)"
+        },
+        {
+          "timestamp": "2026-11-01T14:49:12.756Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-les-21-mcq-hieu-1-v2)"
         }
       ]
     }

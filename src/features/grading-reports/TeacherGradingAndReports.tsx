@@ -269,11 +269,15 @@ export const TeacherGradingAndReports: React.FC<TeacherGradingAndReportsProps> =
     if (!activeSubDetail?.submission) return;
     setSavingGrade(true);
     try {
+      const autoScore = Number(activeSubDetail.submission.autoGradedScore ?? 6.0);
       await apiRequest(`/api/submissions/${activeSubDetail.submission.id}/grade`, {
         method: 'POST',
         body: JSON.stringify({
           questionGrades: gradeInputs,
           teacherOverallFeedback: overallFeedback,
+          autoGradedScore: autoScore,
+          manualGradedScore: currentManualTotal,
+          totalScore: Number((autoScore + currentManualTotal).toFixed(2)),
           finalize: true,
         }),
       });
