@@ -2,6 +2,7 @@ import express from 'express';
 import path from 'node:path';
 import fs from 'node:fs';
 import crypto from 'node:crypto';
+import { spawnSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import { getDb, saveDb, hashPassword, verifyPassword, sanitizeUser } from './db.js';
 import {
@@ -1222,6 +1223,135 @@ app.get('/api/exams/:id/print-data', requireTeacher, (req, res) => {
       hydratedVariants,
     },
   });
+});
+
+// Dynamic DOCX Export: Từ payload trực tiếp (phục vụ Live Preview & Tùy biến mọi khối lớp)
+app.post('/api/exams/export-docx', (req, res) => {
+  try {
+    const payload = req.body || {};
+    const onlyPapers = Boolean(req.query.onlyPapers === 'true' || payload.onlyPapers);
+    const grade = payload.grade || 9;
+    const title = payload.title || 'Đề kiểm tra';
+
+    const tempId = crypto.randomBytes(8).toString('hex');
+    const inJsonPath = path.join(__dirname, `temp_exam_${tempId}.json`);
+    const outDocxPath = path.join(__dirname, `temp_exam_${tempId}.docx`);
+
+    fs.writeFileSync(inJsonPath, JSON.stringify(payload, null, 2), 'utf-8');
+
+    const scriptPath = path.join(__dirname, '..', 'scripts', 'generate_exam_docx_dynamic.py');
+    const pythonExe = process.platform === 'win32' ? 'python' : 'python3';
+    const args = [scriptPath, inJsonPath, outDocxPath];
+    if (onlyPapers) {
+      args.push('--only-papers');
+    }
+
+    const pyRun = spawnSync(pythonExe, args, { encoding: 'utf-8' });
+    if (fs.existsSync(inJsonPath)) {
+      try { fs.unlinkSync(inJsonPath); } catch {}
+    }
+
+    if (pyRun.status !== 0 || !fs.existsSync(outDocxPath)) {
+      console.error('[export-docx error]', pyRun.stderr || pyRun.stdout);
+      return res.status(500).json({ success: false, error: 'Không thể tạo file Word DOCX động: ' + (pyRun.stderr || 'Lỗi xử lý') });
+    }
+
+    const fileBuf = fs.readFileSync(outDocxPath);
+    try { fs.unlinkSync(outDocxPath); } catch {}
+
+    const safeTitle = (title || 'De_Kiem_Tra')
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .replace(/đ/g, 'd')
+      .replace(/Đ/g, 'D')
+      .replace(/[^a-zA-Z0-9]+/g, '_');
+    const fileName = onlyPapers
+      ? `De_Thi_KHTN${grade}_${safeTitle}.docx`
+      : `Ma_Tran_Ban_Dac_Ta_De_Dap_An_KHTN${grade}_${safeTitle}.docx`;
+
+    res.setHeader('Content-Type', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document');
+    res.setHeader('Content-Disposition', `attachment; filename="${fileName}"`);
+    return res.send(fileBuf);
+  } catch (err) {
+    console.error('[export-docx exception]', err);
+    return res.status(500).json({ success: false, error: err.message || 'Lỗi server khi tạo file docx.' });
+  }
+});
+
+// Dynamic DOCX Export: Từ Exam ID đã lưu
+app.get('/api/exams/:id/export-docx', (req, res) => {
+  try {
+    const db = getDb();
+    const exam = db.exams.find((e) => e.id === req.params.id);
+    if (!exam) {
+      return res.status(404).json({ success: false, error: 'Không tìm thấy đề kiểm tra.' });
+    }
+    const qMap = new Map(db.questions.map((q) => [q.id, q]));
+    const selectedQuestions = (exam.questionIds || []).map((id) => qMap.get(id)).filter(Boolean);
+    const { matrixRows, specificationRows } = buildMatrixAndSpecification(
+      selectedQuestions,
+      db.chapters,
+      db.lessons,
+      exam.category,
+      exam.totalPoints
+    );
+    const hydratedVariants = hydratePaperVariants(exam.paperVariants, db.questions);
+
+    const payload = {
+      title: exam.title,
+      grade: exam.grade || 9,
+      category: exam.category,
+      schoolYear: exam.schoolYear,
+      durationMinutes: exam.durationMinutes,
+      totalPoints: exam.totalPoints,
+      schoolConfig: db.schoolConfig,
+      matrixRows,
+      specificationRows,
+      hydratedVariants,
+      onlyPapers: req.query.onlyPapers === 'true',
+    };
+
+    const tempId = crypto.randomBytes(8).toString('hex');
+    const inJsonPath = path.join(__dirname, `temp_exam_${tempId}.json`);
+    const outDocxPath = path.join(__dirname, `temp_exam_${tempId}.docx`);
+
+    fs.writeFileSync(inJsonPath, JSON.stringify(payload, null, 2), 'utf-8');
+
+    const scriptPath = path.join(__dirname, '..', 'scripts', 'generate_exam_docx_dynamic.py');
+    const pythonExe = process.platform === 'win32' ? 'python' : 'python3';
+    const args = [scriptPath, inJsonPath, outDocxPath];
+    if (payload.onlyPapers) args.push('--only-papers');
+
+    const pyRun = spawnSync(pythonExe, args, { encoding: 'utf-8' });
+    if (fs.existsSync(inJsonPath)) {
+      try { fs.unlinkSync(inJsonPath); } catch {}
+    }
+
+    if (pyRun.status !== 0 || !fs.existsSync(outDocxPath)) {
+      console.error('[export-docx error]', pyRun.stderr || pyRun.stdout);
+      return res.status(500).json({ success: false, error: 'Không thể tạo file Word DOCX: ' + (pyRun.stderr || 'Lỗi xử lý') });
+    }
+
+    const fileBuf = fs.readFileSync(outDocxPath);
+    try { fs.unlinkSync(outDocxPath); } catch {}
+
+    const safeTitle = (exam.title || 'De_Kiem_Tra')
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .replace(/đ/g, 'd')
+      .replace(/Đ/g, 'D')
+      .replace(/[^a-zA-Z0-9]+/g, '_');
+    const fileName = payload.onlyPapers
+      ? `De_Thi_KHTN${exam.grade || 9}_${safeTitle}.docx`
+      : `Ma_Tran_Ban_Dac_Ta_De_Dap_An_KHTN${exam.grade || 9}_${safeTitle}.docx`;
+
+    res.setHeader('Content-Type', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document');
+    res.setHeader('Content-Disposition', `attachment; filename="${fileName}"`);
+    return res.send(fileBuf);
+  } catch (err) {
+    console.error('[export-docx exception]', err);
+    return res.status(500).json({ success: false, error: err.message || 'Lỗi server khi tạo file docx.' });
+  }
 });
 
 // 10. STUDENT EXAM TAKING & ANTI-CHEAT

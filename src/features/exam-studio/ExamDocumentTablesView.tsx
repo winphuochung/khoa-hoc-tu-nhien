@@ -66,6 +66,7 @@ export const ExamDocumentTablesView: React.FC<ExamDocumentTablesViewProps> = ({
     defaultTab
   );
   const [selectedPaperCode, setSelectedPaperCode] = useState<string>('ALL');
+  const [downloadingDocx, setDownloadingDocx] = useState<boolean>(false);
   const docContainerRef = useRef<HTMLDivElement>(null);
   const fullDocExportRef = useRef<HTMLDivElement>(null);
 
@@ -269,6 +270,62 @@ export const ExamDocumentTablesView: React.FC<ExamDocumentTablesViewProps> = ({
     }
   }
 
+  // Dynamic Export to Word (.docx) for exact current exam data (any grade, any scope)
+  const handleDownloadDocx = async (onlyPapers = false) => {
+    try {
+      setDownloadingDocx(true);
+      const payload = {
+        title,
+        category,
+        schoolYear,
+        durationMinutes,
+        totalPoints,
+        grade,
+        schoolConfig,
+        matrixRows,
+        specificationRows,
+        hydratedVariants,
+        onlyPapers,
+      };
+
+      const res = await fetch(`/api/exams/export-docx${onlyPapers ? '?onlyPapers=true' : ''}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(payload),
+      });
+
+      if (!res.ok) {
+        throw new Error(`Lỗi máy chủ (${res.status}): Không thể tạo file DOCX.`);
+      }
+
+      const blob = await res.blob();
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      const safeTitle = (title || 'De_Kiem_Tra')
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .replace(/đ/g, 'd')
+        .replace(/Đ/g, 'D')
+        .replace(/[^a-zA-Z0-9]+/g, '_');
+      link.download = onlyPapers
+        ? `De_Thi_KHTN${grade}_${safeTitle}.docx`
+        : `Ma_Tran_Ban_Dac_Ta_De_Dap_An_KHTN${grade}_${safeTitle}.docx`;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      URL.revokeObjectURL(url);
+    } catch (err) {
+      console.error('Lỗi khi tải file DOCX động:', err);
+      // Fallback to downloading .doc
+      handleDownloadWordDoc();
+    } finally {
+      setDownloadingDocx(false);
+    }
+  };
+
   // Export to Word (.doc) with SectionLandscape (A4 ngang) and SectionPortrait (A4 đứng)
   const handleDownloadWordDoc = () => {
     const exportNode =
@@ -386,7 +443,7 @@ export const ExamDocumentTablesView: React.FC<ExamDocumentTablesViewProps> = ({
       .replace(/đ/g, 'd')
       .replace(/Đ/g, 'D')
       .replace(/[^a-zA-Z0-9]+/g, '_');
-    link.download = `Ma_Tran_Ban_Dac_Ta_De_Dap_An_${safeName}.doc`;
+    link.download = `Ma_Tran_Ban_Dac_Ta_De_Dap_An_KHTN${grade}_${safeName}.doc`;
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -1481,26 +1538,28 @@ export const ExamDocumentTablesView: React.FC<ExamDocumentTablesViewProps> = ({
             </div>
           )}
 
-          <a
-            href="./Ma_Tran_Ban_Dac_Ta_De_Dap_An_KTGK1_KHTN9_2026-2027.docx"
-            download="Ma_Tran_Ban_Dac_Ta_De_Dap_An_KTGK1_KHTN9_2026-2027.docx"
-            className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-emerald-700 hover:bg-emerald-800 text-white text-xs font-bold shadow-xs"
-            title="Tải trực tiếp file Word (.docx) chuẩn của trường: Ma trận/Đặc tả nằm ngang, Đề/Đáp án thẳng đứng"
+          <button
+            type="button"
+            disabled={downloadingDocx}
+            onClick={() => handleDownloadDocx(false)}
+            className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-emerald-700 hover:bg-emerald-800 disabled:opacity-50 text-white text-xs font-bold shadow-xs cursor-pointer"
+            title={`Tải file Word (.docx) động chuẩn: Ma trận & Bản đặc tả A4 nằm ngang, 2 Đề thi & Đáp án KHTN ${grade} A4 thẳng đứng`}
           >
             <Download className="w-4 h-4" />
-            <span>Tải file Word trọn bộ (.docx)</span>
-          </a>
+            <span>{downloadingDocx ? 'Đang tạo file DOCX...' : `Tải file Word trọn bộ KHTN ${grade} (.docx)`}</span>
+          </button>
 
           {viewMode === 'paper' && (
-            <a
-              href="./De_Kiem_Tra_KHTN9_GK1_2026-2027.docx"
-              download="De_Kiem_Tra_KHTN9_GK1_2026-2027.docx"
-              className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-teal-700 hover:bg-teal-800 text-white text-xs font-bold shadow-xs"
-              title="Tải file Word (.docx) chỉ riêng 2 Đề kiểm tra khổ A4 thẳng đứng"
+            <button
+              type="button"
+              disabled={downloadingDocx}
+              onClick={() => handleDownloadDocx(true)}
+              className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-teal-700 hover:bg-teal-800 disabled:opacity-50 text-white text-xs font-bold shadow-xs cursor-pointer"
+              title={`Tải riêng 2 Đề kiểm tra KHTN ${grade} khổ A4 thẳng đứng (.docx)`}
             >
               <Download className="w-4 h-4" />
-              <span>Tải riêng Đề thi (.docx)</span>
-            </a>
+              <span>{downloadingDocx ? 'Đang tạo...' : `Tải riêng Đề thi KHTN ${grade} (.docx)`}</span>
+            </button>
           )}
 
           <button
