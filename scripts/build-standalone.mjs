@@ -47,6 +47,11 @@ async function buildBundle() {
   if (fs.existsSync(path.join(rootDir, 'public', sampleDocx))) {
     fs.copyFileSync(path.join(rootDir, 'public', sampleDocx), path.join(rootDir, 'dist', sampleDocx));
   }
+  const paperDocx = 'De_Kiem_Tra_KHTN9_GK1_2026-2027.docx';
+  if (fs.existsSync(path.join(rootDir, paperDocx))) {
+    fs.copyFileSync(path.join(rootDir, paperDocx), path.join(rootDir, 'public', paperDocx));
+    fs.copyFileSync(path.join(rootDir, paperDocx), path.join(rootDir, 'dist', paperDocx));
+  }
   console.log('[Build Standalone] Built dist/app.iife.js, dist/app.css, and copied assets successfully.');
 }
 

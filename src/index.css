@@ -27,4 +27,27 @@
     padding: 0 !important;
     margin: 0 !important;
   }
+  @page landscape-sheet {
+    size: A4 landscape;
+    margin: 10mm 15mm;
+  }
+  @page portrait-sheet {
+    size: A4 portrait;
+    margin: 15mm 20mm;
+  }
+  .SectionLandscape {
+    page: landscape-sheet !important;
+    break-after: page;
+  }
+  .SectionPortrait {
+    page: portrait-sheet !important;
+  }
+  .page-break {
+    page-break-before: always !important;
+    break-before: page !important;
+  }
+  .section-break {
+    page-break-before: always !important;
+    break-before: page !important;
+  }
 }
