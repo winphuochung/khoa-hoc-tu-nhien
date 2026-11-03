@@ -67,6 +67,7 @@ export const ExamDocumentTablesView: React.FC<ExamDocumentTablesViewProps> = ({
   );
   const [selectedPaperCode, setSelectedPaperCode] = useState<string>('ALL');
   const docContainerRef = useRef<HTMLDivElement>(null);
+  const fullDocExportRef = useRef<HTMLDivElement>(null);
 
   const visibleVariants =
     selectedPaperCode === 'ALL'
@@ -268,9 +269,14 @@ export const ExamDocumentTablesView: React.FC<ExamDocumentTablesViewProps> = ({
     }
   }
 
-  // Export to Word (.doc) matching sample file
+  // Export to Word (.doc) with SectionLandscape (A4 ngang) and SectionPortrait (A4 đứng)
   const handleDownloadWordDoc = () => {
-    if (!docContainerRef.current) return;
+    const exportNode =
+      (viewMode === 'all' || viewMode === 'matrix' || viewMode === 'spec') && fullDocExportRef.current
+        ? fullDocExportRef.current
+        : docContainerRef.current;
+    if (!exportNode) return;
+
     const htmlContent = `
       <html xmlns:o="urn:schemas-microsoft-com:office:office"
             xmlns:w="urn:schemas-microsoft-com:office:word"
@@ -278,23 +284,93 @@ export const ExamDocumentTablesView: React.FC<ExamDocumentTablesViewProps> = ({
       <head>
         <meta charset="utf-8" />
         <title>${title}</title>
+        <!--[if gte mso 9]>
+        <xml>
+          <w:WordDocument>
+            <w:View>Print</w:View>
+            <w:Zoom>100</w:Zoom>
+            <w:DoNotOptimizeForBrowser/>
+          </w:WordDocument>
+        </xml>
+        <![endif]-->
         <style>
-          body { font-family: "Times New Roman", Times, serif; font-size: 12pt; color: #000; line-height: 1.35; }
+          /* 1. KHUNG MA TRẬN & BẢN ĐẶC TẢ: KHỔ A4 NẰM NGANG (LANDSCAPE) */
+          @page SectionLandscape {
+            size: 841.9pt 595.3pt;
+            mso-page-orientation: landscape;
+            margin: 34.0pt 42.5pt 34.0pt 42.5pt;
+            mso-header-margin: 35.4pt;
+            mso-footer-margin: 35.4pt;
+            mso-paper-source: 0;
+          }
+          div.SectionLandscape {
+            page: SectionLandscape;
+          }
+
+          /* 2. ĐỀ KIỂM TRA & ĐÁP ÁN: KHỔ A4 THẲNG ĐỨNG (PORTRAIT) */
+          @page SectionPortrait {
+            size: 595.3pt 841.9pt;
+            mso-page-orientation: portrait;
+            margin: 42.5pt 56.7pt 42.5pt 56.7pt;
+            mso-header-margin: 35.4pt;
+            mso-footer-margin: 35.4pt;
+            mso-paper-source: 0;
+          }
+          div.SectionPortrait {
+            page: SectionPortrait;
+          }
+
+          body {
+            font-family: "Times New Roman", Times, serif;
+            font-size: 11pt;
+            color: #000;
+            line-height: 1.35;
+          }
           h3, h4 { margin: 8pt 0 4pt 0; }
-          table { border-collapse: collapse; width: 100%; margin: 6pt 0 10pt 0; font-size: 11pt; }
-          th, td { border: 1px solid #000; padding: 4pt 6pt; vertical-align: middle; }
+          table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 6pt 0 10pt 0;
+            font-size: 10.5pt;
+          }
+          th, td {
+            border: 1px solid #000;
+            padding: 3.5pt 5.5pt;
+            vertical-align: middle;
+          }
           .text-center { text-align: center; }
           .text-left { text-align: left; }
           .text-right { text-align: right; }
           .font-bold { font-weight: bold; }
-          .page-break { page-break-before: always; }
-          table.school-header-table { width: 100%; border-collapse: collapse; margin-bottom: 6pt !important; }
-          table.score-feedback-table { width: 100%; border-collapse: collapse; margin-top: 6pt !important; margin-bottom: 10pt !important; }
-          td.score-feedback-cell { height: 75pt !important; min-height: 75pt !important; vertical-align: top !important; }
+          .page-break {
+            page-break-before: always;
+            mso-break-type: page-break;
+          }
+          .section-break {
+            page-break-before: always;
+            mso-break-type: section-break;
+            clear: all;
+          }
+          table.school-header-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 6pt !important;
+          }
+          table.score-feedback-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 6pt !important;
+            margin-bottom: 10pt !important;
+          }
+          td.score-feedback-cell {
+            height: 75pt !important;
+            min-height: 75pt !important;
+            vertical-align: top !important;
+          }
         </style>
       </head>
       <body>
-        ${docContainerRef.current.innerHTML}
+        ${exportNode.innerHTML}
       </body>
       </html>
     `;
@@ -794,139 +870,7 @@ export const ExamDocumentTablesView: React.FC<ExamDocumentTablesViewProps> = ({
     );
   };
 
-  return (
-    <div className="space-y-4">
-      {/* Sub-navigation Tabs & Export Toolbar (Hidden when printing) */}
-      <div className="bg-slate-100 p-3 rounded-2xl border border-slate-200 flex flex-wrap items-center justify-between gap-3 no-print">
-        <div className="flex flex-wrap gap-1.5">
-          <button
-            type="button"
-            onClick={() => setViewMode('matrix')}
-            className={`inline-flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-bold transition-all ${
-              viewMode === 'matrix'
-                ? 'bg-[#0D6E6E] text-white shadow-xs'
-                : 'bg-white text-slate-700 border border-slate-300 hover:bg-teal-50'
-            }`}
-          >
-            <Table className="w-4 h-4" />
-            <span>1. Khung Ma trận đề (Giống mẫu)</span>
-          </button>
-
-          <button
-            type="button"
-            onClick={() => setViewMode('spec')}
-            className={`inline-flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-bold transition-all ${
-              viewMode === 'spec'
-                ? 'bg-[#0D6E6E] text-white shadow-xs'
-                : 'bg-white text-slate-700 border border-slate-300 hover:bg-teal-50'
-            }`}
-          >
-            <Layers className="w-4 h-4" />
-            <span>2. Bản đặc tả đề (Giống mẫu)</span>
-          </button>
-
-          <button
-            type="button"
-            onClick={() => setViewMode('paper')}
-            className={`inline-flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-bold transition-all ${
-              viewMode === 'paper'
-                ? 'bg-[#0D6E6E] text-white shadow-xs'
-                : 'bg-white text-slate-700 border border-slate-300 hover:bg-teal-50'
-            }`}
-          >
-            <FileText className="w-4 h-4" />
-            <span>3. Đề kiểm tra (2 đề khác nhau: Đề 01 & Đề 02)</span>
-          </button>
-
-          <button
-            type="button"
-            onClick={() => setViewMode('answer_key')}
-            className={`inline-flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-bold transition-all ${
-              viewMode === 'answer_key'
-                ? 'bg-[#0D6E6E] text-white shadow-xs'
-                : 'bg-white text-slate-700 border border-slate-300 hover:bg-teal-50'
-            }`}
-          >
-            <CheckSquare className="w-4 h-4" />
-            <span>4. Đáp án & Hướng dẫn chấm (2 đề)</span>
-          </button>
-
-          <button
-            type="button"
-            onClick={() => setViewMode('all')}
-            className={`inline-flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-bold transition-all ${
-              viewMode === 'all'
-                ? 'bg-[#0D6E6E] text-white shadow-xs'
-                : 'bg-white text-slate-700 border border-slate-300 hover:bg-teal-50'
-            }`}
-          >
-            <BookOpenCheck className="w-4 h-4" />
-            <span>5. Xem gộp trọn bộ (Ma trận + Đặc tả + 2 Đề + Đáp án)</span>
-          </button>
-        </div>
-
-        <div className="flex flex-wrap items-center gap-2">
-          {(viewMode === 'paper' || viewMode === 'answer_key') && hydratedVariants.length > 0 && (
-            <div className="flex items-center gap-1.5 mr-1">
-              <span className="text-xs font-bold text-slate-700">Hiển thị:</span>
-              <button
-                type="button"
-                onClick={() => setSelectedPaperCode('ALL')}
-                className={`px-2.5 py-1.5 rounded-lg text-xs font-bold border ${
-                  selectedPaperCode === 'ALL'
-                    ? 'bg-amber-500 text-white border-amber-600'
-                    : 'bg-white text-slate-700 border-slate-300'
-                }`}
-              >
-                Cả 2 đề (Đề 01 & Đề 02)
-              </button>
-              {hydratedVariants.map((v) => (
-                <button
-                  key={v.paperCode}
-                  type="button"
-                  onClick={() => setSelectedPaperCode(v.paperCode)}
-                  className={`px-2.5 py-1.5 rounded-lg text-xs font-bold border ${
-                    selectedPaperCode === v.paperCode
-                      ? 'bg-amber-500 text-white border-amber-600'
-                      : 'bg-white text-slate-700 border-slate-300'
-                  }`}
-                >
-                  Chỉ Đề {v.paperCode}
-                </button>
-              ))}
-            </div>
-          )}
-
-          <button
-            type="button"
-            onClick={handleDownloadWordDoc}
-            className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-blue-700 hover:bg-blue-800 text-white text-xs font-bold shadow-xs"
-            title="Tải file Word (.doc) chứa bảng Ma trận, Bản đặc tả, Đề và Đáp án giống file mẫu"
-          >
-            <Download className="w-4 h-4" />
-            <span>Tải file Word (.doc)</span>
-          </button>
-
-          <button
-            type="button"
-            onClick={() => window.print()}
-            className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-amber-500 hover:bg-amber-600 text-white text-xs font-bold shadow-xs"
-          >
-            <Printer className="w-4 h-4" />
-            <span>In / Xuất PDF</span>
-          </button>
-        </div>
-      </div>
-
-      {/* Document Content Container */}
-      <div
-        ref={docContainerRef}
-        className="bg-white rounded-2xl border border-slate-300 p-4 sm:p-8 space-y-8 text-slate-900 shadow-xs"
-      >
-        {/* =====================================================================
-            TABLE 1: KHUNG MA TRẬN ĐỀ KIỂM TRA (100% GIỐNG FILE MẪU DOCX)
-           ===================================================================== */}
-        {(viewMode === 'matrix' || viewMode === 'all') && (
+  const renderMatrixContent = () => (
           <div className="space-y-3">
             <div className="text-center space-y-0.5">
               <div className="text-xs font-bold uppercase text-slate-600">
@@ -1193,12 +1137,9 @@ export const ExamDocumentTablesView: React.FC<ExamDocumentTablesViewProps> = ({
               </table>
             </div>
           </div>
-        )}
+  );
 
-        {/* =====================================================================
-            TABLE 2: BẢN ĐẶC TẢ ĐỀ KIỂM TRA (100% GIỐNG FILE MẪU DOCX)
-           ===================================================================== */}
-        {(viewMode === 'spec' || viewMode === 'all') && (
+  const renderSpecContent = () => (
           <div className="space-y-3 pt-2">
             <div className="text-center space-y-0.5">
               <h3 className="font-bold text-base sm:text-lg uppercase">
@@ -1428,13 +1369,160 @@ export const ExamDocumentTablesView: React.FC<ExamDocumentTablesViewProps> = ({
               </table>
             </div>
           </div>
+  );
+
+  return (
+    <div className="space-y-4">
+      {/* Sub-navigation Tabs & Export Toolbar (Hidden when printing) */}
+      <div className="bg-slate-100 p-3 rounded-2xl border border-slate-200 flex flex-wrap items-center justify-between gap-3 no-print">
+        <div className="flex flex-wrap gap-1.5">
+          <button
+            type="button"
+            onClick={() => setViewMode('matrix')}
+            className={`inline-flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-bold transition-all ${
+              viewMode === 'matrix'
+                ? 'bg-[#0D6E6E] text-white shadow-xs'
+                : 'bg-white text-slate-700 border border-slate-300 hover:bg-teal-50'
+            }`}
+          >
+            <Table className="w-4 h-4" />
+            <span>1. Khung Ma trận đề (Giống mẫu)</span>
+          </button>
+
+          <button
+            type="button"
+            onClick={() => setViewMode('spec')}
+            className={`inline-flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-bold transition-all ${
+              viewMode === 'spec'
+                ? 'bg-[#0D6E6E] text-white shadow-xs'
+                : 'bg-white text-slate-700 border border-slate-300 hover:bg-teal-50'
+            }`}
+          >
+            <Layers className="w-4 h-4" />
+            <span>2. Bản đặc tả đề (Giống mẫu)</span>
+          </button>
+
+          <button
+            type="button"
+            onClick={() => setViewMode('paper')}
+            className={`inline-flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-bold transition-all ${
+              viewMode === 'paper'
+                ? 'bg-[#0D6E6E] text-white shadow-xs'
+                : 'bg-white text-slate-700 border border-slate-300 hover:bg-teal-50'
+            }`}
+          >
+            <FileText className="w-4 h-4" />
+            <span>3. Đề kiểm tra (2 đề khác nhau: Đề 01 & Đề 02)</span>
+          </button>
+
+          <button
+            type="button"
+            onClick={() => setViewMode('answer_key')}
+            className={`inline-flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-bold transition-all ${
+              viewMode === 'answer_key'
+                ? 'bg-[#0D6E6E] text-white shadow-xs'
+                : 'bg-white text-slate-700 border border-slate-300 hover:bg-teal-50'
+            }`}
+          >
+            <CheckSquare className="w-4 h-4" />
+            <span>4. Đáp án & Hướng dẫn chấm (2 đề)</span>
+          </button>
+
+          <button
+            type="button"
+            onClick={() => setViewMode('all')}
+            className={`inline-flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-bold transition-all ${
+              viewMode === 'all'
+                ? 'bg-[#0D6E6E] text-white shadow-xs'
+                : 'bg-white text-slate-700 border border-slate-300 hover:bg-teal-50'
+            }`}
+          >
+            <BookOpenCheck className="w-4 h-4" />
+            <span>5. Xem gộp trọn bộ (Ma trận + Đặc tả + 2 Đề + Đáp án)</span>
+          </button>
+        </div>
+
+        <div className="flex flex-wrap items-center gap-2">
+          {(viewMode === 'paper' || viewMode === 'answer_key') && hydratedVariants.length > 0 && (
+            <div className="flex items-center gap-1.5 mr-1">
+              <span className="text-xs font-bold text-slate-700">Hiển thị:</span>
+              <button
+                type="button"
+                onClick={() => setSelectedPaperCode('ALL')}
+                className={`px-2.5 py-1.5 rounded-lg text-xs font-bold border ${
+                  selectedPaperCode === 'ALL'
+                    ? 'bg-amber-500 text-white border-amber-600'
+                    : 'bg-white text-slate-700 border-slate-300'
+                }`}
+              >
+                Cả 2 đề (Đề 01 & Đề 02)
+              </button>
+              {hydratedVariants.map((v) => (
+                <button
+                  key={v.paperCode}
+                  type="button"
+                  onClick={() => setSelectedPaperCode(v.paperCode)}
+                  className={`px-2.5 py-1.5 rounded-lg text-xs font-bold border ${
+                    selectedPaperCode === v.paperCode
+                      ? 'bg-amber-500 text-white border-amber-600'
+                      : 'bg-white text-slate-700 border-slate-300'
+                  }`}
+                >
+                  Chỉ Đề {v.paperCode}
+                </button>
+              ))}
+            </div>
+          )}
+
+          <a
+            href="./Ma_Tran_Ban_Dac_Ta_De_Dap_An_KTGK1_KHTN9_2026-2027.docx"
+            download="Ma_Tran_Ban_Dac_Ta_De_Dap_An_KTGK1_KHTN9_2026-2027.docx"
+            className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-emerald-700 hover:bg-emerald-800 text-white text-xs font-bold shadow-xs"
+            title="Tải trực tiếp file Word (.docx) chuẩn của trường: Ma trận/Đặc tả nằm ngang, Đề/Đáp án thẳng đứng"
+          >
+            <Download className="w-4 h-4" />
+            <span>Tải file Word chuẩn (.docx)</span>
+          </a>
+
+          <button
+            type="button"
+            onClick={handleDownloadWordDoc}
+            className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-blue-700 hover:bg-blue-800 text-white text-xs font-bold shadow-xs"
+            title="Tải file Word (.doc) chứa bảng Ma trận, Bản đặc tả (ngang), Đề và Đáp án (đứng)"
+          >
+            <Download className="w-4 h-4" />
+            <span>Tải file Word (.doc)</span>
+          </button>
+
+          <button
+            type="button"
+            onClick={() => window.print()}
+            className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-amber-500 hover:bg-amber-600 text-white text-xs font-bold shadow-xs"
+          >
+            <Printer className="w-4 h-4" />
+            <span>In / Xuất PDF</span>
+          </button>
+        </div>
+      </div>
+
+      {/* Document Content Container */}
+      <div
+        ref={docContainerRef}
+        className="bg-white rounded-2xl border border-slate-300 p-4 sm:p-8 space-y-8 text-slate-900 shadow-xs"
+      >
+        {/* VIEW: CHỈ KHUNG MA TRẬN (A4 NẰM NGANG) */}
+        {viewMode === 'matrix' && (
+          <div className="SectionLandscape space-y-3">{renderMatrixContent()}</div>
         )}
 
-        {/* =====================================================================
-            VIEW 3: ĐỀ KIỂM TRA (2 ĐỀ KHÁC NHAU — ĐÚNG NỘI DUNG BÀI ĐƯỢC CHỌN)
-           ===================================================================== */}
+        {/* VIEW: CHỈ BẢN ĐẶC TẢ (A4 NẰM NGANG) */}
+        {viewMode === 'spec' && (
+          <div className="SectionLandscape space-y-3">{renderSpecContent()}</div>
+        )}
+
+        {/* VIEW: CHỈ ĐỀ KIỂM TRA (A4 THẲNG ĐỨNG) */}
         {viewMode === 'paper' && (
-          <div className="space-y-8">
+          <div className="SectionPortrait space-y-8">
             {hydratedVariants.length >= 2 && (
               <div className="bg-emerald-50 border border-emerald-200 rounded-xl p-3 text-xs sm:text-sm text-emerald-900 flex flex-wrap items-center justify-between gap-2 no-print">
                 <div>
@@ -1454,47 +1542,113 @@ export const ExamDocumentTablesView: React.FC<ExamDocumentTablesViewProps> = ({
               <div
                 key={`paper-wrap-${variant.paperCode}`}
                 className={idx > 0 ? 'pt-6 border-t-4 border-dashed border-slate-300 page-break' : ''}
+                style={idx > 0 ? { pageBreakBefore: 'always' } : undefined}
               >
                 {renderPaperBlock(variant)}
               </div>
             ))}
           </div>
         )}
-        {viewMode === 'all' &&
-          hydratedVariants.map((variant, idx) => (
-            <div
-              key={`all-paper-${variant.paperCode}`}
-              className={idx > 0 ? 'pt-6 border-t-4 border-dashed border-slate-300 page-break' : ''}
-            >
-              {renderPaperBlock(variant)}
-            </div>
-          ))}
 
-        {/* =====================================================================
-            VIEW 4: ĐÁP ÁN & HƯỚNG DẪN CHẤM (2 ĐỀ KHÁC NHAU — ĐÚNG MẪU FILE DOCX)
-           ===================================================================== */}
+        {/* VIEW: CHỈ ĐÁP ÁN & HƯỚNG DẪN CHẤM (A4 THẲNG ĐỨNG) */}
         {viewMode === 'answer_key' && (
-          <div className="space-y-8">
+          <div className="SectionPortrait space-y-8">
             {visibleVariants.map((variant, idx) => (
               <div
                 key={`ans-wrap-${variant.paperCode}`}
                 className={idx > 0 ? 'pt-6 border-t-4 border-dashed border-slate-300 page-break' : ''}
+                style={idx > 0 ? { pageBreakBefore: 'always' } : undefined}
               >
                 {renderAnswerKeyBlock(variant)}
               </div>
             ))}
           </div>
         )}
-        {viewMode === 'all' &&
-          hydratedVariants.map((variant, idx) => (
+
+        {/* VIEW: TOÀN BỘ VĂN BẢN (MA TRẬN & ĐẶC TẢ A4 NẰM NGANG, ĐỀ & ĐÁP ÁN A4 THẲNG ĐỨNG) */}
+        {viewMode === 'all' && (
+          <div className="space-y-8">
+            {/* SECTION 1: KHUNG MA TRẬN & BẢN ĐẶC TẢ (A4 NẰM NGANG) */}
+            <div className="SectionLandscape space-y-8">
+              {renderMatrixContent()}
+              <div className="page-break pt-4 border-t-2 border-dashed border-slate-300" style={{ pageBreakBefore: 'always' }}>
+                {renderSpecContent()}
+              </div>
+            </div>
+
+            {/* NGẮT SECTION SANG KHỔ A4 THẲNG ĐỨNG CHO WORD */}
+            <div className="section-break my-6" style={{ pageBreakBefore: 'always' }}>
+              <br clear="all" style={{ msoBreakType: 'section-break' } as any} />
+            </div>
+
+            {/* SECTION 2: ĐỀ KIỂM TRA & ĐÁP ÁN (A4 THẲNG ĐỨNG) */}
+            <div className="SectionPortrait space-y-8">
+              {hydratedVariants.map((variant, idx) => (
+                <div
+                  key={`all-paper-${variant.paperCode}`}
+                  className={idx > 0 ? 'pt-6 border-t-4 border-dashed border-slate-300 page-break' : ''}
+                  style={idx > 0 ? { pageBreakBefore: 'always' } : undefined}
+                >
+                  {renderPaperBlock(variant)}
+                </div>
+              ))}
+
+              <div className="page-break pt-6" style={{ pageBreakBefore: 'always' }}>
+                <br style={{ msoBreakType: 'page-break' } as any} />
+              </div>
+
+              {hydratedVariants.map((variant, idx) => (
+                <div
+                  key={`all-ans-${variant.paperCode}`}
+                  className={idx > 0 ? 'pt-6 border-t-4 border-dashed border-slate-300 page-break' : ''}
+                  style={idx > 0 ? { pageBreakBefore: 'always' } : undefined}
+                >
+                  {renderAnswerKeyBlock(variant)}
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+      </div>
+
+      {/* Hidden Full Document Export Container (Luôn đảm bảo xuất đủ Ma trận + Bản đặc tả nằm ngang, Đề + Đáp án thẳng đứng) */}
+      <div ref={fullDocExportRef} style={{ display: 'none' }}>
+        <div className="SectionLandscape">
+          {renderMatrixContent()}
+          <div className="page-break" style={{ pageBreakBefore: 'always' }}>
+            <br style={{ msoBreakType: 'page-break' } as any} />
+          </div>
+          {renderSpecContent()}
+        </div>
+
+        <br clear="all" style={{ pageBreakBefore: 'always', msoBreakType: 'section-break' } as any} className="section-break" />
+
+        <div className="SectionPortrait">
+          {hydratedVariants.map((variant, idx) => (
             <div
-              key={`all-ans-${variant.paperCode}`}
-              className={idx > 0 ? 'pt-6 border-t-4 border-dashed border-slate-300 page-break' : ''}
+              key={`full-exp-paper-${variant.paperCode}`}
+              style={idx > 0 ? { pageBreakBefore: 'always', paddingTop: '16pt' } : undefined}
+            >
+              {renderPaperBlock(variant)}
+            </div>
+          ))}
+
+          <div className="page-break" style={{ pageBreakBefore: 'always' }}>
+            <br style={{ msoBreakType: 'page-break' } as any} />
+          </div>
+
+          {hydratedVariants.map((variant, idx) => (
+            <div
+              key={`full-exp-ans-${variant.paperCode}`}
+              style={idx > 0 ? { pageBreakBefore: 'always', paddingTop: '16pt' } : undefined}
             >
               {renderAnswerKeyBlock(variant)}
             </div>
           ))}
+        </div>
       </div>
+
     </div>
   );
 };

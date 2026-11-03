@@ -43,7 +43,11 @@ async function buildBundle() {
   } else if (fs.existsSync(path.join(rootDir, 'logo.png'))) {
     fs.copyFileSync(path.join(rootDir, 'logo.png'), path.join(rootDir, 'dist', 'logo.png'));
   }
-  console.log('[Build Standalone] Built dist/app.iife.js, dist/app.css, and copied dist/logo.png successfully.');
+  const sampleDocx = 'Ma_Tran_Ban_Dac_Ta_De_Dap_An_KTGK1_KHTN9_2026-2027.docx';
+  if (fs.existsSync(path.join(rootDir, 'public', sampleDocx))) {
+    fs.copyFileSync(path.join(rootDir, 'public', sampleDocx), path.join(rootDir, 'dist', sampleDocx));
+  }
+  console.log('[Build Standalone] Built dist/app.iife.js, dist/app.css, and copied assets successfully.');
 }
 
 buildBundle().catch((err) => {
