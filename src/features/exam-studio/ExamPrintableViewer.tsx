@@ -75,6 +75,7 @@ export const ExamPrintableViewer: React.FC<ExamPrintableViewerProps> = ({
             durationMinutes={exam.durationMinutes}
             totalPoints={exam.totalPoints}
             schoolConfig={schoolConfig}
+            grade={exam.grade || 9}
             matrixRows={exam.matrixRows}
             specificationRows={exam.specificationRows}
             hydratedVariants={hydratedVariants}

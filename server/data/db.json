@@ -146626,13 +146626,13 @@
           "isCorrect": true
         }
       },
-      "status": "finalized",
+      "status": "submitted_pending_grading",
       "startedAt": "2026-11-01T13:27:42.454Z",
       "submittedAt": "2026-11-01T14:17:42.454Z",
       "finalizedAt": "2026-11-01T14:51:52.938Z",
       "autoGradedScore": 6,
-      "manualGradedScore": 3,
-      "totalScore": 9,
+      "manualGradedScore": 0,
+      "totalScore": 6,
       "violationCount": 0,
       "flaggedForReview": false,
       "deviceInfo": {

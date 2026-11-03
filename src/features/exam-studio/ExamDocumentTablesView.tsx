@@ -281,13 +281,16 @@ export const ExamDocumentTablesView: React.FC<ExamDocumentTablesViewProps> = ({
         <style>
           body { font-family: "Times New Roman", Times, serif; font-size: 12pt; color: #000; line-height: 1.35; }
           h3, h4 { margin: 8pt 0 4pt 0; }
-          table { border-collapse: collapse; width: 100%; margin: 6pt 0 12pt 0; font-size: 11pt; }
+          table { border-collapse: collapse; width: 100%; margin: 6pt 0 10pt 0; font-size: 11pt; }
           th, td { border: 1px solid #000; padding: 4pt 6pt; vertical-align: middle; }
           .text-center { text-align: center; }
           .text-left { text-align: left; }
           .text-right { text-align: right; }
           .font-bold { font-weight: bold; }
           .page-break { page-break-before: always; }
+          table.school-header-table { width: 100%; border-collapse: collapse; margin-bottom: 6pt !important; }
+          table.score-feedback-table { width: 100%; border-collapse: collapse; margin-top: 6pt !important; margin-bottom: 10pt !important; }
+          td.score-feedback-cell { height: 75pt !important; min-height: 75pt !important; vertical-align: top !important; }
         </style>
       </head>
       <body>
@@ -324,43 +327,135 @@ export const ExamDocumentTablesView: React.FC<ExamDocumentTablesViewProps> = ({
 
     return (
       <div key={`paper-${variant.paperCode}`} className="space-y-4 pt-2">
-        {/* TABLE 3 / 12: Official School Header Box */}
-        <table className="w-full border-collapse border-2 border-slate-900 text-xs sm:text-sm">
+        {/* BẢNG 1: THÔNG TIN TRƯỜNG & KỲ THI (Mẫu chuẩn phân cách 2 bảng) */}
+        <table
+          style={{ width: '100%', borderCollapse: 'collapse', marginBottom: '6pt' }}
+          className="w-full border-collapse border border-slate-900 text-xs sm:text-sm school-header-table"
+        >
           <tbody>
             <tr>
-              <td className="border border-slate-900 p-2.5 text-center w-5/12 align-top">
-                <div className="font-bold uppercase">{schoolConfig.schoolName}</div>
-                <div className="font-bold mt-1">Đề {variant.paperCode}</div>
+              <td
+                style={{
+                  width: '45%',
+                  verticalAlign: 'top',
+                  padding: '5pt 8pt',
+                  border: '1px solid #000',
+                  lineHeight: '1.4',
+                }}
+                className="border border-slate-900 p-2 sm:p-2.5 align-top w-5/12 leading-relaxed"
+              >
+                <div style={{ fontWeight: 'bold' }} className="font-bold">
+                  {schoolConfig.schoolName}
+                </div>
+                <div style={{ marginTop: '3pt' }} className="mt-1">
+                  Họ và tên: ......................................................
+                </div>
+                <div style={{ marginTop: '3pt' }} className="mt-1">
+                  Lớp {grade}A.....
+                </div>
               </td>
               <td
-                colSpan={2}
-                className="border border-slate-900 p-2.5 text-center w-7/12 align-top font-bold"
+                style={{
+                  width: '55%',
+                  verticalAlign: 'middle',
+                  textAlign: 'center',
+                  padding: '5pt 8pt',
+                  border: '1px solid #000',
+                  fontWeight: 'bold',
+                  lineHeight: '1.4',
+                }}
+                className="border border-slate-900 p-2 sm:p-2.5 text-center align-middle w-7/12 font-bold leading-relaxed"
               >
-                <div className="uppercase text-sm sm:text-base">{title}</div>
-                <div className="uppercase">NĂM HỌC: {schoolYear}</div>
-                <div className="uppercase">
-                  MÔN: KHTN 9 – THỜI GIAN: {durationMinutes} phút
+                <div style={{ textTransform: 'uppercase' }} className="uppercase text-sm sm:text-base">
+                  {title}
+                </div>
+                <div style={{ textTransform: 'uppercase' }} className="uppercase">
+                  NĂM HỌC: {schoolYear}
+                </div>
+                <div style={{ textTransform: 'uppercase' }} className="uppercase">
+                  MÔN: KHTN {grade} – THỜI GIAN: {durationMinutes} phút
                 </div>
               </td>
             </tr>
+          </tbody>
+        </table>
+
+        {/* PARAGRAPH PHÂN TÁCH ĐẢM BẢO WORD TÁCH RỜI THÀNH 2 BẢNG BIỆT LẬP */}
+        <p style={{ margin: '6pt 0', fontSize: '4pt', lineHeight: '4pt' }}>&nbsp;</p>
+
+        {/* BẢNG 2: ĐIỂM & LỜI PHÊ */}
+        <table
+          style={{ width: '100%', borderCollapse: 'collapse', marginTop: '6pt', marginBottom: '10pt' }}
+          className="w-full border-collapse border border-slate-900 text-xs sm:text-sm score-feedback-table"
+        >
+          <tbody>
             <tr>
-              <td rowSpan={2} className="border border-slate-900 p-2.5 align-top">
-                <div>Họ và tên: ......................................................</div>
-                <div className="mt-2">Lớp 9A.....</div>
+              <td
+                style={{
+                  width: '50%',
+                  textAlign: 'center',
+                  fontWeight: 'bold',
+                  padding: '4pt 6pt',
+                  border: '1px solid #000',
+                  textTransform: 'uppercase',
+                }}
+                className="border border-slate-900 p-1.5 text-center font-bold uppercase w-1/2"
+              >
+                ĐIỂM
               </td>
-              <td className="border border-slate-900 p-1.5 text-center font-bold w-28">
-                Điểm
-              </td>
-              <td className="border border-slate-900 p-1.5 text-center font-bold">
-                Lời phê
+              <td
+                style={{
+                  width: '50%',
+                  textAlign: 'center',
+                  fontWeight: 'bold',
+                  padding: '4pt 6pt',
+                  border: '1px solid #000',
+                  textTransform: 'uppercase',
+                }}
+                className="border border-slate-900 p-1.5 text-center font-bold uppercase w-1/2"
+              >
+                LỜI PHÊ
               </td>
             </tr>
-            <tr>
-              <td className="border border-slate-900 h-14"></td>
-              <td className="border border-slate-900 h-14"></td>
+            <tr style={{ height: '75pt' }}>
+              <td
+                style={{
+                  width: '50%',
+                  height: '75pt',
+                  minHeight: '75pt',
+                  border: '1px solid #000',
+                  verticalAlign: 'top',
+                  padding: '6pt',
+                }}
+                className="border border-slate-900 h-20 score-feedback-cell"
+              >
+                <div style={{ height: '60pt', minHeight: '60pt' }}>&nbsp;</div>
+              </td>
+              <td
+                style={{
+                  width: '50%',
+                  height: '75pt',
+                  minHeight: '75pt',
+                  border: '1px solid #000',
+                  verticalAlign: 'top',
+                  padding: '6pt',
+                }}
+                className="border border-slate-900 h-20 score-feedback-cell"
+              >
+                <div style={{ height: '60pt', minHeight: '60pt' }}>&nbsp;</div>
+              </td>
             </tr>
           </tbody>
         </table>
+
+        {variant.paperCode && (
+          <p
+            style={{ fontWeight: 'bold', fontSize: '13pt', margin: '8pt 0 4pt 0', textAlign: 'left' }}
+            className="font-bold text-sm sm:text-base pt-1"
+          >
+            Mã đề {variant.paperCode}
+          </p>
+        )}
 
         {/* Exam Questions Content */}
         <div className="space-y-4 text-sm leading-relaxed">
