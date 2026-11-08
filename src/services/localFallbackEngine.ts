@@ -852,7 +852,9 @@ function getLocalDb() {
               ) {
                 const subsForExam = parsed.submissions.filter((s: any) => s.examId === ex.id);
                 for (const s of init.submissions) {
-                  if (!subsForExam.some((se: any) => se.studentName === s.studentName)) {
+                  const isRetakeGranted = Array.isArray(parsed.retakeGrants) &&
+                    parsed.retakeGrants.some((rg: any) => rg.examId === ex.id && (rg.studentId === s.studentId || rg.studentName === s.studentName));
+                  if (!isRetakeGranted && !subsForExam.some((se: any) => se.studentName === s.studentName)) {
                     parsed.submissions.push({
                       ...s,
                       id: `sub-${ex.id}-${s.studentId.replace('usr-hs-', '')}`,
@@ -1911,6 +1913,10 @@ export async function handleLocalApiRequest<T>(
       })
       .map((ex: any) => {
         const mySub = db.submissions.find((s: any) => s.examId === ex.id && s.studentId === user.id);
+        const retakeGranted = Boolean(
+          Array.isArray(db.retakeGrants) &&
+            db.retakeGrants.some((rg: any) => rg.examId === ex.id && rg.studentId === user.id)
+        );
         return {
           id: ex.id,
           grade: ex.grade || 9,
@@ -1926,6 +1932,7 @@ export async function handleLocalApiRequest<T>(
           isOpen: ex.isOpen,
           maxTabViolations: ex.maxTabViolations,
           createdAt: ex.createdAt,
+          retakeGranted,
           mySubmission: mySub
             ? {
                 id: mySub.id,
@@ -2041,7 +2048,11 @@ export async function handleLocalApiRequest<T>(
     const user = requireAuthUser();
     const exam = db.exams.find((e: any) => e.id === examStartMatch[1]);
     if (!exam) throw new Error('Không tìm thấy đợt kiểm tra.');
-    if (!exam.isOpen) throw new Error('Đợt kiểm tra này hiện đang đóng.');
+    const hasRetakeGrant = Boolean(
+      Array.isArray(db.retakeGrants) &&
+        db.retakeGrants.some((rg: any) => rg.examId === exam.id && rg.studentId === user.id)
+    );
+    if (!exam.isOpen && !hasRetakeGrant) throw new Error('Đợt kiểm tra này hiện đang đóng.');
 
     if (user.role === 'student') {
       const studentClass = String(user.className || '').trim();
@@ -2073,6 +2084,15 @@ export async function handleLocalApiRequest<T>(
         db.questions,
         existingForExam
       );
+      const wasRetake = Boolean(
+        Array.isArray(db.retakeGrants) &&
+          db.retakeGrants.some((rg: any) => rg.examId === exam.id && rg.studentId === user.id)
+      );
+      if (Array.isArray(db.retakeGrants)) {
+        db.retakeGrants = db.retakeGrants.filter(
+          (rg: any) => !(rg.examId === exam.id && rg.studentId === user.id)
+        );
+      }
       submission = {
         id: randomId('sub'),
         examId: exam.id,
@@ -2091,6 +2111,7 @@ export async function handleLocalApiRequest<T>(
         totalScore: 0,
         violationCount: 0,
         flaggedForReview: false,
+        isRetake: wasRetake,
         deviceInfo: body.deviceInfo || {
           userAgent: navigator.userAgent,
           platform: navigator.platform || 'Web',
@@ -2100,7 +2121,9 @@ export async function handleLocalApiRequest<T>(
           {
             timestamp: now,
             eventType: 'exam_start',
-            detail: `Bắt đầu làm bài. Mã đề cá nhân: ${paperCode} (Chữ ký đề: ${paperSignature})`,
+            detail: wasRetake
+              ? `Bắt đầu làm lại bài kiểm tra (Được giáo viên quản trị cấp quyền). Mã đề cá nhân: ${paperCode} (Chữ ký đề: ${paperSignature})`
+              : `Bắt đầu làm bài. Mã đề cá nhân: ${paperCode} (Chữ ký đề: ${paperSignature})`,
           },
         ],
       };
@@ -2193,6 +2216,9 @@ export async function handleLocalApiRequest<T>(
       passRatePercent,
       hardestQuestions,
       submissions: subs,
+      retakeGrants: Array.isArray(db.retakeGrants)
+        ? db.retakeGrants.filter((rg: any) => rg.examId === exam.id)
+        : [],
     } as T;
   }
 
@@ -2539,6 +2565,42 @@ export async function handleLocalApiRequest<T>(
     }
     saveLocalDb();
     return submission as T;
+  }
+
+  const subRetakeMatch = pathname.match(/^\/api\/submissions\/([^/]+)\/allow-retake$/);
+  if (method === 'POST' && subRetakeMatch) {
+    const teacher = requireTeacherUser();
+    const subIndex = db.submissions.findIndex((s: any) => s.id === subRetakeMatch[1]);
+    if (subIndex === -1) throw new Error('Không tìm thấy bài làm.');
+    const sub = db.submissions[subIndex];
+
+    if (!db.archivedSubmissions) db.archivedSubmissions = [];
+    db.archivedSubmissions.push({
+      ...sub,
+      retakeAllowedAt: new Date().toISOString(),
+      retakeAllowedBy: teacher.fullName || 'Giáo viên quản trị',
+      retakeReason: body?.reason || 'Giáo viên xem xét và đồng ý cho học sinh kiểm tra lại.',
+    });
+
+    if (!db.retakeGrants) db.retakeGrants = [];
+    db.retakeGrants = db.retakeGrants.filter(
+      (rg: any) => !(rg.examId === sub.examId && rg.studentId === sub.studentId)
+    );
+    db.retakeGrants.push({
+      examId: sub.examId,
+      studentId: sub.studentId,
+      studentName: sub.studentName,
+      className: sub.className,
+      grantedAt: new Date().toISOString(),
+      grantedBy: teacher.fullName || 'Giáo viên quản trị',
+    });
+
+    db.submissions.splice(subIndex, 1);
+    saveLocalDb();
+    return {
+      success: true,
+      message: `Đã cấp quyền cho học sinh ${sub.studentName} (${sub.className}) làm lại bài kiểm tra thành công.`,
+    } as T;
   }
 
   throw new Error(`Endpoint không tồn tại: ${method} ${pathname}`);

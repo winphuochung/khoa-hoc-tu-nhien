@@ -2271,6 +2271,76 @@
       "userId": "usr-teacher-0ae981a1",
       "role": "teacher",
       "createdAt": "2026-11-08T09:26:46.883Z"
+    },
+    "tk-student__usr-hs-fadd3f04__ef18819b939ccef748eabb8c": {
+      "userId": "usr-hs-fadd3f04",
+      "role": "student",
+      "createdAt": "2026-11-08T09:38:14.756Z"
+    },
+    "tk-student__usr-hs-9343c834__385b90ae5216b0a46a20d7c6": {
+      "userId": "usr-hs-9343c834",
+      "role": "student",
+      "createdAt": "2026-11-08T09:41:12.182Z"
+    },
+    "tk-student__usr-hs-41c692e5__f3c947bdf5755c26b96d7dee": {
+      "userId": "usr-hs-41c692e5",
+      "role": "student",
+      "createdAt": "2026-11-08T09:40:20.588Z"
+    },
+    "tk-student__usr-hs-2751783e__6716f053a664ff0bdc65da44": {
+      "userId": "usr-hs-2751783e",
+      "role": "student",
+      "createdAt": "2026-11-08T09:44:59.340Z"
+    },
+    "tk-student__usr-hs-927b41be__e943e51fcb31a5a616ebbd14": {
+      "userId": "usr-hs-927b41be",
+      "role": "student",
+      "createdAt": "2026-11-08T09:42:31.619Z"
+    },
+    "tk-student__usr-hs-bee33af0__04503c938580cf756d4d3000": {
+      "userId": "usr-hs-bee33af0",
+      "role": "student",
+      "createdAt": "2026-11-08T09:37:12.173Z"
+    },
+    "tk-teacher__usr-teacher-0ae981a1__188ff4b43f47bda03ca9f058": {
+      "userId": "usr-teacher-0ae981a1",
+      "role": "teacher",
+      "createdAt": "2026-11-08T09:40:58.389Z"
+    },
+    "tk-student__usr-hs-fadd3f04__4622bbc1ecd139b408839f57": {
+      "userId": "usr-hs-fadd3f04",
+      "role": "student",
+      "createdAt": "2026-11-08T09:46:13.832Z"
+    },
+    "tk-student__usr-hs-25e37862__a61e6a616715e228f9fed653": {
+      "userId": "usr-hs-25e37862",
+      "role": "student",
+      "createdAt": "2026-11-08T09:52:12.078Z"
+    },
+    "tk-student__usr-hs-28a41acb__95ada0378c80347028907e43": {
+      "userId": "usr-hs-28a41acb",
+      "role": "student",
+      "createdAt": "2026-11-08T09:52:40.748Z"
+    },
+    "tk-teacher": {
+      "userId": "usr-teacher-0ae981a1",
+      "role": "teacher",
+      "createdAt": "2026-11-08T09:53:57.738Z"
+    },
+    "tk-student__usr-hs-2751783e__33948fd574454e49ad895c21": {
+      "userId": "usr-hs-2751783e",
+      "role": "student",
+      "createdAt": "2026-11-08T09:54:44.897Z"
+    },
+    "tk-student__usr-hs-2751783e__c924662dc9cdb7eee6a1dd4a": {
+      "userId": "usr-hs-2751783e",
+      "role": "student",
+      "createdAt": "2026-11-08T09:54:52.163Z"
+    },
+    "tk-student__usr-hs-2751783e__cc2b0fe6016800c7ef9d4247": {
+      "userId": "usr-hs-2751783e",
+      "role": "student",
+      "createdAt": "2026-11-08T09:55:05.662Z"
     }
   },
   "chapters": [
@@ -114685,9 +114755,1619 @@
         "studiedAt": "2026-11-05T15:03:45.985Z",
         "lastPracticedAt": "2026-11-05T15:03:45.985Z"
       }
+    },
+    "usr-hs-fadd3f04": {
+      "701": {
+        "lessonId": 701,
+        "studied": true,
+        "totalAttempted": 7,
+        "correctCount": 7,
+        "studiedAt": "2026-11-08T09:49:04.981Z",
+        "lastPracticedAt": "2026-11-08T09:49:04.981Z"
+      },
+      "702": {
+        "lessonId": 702,
+        "studied": true,
+        "totalAttempted": 8,
+        "correctCount": 8,
+        "studiedAt": "2026-11-08T09:52:08.152Z",
+        "lastPracticedAt": "2026-11-08T09:52:08.152Z"
+      }
+    },
+    "usr-hs-41c692e5": {
+      "701": {
+        "lessonId": 701,
+        "studied": true,
+        "totalAttempted": 11,
+        "correctCount": 7,
+        "studiedAt": "2026-11-08T09:47:35.743Z",
+        "lastPracticedAt": "2026-11-08T09:47:35.743Z"
+      }
+    },
+    "usr-hs-927b41be": {
+      "701": {
+        "lessonId": 701,
+        "studied": true,
+        "totalAttempted": 4,
+        "correctCount": 2,
+        "studiedAt": "2026-11-08T09:51:16.981Z",
+        "lastPracticedAt": "2026-11-08T09:51:16.981Z"
+      }
+    },
+    "usr-hs-2751783e": {
+      "701": {
+        "lessonId": 701,
+        "studied": true,
+        "totalAttempted": 5,
+        "correctCount": 2,
+        "studiedAt": "2026-11-08T09:52:05.156Z",
+        "lastPracticedAt": "2026-11-08T09:52:05.156Z"
+      }
     }
   },
   "exams": [
+    {
+      "id": "exam-103bd4d1",
+      "grade": 7,
+      "title": "ĐỀ KIỂM TRA GIỮA KÌ I",
+      "category": "midterm",
+      "schoolYear": "2026 – 2027",
+      "durationMinutes": 90,
+      "totalPoints": 10,
+      "assignedClasses": [
+        "7A1"
+      ],
+      "lessonScope": [
+        701,
+        702,
+        703,
+        704,
+        705,
+        706,
+        707,
+        708,
+        709,
+        710
+      ],
+      "questionIds": [
+        "q-g7-l2-mcq1",
+        "q-g7-l3-mcq2",
+        "q-g7-l4-mcq1",
+        "q-g7-l4-mcq3",
+        "q-g7-l5-mcq2",
+        "q-g7-l7-mcq1",
+        "q-g7-l8-mcq1",
+        "q-g7-l8-mcq3",
+        "q-g7-l9-mcq1",
+        "q-g7-l9-mcq3",
+        "q-g7-l10-mcq1",
+        "q-g7-l10-mcq3",
+        "q-g7-l3-tf1",
+        "q-g7-l5-tf1",
+        "q-g7-l1-sa2",
+        "q-g7-l6-sa2",
+        "q-g7-l6-sa1",
+        "q-g7-l7-sa2",
+        "q-g7-l1-es1",
+        "q-g7-l2-es1",
+        "q-g7-l4-es1"
+      ],
+      "paperVariants": [
+        {
+          "paperCode": "01",
+          "questionIds": [
+            "q-g7-l2-mcq1",
+            "q-g7-l3-mcq2",
+            "q-g7-l4-mcq1",
+            "q-g7-l4-mcq3",
+            "q-g7-l5-mcq2",
+            "q-g7-l7-mcq1",
+            "q-g7-l8-mcq1",
+            "q-g7-l8-mcq3",
+            "q-g7-l9-mcq1",
+            "q-g7-l9-mcq3",
+            "q-g7-l10-mcq1",
+            "q-g7-l10-mcq3",
+            "q-g7-l3-tf1",
+            "q-g7-l5-tf1",
+            "q-g7-l1-sa2",
+            "q-g7-l6-sa2",
+            "q-g7-l6-sa1",
+            "q-g7-l7-sa2",
+            "q-g7-l1-es1",
+            "q-g7-l2-es1",
+            "q-g7-l4-es1"
+          ],
+          "optionOrders": {
+            "q-g7-l2-mcq1": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "q-g7-l3-mcq2": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "q-g7-l4-mcq1": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "q-g7-l4-mcq3": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "q-g7-l5-mcq2": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "q-g7-l7-mcq1": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "q-g7-l8-mcq1": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "q-g7-l8-mcq3": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "q-g7-l9-mcq1": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "q-g7-l9-mcq3": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "q-g7-l10-mcq1": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "q-g7-l10-mcq3": [
+              0,
+              1,
+              2,
+              3
+            ]
+          }
+        },
+        {
+          "paperCode": "02",
+          "questionIds": [
+            "q-g7-l2-mcq3",
+            "q-g7-l3-mcq4",
+            "q-g7-l4-mcq5",
+            "q-g7-l4-mcq2",
+            "q-g7-l5-mcq4",
+            "q-g7-l7-mcq3",
+            "q-g7-l8-mcq5",
+            "q-g7-l8-mcq2",
+            "q-g7-l9-mcq5",
+            "q-g7-l9-mcq2",
+            "q-g7-l10-mcq5",
+            "q-g7-l10-mcq2",
+            "q-g7-l3-tf2",
+            "q-g7-l5-tf2",
+            "q-g7-l1-sa1",
+            "q-g7-l6-sa1",
+            "q-g7-l6-sa3",
+            "q-g7-l7-sa1",
+            "q-g7-l1-es2",
+            "q-g7-l2-es2",
+            "q-g7-l4-es2"
+          ],
+          "optionOrders": {
+            "q-g7-l2-mcq3": [
+              1,
+              3,
+              2,
+              0
+            ],
+            "q-g7-l3-mcq4": [
+              3,
+              0,
+              2,
+              1
+            ],
+            "q-g7-l4-mcq5": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "q-g7-l4-mcq2": [
+              0,
+              2,
+              1,
+              3
+            ],
+            "q-g7-l5-mcq4": [
+              3,
+              2,
+              1,
+              0
+            ],
+            "q-g7-l7-mcq3": [
+              0,
+              1,
+              3,
+              2
+            ],
+            "q-g7-l8-mcq5": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "q-g7-l8-mcq2": [
+              0,
+              2,
+              1,
+              3
+            ],
+            "q-g7-l9-mcq5": [
+              2,
+              0,
+              3,
+              1
+            ],
+            "q-g7-l9-mcq2": [
+              2,
+              0,
+              3,
+              1
+            ],
+            "q-g7-l10-mcq5": [
+              3,
+              2,
+              0,
+              1
+            ],
+            "q-g7-l10-mcq2": [
+              0,
+              3,
+              2,
+              1
+            ]
+          }
+        }
+      ],
+      "matrixRows": [
+        {
+          "tt": 1,
+          "rowIndex": 1,
+          "chapterId": "ch-7-00",
+          "chapterTitle": "Chủ đề mở đầu",
+          "lessonId": 701,
+          "lessonTitle": "Bài 1: Phương pháp và kỹ năng học tập môn Khoa học tự nhiên",
+          "periods": 5,
+          "periodsPercent": 14.3,
+          "counts": {
+            "mcq": {
+              "biet": 0,
+              "hieu": 0,
+              "van_dung": 0
+            },
+            "true_false": {
+              "biet": 0,
+              "hieu": 0,
+              "van_dung": 0
+            },
+            "short_answer": {
+              "biet": 1,
+              "hieu": 0,
+              "van_dung": 0
+            },
+            "essay": {
+              "biet": 0,
+              "hieu": 0,
+              "van_dung": 1
+            }
+          },
+          "totalByLevel": {
+            "biet": 1,
+            "hieu": 0,
+            "van_dung": 1
+          },
+          "totalCommands": 2,
+          "totalPoints": 1.5,
+          "percentScore": 15
+        },
+        {
+          "tt": 2,
+          "rowIndex": 2,
+          "chapterId": "ch-7-01",
+          "chapterTitle": "Chương I: Nguyên tử. Sơ lược về bảng tuần hoàn các nguyên tố hoá học",
+          "lessonId": 702,
+          "lessonTitle": "Bài 2: Nguyên tử",
+          "periods": 4,
+          "periodsPercent": 11.4,
+          "counts": {
+            "mcq": {
+              "biet": 1,
+              "hieu": 0,
+              "van_dung": 0
+            },
+            "true_false": {
+              "biet": 0,
+              "hieu": 0,
+              "van_dung": 0
+            },
+            "short_answer": {
+              "biet": 0,
+              "hieu": 0,
+              "van_dung": 0
+            },
+            "essay": {
+              "biet": 0,
+              "hieu": 0,
+              "van_dung": 1
+            }
+          },
+          "totalByLevel": {
+            "biet": 1,
+            "hieu": 0,
+            "van_dung": 1
+          },
+          "totalCommands": 2,
+          "totalPoints": 1.25,
+          "percentScore": 12.5
+        },
+        {
+          "tt": 2,
+          "rowIndex": 3,
+          "chapterId": "ch-7-01",
+          "chapterTitle": "Chương I: Nguyên tử. Sơ lược về bảng tuần hoàn các nguyên tố hoá học",
+          "lessonId": 703,
+          "lessonTitle": "Bài 3: Nguyên tố hóa học",
+          "periods": 4,
+          "periodsPercent": 11.4,
+          "counts": {
+            "mcq": {
+              "biet": 0,
+              "hieu": 1,
+              "van_dung": 0
+            },
+            "true_false": {
+              "biet": 0,
+              "hieu": 1,
+              "van_dung": 0
+            },
+            "short_answer": {
+              "biet": 0,
+              "hieu": 0,
+              "van_dung": 0
+            },
+            "essay": {
+              "biet": 0,
+              "hieu": 0,
+              "van_dung": 0
+            }
+          },
+          "totalByLevel": {
+            "biet": 0,
+            "hieu": 2,
+            "van_dung": 0
+          },
+          "totalCommands": 2,
+          "totalPoints": 1.25,
+          "percentScore": 12.5
+        },
+        {
+          "tt": 2,
+          "rowIndex": 4,
+          "chapterId": "ch-7-01",
+          "chapterTitle": "Chương I: Nguyên tử. Sơ lược về bảng tuần hoàn các nguyên tố hoá học",
+          "lessonId": 704,
+          "lessonTitle": "Bài 4: Sơ lược về bảng tuần hoàn các nguyên tố hóa học",
+          "periods": 5,
+          "periodsPercent": 14.3,
+          "counts": {
+            "mcq": {
+              "biet": 2,
+              "hieu": 0,
+              "van_dung": 0
+            },
+            "true_false": {
+              "biet": 0,
+              "hieu": 0,
+              "van_dung": 0
+            },
+            "short_answer": {
+              "biet": 0,
+              "hieu": 0,
+              "van_dung": 0
+            },
+            "essay": {
+              "biet": 0,
+              "hieu": 0,
+              "van_dung": 1
+            }
+          },
+          "totalByLevel": {
+            "biet": 2,
+            "hieu": 0,
+            "van_dung": 1
+          },
+          "totalCommands": 3,
+          "totalPoints": 1.5,
+          "percentScore": 15
+        },
+        {
+          "tt": 3,
+          "rowIndex": 5,
+          "chapterId": "ch-7-02",
+          "chapterTitle": "Chương II: Phân tử. Liên kết hoá học",
+          "lessonId": 705,
+          "lessonTitle": "Bài 5: Phân tử",
+          "periods": 4,
+          "periodsPercent": 11.4,
+          "counts": {
+            "mcq": {
+              "biet": 0,
+              "hieu": 1,
+              "van_dung": 0
+            },
+            "true_false": {
+              "biet": 0,
+              "hieu": 1,
+              "van_dung": 0
+            },
+            "short_answer": {
+              "biet": 0,
+              "hieu": 0,
+              "van_dung": 0
+            },
+            "essay": {
+              "biet": 0,
+              "hieu": 0,
+              "van_dung": 0
+            }
+          },
+          "totalByLevel": {
+            "biet": 0,
+            "hieu": 2,
+            "van_dung": 0
+          },
+          "totalCommands": 2,
+          "totalPoints": 1.25,
+          "percentScore": 12.5
+        },
+        {
+          "tt": 3,
+          "rowIndex": 6,
+          "chapterId": "ch-7-02",
+          "chapterTitle": "Chương II: Phân tử. Liên kết hoá học",
+          "lessonId": 706,
+          "lessonTitle": "Bài 6: Giới thiệu về liên kết hóa học",
+          "periods": 4,
+          "periodsPercent": 11.4,
+          "counts": {
+            "mcq": {
+              "biet": 0,
+              "hieu": 0,
+              "van_dung": 0
+            },
+            "true_false": {
+              "biet": 0,
+              "hieu": 0,
+              "van_dung": 0
+            },
+            "short_answer": {
+              "biet": 1,
+              "hieu": 0,
+              "van_dung": 1
+            },
+            "essay": {
+              "biet": 0,
+              "hieu": 0,
+              "van_dung": 0
+            }
+          },
+          "totalByLevel": {
+            "biet": 1,
+            "hieu": 0,
+            "van_dung": 1
+          },
+          "totalCommands": 2,
+          "totalPoints": 1,
+          "percentScore": 10
+        },
+        {
+          "tt": 3,
+          "rowIndex": 7,
+          "chapterId": "ch-7-02",
+          "chapterTitle": "Chương II: Phân tử. Liên kết hoá học",
+          "lessonId": 707,
+          "lessonTitle": "Bài 7: Hóa trị và công thức hóa học",
+          "periods": 3,
+          "periodsPercent": 8.6,
+          "counts": {
+            "mcq": {
+              "biet": 1,
+              "hieu": 0,
+              "van_dung": 0
+            },
+            "true_false": {
+              "biet": 0,
+              "hieu": 0,
+              "van_dung": 0
+            },
+            "short_answer": {
+              "biet": 1,
+              "hieu": 0,
+              "van_dung": 0
+            },
+            "essay": {
+              "biet": 0,
+              "hieu": 0,
+              "van_dung": 0
+            }
+          },
+          "totalByLevel": {
+            "biet": 2,
+            "hieu": 0,
+            "van_dung": 0
+          },
+          "totalCommands": 2,
+          "totalPoints": 0.75,
+          "percentScore": 7.5
+        },
+        {
+          "tt": 4,
+          "rowIndex": 8,
+          "chapterId": "ch-7-03",
+          "chapterTitle": "Chương III: Tốc độ chuyển động",
+          "lessonId": 708,
+          "lessonTitle": "Bài 8: Tốc độ chuyển động",
+          "periods": 2,
+          "periodsPercent": 5.7,
+          "counts": {
+            "mcq": {
+              "biet": 2,
+              "hieu": 0,
+              "van_dung": 0
+            },
+            "true_false": {
+              "biet": 0,
+              "hieu": 0,
+              "van_dung": 0
+            },
+            "short_answer": {
+              "biet": 0,
+              "hieu": 0,
+              "van_dung": 0
+            },
+            "essay": {
+              "biet": 0,
+              "hieu": 0,
+              "van_dung": 0
+            }
+          },
+          "totalByLevel": {
+            "biet": 2,
+            "hieu": 0,
+            "van_dung": 0
+          },
+          "totalCommands": 2,
+          "totalPoints": 0.5,
+          "percentScore": 5
+        },
+        {
+          "tt": 4,
+          "rowIndex": 9,
+          "chapterId": "ch-7-03",
+          "chapterTitle": "Chương III: Tốc độ chuyển động",
+          "lessonId": 709,
+          "lessonTitle": "Bài 9: Đo tốc độ",
+          "periods": 2,
+          "periodsPercent": 5.7,
+          "counts": {
+            "mcq": {
+              "biet": 2,
+              "hieu": 0,
+              "van_dung": 0
+            },
+            "true_false": {
+              "biet": 0,
+              "hieu": 0,
+              "van_dung": 0
+            },
+            "short_answer": {
+              "biet": 0,
+              "hieu": 0,
+              "van_dung": 0
+            },
+            "essay": {
+              "biet": 0,
+              "hieu": 0,
+              "van_dung": 0
+            }
+          },
+          "totalByLevel": {
+            "biet": 2,
+            "hieu": 0,
+            "van_dung": 0
+          },
+          "totalCommands": 2,
+          "totalPoints": 0.5,
+          "percentScore": 5
+        },
+        {
+          "tt": 4,
+          "rowIndex": 10,
+          "chapterId": "ch-7-03",
+          "chapterTitle": "Chương III: Tốc độ chuyển động",
+          "lessonId": 710,
+          "lessonTitle": "Bài 10: Đồ thị quãng đường",
+          "periods": 2,
+          "periodsPercent": 5.7,
+          "counts": {
+            "mcq": {
+              "biet": 2,
+              "hieu": 0,
+              "van_dung": 0
+            },
+            "true_false": {
+              "biet": 0,
+              "hieu": 0,
+              "van_dung": 0
+            },
+            "short_answer": {
+              "biet": 0,
+              "hieu": 0,
+              "van_dung": 0
+            },
+            "essay": {
+              "biet": 0,
+              "hieu": 0,
+              "van_dung": 0
+            }
+          },
+          "totalByLevel": {
+            "biet": 2,
+            "hieu": 0,
+            "van_dung": 0
+          },
+          "totalCommands": 2,
+          "totalPoints": 0.5,
+          "percentScore": 5
+        }
+      ],
+      "specificationRows": [
+        {
+          "tt": 1,
+          "rowIndex": 1,
+          "chapterId": "ch-7-00",
+          "chapterTitle": "Chủ đề mở đầu",
+          "lessonId": 701,
+          "lessonTitle": "Bài 1: Phương pháp và kỹ năng học tập môn Khoa học tự nhiên",
+          "periods": 5,
+          "periodsPercent": 14.3,
+          "requirementsByLevel": {
+            "biet": [
+              "Trình bày và vận dụng được một số phương pháp và kĩ năng trong học tập môn Khoa học tự nhiên:."
+            ],
+            "hieu": [],
+            "van_dung": [
+              "Trình bày và vận dụng được một số phương pháp và kĩ năng trong học tập môn Khoa học tự nhiên:."
+            ]
+          },
+          "indicators": [
+            "NT1"
+          ],
+          "questionPositions": {
+            "mcq": {
+              "biet": [],
+              "hieu": [],
+              "van_dung": []
+            },
+            "true_false": {
+              "biet": [],
+              "hieu": [],
+              "van_dung": []
+            },
+            "short_answer": {
+              "biet": [
+                "Câu 1"
+              ],
+              "hieu": [],
+              "van_dung": []
+            },
+            "essay": {
+              "biet": [],
+              "hieu": [],
+              "van_dung": [
+                "Câu 1"
+              ]
+            }
+          },
+          "specCells": {
+            "mcq": {
+              "biet": "",
+              "hieu": "",
+              "van_dung": ""
+            },
+            "true_false": {
+              "biet": "",
+              "hieu": "",
+              "van_dung": ""
+            },
+            "short_answer": {
+              "biet": "Câu 1\nNT1",
+              "hieu": "",
+              "van_dung": ""
+            },
+            "essay": {
+              "biet": "",
+              "hieu": "",
+              "van_dung": "Câu 1"
+            }
+          },
+          "counts": {
+            "mcq": {
+              "biet": 0,
+              "hieu": 0,
+              "van_dung": 0
+            },
+            "true_false": {
+              "biet": 0,
+              "hieu": 0,
+              "van_dung": 0
+            },
+            "short_answer": {
+              "biet": 1,
+              "hieu": 0,
+              "van_dung": 0
+            },
+            "essay": {
+              "biet": 0,
+              "hieu": 0,
+              "van_dung": 1
+            }
+          }
+        },
+        {
+          "tt": 2,
+          "rowIndex": 2,
+          "chapterId": "ch-7-01",
+          "chapterTitle": "Chương I: Nguyên tử. Sơ lược về bảng tuần hoàn các nguyên tố hoá học",
+          "lessonId": 702,
+          "lessonTitle": "Bài 2: Nguyên tử",
+          "periods": 4,
+          "periodsPercent": 11.4,
+          "requirementsByLevel": {
+            "biet": [
+              "Trình bày được mô hình nguyên tử của Rutherford."
+            ],
+            "hieu": [],
+            "van_dung": [
+              "Nêu được khối lượng của một nguyên tử theo đơn vị quốc tế amu (đơn vị khối lượng nguyên tử). Học sinh thực hiện được các tương tác thường xuyên, xác định rõ ràng với công nghệ số trong quá trình học tập (truy cập, đăng ảnh/video mô hình, đọc bài bạn, like/bình luận phản hồi thường xuyên). (đăng ảnh/video mô hình nguyên tử 3D kèm chú thích giải thích cấu tạo, thể hiện quá trình làm và ý nghĩa STEM)."
+            ]
+          },
+          "indicators": [
+            "HH1.1",
+            "HH3.1"
+          ],
+          "questionPositions": {
+            "mcq": {
+              "biet": [
+                "Câu 1"
+              ],
+              "hieu": [],
+              "van_dung": []
+            },
+            "true_false": {
+              "biet": [],
+              "hieu": [],
+              "van_dung": []
+            },
+            "short_answer": {
+              "biet": [],
+              "hieu": [],
+              "van_dung": []
+            },
+            "essay": {
+              "biet": [],
+              "hieu": [],
+              "van_dung": [
+                "Câu 2"
+              ]
+            }
+          },
+          "specCells": {
+            "mcq": {
+              "biet": "Câu 1\nHH1.1",
+              "hieu": "",
+              "van_dung": ""
+            },
+            "true_false": {
+              "biet": "",
+              "hieu": "",
+              "van_dung": ""
+            },
+            "short_answer": {
+              "biet": "",
+              "hieu": "",
+              "van_dung": ""
+            },
+            "essay": {
+              "biet": "",
+              "hieu": "",
+              "van_dung": "Câu 2\nHH3.1"
+            }
+          },
+          "counts": {
+            "mcq": {
+              "biet": 1,
+              "hieu": 0,
+              "van_dung": 0
+            },
+            "true_false": {
+              "biet": 0,
+              "hieu": 0,
+              "van_dung": 0
+            },
+            "short_answer": {
+              "biet": 0,
+              "hieu": 0,
+              "van_dung": 0
+            },
+            "essay": {
+              "biet": 0,
+              "hieu": 0,
+              "van_dung": 1
+            }
+          }
+        },
+        {
+          "tt": 2,
+          "rowIndex": 3,
+          "chapterId": "ch-7-01",
+          "chapterTitle": "Chương I: Nguyên tử. Sơ lược về bảng tuần hoàn các nguyên tố hoá học",
+          "lessonId": 703,
+          "lessonTitle": "Bài 3: Nguyên tố hóa học",
+          "periods": 4,
+          "periodsPercent": 11.4,
+          "requirementsByLevel": {
+            "biet": [],
+            "hieu": [
+              "Viết được công thức hoá học và đọc được tên của 20 nguyên tố đầu tiên."
+            ],
+            "van_dung": []
+          },
+          "indicators": [
+            "HH2.1"
+          ],
+          "questionPositions": {
+            "mcq": {
+              "biet": [],
+              "hieu": [
+                "Câu 2"
+              ],
+              "van_dung": []
+            },
+            "true_false": {
+              "biet": [],
+              "hieu": [
+                "Câu 1"
+              ],
+              "van_dung": []
+            },
+            "short_answer": {
+              "biet": [],
+              "hieu": [],
+              "van_dung": []
+            },
+            "essay": {
+              "biet": [],
+              "hieu": [],
+              "van_dung": []
+            }
+          },
+          "specCells": {
+            "mcq": {
+              "biet": "",
+              "hieu": "Câu 2\nHH2.1",
+              "van_dung": ""
+            },
+            "true_false": {
+              "biet": "",
+              "hieu": "Câu 1\nHH2.1",
+              "van_dung": ""
+            },
+            "short_answer": {
+              "biet": "",
+              "hieu": "",
+              "van_dung": ""
+            },
+            "essay": {
+              "biet": "",
+              "hieu": "",
+              "van_dung": ""
+            }
+          },
+          "counts": {
+            "mcq": {
+              "biet": 0,
+              "hieu": 1,
+              "van_dung": 0
+            },
+            "true_false": {
+              "biet": 0,
+              "hieu": 1,
+              "van_dung": 0
+            },
+            "short_answer": {
+              "biet": 0,
+              "hieu": 0,
+              "van_dung": 0
+            },
+            "essay": {
+              "biet": 0,
+              "hieu": 0,
+              "van_dung": 0
+            }
+          }
+        },
+        {
+          "tt": 2,
+          "rowIndex": 4,
+          "chapterId": "ch-7-01",
+          "chapterTitle": "Chương I: Nguyên tử. Sơ lược về bảng tuần hoàn các nguyên tố hoá học",
+          "lessonId": 704,
+          "lessonTitle": "Bài 4: Sơ lược về bảng tuần hoàn các nguyên tố hóa học",
+          "periods": 5,
+          "periodsPercent": 14.3,
+          "requirementsByLevel": {
+            "biet": [
+              "Nêu được các nguyên tắc xây dựng bảng tuần hoàn các nguyên tố hoá học."
+            ],
+            "hieu": [],
+            "van_dung": [
+              "Mô tả được cấu tạo bảng tuần hoàn gồm: ô, nhóm, chu kì. -Sử dụng được bảng tuần hoàn để chỉ ra các nhóm nguyên tố/nguyên tố kim loại, các nhóm nguyên tố/nguyên tố phi kim, nhóm nguyên tố khí hiếm trong bảng tuần hoàn. -1.1TC1b: Thực hiện được rõ ràng và theo quy trình các tìm kiếm để tìm dữ liệu, thông tin và nội dung trong môi trường số."
+            ]
+          },
+          "indicators": [
+            "HH1.1",
+            "HH3.1"
+          ],
+          "questionPositions": {
+            "mcq": {
+              "biet": [
+                "Câu 3",
+                "Câu 4"
+              ],
+              "hieu": [],
+              "van_dung": []
+            },
+            "true_false": {
+              "biet": [],
+              "hieu": [],
+              "van_dung": []
+            },
+            "short_answer": {
+              "biet": [],
+              "hieu": [],
+              "van_dung": []
+            },
+            "essay": {
+              "biet": [],
+              "hieu": [],
+              "van_dung": [
+                "Câu 3"
+              ]
+            }
+          },
+          "specCells": {
+            "mcq": {
+              "biet": "Câu 3, Câu 4\nHH1.1",
+              "hieu": "",
+              "van_dung": ""
+            },
+            "true_false": {
+              "biet": "",
+              "hieu": "",
+              "van_dung": ""
+            },
+            "short_answer": {
+              "biet": "",
+              "hieu": "",
+              "van_dung": ""
+            },
+            "essay": {
+              "biet": "",
+              "hieu": "",
+              "van_dung": "Câu 3\nHH3.1"
+            }
+          },
+          "counts": {
+            "mcq": {
+              "biet": 2,
+              "hieu": 0,
+              "van_dung": 0
+            },
+            "true_false": {
+              "biet": 0,
+              "hieu": 0,
+              "van_dung": 0
+            },
+            "short_answer": {
+              "biet": 0,
+              "hieu": 0,
+              "van_dung": 0
+            },
+            "essay": {
+              "biet": 0,
+              "hieu": 0,
+              "van_dung": 1
+            }
+          }
+        },
+        {
+          "tt": 3,
+          "rowIndex": 5,
+          "chapterId": "ch-7-02",
+          "chapterTitle": "Chương II: Phân tử. Liên kết hoá học",
+          "lessonId": 705,
+          "lessonTitle": "Bài 5: Phân tử",
+          "periods": 4,
+          "periodsPercent": 11.4,
+          "requirementsByLevel": {
+            "biet": [],
+            "hieu": [
+              "Tính được khối lượng phân tử theo đơn vị amu."
+            ],
+            "van_dung": []
+          },
+          "indicators": [
+            "HH2.1"
+          ],
+          "questionPositions": {
+            "mcq": {
+              "biet": [],
+              "hieu": [
+                "Câu 5"
+              ],
+              "van_dung": []
+            },
+            "true_false": {
+              "biet": [],
+              "hieu": [
+                "Câu 2"
+              ],
+              "van_dung": []
+            },
+            "short_answer": {
+              "biet": [],
+              "hieu": [],
+              "van_dung": []
+            },
+            "essay": {
+              "biet": [],
+              "hieu": [],
+              "van_dung": []
+            }
+          },
+          "specCells": {
+            "mcq": {
+              "biet": "",
+              "hieu": "Câu 5\nHH2.1",
+              "van_dung": ""
+            },
+            "true_false": {
+              "biet": "",
+              "hieu": "Câu 2\nHH2.1",
+              "van_dung": ""
+            },
+            "short_answer": {
+              "biet": "",
+              "hieu": "",
+              "van_dung": ""
+            },
+            "essay": {
+              "biet": "",
+              "hieu": "",
+              "van_dung": ""
+            }
+          },
+          "counts": {
+            "mcq": {
+              "biet": 0,
+              "hieu": 1,
+              "van_dung": 0
+            },
+            "true_false": {
+              "biet": 0,
+              "hieu": 1,
+              "van_dung": 0
+            },
+            "short_answer": {
+              "biet": 0,
+              "hieu": 0,
+              "van_dung": 0
+            },
+            "essay": {
+              "biet": 0,
+              "hieu": 0,
+              "van_dung": 0
+            }
+          }
+        },
+        {
+          "tt": 3,
+          "rowIndex": 6,
+          "chapterId": "ch-7-02",
+          "chapterTitle": "Chương II: Phân tử. Liên kết hoá học",
+          "lessonId": 706,
+          "lessonTitle": "Bài 6: Giới thiệu về liên kết hóa học",
+          "periods": 4,
+          "periodsPercent": 11.4,
+          "requirementsByLevel": {
+            "biet": [
+              "Nêu được mô hình sắp xếp electron trong vỏ nguyên tử của một số nguyên tố khí hiếm."
+            ],
+            "hieu": [],
+            "van_dung": [
+              "Chỉ ra được sự khác nhau về một số tính chất của chất ion và chất cộng hoá trị. -Thực hiện được rõ ràng và theo quy trình các tìm kiếm để tìm dữ liệu, thông tin và nội dung trong môi trường số. (Học sinh biết xác định từ khóa, chọn nguồn tin cậy, lọc và ghi lại thông tin phù hợp về liên kết hóa học theo đúng quy trình tìm kiếm trong môi trường số.)."
+            ]
+          },
+          "indicators": [
+            "HH1.1",
+            "HH3.1"
+          ],
+          "questionPositions": {
+            "mcq": {
+              "biet": [],
+              "hieu": [],
+              "van_dung": []
+            },
+            "true_false": {
+              "biet": [],
+              "hieu": [],
+              "van_dung": []
+            },
+            "short_answer": {
+              "biet": [
+                "Câu 2"
+              ],
+              "hieu": [],
+              "van_dung": [
+                "Câu 3"
+              ]
+            },
+            "essay": {
+              "biet": [],
+              "hieu": [],
+              "van_dung": []
+            }
+          },
+          "specCells": {
+            "mcq": {
+              "biet": "",
+              "hieu": "",
+              "van_dung": ""
+            },
+            "true_false": {
+              "biet": "",
+              "hieu": "",
+              "van_dung": ""
+            },
+            "short_answer": {
+              "biet": "Câu 2\nHH1.1",
+              "hieu": "",
+              "van_dung": "Câu 3\nHH3.1"
+            },
+            "essay": {
+              "biet": "",
+              "hieu": "",
+              "van_dung": ""
+            }
+          },
+          "counts": {
+            "mcq": {
+              "biet": 0,
+              "hieu": 0,
+              "van_dung": 0
+            },
+            "true_false": {
+              "biet": 0,
+              "hieu": 0,
+              "van_dung": 0
+            },
+            "short_answer": {
+              "biet": 1,
+              "hieu": 0,
+              "van_dung": 1
+            },
+            "essay": {
+              "biet": 0,
+              "hieu": 0,
+              "van_dung": 0
+            }
+          }
+        },
+        {
+          "tt": 3,
+          "rowIndex": 7,
+          "chapterId": "ch-7-02",
+          "chapterTitle": "Chương II: Phân tử. Liên kết hoá học",
+          "lessonId": 707,
+          "lessonTitle": "Bài 7: Hóa trị và công thức hóa học",
+          "periods": 3,
+          "periodsPercent": 8.6,
+          "requirementsByLevel": {
+            "biet": [
+              "Viết được công thức hoá học của một số chất và hợp chất đơn giản thông dụng.",
+              "Trình bày được khái niệm về hoá trị (cho9chất cộng hoá trị). Cách viết công thức hoá học."
+            ],
+            "hieu": [],
+            "van_dung": []
+          },
+          "indicators": [
+            "HH1.1"
+          ],
+          "questionPositions": {
+            "mcq": {
+              "biet": [
+                "Câu 6"
+              ],
+              "hieu": [],
+              "van_dung": []
+            },
+            "true_false": {
+              "biet": [],
+              "hieu": [],
+              "van_dung": []
+            },
+            "short_answer": {
+              "biet": [
+                "Câu 4"
+              ],
+              "hieu": [],
+              "van_dung": []
+            },
+            "essay": {
+              "biet": [],
+              "hieu": [],
+              "van_dung": []
+            }
+          },
+          "specCells": {
+            "mcq": {
+              "biet": "Câu 6\nHH1.1",
+              "hieu": "",
+              "van_dung": ""
+            },
+            "true_false": {
+              "biet": "",
+              "hieu": "",
+              "van_dung": ""
+            },
+            "short_answer": {
+              "biet": "Câu 4\nHH1.1",
+              "hieu": "",
+              "van_dung": ""
+            },
+            "essay": {
+              "biet": "",
+              "hieu": "",
+              "van_dung": ""
+            }
+          },
+          "counts": {
+            "mcq": {
+              "biet": 1,
+              "hieu": 0,
+              "van_dung": 0
+            },
+            "true_false": {
+              "biet": 0,
+              "hieu": 0,
+              "van_dung": 0
+            },
+            "short_answer": {
+              "biet": 1,
+              "hieu": 0,
+              "van_dung": 0
+            },
+            "essay": {
+              "biet": 0,
+              "hieu": 0,
+              "van_dung": 0
+            }
+          }
+        },
+        {
+          "tt": 4,
+          "rowIndex": 8,
+          "chapterId": "ch-7-03",
+          "chapterTitle": "Chương III: Tốc độ chuyển động",
+          "lessonId": 708,
+          "lessonTitle": "Bài 8: Tốc độ chuyển động",
+          "periods": 2,
+          "periodsPercent": 5.7,
+          "requirementsByLevel": {
+            "biet": [
+              "Nêu được ý nghĩa vật lí của tốc độ, xác định được tốc độ qua quãng đường vật đi được trong khoảng thời gian tương ứng, tốc độ = quãng đường vật đi/thời gian đi quãng đường đó."
+            ],
+            "hieu": [],
+            "van_dung": []
+          },
+          "indicators": [],
+          "questionPositions": {
+            "mcq": {
+              "biet": [
+                "Câu 7",
+                "Câu 8"
+              ],
+              "hieu": [],
+              "van_dung": []
+            },
+            "true_false": {
+              "biet": [],
+              "hieu": [],
+              "van_dung": []
+            },
+            "short_answer": {
+              "biet": [],
+              "hieu": [],
+              "van_dung": []
+            },
+            "essay": {
+              "biet": [],
+              "hieu": [],
+              "van_dung": []
+            }
+          },
+          "specCells": {
+            "mcq": {
+              "biet": "Câu 7, Câu 8",
+              "hieu": "",
+              "van_dung": ""
+            },
+            "true_false": {
+              "biet": "",
+              "hieu": "",
+              "van_dung": ""
+            },
+            "short_answer": {
+              "biet": "",
+              "hieu": "",
+              "van_dung": ""
+            },
+            "essay": {
+              "biet": "",
+              "hieu": "",
+              "van_dung": ""
+            }
+          },
+          "counts": {
+            "mcq": {
+              "biet": 2,
+              "hieu": 0,
+              "van_dung": 0
+            },
+            "true_false": {
+              "biet": 0,
+              "hieu": 0,
+              "van_dung": 0
+            },
+            "short_answer": {
+              "biet": 0,
+              "hieu": 0,
+              "van_dung": 0
+            },
+            "essay": {
+              "biet": 0,
+              "hieu": 0,
+              "van_dung": 0
+            }
+          }
+        },
+        {
+          "tt": 4,
+          "rowIndex": 9,
+          "chapterId": "ch-7-03",
+          "chapterTitle": "Chương III: Tốc độ chuyển động",
+          "lessonId": 709,
+          "lessonTitle": "Bài 9: Đo tốc độ",
+          "periods": 2,
+          "periodsPercent": 5.7,
+          "requirementsByLevel": {
+            "biet": [
+              "Mô tả được sơ lược cách đo tốc độ bằng đồng hồ bấm giây và cổng quang điện trong dụng cụ thực hành ở nhà trường; thiết bị “bắn tốc độ” trong kiểm tra tốc độ các phương tiện giao thông. Thực hiện được rõ ràng và theo quy trình các tìm kiếm để tìm dữ liệu, thông tin và nội dung trong môi trường số.(Học sinh biết tìm dữ liệu về đo tốc độ một cách có hệ thống trong môi trường số, thu thập đầy đủ thông tin về công thức, phương pháp đo và ví dụ, sau đó sử dụng vào thực hành.)."
+            ],
+            "hieu": [],
+            "van_dung": []
+          },
+          "indicators": [],
+          "questionPositions": {
+            "mcq": {
+              "biet": [
+                "Câu 9",
+                "Câu 10"
+              ],
+              "hieu": [],
+              "van_dung": []
+            },
+            "true_false": {
+              "biet": [],
+              "hieu": [],
+              "van_dung": []
+            },
+            "short_answer": {
+              "biet": [],
+              "hieu": [],
+              "van_dung": []
+            },
+            "essay": {
+              "biet": [],
+              "hieu": [],
+              "van_dung": []
+            }
+          },
+          "specCells": {
+            "mcq": {
+              "biet": "Câu 9, Câu 10",
+              "hieu": "",
+              "van_dung": ""
+            },
+            "true_false": {
+              "biet": "",
+              "hieu": "",
+              "van_dung": ""
+            },
+            "short_answer": {
+              "biet": "",
+              "hieu": "",
+              "van_dung": ""
+            },
+            "essay": {
+              "biet": "",
+              "hieu": "",
+              "van_dung": ""
+            }
+          },
+          "counts": {
+            "mcq": {
+              "biet": 2,
+              "hieu": 0,
+              "van_dung": 0
+            },
+            "true_false": {
+              "biet": 0,
+              "hieu": 0,
+              "van_dung": 0
+            },
+            "short_answer": {
+              "biet": 0,
+              "hieu": 0,
+              "van_dung": 0
+            },
+            "essay": {
+              "biet": 0,
+              "hieu": 0,
+              "van_dung": 0
+            }
+          }
+        },
+        {
+          "tt": 4,
+          "rowIndex": 10,
+          "chapterId": "ch-7-03",
+          "chapterTitle": "Chương III: Tốc độ chuyển động",
+          "lessonId": 710,
+          "lessonTitle": "Bài 10: Đồ thị quãng đường",
+          "periods": 2,
+          "periodsPercent": 5.7,
+          "requirementsByLevel": {
+            "biet": [
+              "Vẽ được đồ thị quãng đường."
+            ],
+            "hieu": [],
+            "van_dung": []
+          },
+          "indicators": [],
+          "questionPositions": {
+            "mcq": {
+              "biet": [
+                "Câu 11",
+                "Câu 12"
+              ],
+              "hieu": [],
+              "van_dung": []
+            },
+            "true_false": {
+              "biet": [],
+              "hieu": [],
+              "van_dung": []
+            },
+            "short_answer": {
+              "biet": [],
+              "hieu": [],
+              "van_dung": []
+            },
+            "essay": {
+              "biet": [],
+              "hieu": [],
+              "van_dung": []
+            }
+          },
+          "specCells": {
+            "mcq": {
+              "biet": "Câu 11, Câu 12",
+              "hieu": "",
+              "van_dung": ""
+            },
+            "true_false": {
+              "biet": "",
+              "hieu": "",
+              "van_dung": ""
+            },
+            "short_answer": {
+              "biet": "",
+              "hieu": "",
+              "van_dung": ""
+            },
+            "essay": {
+              "biet": "",
+              "hieu": "",
+              "van_dung": ""
+            }
+          },
+          "counts": {
+            "mcq": {
+              "biet": 2,
+              "hieu": 0,
+              "van_dung": 0
+            },
+            "true_false": {
+              "biet": 0,
+              "hieu": 0,
+              "van_dung": 0
+            },
+            "short_answer": {
+              "biet": 0,
+              "hieu": 0,
+              "van_dung": 0
+            },
+            "essay": {
+              "biet": 0,
+              "hieu": 0,
+              "van_dung": 0
+            }
+          }
+        }
+      ],
+      "allowReview": false,
+      "isOpen": true,
+      "maxTabViolations": 3,
+      "createdAt": "2026-11-08T09:34:14.140Z",
+      "updatedAt": "2026-11-08T09:34:14.140Z"
+    },
     {
       "id": "exam-eb19bb45",
       "grade": 9,
@@ -149672,6 +151352,2360 @@
           "detail": "Cập nhật câu trả lời (q-les-20-sa-biet-1)"
         }
       ]
+    },
+    {
+      "id": "sub-6862df26",
+      "examId": "exam-103bd4d1",
+      "studentId": "usr-hs-9343c834",
+      "studentName": "Kiều Thị Bích Liên",
+      "studentUsername": "kieuthibichlien_7a1",
+      "className": "7A1",
+      "paperCode": "MĐ-7A1-9628",
+      "paperSignature": "96286B897081",
+      "paperSnapshot": [
+        {
+          "questionId": "q-g7-l4-mcq1",
+          "orderIndex": 1,
+          "type": "mcq",
+          "level": "biet",
+          "lessonId": 704,
+          "points": 0.25,
+          "prompt": "Khi tìm hiểu về sơ lược về bảng tuần hoàn các nguyên tố hoá học trong tự nhiên và đời sống, phát biểu nào sau đây là chính xác nhất?",
+          "originalOptionIndices": [
+            0,
+            2,
+            3,
+            1
+          ],
+          "shuffledOptions": [
+            "Bảng tuần hoàn sắp xếp các nguyên tố theo chiều tăng dần của điện tích hạt nhân.",
+            "Chỉ xảy ra trong môi trường phòng thí nghiệm kín chứ không tồn tại trong tự nhiên.",
+            "Không có bất kì sự chuyển hoá hoặc biến đổi vật chất, năng lượng nào đi kèm.",
+            "Các hiện tượng này luôn diễn ra ngẫu nhiên và không tuân theo bất kì quy luật vật lí hay hoá sinh nào."
+          ]
+        },
+        {
+          "questionId": "q-g7-l9-mcq3",
+          "orderIndex": 2,
+          "type": "mcq",
+          "level": "biet",
+          "lessonId": 709,
+          "points": 0.25,
+          "prompt": "Trong các nhận định sau đây về Đo tốc độ, nội dung nào là phát biểu khoa học đúng?",
+          "originalOptionIndices": [
+            3,
+            1,
+            2,
+            0
+          ],
+          "shuffledOptions": [
+            "Đo tốc độ chỉ áp dụng cho các vật thể đứng yên và không có sự tương tác vật chất.",
+            "Đo tốc độ không có bất kì ý nghĩa thực tiễn hay ứng dụng nào trong cuộc sống và kĩ thuật.",
+            "Đo tốc độ luôn biến thiên bất thường mà không tuân theo các nguyên lí khoa học.",
+            "Đo tốc độ giữ vai trò cơ bản, phản ánh đúng các quy luật biến đổi và bản chất khoa học tự nhiên."
+          ]
+        },
+        {
+          "questionId": "q-g7-l7-mcq3",
+          "orderIndex": 3,
+          "type": "mcq",
+          "level": "biet",
+          "lessonId": 707,
+          "points": 0.25,
+          "prompt": "Trong các nhận định sau đây về Hóa trị và công thức hóa học, nội dung nào là phát biểu khoa học đúng?",
+          "originalOptionIndices": [
+            2,
+            3,
+            0,
+            1
+          ],
+          "shuffledOptions": [
+            "Hóa trị và công thức hóa học luôn biến thiên bất thường mà không tuân theo các nguyên lí khoa học.",
+            "Hóa trị và công thức hóa học chỉ áp dụng cho các vật thể đứng yên và không có sự tương tác vật chất.",
+            "Hóa trị và công thức hóa học giữ vai trò cơ bản, phản ánh đúng các quy luật biến đổi và bản chất khoa học tự nhiên.",
+            "Hóa trị và công thức hóa học không có bất kì ý nghĩa thực tiễn hay ứng dụng nào trong cuộc sống và kĩ thuật."
+          ]
+        },
+        {
+          "questionId": "q-g7-l4-mcq3",
+          "orderIndex": 4,
+          "type": "mcq",
+          "level": "biet",
+          "lessonId": 704,
+          "points": 0.25,
+          "prompt": "Trong các nhận định sau đây về Sơ lược về bảng tuần hoàn các nguyên tố hóa học, nội dung nào là phát biểu khoa học đúng?",
+          "originalOptionIndices": [
+            2,
+            1,
+            3,
+            0
+          ],
+          "shuffledOptions": [
+            "Sơ lược về bảng tuần hoàn các nguyên tố hóa học luôn biến thiên bất thường mà không tuân theo các nguyên lí khoa học.",
+            "Sơ lược về bảng tuần hoàn các nguyên tố hóa học không có bất kì ý nghĩa thực tiễn hay ứng dụng nào trong cuộc sống và kĩ thuật.",
+            "Sơ lược về bảng tuần hoàn các nguyên tố hóa học chỉ áp dụng cho các vật thể đứng yên và không có sự tương tác vật chất.",
+            "Sơ lược về bảng tuần hoàn các nguyên tố hóa học giữ vai trò cơ bản, phản ánh đúng các quy luật biến đổi và bản chất khoa học tự nhiên."
+          ]
+        },
+        {
+          "questionId": "q-g7-l9-mcq1",
+          "orderIndex": 5,
+          "type": "mcq",
+          "level": "biet",
+          "lessonId": 709,
+          "points": 0.25,
+          "prompt": "Khi tìm hiểu về đo tốc độ trong tự nhiên và đời sống, phát biểu nào sau đây là chính xác nhất?",
+          "originalOptionIndices": [
+            0,
+            3,
+            2,
+            1
+          ],
+          "shuffledOptions": [
+            "Để đo tốc độ cần đo quãng đường s (bằng thước) và thời gian t (bằng đồng hồ bấm giây hoặc cổng quang điện kết nối đồng hồ hiện số MC-964).",
+            "Không có bất kì sự chuyển hoá hoặc biến đổi vật chất, năng lượng nào đi kèm.",
+            "Chỉ xảy ra trong môi trường phòng thí nghiệm kín chứ không tồn tại trong tự nhiên.",
+            "Các hiện tượng này luôn diễn ra ngẫu nhiên và không tuân theo bất kì quy luật vật lí hay hoá sinh nào."
+          ]
+        },
+        {
+          "questionId": "q-g7-l8-mcq1",
+          "orderIndex": 6,
+          "type": "mcq",
+          "level": "biet",
+          "lessonId": 708,
+          "points": 0.25,
+          "prompt": "Khi tìm hiểu về tốc độ chuyển động trong tự nhiên và đời sống, phát biểu nào sau đây là chính xác nhất?",
+          "originalOptionIndices": [
+            2,
+            0,
+            1,
+            3
+          ],
+          "shuffledOptions": [
+            "Chỉ xảy ra trong môi trường phòng thí nghiệm kín chứ không tồn tại trong tự nhiên.",
+            "Tốc độ chuyển động cho biết mức độ nhanh hay chậm của chuyển động, xác định bằng quãng đường đi được trong một đơn vị thời gian: v = s / t (đơn vị m/s hoặc km/h; 1 m/s = 3,6 km/h).",
+            "Các hiện tượng này luôn diễn ra ngẫu nhiên và không tuân theo bất kì quy luật vật lí hay hoá sinh nào.",
+            "Không có bất kì sự chuyển hoá hoặc biến đổi vật chất, năng lượng nào đi kèm."
+          ]
+        },
+        {
+          "questionId": "q-g7-l10-mcq1",
+          "orderIndex": 7,
+          "type": "mcq",
+          "level": "biet",
+          "lessonId": 710,
+          "points": 0.25,
+          "prompt": "Khi tìm hiểu về đồ thị quãng đường - thời gian trong tự nhiên và đời sống, phát biểu nào sau đây là chính xác nhất?",
+          "originalOptionIndices": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "shuffledOptions": [
+            "Các hiện tượng này luôn diễn ra ngẫu nhiên và không tuân theo bất kì quy luật vật lí hay hoá sinh nào.",
+            "Chỉ xảy ra trong môi trường phòng thí nghiệm kín chứ không tồn tại trong tự nhiên.",
+            "Không có bất kì sự chuyển hoá hoặc biến đổi vật chất, năng lượng nào đi kèm.",
+            "Đồ thị s - t có trục hoành biểu diễn thời gian t, trục tung biểu diễn quãng đường s."
+          ]
+        },
+        {
+          "questionId": "q-g7-l8-mcq3",
+          "orderIndex": 8,
+          "type": "mcq",
+          "level": "biet",
+          "lessonId": 708,
+          "points": 0.25,
+          "prompt": "Trong các nhận định sau đây về Tốc độ chuyển động, nội dung nào là phát biểu khoa học đúng?",
+          "originalOptionIndices": [
+            1,
+            3,
+            0,
+            2
+          ],
+          "shuffledOptions": [
+            "Tốc độ chuyển động không có bất kì ý nghĩa thực tiễn hay ứng dụng nào trong cuộc sống và kĩ thuật.",
+            "Tốc độ chuyển động chỉ áp dụng cho các vật thể đứng yên và không có sự tương tác vật chất.",
+            "Tốc độ chuyển động giữ vai trò cơ bản, phản ánh đúng các quy luật biến đổi và bản chất khoa học tự nhiên.",
+            "Tốc độ chuyển động luôn biến thiên bất thường mà không tuân theo các nguyên lí khoa học."
+          ]
+        },
+        {
+          "questionId": "q-g7-l5-mcq2",
+          "orderIndex": 9,
+          "type": "mcq",
+          "level": "hieu",
+          "lessonId": 705,
+          "points": 0.25,
+          "prompt": "Trong quá trình khảo sát thực nghiệm về phân tử, khối lượng phân tử (amu), đơn chất và hợp chất, nhận định nào sau đây phản ánh đúng bản chất hiện tượng?",
+          "originalOptionIndices": [
+            3,
+            1,
+            2,
+            0
+          ],
+          "shuffledOptions": [
+            "Nhiệt độ môi trường hoàn toàn không ảnh hưởng đến tốc độ hoặc trạng thái của hệ.",
+            "Năng lượng tự nhiên tự sinh ra thêm sau mỗi chu trình biến đổi.",
+            "Mọi biến đổi đều làm mất đi hoàn toàn khối lượng của hệ ban đầu.",
+            "Quá trình luôn gắn liền với sự bảo toàn, biến đổi năng lượng hoặc tính chất đặc trưng của vật chất."
+          ]
+        },
+        {
+          "questionId": "q-g7-l2-mcq1",
+          "orderIndex": 10,
+          "type": "mcq",
+          "level": "biet",
+          "lessonId": 702,
+          "points": 0.25,
+          "prompt": "Khi tìm hiểu về nguyên tử trong tự nhiên và đời sống, phát biểu nào sau đây là chính xác nhất?",
+          "originalOptionIndices": [
+            0,
+            1,
+            3,
+            2
+          ],
+          "shuffledOptions": [
+            "Nguyên tử là hạt vô cùng nhỏ, trung hoà về điện.",
+            "Các hiện tượng này luôn diễn ra ngẫu nhiên và không tuân theo bất kì quy luật vật lí hay hoá sinh nào.",
+            "Không có bất kì sự chuyển hoá hoặc biến đổi vật chất, năng lượng nào đi kèm.",
+            "Chỉ xảy ra trong môi trường phòng thí nghiệm kín chứ không tồn tại trong tự nhiên."
+          ]
+        },
+        {
+          "questionId": "q-g7-l3-mcq2",
+          "orderIndex": 11,
+          "type": "mcq",
+          "level": "hieu",
+          "lessonId": 703,
+          "points": 0.25,
+          "prompt": "Trong quá trình khảo sát thực nghiệm về kí hiệu hoá học, số proton trong hạt nhân xác định nguyên tố, nhận định nào sau đây phản ánh đúng bản chất hiện tượng?",
+          "originalOptionIndices": [
+            0,
+            2,
+            3,
+            1
+          ],
+          "shuffledOptions": [
+            "Quá trình luôn gắn liền với sự bảo toàn, biến đổi năng lượng hoặc tính chất đặc trưng của vật chất.",
+            "Mọi biến đổi đều làm mất đi hoàn toàn khối lượng của hệ ban đầu.",
+            "Nhiệt độ môi trường hoàn toàn không ảnh hưởng đến tốc độ hoặc trạng thái của hệ.",
+            "Năng lượng tự nhiên tự sinh ra thêm sau mỗi chu trình biến đổi."
+          ]
+        },
+        {
+          "questionId": "q-g7-l10-mcq3",
+          "orderIndex": 12,
+          "type": "mcq",
+          "level": "biet",
+          "lessonId": 710,
+          "points": 0.25,
+          "prompt": "Trong các nhận định sau đây về Đồ thị quãng đường, nội dung nào là phát biểu khoa học đúng?",
+          "originalOptionIndices": [
+            0,
+            3,
+            2,
+            1
+          ],
+          "shuffledOptions": [
+            "Đồ thị quãng đường giữ vai trò cơ bản, phản ánh đúng các quy luật biến đổi và bản chất khoa học tự nhiên.",
+            "Đồ thị quãng đường chỉ áp dụng cho các vật thể đứng yên và không có sự tương tác vật chất.",
+            "Đồ thị quãng đường luôn biến thiên bất thường mà không tuân theo các nguyên lí khoa học.",
+            "Đồ thị quãng đường không có bất kì ý nghĩa thực tiễn hay ứng dụng nào trong cuộc sống và kĩ thuật."
+          ]
+        },
+        {
+          "questionId": "q-g7-l5-tf1",
+          "orderIndex": 13,
+          "type": "true_false",
+          "level": "hieu",
+          "lessonId": 705,
+          "points": 1,
+          "prompt": "Khi phân tích các thông số và ứng dụng thực tiễn của phân tử - đơn chất - hợp chất, hãy xét tính đúng/sai của các nhận định sau:",
+          "statements": [
+            {
+              "id": "a",
+              "text": "Nội dung cốt lõi: Phân tử là hạt đại diện cho chất, gồm một hay nhiều nguyên tử liên kết với nhau."
+            },
+            {
+              "id": "b",
+              "text": "Hiện tượng này mâu thuẫn hoàn toàn với các định luật bảo toàn trong khoa học tự nhiên."
+            },
+            {
+              "id": "c",
+              "text": "Có thể ứng dụng các quy luật này vào kĩ thuật chế tạo thiết bị, chăm sóc sức khoẻ hoặc bảo vệ môi trường."
+            },
+            {
+              "id": "d",
+              "text": "Tất cả các biến đổi trong tự nhiên đều diễn ra tức thời mà không cần điều kiện tác nhân môi trường."
+            }
+          ]
+        },
+        {
+          "questionId": "q-g7-l3-tf1",
+          "orderIndex": 14,
+          "type": "true_false",
+          "level": "hieu",
+          "lessonId": 703,
+          "points": 1,
+          "prompt": "Khi phân tích các thông số và ứng dụng thực tiễn của nguyên tố hoá học, hãy xét tính đúng/sai của các nhận định sau:",
+          "statements": [
+            {
+              "id": "a",
+              "text": "Nội dung cốt lõi: Tập hợp các nguyên tử có cùng số proton trong hạt nhân thuộc cùng một nguyên tố hoá học."
+            },
+            {
+              "id": "b",
+              "text": "Hiện tượng này mâu thuẫn hoàn toàn với các định luật bảo toàn trong khoa học tự nhiên."
+            },
+            {
+              "id": "c",
+              "text": "Có thể ứng dụng các quy luật này vào kĩ thuật chế tạo thiết bị, chăm sóc sức khoẻ hoặc bảo vệ môi trường."
+            },
+            {
+              "id": "d",
+              "text": "Tất cả các biến đổi trong tự nhiên đều diễn ra tức thời mà không cần điều kiện tác nhân môi trường."
+            }
+          ]
+        },
+        {
+          "questionId": "q-g7-l1-sa2",
+          "orderIndex": 15,
+          "type": "short_answer",
+          "level": "biet",
+          "lessonId": 701,
+          "points": 0.5,
+          "prompt": "Hãy nêu một đặc điểm cơ bản hoặc đại lượng vật lí / hoá học / sinh học đặc trưng trong nội dung Phương pháp và kỹ năng học tập môn Khoa học tự nhiên."
+        },
+        {
+          "questionId": "q-g7-l6-sa1",
+          "orderIndex": 16,
+          "type": "short_answer",
+          "level": "van_dung",
+          "lessonId": 706,
+          "points": 0.5,
+          "prompt": "Trong một thí nghiệm đo đạc hoặc quan sát thực tế về liên kết ion và liên kết cộng hoá trị theo quy tắc bát tử, yếu tố hoặc điều kiện trọng tâm nào quyết định trực tiếp đến độ chính xác và tính ổn định của kết quả?"
+        },
+        {
+          "questionId": "q-g7-l6-sa2",
+          "orderIndex": 17,
+          "type": "short_answer",
+          "level": "biet",
+          "lessonId": 706,
+          "points": 0.5,
+          "prompt": "Hãy nêu một đặc điểm cơ bản hoặc đại lượng vật lí / hoá học / sinh học đặc trưng trong nội dung Giới thiệu về liên kết hóa học."
+        },
+        {
+          "questionId": "q-g7-l7-sa2",
+          "orderIndex": 18,
+          "type": "short_answer",
+          "level": "biet",
+          "lessonId": 707,
+          "points": 0.5,
+          "prompt": "Hãy nêu một đặc điểm cơ bản hoặc đại lượng vật lí / hoá học / sinh học đặc trưng trong nội dung Hóa trị và công thức hóa học."
+        },
+        {
+          "questionId": "q-g7-l2-es1",
+          "orderIndex": 19,
+          "type": "essay",
+          "level": "van_dung",
+          "lessonId": 702,
+          "points": 1,
+          "prompt": "Hãy giải thích cơ sở khoa học của hiện tượng liên quan đến nguyên tử trong thực tiễn và nêu ít nhất 2 biện pháp ứng dụng hoặc bảo vệ an toàn trong đời sống hàng ngày.",
+          "rubricSteps": [
+            {
+              "id": "step-1",
+              "description": "Bước chấm (0.5 điểm)",
+              "points": 0.5
+            },
+            {
+              "id": "step-2",
+              "description": "Bước chấm (0.5 điểm)",
+              "points": 0.5
+            }
+          ]
+        },
+        {
+          "questionId": "q-g7-l1-es1",
+          "orderIndex": 20,
+          "type": "essay",
+          "level": "van_dung",
+          "lessonId": 701,
+          "points": 1,
+          "prompt": "Hãy giải thích cơ sở khoa học của hiện tượng liên quan đến phương pháp và kĩ năng học tập môn khoa học tự nhiên trong thực tiễn và nêu ít nhất 2 biện pháp ứng dụng hoặc bảo vệ an toàn trong đời sống hàng ngày.",
+          "rubricSteps": [
+            {
+              "id": "step-1",
+              "description": "Bước chấm (0.5 điểm)",
+              "points": 0.5
+            },
+            {
+              "id": "step-2",
+              "description": "Bước chấm (0.5 điểm)",
+              "points": 0.5
+            }
+          ]
+        },
+        {
+          "questionId": "q-g7-l4-es1",
+          "orderIndex": 21,
+          "type": "essay",
+          "level": "van_dung",
+          "lessonId": 704,
+          "points": 1,
+          "prompt": "Hãy giải thích cơ sở khoa học của hiện tượng liên quan đến sơ lược về bảng tuần hoàn các nguyên tố hoá học trong thực tiễn và nêu ít nhất 2 biện pháp ứng dụng hoặc bảo vệ an toàn trong đời sống hàng ngày.",
+          "rubricSteps": [
+            {
+              "id": "step-1",
+              "description": "Bước chấm (0.5 điểm)",
+              "points": 0.5
+            },
+            {
+              "id": "step-2",
+              "description": "Bước chấm (0.5 điểm)",
+              "points": 0.5
+            }
+          ]
+        }
+      ],
+      "answers": {
+        "q-g7-l4-mcq1": {
+          "selectedShuffledIndex": 0,
+          "timeSpentSeconds": 0
+        },
+        "q-g7-l9-mcq3": {
+          "selectedShuffledIndex": 3,
+          "timeSpentSeconds": 0
+        },
+        "q-g7-l7-mcq3": {
+          "selectedShuffledIndex": 2,
+          "timeSpentSeconds": 0
+        },
+        "q-g7-l4-mcq3": {
+          "selectedShuffledIndex": 3,
+          "timeSpentSeconds": 0
+        },
+        "q-g7-l9-mcq1": {
+          "selectedShuffledIndex": 0,
+          "timeSpentSeconds": 0
+        },
+        "q-g7-l8-mcq1": {
+          "selectedShuffledIndex": 1,
+          "timeSpentSeconds": 0
+        },
+        "q-g7-l10-mcq1": {
+          "selectedShuffledIndex": 3,
+          "timeSpentSeconds": 0
+        },
+        "q-g7-l8-mcq3": {
+          "selectedShuffledIndex": 2,
+          "timeSpentSeconds": 0
+        },
+        "q-g7-l5-mcq2": {
+          "selectedShuffledIndex": 0,
+          "timeSpentSeconds": 17
+        },
+        "q-g7-l2-mcq1": {
+          "selectedShuffledIndex": 0,
+          "timeSpentSeconds": 0
+        },
+        "q-g7-l3-mcq2": {
+          "selectedShuffledIndex": 0,
+          "timeSpentSeconds": 0
+        },
+        "q-g7-l10-mcq3": {
+          "selectedShuffledIndex": 0,
+          "timeSpentSeconds": 0
+        },
+        "q-g7-l5-tf1": {
+          "trueFalseAnswers": {
+            "a": true,
+            "b": false,
+            "c": true,
+            "d": false
+          },
+          "timeSpentSeconds": 94
+        },
+        "q-g7-l3-tf1": {
+          "trueFalseAnswers": {
+            "a": true,
+            "b": false,
+            "c": true,
+            "d": false
+          },
+          "timeSpentSeconds": 20
+        },
+        "q-g7-l1-sa2": {
+          "textAnswer": "Độ chia nhỏ nhất (ĐCNN) hoặc Giới hạn đo (GHĐ)",
+          "timeSpentSeconds": 92
+        },
+        "q-g7-l6-sa1": {
+          "textAnswer": "Độ tinh khiết của hoá chất/mẫu thử và sự kiểm soát chính xác các điều kiện môi trường thí nghiệm ",
+          "timeSpentSeconds": 141
+        },
+        "q-g7-l6-sa2": {
+          "textAnswer": "Số electron lớp ngoài cùng, sự góp chung electron, sự nhường, nhận electron ",
+          "timeSpentSeconds": 155
+        },
+        "q-g7-l7-sa2": {
+          "textAnswer": "Hoá trị, chỉ số hoá trị, quy tắc hoá trị, ",
+          "timeSpentSeconds": 110
+        }
+      },
+      "status": "in_progress",
+      "startedAt": "2026-11-08T09:41:23.519Z",
+      "autoGradedScore": 0,
+      "manualGradedScore": 0,
+      "totalScore": 0,
+      "violationCount": 0,
+      "flaggedForReview": false,
+      "deviceInfo": {
+        "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Mobile Safari/537.36",
+        "platform": "Linux armv81",
+        "screenResolution": "385x858"
+      },
+      "activityLogs": [
+        {
+          "timestamp": "2026-11-08T09:41:23.519Z",
+          "eventType": "exam_start",
+          "detail": "Bắt đầu làm bài. Mã đề cá nhân: MĐ-7A1-9628 (Chữ ký đề: 96286B897081)"
+        },
+        {
+          "timestamp": "2026-11-08T09:41:33.245Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l4-mcq1)"
+        },
+        {
+          "timestamp": "2026-11-08T09:41:54.393Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l9-mcq3)"
+        },
+        {
+          "timestamp": "2026-11-08T09:42:08.806Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l7-mcq3)"
+        },
+        {
+          "timestamp": "2026-11-08T09:42:29.014Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l4-mcq3)"
+        },
+        {
+          "timestamp": "2026-11-08T09:45:42.274Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l5-tf1)"
+        },
+        {
+          "timestamp": "2026-11-08T09:45:51.793Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l5-tf1)"
+        },
+        {
+          "timestamp": "2026-11-08T09:46:12.473Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l3-tf1)"
+        },
+        {
+          "timestamp": "2026-11-08T09:46:19.268Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l3-tf1)"
+        },
+        {
+          "timestamp": "2026-11-08T09:46:25.404Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l3-tf1)"
+        },
+        {
+          "timestamp": "2026-11-08T09:46:31.940Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l3-tf1)"
+        },
+        {
+          "timestamp": "2026-11-08T09:47:40.943Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l1-sa2)"
+        },
+        {
+          "timestamp": "2026-11-08T09:47:41.279Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l1-sa2)"
+        },
+        {
+          "timestamp": "2026-11-08T09:47:42.400Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l1-sa2)"
+        },
+        {
+          "timestamp": "2026-11-08T09:47:47.849Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l1-sa2)"
+        },
+        {
+          "timestamp": "2026-11-08T09:47:48.002Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l1-sa2)"
+        },
+        {
+          "timestamp": "2026-11-08T09:47:48.293Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l1-sa2)"
+        },
+        {
+          "timestamp": "2026-11-08T09:47:51.378Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l1-sa2)"
+        },
+        {
+          "timestamp": "2026-11-08T09:47:53.306Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l1-sa2)"
+        },
+        {
+          "timestamp": "2026-11-08T09:47:53.693Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l1-sa2)"
+        },
+        {
+          "timestamp": "2026-11-08T09:47:54.168Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l1-sa2)"
+        },
+        {
+          "timestamp": "2026-11-08T09:47:54.463Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l1-sa2)"
+        },
+        {
+          "timestamp": "2026-11-08T09:47:54.998Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l1-sa2)"
+        },
+        {
+          "timestamp": "2026-11-08T09:48:04.436Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l1-sa2)"
+        },
+        {
+          "timestamp": "2026-11-08T09:48:47.277Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l6-sa1)"
+        },
+        {
+          "timestamp": "2026-11-08T09:48:54.729Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l6-sa1)"
+        },
+        {
+          "timestamp": "2026-11-08T09:48:55.410Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l6-sa1)"
+        },
+        {
+          "timestamp": "2026-11-08T09:48:56.234Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l6-sa1)"
+        },
+        {
+          "timestamp": "2026-11-08T09:48:56.697Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l6-sa1)"
+        },
+        {
+          "timestamp": "2026-11-08T09:48:57.141Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l6-sa1)"
+        },
+        {
+          "timestamp": "2026-11-08T09:48:57.397Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l6-sa1)"
+        },
+        {
+          "timestamp": "2026-11-08T09:48:59.958Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l6-sa1)"
+        },
+        {
+          "timestamp": "2026-11-08T09:49:01.258Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l6-sa1)"
+        },
+        {
+          "timestamp": "2026-11-08T09:49:01.654Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l6-sa1)"
+        },
+        {
+          "timestamp": "2026-11-08T09:49:02.406Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l6-sa1)"
+        },
+        {
+          "timestamp": "2026-11-08T09:49:02.592Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l6-sa1)"
+        },
+        {
+          "timestamp": "2026-11-08T09:49:02.748Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l6-sa1)"
+        },
+        {
+          "timestamp": "2026-11-08T09:49:02.918Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l6-sa1)"
+        },
+        {
+          "timestamp": "2026-11-08T09:49:03.110Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l6-sa1)"
+        },
+        {
+          "timestamp": "2026-11-08T09:49:05.977Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l6-sa1)"
+        },
+        {
+          "timestamp": "2026-11-08T09:49:06.158Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l6-sa1)"
+        },
+        {
+          "timestamp": "2026-11-08T09:49:06.316Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l6-sa1)"
+        },
+        {
+          "timestamp": "2026-11-08T09:49:06.462Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l6-sa1)"
+        },
+        {
+          "timestamp": "2026-11-08T09:49:06.684Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l6-sa1)"
+        },
+        {
+          "timestamp": "2026-11-08T09:49:07.067Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l6-sa1)"
+        },
+        {
+          "timestamp": "2026-11-08T09:49:08.602Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l6-sa1)"
+        },
+        {
+          "timestamp": "2026-11-08T09:49:08.976Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l6-sa1)"
+        },
+        {
+          "timestamp": "2026-11-08T09:49:09.201Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l6-sa1)"
+        },
+        {
+          "timestamp": "2026-11-08T09:49:09.454Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l6-sa1)"
+        },
+        {
+          "timestamp": "2026-11-08T09:49:10.055Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l6-sa1)"
+        },
+        {
+          "timestamp": "2026-11-08T09:49:10.374Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l6-sa1)"
+        },
+        {
+          "timestamp": "2026-11-08T09:49:10.576Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l6-sa1)"
+        },
+        {
+          "timestamp": "2026-11-08T09:49:12.138Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l6-sa1)"
+        },
+        {
+          "timestamp": "2026-11-08T09:49:12.840Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l6-sa1)"
+        },
+        {
+          "timestamp": "2026-11-08T09:49:13.207Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l6-sa1)"
+        },
+        {
+          "timestamp": "2026-11-08T09:49:13.726Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l6-sa1)"
+        },
+        {
+          "timestamp": "2026-11-08T09:49:13.994Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l6-sa1)"
+        },
+        {
+          "timestamp": "2026-11-08T09:49:14.147Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l6-sa1)"
+        },
+        {
+          "timestamp": "2026-11-08T09:49:14.455Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l6-sa1)"
+        },
+        {
+          "timestamp": "2026-11-08T09:49:17.759Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l6-sa1)"
+        },
+        {
+          "timestamp": "2026-11-08T09:49:18.960Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l6-sa1)"
+        },
+        {
+          "timestamp": "2026-11-08T09:49:20.296Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l6-sa1)"
+        },
+        {
+          "timestamp": "2026-11-08T09:49:20.821Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l6-sa1)"
+        },
+        {
+          "timestamp": "2026-11-08T09:49:20.963Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l6-sa1)"
+        },
+        {
+          "timestamp": "2026-11-08T09:49:22.575Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l6-sa1)"
+        },
+        {
+          "timestamp": "2026-11-08T09:49:24.360Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l6-sa1)"
+        },
+        {
+          "timestamp": "2026-11-08T09:49:24.899Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l6-sa1)"
+        },
+        {
+          "timestamp": "2026-11-08T09:49:25.217Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l6-sa1)"
+        },
+        {
+          "timestamp": "2026-11-08T09:49:25.381Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l6-sa1)"
+        },
+        {
+          "timestamp": "2026-11-08T09:50:26.444Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l6-sa2)"
+        },
+        {
+          "timestamp": "2026-11-08T09:50:56.879Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l6-sa2)"
+        },
+        {
+          "timestamp": "2026-11-08T09:50:57.035Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l6-sa2)"
+        },
+        {
+          "timestamp": "2026-11-08T09:50:57.189Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l6-sa2)"
+        },
+        {
+          "timestamp": "2026-11-08T09:50:57.341Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l6-sa2)"
+        },
+        {
+          "timestamp": "2026-11-08T09:50:57.688Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l6-sa2)"
+        },
+        {
+          "timestamp": "2026-11-08T09:50:57.876Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l6-sa2)"
+        },
+        {
+          "timestamp": "2026-11-08T09:50:58.031Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l6-sa2)"
+        },
+        {
+          "timestamp": "2026-11-08T09:50:58.203Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l6-sa2)"
+        },
+        {
+          "timestamp": "2026-11-08T09:50:58.945Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l6-sa2)"
+        },
+        {
+          "timestamp": "2026-11-08T09:51:00.183Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l6-sa2)"
+        },
+        {
+          "timestamp": "2026-11-08T09:51:00.451Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l6-sa2)"
+        },
+        {
+          "timestamp": "2026-11-08T09:51:02.456Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l6-sa2)"
+        },
+        {
+          "timestamp": "2026-11-08T09:51:03.149Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l6-sa2)"
+        },
+        {
+          "timestamp": "2026-11-08T09:51:03.562Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l6-sa2)"
+        },
+        {
+          "timestamp": "2026-11-08T09:51:04.884Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l6-sa2)"
+        },
+        {
+          "timestamp": "2026-11-08T09:51:10.665Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l6-sa2)"
+        },
+        {
+          "timestamp": "2026-11-08T09:51:10.898Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l6-sa2)"
+        },
+        {
+          "timestamp": "2026-11-08T09:51:11.278Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l6-sa2)"
+        },
+        {
+          "timestamp": "2026-11-08T09:51:12.290Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l6-sa2)"
+        },
+        {
+          "timestamp": "2026-11-08T09:51:12.426Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l6-sa2)"
+        },
+        {
+          "timestamp": "2026-11-08T09:51:12.891Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l6-sa2)"
+        },
+        {
+          "timestamp": "2026-11-08T09:51:13.441Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l6-sa2)"
+        },
+        {
+          "timestamp": "2026-11-08T09:51:13.612Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l6-sa2)"
+        },
+        {
+          "timestamp": "2026-11-08T09:51:13.765Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l6-sa2)"
+        },
+        {
+          "timestamp": "2026-11-08T09:51:16.676Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l6-sa2)"
+        },
+        {
+          "timestamp": "2026-11-08T09:51:17.468Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l6-sa2)"
+        },
+        {
+          "timestamp": "2026-11-08T09:51:17.852Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l6-sa2)"
+        },
+        {
+          "timestamp": "2026-11-08T09:51:18.000Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l6-sa2)"
+        },
+        {
+          "timestamp": "2026-11-08T09:51:18.156Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l6-sa2)"
+        },
+        {
+          "timestamp": "2026-11-08T09:51:39.785Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l7-sa2)"
+        },
+        {
+          "timestamp": "2026-11-08T09:51:50.241Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l7-sa2)"
+        },
+        {
+          "timestamp": "2026-11-08T09:51:50.369Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l7-sa2)"
+        },
+        {
+          "timestamp": "2026-11-08T09:51:59.377Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l7-sa2)"
+        },
+        {
+          "timestamp": "2026-11-08T09:51:59.755Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l7-sa2)"
+        },
+        {
+          "timestamp": "2026-11-08T09:51:59.923Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l7-sa2)"
+        },
+        {
+          "timestamp": "2026-11-08T09:52:00.060Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l7-sa2)"
+        },
+        {
+          "timestamp": "2026-11-08T09:52:00.728Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l7-sa2)"
+        },
+        {
+          "timestamp": "2026-11-08T09:52:00.941Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l7-sa2)"
+        },
+        {
+          "timestamp": "2026-11-08T09:52:02.527Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l7-sa2)"
+        },
+        {
+          "timestamp": "2026-11-08T09:52:02.699Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l7-sa2)"
+        },
+        {
+          "timestamp": "2026-11-08T09:52:02.957Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l7-sa2)"
+        },
+        {
+          "timestamp": "2026-11-08T09:52:03.756Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l7-sa2)"
+        },
+        {
+          "timestamp": "2026-11-08T09:52:06.919Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l7-sa2)"
+        },
+        {
+          "timestamp": "2026-11-08T09:52:07.456Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l7-sa2)"
+        },
+        {
+          "timestamp": "2026-11-08T09:52:07.699Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l7-sa2)"
+        },
+        {
+          "timestamp": "2026-11-08T09:52:08.670Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l7-sa2)"
+        },
+        {
+          "timestamp": "2026-11-08T09:52:08.839Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l7-sa2)"
+        },
+        {
+          "timestamp": "2026-11-08T09:52:09.017Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l7-sa2)"
+        },
+        {
+          "timestamp": "2026-11-08T09:52:09.610Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l7-sa2)"
+        },
+        {
+          "timestamp": "2026-11-08T09:52:10.469Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l7-sa2)"
+        },
+        {
+          "timestamp": "2026-11-08T09:52:10.755Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l7-sa2)"
+        },
+        {
+          "timestamp": "2026-11-08T09:52:10.952Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l7-sa2)"
+        },
+        {
+          "timestamp": "2026-11-08T09:52:11.661Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l7-sa2)"
+        },
+        {
+          "timestamp": "2026-11-08T09:52:12.269Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l7-sa2)"
+        },
+        {
+          "timestamp": "2026-11-08T09:52:12.585Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l7-sa2)"
+        },
+        {
+          "timestamp": "2026-11-08T09:52:12.753Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l7-sa2)"
+        },
+        {
+          "timestamp": "2026-11-08T09:52:19.969Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l7-sa2)"
+        },
+        {
+          "timestamp": "2026-11-08T09:52:20.208Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l7-sa2)"
+        },
+        {
+          "timestamp": "2026-11-08T09:52:24.619Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l7-sa2)"
+        },
+        {
+          "timestamp": "2026-11-08T09:52:24.750Z",
+          "eventType": "answer_change",
+          "detail": "Cập nhật câu trả lời (q-g7-l7-sa2)"
+        }
+      ]
+    },
+    {
+      "id": "sub-0c336e58",
+      "examId": "exam-103bd4d1",
+      "studentId": "usr-hs-2751783e",
+      "studentName": "Dương Hoàng Anh",
+      "studentUsername": "duonghoanganh_7a1",
+      "className": "7A1",
+      "paperCode": "MĐ-7A1-8EF2",
+      "paperSignature": "8EF252BA05D9",
+      "paperSnapshot": [
+        {
+          "questionId": "q-g7-l8-mcq3",
+          "orderIndex": 1,
+          "type": "mcq",
+          "level": "biet",
+          "lessonId": 708,
+          "points": 0.25,
+          "prompt": "Trong các nhận định sau đây về Tốc độ chuyển động, nội dung nào là phát biểu khoa học đúng?",
+          "originalOptionIndices": [
+            0,
+            3,
+            2,
+            1
+          ],
+          "shuffledOptions": [
+            "Tốc độ chuyển động giữ vai trò cơ bản, phản ánh đúng các quy luật biến đổi và bản chất khoa học tự nhiên.",
+            "Tốc độ chuyển động chỉ áp dụng cho các vật thể đứng yên và không có sự tương tác vật chất.",
+            "Tốc độ chuyển động luôn biến thiên bất thường mà không tuân theo các nguyên lí khoa học.",
+            "Tốc độ chuyển động không có bất kì ý nghĩa thực tiễn hay ứng dụng nào trong cuộc sống và kĩ thuật."
+          ]
+        },
+        {
+          "questionId": "q-g7-l4-mcq3",
+          "orderIndex": 2,
+          "type": "mcq",
+          "level": "biet",
+          "lessonId": 704,
+          "points": 0.25,
+          "prompt": "Trong các nhận định sau đây về Sơ lược về bảng tuần hoàn các nguyên tố hóa học, nội dung nào là phát biểu khoa học đúng?",
+          "originalOptionIndices": [
+            2,
+            0,
+            1,
+            3
+          ],
+          "shuffledOptions": [
+            "Sơ lược về bảng tuần hoàn các nguyên tố hóa học luôn biến thiên bất thường mà không tuân theo các nguyên lí khoa học.",
+            "Sơ lược về bảng tuần hoàn các nguyên tố hóa học giữ vai trò cơ bản, phản ánh đúng các quy luật biến đổi và bản chất khoa học tự nhiên.",
+            "Sơ lược về bảng tuần hoàn các nguyên tố hóa học không có bất kì ý nghĩa thực tiễn hay ứng dụng nào trong cuộc sống và kĩ thuật.",
+            "Sơ lược về bảng tuần hoàn các nguyên tố hóa học chỉ áp dụng cho các vật thể đứng yên và không có sự tương tác vật chất."
+          ]
+        },
+        {
+          "questionId": "q-g7-l10-mcq3",
+          "orderIndex": 3,
+          "type": "mcq",
+          "level": "biet",
+          "lessonId": 710,
+          "points": 0.25,
+          "prompt": "Trong các nhận định sau đây về Đồ thị quãng đường, nội dung nào là phát biểu khoa học đúng?",
+          "originalOptionIndices": [
+            2,
+            0,
+            3,
+            1
+          ],
+          "shuffledOptions": [
+            "Đồ thị quãng đường luôn biến thiên bất thường mà không tuân theo các nguyên lí khoa học.",
+            "Đồ thị quãng đường giữ vai trò cơ bản, phản ánh đúng các quy luật biến đổi và bản chất khoa học tự nhiên.",
+            "Đồ thị quãng đường chỉ áp dụng cho các vật thể đứng yên và không có sự tương tác vật chất.",
+            "Đồ thị quãng đường không có bất kì ý nghĩa thực tiễn hay ứng dụng nào trong cuộc sống và kĩ thuật."
+          ]
+        },
+        {
+          "questionId": "q-g7-l3-mcq4",
+          "orderIndex": 4,
+          "type": "mcq",
+          "level": "hieu",
+          "lessonId": 703,
+          "points": 0.25,
+          "prompt": "Khi quan sát hiện tượng thực tế gắn liền với Nguyên tố hóa học, giải thích khoa học nào sau đây là hợp lí nhất?",
+          "originalOptionIndices": [
+            2,
+            0,
+            1,
+            3
+          ],
+          "shuffledOptions": [
+            "Năng lượng và vật chất tự sinh ra hoặc mất đi hoàn toàn mà không chuyển hoá.",
+            "Hiện tượng xảy ra do sự tương tác, biến đổi theo đúng nguyên lí khoa học của Nguyên tố hóa học.",
+            "Hiện tượng xảy ra do các yếu tố ngẫu nhiên mà không chịu sự chi phối của các định luật tự nhiên.",
+            "Chỉ có thể giải thích được khi tiến hành thí nghiệm trong chân không tuyệt đối."
+          ]
+        },
+        {
+          "questionId": "q-g7-l5-mcq4",
+          "orderIndex": 5,
+          "type": "mcq",
+          "level": "hieu",
+          "lessonId": 705,
+          "points": 0.25,
+          "prompt": "Khi quan sát hiện tượng thực tế gắn liền với Phân tử, giải thích khoa học nào sau đây là hợp lí nhất?",
+          "originalOptionIndices": [
+            3,
+            1,
+            0,
+            2
+          ],
+          "shuffledOptions": [
+            "Chỉ có thể giải thích được khi tiến hành thí nghiệm trong chân không tuyệt đối.",
+            "Hiện tượng xảy ra do các yếu tố ngẫu nhiên mà không chịu sự chi phối của các định luật tự nhiên.",
+            "Hiện tượng xảy ra do sự tương tác, biến đổi theo đúng nguyên lí khoa học của Phân tử.",
+            "Năng lượng và vật chất tự sinh ra hoặc mất đi hoàn toàn mà không chuyển hoá."
+          ]
+        },
+        {
+          "questionId": "q-g7-l4-mcq5",
+          "orderIndex": 6,
+          "type": "mcq",
+          "level": "biet",
+          "lessonId": 704,
+          "points": 0.25,
+          "prompt": "Khi xem xét về Sơ lược về bảng tuần hoàn các nguyên tố hóa học, đơn vị đo hoặc dấu hiệu đặc trưng cơ bản nào sau đây là chuẩn mực khoa học?",
+          "originalOptionIndices": [
+            1,
+            3,
+            0,
+            2
+          ],
+          "shuffledOptions": [
+            "Không có bất kì đơn vị đo lường hoặc dấu hiệu định tính nào được công nhận.",
+            "Luôn thay đổi liên tục mà không có chuẩn quy chiếu chung.",
+            "Dấu hiệu và thông số đo lường phản ánh đúng bản chất tự nhiên của Sơ lược về bảng tuần hoàn các nguyên tố hóa học.",
+            "Chỉ phụ thuộc vào cảm tính chủ quan của người làm thí nghiệm."
+          ]
+        },
+        {
+          "questionId": "q-g7-l2-mcq3",
+          "orderIndex": 7,
+          "type": "mcq",
+          "level": "biet",
+          "lessonId": 702,
+          "points": 0.25,
+          "prompt": "Trong các nhận định sau đây về Nguyên tử, nội dung nào là phát biểu khoa học đúng?",
+          "originalOptionIndices": [
+            2,
+            1,
+            3,
+            0
+          ],
+          "shuffledOptions": [
+            "Nguyên tử luôn biến thiên bất thường mà không tuân theo các nguyên lí khoa học.",
+            "Nguyên tử không có bất kì ý nghĩa thực tiễn hay ứng dụng nào trong cuộc sống và kĩ thuật.",
+            "Nguyên tử chỉ áp dụng cho các vật thể đứng yên và không có sự tương tác vật chất.",
+            "Nguyên tử giữ vai trò cơ bản, phản ánh đúng các quy luật biến đổi và bản chất khoa học tự nhiên."
+          ]
+        },
+        {
+          "questionId": "q-g7-l9-mcq5",
+          "orderIndex": 8,
+          "type": "mcq",
+          "level": "biet",
+          "lessonId": 709,
+          "points": 0.25,
+          "prompt": "Khi xem xét về Đo tốc độ, đơn vị đo hoặc dấu hiệu đặc trưng cơ bản nào sau đây là chuẩn mực khoa học?",
+          "originalOptionIndices": [
+            2,
+            3,
+            0,
+            1
+          ],
+          "shuffledOptions": [
+            "Chỉ phụ thuộc vào cảm tính chủ quan của người làm thí nghiệm.",
+            "Luôn thay đổi liên tục mà không có chuẩn quy chiếu chung.",
+            "Dấu hiệu và thông số đo lường phản ánh đúng bản chất tự nhiên của Đo tốc độ.",
+            "Không có bất kì đơn vị đo lường hoặc dấu hiệu định tính nào được công nhận."
+          ]
+        },
+        {
+          "questionId": "q-g7-l10-mcq1",
+          "orderIndex": 9,
+          "type": "mcq",
+          "level": "biet",
+          "lessonId": 710,
+          "points": 0.25,
+          "prompt": "Khi tìm hiểu về đồ thị quãng đường - thời gian trong tự nhiên và đời sống, phát biểu nào sau đây là chính xác nhất?",
+          "originalOptionIndices": [
+            1,
+            0,
+            3,
+            2
+          ],
+          "shuffledOptions": [
+            "Các hiện tượng này luôn diễn ra ngẫu nhiên và không tuân theo bất kì quy luật vật lí hay hoá sinh nào.",
+            "Đồ thị s - t có trục hoành biểu diễn thời gian t, trục tung biểu diễn quãng đường s.",
+            "Không có bất kì sự chuyển hoá hoặc biến đổi vật chất, năng lượng nào đi kèm.",
+            "Chỉ xảy ra trong môi trường phòng thí nghiệm kín chứ không tồn tại trong tự nhiên."
+          ]
+        },
+        {
+          "questionId": "q-g7-l8-mcq5",
+          "orderIndex": 10,
+          "type": "mcq",
+          "level": "biet",
+          "lessonId": 708,
+          "points": 0.25,
+          "prompt": "Khi xem xét về Tốc độ chuyển động, đơn vị đo hoặc dấu hiệu đặc trưng cơ bản nào sau đây là chuẩn mực khoa học?",
+          "originalOptionIndices": [
+            3,
+            1,
+            2,
+            0
+          ],
+          "shuffledOptions": [
+            "Luôn thay đổi liên tục mà không có chuẩn quy chiếu chung.",
+            "Không có bất kì đơn vị đo lường hoặc dấu hiệu định tính nào được công nhận.",
+            "Chỉ phụ thuộc vào cảm tính chủ quan của người làm thí nghiệm.",
+            "Dấu hiệu và thông số đo lường phản ánh đúng bản chất tự nhiên của Tốc độ chuyển động."
+          ]
+        },
+        {
+          "questionId": "q-g7-l7-mcq3",
+          "orderIndex": 11,
+          "type": "mcq",
+          "level": "biet",
+          "lessonId": 707,
+          "points": 0.25,
+          "prompt": "Trong các nhận định sau đây về Hóa trị và công thức hóa học, nội dung nào là phát biểu khoa học đúng?",
+          "originalOptionIndices": [
+            2,
+            1,
+            3,
+            0
+          ],
+          "shuffledOptions": [
+            "Hóa trị và công thức hóa học luôn biến thiên bất thường mà không tuân theo các nguyên lí khoa học.",
+            "Hóa trị và công thức hóa học không có bất kì ý nghĩa thực tiễn hay ứng dụng nào trong cuộc sống và kĩ thuật.",
+            "Hóa trị và công thức hóa học chỉ áp dụng cho các vật thể đứng yên và không có sự tương tác vật chất.",
+            "Hóa trị và công thức hóa học giữ vai trò cơ bản, phản ánh đúng các quy luật biến đổi và bản chất khoa học tự nhiên."
+          ]
+        },
+        {
+          "questionId": "q-g7-l9-mcq3",
+          "orderIndex": 12,
+          "type": "mcq",
+          "level": "biet",
+          "lessonId": 709,
+          "points": 0.25,
+          "prompt": "Trong các nhận định sau đây về Đo tốc độ, nội dung nào là phát biểu khoa học đúng?",
+          "originalOptionIndices": [
+            3,
+            2,
+            0,
+            1
+          ],
+          "shuffledOptions": [
+            "Đo tốc độ chỉ áp dụng cho các vật thể đứng yên và không có sự tương tác vật chất.",
+            "Đo tốc độ luôn biến thiên bất thường mà không tuân theo các nguyên lí khoa học.",
+            "Đo tốc độ giữ vai trò cơ bản, phản ánh đúng các quy luật biến đổi và bản chất khoa học tự nhiên.",
+            "Đo tốc độ không có bất kì ý nghĩa thực tiễn hay ứng dụng nào trong cuộc sống và kĩ thuật."
+          ]
+        },
+        {
+          "questionId": "q-g7-l5-tf1",
+          "orderIndex": 13,
+          "type": "true_false",
+          "level": "hieu",
+          "lessonId": 705,
+          "points": 1,
+          "prompt": "Khi phân tích các thông số và ứng dụng thực tiễn của phân tử - đơn chất - hợp chất, hãy xét tính đúng/sai của các nhận định sau:",
+          "statements": [
+            {
+              "id": "a",
+              "text": "Nội dung cốt lõi: Phân tử là hạt đại diện cho chất, gồm một hay nhiều nguyên tử liên kết với nhau."
+            },
+            {
+              "id": "b",
+              "text": "Hiện tượng này mâu thuẫn hoàn toàn với các định luật bảo toàn trong khoa học tự nhiên."
+            },
+            {
+              "id": "c",
+              "text": "Có thể ứng dụng các quy luật này vào kĩ thuật chế tạo thiết bị, chăm sóc sức khoẻ hoặc bảo vệ môi trường."
+            },
+            {
+              "id": "d",
+              "text": "Tất cả các biến đổi trong tự nhiên đều diễn ra tức thời mà không cần điều kiện tác nhân môi trường."
+            }
+          ]
+        },
+        {
+          "questionId": "q-g7-l3-tf1",
+          "orderIndex": 14,
+          "type": "true_false",
+          "level": "hieu",
+          "lessonId": 703,
+          "points": 1,
+          "prompt": "Khi phân tích các thông số và ứng dụng thực tiễn của nguyên tố hoá học, hãy xét tính đúng/sai của các nhận định sau:",
+          "statements": [
+            {
+              "id": "a",
+              "text": "Nội dung cốt lõi: Tập hợp các nguyên tử có cùng số proton trong hạt nhân thuộc cùng một nguyên tố hoá học."
+            },
+            {
+              "id": "b",
+              "text": "Hiện tượng này mâu thuẫn hoàn toàn với các định luật bảo toàn trong khoa học tự nhiên."
+            },
+            {
+              "id": "c",
+              "text": "Có thể ứng dụng các quy luật này vào kĩ thuật chế tạo thiết bị, chăm sóc sức khoẻ hoặc bảo vệ môi trường."
+            },
+            {
+              "id": "d",
+              "text": "Tất cả các biến đổi trong tự nhiên đều diễn ra tức thời mà không cần điều kiện tác nhân môi trường."
+            }
+          ]
+        },
+        {
+          "questionId": "q-g7-l6-sa2",
+          "orderIndex": 15,
+          "type": "short_answer",
+          "level": "biet",
+          "lessonId": 706,
+          "points": 0.5,
+          "prompt": "Hãy nêu một đặc điểm cơ bản hoặc đại lượng vật lí / hoá học / sinh học đặc trưng trong nội dung Giới thiệu về liên kết hóa học."
+        },
+        {
+          "questionId": "q-g7-l1-sa2",
+          "orderIndex": 16,
+          "type": "short_answer",
+          "level": "biet",
+          "lessonId": 701,
+          "points": 0.5,
+          "prompt": "Hãy nêu một đặc điểm cơ bản hoặc đại lượng vật lí / hoá học / sinh học đặc trưng trong nội dung Phương pháp và kỹ năng học tập môn Khoa học tự nhiên."
+        },
+        {
+          "questionId": "q-g7-l6-sa1",
+          "orderIndex": 17,
+          "type": "short_answer",
+          "level": "van_dung",
+          "lessonId": 706,
+          "points": 0.5,
+          "prompt": "Trong một thí nghiệm đo đạc hoặc quan sát thực tế về liên kết ion và liên kết cộng hoá trị theo quy tắc bát tử, yếu tố hoặc điều kiện trọng tâm nào quyết định trực tiếp đến độ chính xác và tính ổn định của kết quả?"
+        },
+        {
+          "questionId": "q-g7-l7-sa2",
+          "orderIndex": 18,
+          "type": "short_answer",
+          "level": "biet",
+          "lessonId": 707,
+          "points": 0.5,
+          "prompt": "Hãy nêu một đặc điểm cơ bản hoặc đại lượng vật lí / hoá học / sinh học đặc trưng trong nội dung Hóa trị và công thức hóa học."
+        },
+        {
+          "questionId": "q-g7-l4-es1",
+          "orderIndex": 19,
+          "type": "essay",
+          "level": "van_dung",
+          "lessonId": 704,
+          "points": 1,
+          "prompt": "Hãy giải thích cơ sở khoa học của hiện tượng liên quan đến sơ lược về bảng tuần hoàn các nguyên tố hoá học trong thực tiễn và nêu ít nhất 2 biện pháp ứng dụng hoặc bảo vệ an toàn trong đời sống hàng ngày.",
+          "rubricSteps": [
+            {
+              "id": "step-1",
+              "description": "Bước chấm (0.5 điểm)",
+              "points": 0.5
+            },
+            {
+              "id": "step-2",
+              "description": "Bước chấm (0.5 điểm)",
+              "points": 0.5
+            }
+          ]
+        },
+        {
+          "questionId": "q-g7-l2-es1",
+          "orderIndex": 20,
+          "type": "essay",
+          "level": "van_dung",
+          "lessonId": 702,
+          "points": 1,
+          "prompt": "Hãy giải thích cơ sở khoa học của hiện tượng liên quan đến nguyên tử trong thực tiễn và nêu ít nhất 2 biện pháp ứng dụng hoặc bảo vệ an toàn trong đời sống hàng ngày.",
+          "rubricSteps": [
+            {
+              "id": "step-1",
+              "description": "Bước chấm (0.5 điểm)",
+              "points": 0.5
+            },
+            {
+              "id": "step-2",
+              "description": "Bước chấm (0.5 điểm)",
+              "points": 0.5
+            }
+          ]
+        },
+        {
+          "questionId": "q-g7-l1-es1",
+          "orderIndex": 21,
+          "type": "essay",
+          "level": "van_dung",
+          "lessonId": 701,
+          "points": 1,
+          "prompt": "Hãy giải thích cơ sở khoa học của hiện tượng liên quan đến phương pháp và kĩ năng học tập môn khoa học tự nhiên trong thực tiễn và nêu ít nhất 2 biện pháp ứng dụng hoặc bảo vệ an toàn trong đời sống hàng ngày.",
+          "rubricSteps": [
+            {
+              "id": "step-1",
+              "description": "Bước chấm (0.5 điểm)",
+              "points": 0.5
+            },
+            {
+              "id": "step-2",
+              "description": "Bước chấm (0.5 điểm)",
+              "points": 0.5
+            }
+          ]
+        }
+      ],
+      "answers": {},
+      "status": "in_progress",
+      "startedAt": "2026-11-08T09:55:09.798Z",
+      "autoGradedScore": 0,
+      "manualGradedScore": 0,
+      "totalScore": 0,
+      "violationCount": 0,
+      "flaggedForReview": false,
+      "isRetake": true,
+      "deviceInfo": {
+        "userAgent": "Python-urllib/3.13",
+        "platform": "Web Client",
+        "screenResolution": "Responsive"
+      },
+      "activityLogs": [
+        {
+          "timestamp": "2026-11-08T09:55:09.798Z",
+          "eventType": "exam_start",
+          "detail": "Bắt đầu làm lại bài kiểm tra (Được giáo viên quản trị xem xét cấp quyền). Mã đề cá nhân: MĐ-7A1-8EF2 (Chữ ký đề: 8EF252BA05D9)"
+        }
+      ]
     }
-  ]
+  ],
+  "archivedSubmissions": [
+    {
+      "id": "sub-1dfc8598",
+      "examId": "exam-103bd4d1",
+      "studentId": "usr-hs-2751783e",
+      "studentName": "Dương Hoàng Anh",
+      "studentUsername": "duonghoanganh_7a1",
+      "className": "7A1",
+      "paperCode": "MĐ-7A1-8EF2",
+      "paperSignature": "8EF252BA05D9",
+      "paperSnapshot": [
+        {
+          "questionId": "q-g7-l8-mcq3",
+          "orderIndex": 1,
+          "type": "mcq",
+          "level": "biet",
+          "lessonId": 708,
+          "points": 0.25,
+          "prompt": "Trong các nhận định sau đây về Tốc độ chuyển động, nội dung nào là phát biểu khoa học đúng?",
+          "originalOptionIndices": [
+            0,
+            3,
+            2,
+            1
+          ],
+          "shuffledOptions": [
+            "Tốc độ chuyển động giữ vai trò cơ bản, phản ánh đúng các quy luật biến đổi và bản chất khoa học tự nhiên.",
+            "Tốc độ chuyển động chỉ áp dụng cho các vật thể đứng yên và không có sự tương tác vật chất.",
+            "Tốc độ chuyển động luôn biến thiên bất thường mà không tuân theo các nguyên lí khoa học.",
+            "Tốc độ chuyển động không có bất kì ý nghĩa thực tiễn hay ứng dụng nào trong cuộc sống và kĩ thuật."
+          ]
+        },
+        {
+          "questionId": "q-g7-l4-mcq3",
+          "orderIndex": 2,
+          "type": "mcq",
+          "level": "biet",
+          "lessonId": 704,
+          "points": 0.25,
+          "prompt": "Trong các nhận định sau đây về Sơ lược về bảng tuần hoàn các nguyên tố hóa học, nội dung nào là phát biểu khoa học đúng?",
+          "originalOptionIndices": [
+            2,
+            0,
+            1,
+            3
+          ],
+          "shuffledOptions": [
+            "Sơ lược về bảng tuần hoàn các nguyên tố hóa học luôn biến thiên bất thường mà không tuân theo các nguyên lí khoa học.",
+            "Sơ lược về bảng tuần hoàn các nguyên tố hóa học giữ vai trò cơ bản, phản ánh đúng các quy luật biến đổi và bản chất khoa học tự nhiên.",
+            "Sơ lược về bảng tuần hoàn các nguyên tố hóa học không có bất kì ý nghĩa thực tiễn hay ứng dụng nào trong cuộc sống và kĩ thuật.",
+            "Sơ lược về bảng tuần hoàn các nguyên tố hóa học chỉ áp dụng cho các vật thể đứng yên và không có sự tương tác vật chất."
+          ]
+        },
+        {
+          "questionId": "q-g7-l10-mcq3",
+          "orderIndex": 3,
+          "type": "mcq",
+          "level": "biet",
+          "lessonId": 710,
+          "points": 0.25,
+          "prompt": "Trong các nhận định sau đây về Đồ thị quãng đường, nội dung nào là phát biểu khoa học đúng?",
+          "originalOptionIndices": [
+            2,
+            0,
+            3,
+            1
+          ],
+          "shuffledOptions": [
+            "Đồ thị quãng đường luôn biến thiên bất thường mà không tuân theo các nguyên lí khoa học.",
+            "Đồ thị quãng đường giữ vai trò cơ bản, phản ánh đúng các quy luật biến đổi và bản chất khoa học tự nhiên.",
+            "Đồ thị quãng đường chỉ áp dụng cho các vật thể đứng yên và không có sự tương tác vật chất.",
+            "Đồ thị quãng đường không có bất kì ý nghĩa thực tiễn hay ứng dụng nào trong cuộc sống và kĩ thuật."
+          ]
+        },
+        {
+          "questionId": "q-g7-l3-mcq4",
+          "orderIndex": 4,
+          "type": "mcq",
+          "level": "hieu",
+          "lessonId": 703,
+          "points": 0.25,
+          "prompt": "Khi quan sát hiện tượng thực tế gắn liền với Nguyên tố hóa học, giải thích khoa học nào sau đây là hợp lí nhất?",
+          "originalOptionIndices": [
+            2,
+            0,
+            1,
+            3
+          ],
+          "shuffledOptions": [
+            "Năng lượng và vật chất tự sinh ra hoặc mất đi hoàn toàn mà không chuyển hoá.",
+            "Hiện tượng xảy ra do sự tương tác, biến đổi theo đúng nguyên lí khoa học của Nguyên tố hóa học.",
+            "Hiện tượng xảy ra do các yếu tố ngẫu nhiên mà không chịu sự chi phối của các định luật tự nhiên.",
+            "Chỉ có thể giải thích được khi tiến hành thí nghiệm trong chân không tuyệt đối."
+          ]
+        },
+        {
+          "questionId": "q-g7-l5-mcq4",
+          "orderIndex": 5,
+          "type": "mcq",
+          "level": "hieu",
+          "lessonId": 705,
+          "points": 0.25,
+          "prompt": "Khi quan sát hiện tượng thực tế gắn liền với Phân tử, giải thích khoa học nào sau đây là hợp lí nhất?",
+          "originalOptionIndices": [
+            3,
+            1,
+            0,
+            2
+          ],
+          "shuffledOptions": [
+            "Chỉ có thể giải thích được khi tiến hành thí nghiệm trong chân không tuyệt đối.",
+            "Hiện tượng xảy ra do các yếu tố ngẫu nhiên mà không chịu sự chi phối của các định luật tự nhiên.",
+            "Hiện tượng xảy ra do sự tương tác, biến đổi theo đúng nguyên lí khoa học của Phân tử.",
+            "Năng lượng và vật chất tự sinh ra hoặc mất đi hoàn toàn mà không chuyển hoá."
+          ]
+        },
+        {
+          "questionId": "q-g7-l4-mcq5",
+          "orderIndex": 6,
+          "type": "mcq",
+          "level": "biet",
+          "lessonId": 704,
+          "points": 0.25,
+          "prompt": "Khi xem xét về Sơ lược về bảng tuần hoàn các nguyên tố hóa học, đơn vị đo hoặc dấu hiệu đặc trưng cơ bản nào sau đây là chuẩn mực khoa học?",
+          "originalOptionIndices": [
+            1,
+            3,
+            0,
+            2
+          ],
+          "shuffledOptions": [
+            "Không có bất kì đơn vị đo lường hoặc dấu hiệu định tính nào được công nhận.",
+            "Luôn thay đổi liên tục mà không có chuẩn quy chiếu chung.",
+            "Dấu hiệu và thông số đo lường phản ánh đúng bản chất tự nhiên của Sơ lược về bảng tuần hoàn các nguyên tố hóa học.",
+            "Chỉ phụ thuộc vào cảm tính chủ quan của người làm thí nghiệm."
+          ]
+        },
+        {
+          "questionId": "q-g7-l2-mcq3",
+          "orderIndex": 7,
+          "type": "mcq",
+          "level": "biet",
+          "lessonId": 702,
+          "points": 0.25,
+          "prompt": "Trong các nhận định sau đây về Nguyên tử, nội dung nào là phát biểu khoa học đúng?",
+          "originalOptionIndices": [
+            2,
+            1,
+            3,
+            0
+          ],
+          "shuffledOptions": [
+            "Nguyên tử luôn biến thiên bất thường mà không tuân theo các nguyên lí khoa học.",
+            "Nguyên tử không có bất kì ý nghĩa thực tiễn hay ứng dụng nào trong cuộc sống và kĩ thuật.",
+            "Nguyên tử chỉ áp dụng cho các vật thể đứng yên và không có sự tương tác vật chất.",
+            "Nguyên tử giữ vai trò cơ bản, phản ánh đúng các quy luật biến đổi và bản chất khoa học tự nhiên."
+          ]
+        },
+        {
+          "questionId": "q-g7-l9-mcq5",
+          "orderIndex": 8,
+          "type": "mcq",
+          "level": "biet",
+          "lessonId": 709,
+          "points": 0.25,
+          "prompt": "Khi xem xét về Đo tốc độ, đơn vị đo hoặc dấu hiệu đặc trưng cơ bản nào sau đây là chuẩn mực khoa học?",
+          "originalOptionIndices": [
+            2,
+            3,
+            0,
+            1
+          ],
+          "shuffledOptions": [
+            "Chỉ phụ thuộc vào cảm tính chủ quan của người làm thí nghiệm.",
+            "Luôn thay đổi liên tục mà không có chuẩn quy chiếu chung.",
+            "Dấu hiệu và thông số đo lường phản ánh đúng bản chất tự nhiên của Đo tốc độ.",
+            "Không có bất kì đơn vị đo lường hoặc dấu hiệu định tính nào được công nhận."
+          ]
+        },
+        {
+          "questionId": "q-g7-l10-mcq1",
+          "orderIndex": 9,
+          "type": "mcq",
+          "level": "biet",
+          "lessonId": 710,
+          "points": 0.25,
+          "prompt": "Khi tìm hiểu về đồ thị quãng đường - thời gian trong tự nhiên và đời sống, phát biểu nào sau đây là chính xác nhất?",
+          "originalOptionIndices": [
+            1,
+            0,
+            3,
+            2
+          ],
+          "shuffledOptions": [
+            "Các hiện tượng này luôn diễn ra ngẫu nhiên và không tuân theo bất kì quy luật vật lí hay hoá sinh nào.",
+            "Đồ thị s - t có trục hoành biểu diễn thời gian t, trục tung biểu diễn quãng đường s.",
+            "Không có bất kì sự chuyển hoá hoặc biến đổi vật chất, năng lượng nào đi kèm.",
+            "Chỉ xảy ra trong môi trường phòng thí nghiệm kín chứ không tồn tại trong tự nhiên."
+          ]
+        },
+        {
+          "questionId": "q-g7-l8-mcq5",
+          "orderIndex": 10,
+          "type": "mcq",
+          "level": "biet",
+          "lessonId": 708,
+          "points": 0.25,
+          "prompt": "Khi xem xét về Tốc độ chuyển động, đơn vị đo hoặc dấu hiệu đặc trưng cơ bản nào sau đây là chuẩn mực khoa học?",
+          "originalOptionIndices": [
+            3,
+            1,
+            2,
+            0
+          ],
+          "shuffledOptions": [
+            "Luôn thay đổi liên tục mà không có chuẩn quy chiếu chung.",
+            "Không có bất kì đơn vị đo lường hoặc dấu hiệu định tính nào được công nhận.",
+            "Chỉ phụ thuộc vào cảm tính chủ quan của người làm thí nghiệm.",
+            "Dấu hiệu và thông số đo lường phản ánh đúng bản chất tự nhiên của Tốc độ chuyển động."
+          ]
+        },
+        {
+          "questionId": "q-g7-l7-mcq3",
+          "orderIndex": 11,
+          "type": "mcq",
+          "level": "biet",
+          "lessonId": 707,
+          "points": 0.25,
+          "prompt": "Trong các nhận định sau đây về Hóa trị và công thức hóa học, nội dung nào là phát biểu khoa học đúng?",
+          "originalOptionIndices": [
+            2,
+            1,
+            3,
+            0
+          ],
+          "shuffledOptions": [
+            "Hóa trị và công thức hóa học luôn biến thiên bất thường mà không tuân theo các nguyên lí khoa học.",
+            "Hóa trị và công thức hóa học không có bất kì ý nghĩa thực tiễn hay ứng dụng nào trong cuộc sống và kĩ thuật.",
+            "Hóa trị và công thức hóa học chỉ áp dụng cho các vật thể đứng yên và không có sự tương tác vật chất.",
+            "Hóa trị và công thức hóa học giữ vai trò cơ bản, phản ánh đúng các quy luật biến đổi và bản chất khoa học tự nhiên."
+          ]
+        },
+        {
+          "questionId": "q-g7-l9-mcq3",
+          "orderIndex": 12,
+          "type": "mcq",
+          "level": "biet",
+          "lessonId": 709,
+          "points": 0.25,
+          "prompt": "Trong các nhận định sau đây về Đo tốc độ, nội dung nào là phát biểu khoa học đúng?",
+          "originalOptionIndices": [
+            3,
+            2,
+            0,
+            1
+          ],
+          "shuffledOptions": [
+            "Đo tốc độ chỉ áp dụng cho các vật thể đứng yên và không có sự tương tác vật chất.",
+            "Đo tốc độ luôn biến thiên bất thường mà không tuân theo các nguyên lí khoa học.",
+            "Đo tốc độ giữ vai trò cơ bản, phản ánh đúng các quy luật biến đổi và bản chất khoa học tự nhiên.",
+            "Đo tốc độ không có bất kì ý nghĩa thực tiễn hay ứng dụng nào trong cuộc sống và kĩ thuật."
+          ]
+        },
+        {
+          "questionId": "q-g7-l5-tf1",
+          "orderIndex": 13,
+          "type": "true_false",
+          "level": "hieu",
+          "lessonId": 705,
+          "points": 1,
+          "prompt": "Khi phân tích các thông số và ứng dụng thực tiễn của phân tử - đơn chất - hợp chất, hãy xét tính đúng/sai của các nhận định sau:",
+          "statements": [
+            {
+              "id": "a",
+              "text": "Nội dung cốt lõi: Phân tử là hạt đại diện cho chất, gồm một hay nhiều nguyên tử liên kết với nhau."
+            },
+            {
+              "id": "b",
+              "text": "Hiện tượng này mâu thuẫn hoàn toàn với các định luật bảo toàn trong khoa học tự nhiên."
+            },
+            {
+              "id": "c",
+              "text": "Có thể ứng dụng các quy luật này vào kĩ thuật chế tạo thiết bị, chăm sóc sức khoẻ hoặc bảo vệ môi trường."
+            },
+            {
+              "id": "d",
+              "text": "Tất cả các biến đổi trong tự nhiên đều diễn ra tức thời mà không cần điều kiện tác nhân môi trường."
+            }
+          ]
+        },
+        {
+          "questionId": "q-g7-l3-tf1",
+          "orderIndex": 14,
+          "type": "true_false",
+          "level": "hieu",
+          "lessonId": 703,
+          "points": 1,
+          "prompt": "Khi phân tích các thông số và ứng dụng thực tiễn của nguyên tố hoá học, hãy xét tính đúng/sai của các nhận định sau:",
+          "statements": [
+            {
+              "id": "a",
+              "text": "Nội dung cốt lõi: Tập hợp các nguyên tử có cùng số proton trong hạt nhân thuộc cùng một nguyên tố hoá học."
+            },
+            {
+              "id": "b",
+              "text": "Hiện tượng này mâu thuẫn hoàn toàn với các định luật bảo toàn trong khoa học tự nhiên."
+            },
+            {
+              "id": "c",
+              "text": "Có thể ứng dụng các quy luật này vào kĩ thuật chế tạo thiết bị, chăm sóc sức khoẻ hoặc bảo vệ môi trường."
+            },
+            {
+              "id": "d",
+              "text": "Tất cả các biến đổi trong tự nhiên đều diễn ra tức thời mà không cần điều kiện tác nhân môi trường."
+            }
+          ]
+        },
+        {
+          "questionId": "q-g7-l6-sa2",
+          "orderIndex": 15,
+          "type": "short_answer",
+          "level": "biet",
+          "lessonId": 706,
+          "points": 0.5,
+          "prompt": "Hãy nêu một đặc điểm cơ bản hoặc đại lượng vật lí / hoá học / sinh học đặc trưng trong nội dung Giới thiệu về liên kết hóa học."
+        },
+        {
+          "questionId": "q-g7-l1-sa2",
+          "orderIndex": 16,
+          "type": "short_answer",
+          "level": "biet",
+          "lessonId": 701,
+          "points": 0.5,
+          "prompt": "Hãy nêu một đặc điểm cơ bản hoặc đại lượng vật lí / hoá học / sinh học đặc trưng trong nội dung Phương pháp và kỹ năng học tập môn Khoa học tự nhiên."
+        },
+        {
+          "questionId": "q-g7-l6-sa1",
+          "orderIndex": 17,
+          "type": "short_answer",
+          "level": "van_dung",
+          "lessonId": 706,
+          "points": 0.5,
+          "prompt": "Trong một thí nghiệm đo đạc hoặc quan sát thực tế về liên kết ion và liên kết cộng hoá trị theo quy tắc bát tử, yếu tố hoặc điều kiện trọng tâm nào quyết định trực tiếp đến độ chính xác và tính ổn định của kết quả?"
+        },
+        {
+          "questionId": "q-g7-l7-sa2",
+          "orderIndex": 18,
+          "type": "short_answer",
+          "level": "biet",
+          "lessonId": 707,
+          "points": 0.5,
+          "prompt": "Hãy nêu một đặc điểm cơ bản hoặc đại lượng vật lí / hoá học / sinh học đặc trưng trong nội dung Hóa trị và công thức hóa học."
+        },
+        {
+          "questionId": "q-g7-l4-es1",
+          "orderIndex": 19,
+          "type": "essay",
+          "level": "van_dung",
+          "lessonId": 704,
+          "points": 1,
+          "prompt": "Hãy giải thích cơ sở khoa học của hiện tượng liên quan đến sơ lược về bảng tuần hoàn các nguyên tố hoá học trong thực tiễn và nêu ít nhất 2 biện pháp ứng dụng hoặc bảo vệ an toàn trong đời sống hàng ngày.",
+          "rubricSteps": [
+            {
+              "id": "step-1",
+              "description": "Bước chấm (0.5 điểm)",
+              "points": 0.5
+            },
+            {
+              "id": "step-2",
+              "description": "Bước chấm (0.5 điểm)",
+              "points": 0.5
+            }
+          ]
+        },
+        {
+          "questionId": "q-g7-l2-es1",
+          "orderIndex": 20,
+          "type": "essay",
+          "level": "van_dung",
+          "lessonId": 702,
+          "points": 1,
+          "prompt": "Hãy giải thích cơ sở khoa học của hiện tượng liên quan đến nguyên tử trong thực tiễn và nêu ít nhất 2 biện pháp ứng dụng hoặc bảo vệ an toàn trong đời sống hàng ngày.",
+          "rubricSteps": [
+            {
+              "id": "step-1",
+              "description": "Bước chấm (0.5 điểm)",
+              "points": 0.5
+            },
+            {
+              "id": "step-2",
+              "description": "Bước chấm (0.5 điểm)",
+              "points": 0.5
+            }
+          ]
+        },
+        {
+          "questionId": "q-g7-l1-es1",
+          "orderIndex": 21,
+          "type": "essay",
+          "level": "van_dung",
+          "lessonId": 701,
+          "points": 1,
+          "prompt": "Hãy giải thích cơ sở khoa học của hiện tượng liên quan đến phương pháp và kĩ năng học tập môn khoa học tự nhiên trong thực tiễn và nêu ít nhất 2 biện pháp ứng dụng hoặc bảo vệ an toàn trong đời sống hàng ngày.",
+          "rubricSteps": [
+            {
+              "id": "step-1",
+              "description": "Bước chấm (0.5 điểm)",
+              "points": 0.5
+            },
+            {
+              "id": "step-2",
+              "description": "Bước chấm (0.5 điểm)",
+              "points": 0.5
+            }
+          ]
+        }
+      ],
+      "answers": {
+        "q-g7-l8-mcq3": {
+          "questionId": "q-g7-l8-mcq3",
+          "type": "mcq",
+          "maxPoints": 0.25,
+          "textAnswer": "",
+          "autoScore": 0,
+          "finalScore": 0,
+          "isCorrect": false,
+          "needsManualGrading": false,
+          "gradedByTeacher": false,
+          "checkedRubricStepIds": [],
+          "teacherComment": "",
+          "timeSpentSeconds": 0
+        },
+        "q-g7-l4-mcq3": {
+          "questionId": "q-g7-l4-mcq3",
+          "type": "mcq",
+          "maxPoints": 0.25,
+          "textAnswer": "",
+          "autoScore": 0,
+          "finalScore": 0,
+          "isCorrect": false,
+          "needsManualGrading": false,
+          "gradedByTeacher": false,
+          "checkedRubricStepIds": [],
+          "teacherComment": "",
+          "timeSpentSeconds": 0
+        },
+        "q-g7-l10-mcq3": {
+          "questionId": "q-g7-l10-mcq3",
+          "type": "mcq",
+          "maxPoints": 0.25,
+          "textAnswer": "",
+          "autoScore": 0,
+          "finalScore": 0,
+          "isCorrect": false,
+          "needsManualGrading": false,
+          "gradedByTeacher": false,
+          "checkedRubricStepIds": [],
+          "teacherComment": "",
+          "timeSpentSeconds": 0
+        },
+        "q-g7-l3-mcq4": {
+          "questionId": "q-g7-l3-mcq4",
+          "type": "mcq",
+          "maxPoints": 0.25,
+          "textAnswer": "",
+          "autoScore": 0,
+          "finalScore": 0,
+          "isCorrect": false,
+          "needsManualGrading": false,
+          "gradedByTeacher": false,
+          "checkedRubricStepIds": [],
+          "teacherComment": "",
+          "timeSpentSeconds": 0
+        },
+        "q-g7-l5-mcq4": {
+          "questionId": "q-g7-l5-mcq4",
+          "type": "mcq",
+          "maxPoints": 0.25,
+          "textAnswer": "",
+          "autoScore": 0,
+          "finalScore": 0,
+          "isCorrect": false,
+          "needsManualGrading": false,
+          "gradedByTeacher": false,
+          "checkedRubricStepIds": [],
+          "teacherComment": "",
+          "timeSpentSeconds": 0
+        },
+        "q-g7-l4-mcq5": {
+          "questionId": "q-g7-l4-mcq5",
+          "type": "mcq",
+          "maxPoints": 0.25,
+          "textAnswer": "",
+          "autoScore": 0,
+          "finalScore": 0,
+          "isCorrect": false,
+          "needsManualGrading": false,
+          "gradedByTeacher": false,
+          "checkedRubricStepIds": [],
+          "teacherComment": "",
+          "timeSpentSeconds": 0
+        },
+        "q-g7-l2-mcq3": {
+          "questionId": "q-g7-l2-mcq3",
+          "type": "mcq",
+          "maxPoints": 0.25,
+          "textAnswer": "",
+          "autoScore": 0,
+          "finalScore": 0,
+          "isCorrect": false,
+          "needsManualGrading": false,
+          "gradedByTeacher": false,
+          "checkedRubricStepIds": [],
+          "teacherComment": "",
+          "timeSpentSeconds": 0
+        },
+        "q-g7-l9-mcq5": {
+          "questionId": "q-g7-l9-mcq5",
+          "type": "mcq",
+          "maxPoints": 0.25,
+          "textAnswer": "",
+          "autoScore": 0,
+          "finalScore": 0,
+          "isCorrect": false,
+          "needsManualGrading": false,
+          "gradedByTeacher": false,
+          "checkedRubricStepIds": [],
+          "teacherComment": "",
+          "timeSpentSeconds": 0
+        },
+        "q-g7-l10-mcq1": {
+          "questionId": "q-g7-l10-mcq1",
+          "type": "mcq",
+          "maxPoints": 0.25,
+          "textAnswer": "",
+          "autoScore": 0,
+          "finalScore": 0,
+          "isCorrect": false,
+          "needsManualGrading": false,
+          "gradedByTeacher": false,
+          "checkedRubricStepIds": [],
+          "teacherComment": "",
+          "timeSpentSeconds": 0
+        },
+        "q-g7-l8-mcq5": {
+          "questionId": "q-g7-l8-mcq5",
+          "type": "mcq",
+          "maxPoints": 0.25,
+          "textAnswer": "",
+          "autoScore": 0,
+          "finalScore": 0,
+          "isCorrect": false,
+          "needsManualGrading": false,
+          "gradedByTeacher": false,
+          "checkedRubricStepIds": [],
+          "teacherComment": "",
+          "timeSpentSeconds": 0
+        },
+        "q-g7-l7-mcq3": {
+          "questionId": "q-g7-l7-mcq3",
+          "type": "mcq",
+          "maxPoints": 0.25,
+          "textAnswer": "",
+          "autoScore": 0,
+          "finalScore": 0,
+          "isCorrect": false,
+          "needsManualGrading": false,
+          "gradedByTeacher": false,
+          "checkedRubricStepIds": [],
+          "teacherComment": "",
+          "timeSpentSeconds": 0
+        },
+        "q-g7-l9-mcq3": {
+          "questionId": "q-g7-l9-mcq3",
+          "type": "mcq",
+          "maxPoints": 0.25,
+          "textAnswer": "",
+          "autoScore": 0,
+          "finalScore": 0,
+          "isCorrect": false,
+          "needsManualGrading": false,
+          "gradedByTeacher": false,
+          "checkedRubricStepIds": [],
+          "teacherComment": "",
+          "timeSpentSeconds": 0
+        },
+        "q-g7-l5-tf1": {
+          "questionId": "q-g7-l5-tf1",
+          "type": "true_false",
+          "maxPoints": 1,
+          "textAnswer": "",
+          "autoScore": 0,
+          "finalScore": 0,
+          "isCorrect": false,
+          "trueFalseCorrectCount": 0,
+          "needsManualGrading": false,
+          "gradedByTeacher": false,
+          "checkedRubricStepIds": [],
+          "teacherComment": "",
+          "timeSpentSeconds": 0
+        },
+        "q-g7-l3-tf1": {
+          "questionId": "q-g7-l3-tf1",
+          "type": "true_false",
+          "maxPoints": 1,
+          "textAnswer": "",
+          "autoScore": 0,
+          "finalScore": 0,
+          "isCorrect": false,
+          "trueFalseCorrectCount": 0,
+          "needsManualGrading": false,
+          "gradedByTeacher": false,
+          "checkedRubricStepIds": [],
+          "teacherComment": "",
+          "timeSpentSeconds": 0
+        },
+        "q-g7-l6-sa2": {
+          "questionId": "q-g7-l6-sa2",
+          "type": "short_answer",
+          "maxPoints": 0.5,
+          "textAnswer": "",
+          "autoScore": 0,
+          "finalScore": 0,
+          "isCorrect": false,
+          "needsManualGrading": false,
+          "gradedByTeacher": false,
+          "checkedRubricStepIds": [],
+          "teacherComment": "",
+          "timeSpentSeconds": 0
+        },
+        "q-g7-l1-sa2": {
+          "questionId": "q-g7-l1-sa2",
+          "type": "short_answer",
+          "maxPoints": 0.5,
+          "textAnswer": "",
+          "autoScore": 0,
+          "finalScore": 0,
+          "isCorrect": false,
+          "needsManualGrading": false,
+          "gradedByTeacher": false,
+          "checkedRubricStepIds": [],
+          "teacherComment": "",
+          "timeSpentSeconds": 0
+        },
+        "q-g7-l6-sa1": {
+          "questionId": "q-g7-l6-sa1",
+          "type": "short_answer",
+          "maxPoints": 0.5,
+          "textAnswer": "",
+          "autoScore": 0,
+          "finalScore": 0,
+          "isCorrect": false,
+          "needsManualGrading": false,
+          "gradedByTeacher": false,
+          "checkedRubricStepIds": [],
+          "teacherComment": "",
+          "timeSpentSeconds": 0
+        },
+        "q-g7-l7-sa2": {
+          "questionId": "q-g7-l7-sa2",
+          "type": "short_answer",
+          "maxPoints": 0.5,
+          "textAnswer": "",
+          "autoScore": 0,
+          "finalScore": 0,
+          "isCorrect": false,
+          "needsManualGrading": false,
+          "gradedByTeacher": false,
+          "checkedRubricStepIds": [],
+          "teacherComment": "",
+          "timeSpentSeconds": 0
+        },
+        "q-g7-l4-es1": {
+          "questionId": "q-g7-l4-es1",
+          "type": "essay",
+          "maxPoints": 1,
+          "textAnswer": "[BÀI LÀM TỰ LUẬN CỦA HỌC SINH: Dương Hoàng Anh - LỚP 7A1]\n\n1. Cơ sở lí thuyết & Phương pháp giải:\nCơ sở khoa học: Bảng tuần hoàn sắp xếp các nguyên tố theo chiều tăng dần của điện tích hạt nhân. Gồm 7 chu kì và 8 nhóm A (cùng các nhóm B). Phân loại thành kim loại, phi kim và khí hiếm.. Ứng dụng/Biện pháp: (1) Tuân thủ quy trình kĩ thuật và hướng dẫn an toàn; (2) Sử dụng hợp lí, tiết kiệm nguồn lực và giảm thiểu tác động tiêu cực đến môi trường xung quanh.\n\n2. Lời giải chi tiết:\n- Bước 1: Liệt kê dữ kiện đề bài và đổi đơn vị đo lường theo chuẩn SI.\n- Bước 2: Thiết lập hệ phương trình / công thức định lượng biểu diễn mối quan hệ giữa các đại lượng.\n- Bước 3: Thay số liệu cụ thể vào biểu thức để tính toán giá trị cần tìm.\n- Bước 4: Kiểm tra điều kiện thực nghiệm và rút ra kết luận thoả đáng.",
+          "autoScore": 0,
+          "manualScore": 0,
+          "finalScore": 0,
+          "isCorrect": false,
+          "needsManualGrading": false,
+          "gradedByTeacher": true,
+          "checkedRubricStepIds": [],
+          "teacherComment": "",
+          "timeSpentSeconds": 280
+        },
+        "q-g7-l2-es1": {
+          "questionId": "q-g7-l2-es1",
+          "type": "essay",
+          "maxPoints": 1,
+          "textAnswer": "[BÀI LÀM TỰ LUẬN CỦA HỌC SINH: Dương Hoàng Anh - LỚP 7A1]\n\n1. Cơ sở lí thuyết & Phương pháp giải:\nCơ sở khoa học: Nguyên tử là hạt vô cùng nhỏ, trung hoà về điện. Gồm hạt nhân mang điện tích dương (chứa proton và neutron) và vỏ mang điện tích âm chứa các electron chuyển động theo từng lớp.. Ứng dụng/Biện pháp: (1) Tuân thủ quy trình kĩ thuật và hướng dẫn an toàn; (2) Sử dụng hợp lí, tiết kiệm nguồn lực và giảm thiểu tác động tiêu cực đến môi trường xung quanh.\n\n2. Lời giải chi tiết:\n- Bước 1: Liệt kê dữ kiện đề bài và đổi đơn vị đo lường theo chuẩn SI.\n- Bước 2: Thiết lập hệ phương trình / công thức định lượng biểu diễn mối quan hệ giữa các đại lượng.\n- Bước 3: Thay số liệu cụ thể vào biểu thức để tính toán giá trị cần tìm.\n- Bước 4: Kiểm tra điều kiện thực nghiệm và rút ra kết luận thoả đáng.",
+          "autoScore": 0,
+          "manualScore": 0,
+          "finalScore": 0,
+          "isCorrect": false,
+          "needsManualGrading": false,
+          "gradedByTeacher": true,
+          "checkedRubricStepIds": [],
+          "teacherComment": "",
+          "timeSpentSeconds": 280
+        },
+        "q-g7-l1-es1": {
+          "questionId": "q-g7-l1-es1",
+          "type": "essay",
+          "maxPoints": 1,
+          "textAnswer": "[BÀI LÀM TỰ LUẬN CỦA HỌC SINH: Dương Hoàng Anh - LỚP 7A1]\n\n1. Cơ sở lí thuyết & Phương pháp giải:\nCơ sở khoa học: Phương pháp tìm hiểu tự nhiên gồm các bước: Đề xuất vấn đề → Đưa ra giả thuyết → Lập kế hoạch kiểm tra → Thực hiện kế hoạch → Viết báo cáo, thảo luận.. Ứng dụng/Biện pháp: (1) Tuân thủ quy trình kĩ thuật và hướng dẫn an toàn; (2) Sử dụng hợp lí, tiết kiệm nguồn lực và giảm thiểu tác động tiêu cực đến môi trường xung quanh.\n\n2. Lời giải chi tiết:\n- Bước 1: Liệt kê dữ kiện đề bài và đổi đơn vị đo lường theo chuẩn SI.\n- Bước 2: Thiết lập hệ phương trình / công thức định lượng biểu diễn mối quan hệ giữa các đại lượng.\n- Bước 3: Thay số liệu cụ thể vào biểu thức để tính toán giá trị cần tìm.\n- Bước 4: Kiểm tra điều kiện thực nghiệm và rút ra kết luận thoả đáng.",
+          "autoScore": 0,
+          "manualScore": 0,
+          "finalScore": 0,
+          "isCorrect": false,
+          "needsManualGrading": false,
+          "gradedByTeacher": true,
+          "checkedRubricStepIds": [],
+          "teacherComment": "",
+          "timeSpentSeconds": 280
+        }
+      },
+      "status": "finalized",
+      "startedAt": "2026-11-08T09:34:49.715Z",
+      "autoGradedScore": 6,
+      "manualGradedScore": 0,
+      "totalScore": 6,
+      "violationCount": 0,
+      "flaggedForReview": false,
+      "deviceInfo": {
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+        "platform": "Win32",
+        "screenResolution": "1440x900"
+      },
+      "activityLogs": [
+        {
+          "timestamp": "2026-11-08T09:34:49.715Z",
+          "eventType": "exam_start",
+          "detail": "Bắt đầu làm bài. Mã đề cá nhân: MĐ-7A1-8EF2 (Chữ ký đề: 8EF252BA05D9)"
+        },
+        {
+          "timestamp": "2026-11-08T09:34:56.326Z",
+          "eventType": "manual_submit",
+          "detail": "Học sinh chủ động bấm Nộp bài."
+        }
+      ],
+      "submittedAt": "2026-11-08T09:34:56.326Z",
+      "teacherOverallFeedback": "",
+      "finalizedAt": "2026-11-08T09:39:44.982Z",
+      "retakeAllowedAt": "2026-11-08T09:54:01.834Z",
+      "retakeAllowedBy": "Lê Văn Thắng",
+      "retakeReason": "Học sinh kiểm tra lại do gặp sự cố"
+    }
+  ],
+  "retakeGrants": []
 }

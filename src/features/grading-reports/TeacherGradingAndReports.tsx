@@ -12,6 +12,7 @@ import {
   GraduationCap,
   Users,
   Filter,
+  RotateCcw,
 } from 'lucide-react';
 import { apiRequest, getCsvDownloadUrl } from '../../services/apiClient';
 import { ExamDefinition, ExamSubmission, SchoolConfig } from '../../types/domainTypes';
@@ -35,6 +36,14 @@ interface ExamStatisticsResponse {
     wrongRatePercent: number;
   }>;
   submissions: ExamSubmission[];
+  retakeGrants?: Array<{
+    examId: string;
+    studentId: string;
+    studentName: string;
+    className?: string;
+    grantedAt: string;
+    grantedBy: string;
+  }>;
 }
 
 interface TeacherGradingAndReportsProps {
@@ -296,6 +305,41 @@ export const TeacherGradingAndReports: React.FC<TeacherGradingAndReportsProps> =
     }
   };
 
+  const [retakeConfirmSub, setRetakeConfirmSub] = useState<ExamSubmission | null>(null);
+  const [retaking, setRetaking] = useState<boolean>(false);
+  const [retakeReason, setRetakeReason] = useState<string>('');
+
+  const handleRequestAllowRetake = (sub: ExamSubmission) => {
+    setRetakeConfirmSub(sub);
+    setRetakeReason('Học sinh gặp sự cố kỹ thuật / Được giáo viên xem xét cho kiểm tra lại');
+  };
+
+  const handleConfirmAllowRetake = async () => {
+    if (!retakeConfirmSub) return;
+    setRetaking(true);
+    try {
+      await apiRequest(`/api/submissions/${retakeConfirmSub.id}/allow-retake`, {
+        method: 'POST',
+        body: JSON.stringify({ reason: retakeReason }),
+      });
+      onNotify(
+        'success',
+        `Đã cấp quyền cho học sinh ${retakeConfirmSub.studentName} (${retakeConfirmSub.className}) kiểm tra lại thành công! Học sinh có thể vào làm bài ngay.`
+      );
+      if (activeSubDetail?.submission.id === retakeConfirmSub.id) {
+        setActiveSubDetail(null);
+      }
+      setRetakeConfirmSub(null);
+      if (selectedExamId) {
+        await loadExamStatistics(selectedExamId);
+      }
+    } catch (err: any) {
+      onNotify('error', err.message || 'Không thể cấp quyền làm lại bài kiểm tra.');
+    } finally {
+      setRetaking(false);
+    }
+  };
+
   const hasEssayQuestions = useMemo(() => {
     return (activeSubDetail?.enrichedQuestions || []).some((q: any) => q.type === 'essay');
   }, [activeSubDetail]);
@@ -522,6 +566,19 @@ export const TeacherGradingAndReports: React.FC<TeacherGradingAndReportsProps> =
               )}
             </div>
 
+            {stats.retakeGrants && stats.retakeGrants.length > 0 && (
+              <div className="mx-6 mb-4 p-3.5 rounded-2xl bg-amber-50 border border-amber-200 text-xs text-amber-900 flex flex-wrap items-center justify-between gap-2">
+                <div className="flex items-center gap-2">
+                  <RotateCcw className="w-4 h-4 text-amber-700 shrink-0" />
+                  <span>
+                    <strong>{stats.retakeGrants.length} học sinh đang được cấp quyền làm lại bài thi:</strong>{' '}
+                    {stats.retakeGrants.map((rg) => `${rg.studentName}${rg.className ? ` (${rg.className})` : ''}`).join(', ')}
+                  </span>
+                </div>
+                <span className="text-[11px] text-amber-700 font-medium">Học sinh đăng nhập lại để làm đề mới</span>
+              </div>
+            )}
+
             {filteredSubmissions.length === 0 ? (
               <div className="p-8 text-center text-sm text-slate-500">
                 Chưa có học sinh nào {selectedClass !== 'ALL' ? `lớp ${selectedClass}` : ''} nộp bài trong đợt kiểm tra này.
@@ -600,14 +657,24 @@ export const TeacherGradingAndReports: React.FC<TeacherGradingAndReportsProps> =
                             </span>
                           )}
                         </td>
-                        <td className="p-3.5 text-right">
-                          <button
-                            onClick={() => openGradingModal(sub.id)}
-                            className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-[#0D6E6E] hover:bg-teal-800 text-white text-xs font-bold shadow-xs"
-                          >
-                            <Eye className="w-3.5 h-3.5" />
-                            <span>{sub.status === 'finalized' ? 'Xem bài làm & Log' : 'Chấm tự luận & Xem Log'}</span>
-                          </button>
+                        <td className="p-3.5 text-right whitespace-nowrap">
+                          <div className="inline-flex items-center gap-2">
+                            <button
+                              onClick={() => openGradingModal(sub.id)}
+                              className="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-[#0D6E6E] hover:bg-teal-800 text-white text-xs font-bold shadow-xs transition-colors"
+                            >
+                              <Eye className="w-3.5 h-3.5" />
+                              <span>{sub.status === 'finalized' ? 'Xem bài làm & Log' : 'Chấm tự luận & Xem Log'}</span>
+                            </button>
+                            <button
+                              onClick={() => handleRequestAllowRetake(sub)}
+                              title="Xem xét cho phép học sinh được kiểm tra lại lần nữa"
+                              className="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-amber-500 hover:bg-amber-600 text-white text-xs font-bold shadow-xs transition-colors"
+                            >
+                              <RotateCcw className="w-3.5 h-3.5" />
+                              <span>Cho kiểm tra lại</span>
+                            </button>
+                          </div>
                         </td>
                       </tr>
                     ))}
@@ -986,28 +1053,120 @@ export const TeacherGradingAndReports: React.FC<TeacherGradingAndReportsProps> =
               </div>
             </div>
 
-            <div className="px-6 py-4 bg-slate-50 border-t border-slate-200 flex items-center justify-end gap-3">
+            <div className="px-6 py-4 bg-slate-50 border-t border-slate-200 flex flex-wrap items-center justify-between gap-3">
+              <div>
+                <button
+                  type="button"
+                  onClick={() => handleRequestAllowRetake(activeSubDetail.submission)}
+                  className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-600 text-white text-xs font-bold shadow-xs transition-colors"
+                >
+                  <RotateCcw className="w-4 h-4" />
+                  <span>Cấp quyền cho học sinh kiểm tra lại</span>
+                </button>
+              </div>
+              <div className="flex items-center gap-3">
+                <button
+                  type="button"
+                  onClick={() => setActiveSubDetail(null)}
+                  className="px-4 py-2.5 rounded-xl border border-slate-300 text-xs font-bold text-slate-700"
+                >
+                  Đóng
+                </button>
+                <button
+                  type="button"
+                  disabled={savingGrade}
+                  onClick={handleSaveAndFinalizeGrade}
+                  className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl bg-[#0D6E6E] hover:bg-teal-800 text-white text-xs font-bold shadow-md"
+                >
+                  <Save className="w-4 h-4" />
+                  <span>
+                    {savingGrade
+                      ? 'Đang lưu...'
+                      : hasEssayQuestions
+                      ? 'Lưu điểm Tự luận & Chốt kết quả'
+                      : 'Lưu nhận xét & Chốt kết quả'}
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* CONFIRMATION MODAL: CẤP QUYỀN HỌC SINH KIỂM TRA LẠI */}
+      {retakeConfirmSub && (
+        <div className="fixed inset-0 z-[60] bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-4">
+          <div className="bg-white rounded-3xl max-w-md w-full p-6 shadow-2xl border border-slate-200 space-y-4">
+            <div className="flex items-start gap-3">
+              <div className="w-11 h-11 rounded-2xl bg-amber-100 text-amber-700 flex items-center justify-center shrink-0">
+                <RotateCcw className="w-6 h-6" />
+              </div>
+              <div className="space-y-1">
+                <h3 className="font-bold text-slate-900 text-base">Xác nhận cho học sinh kiểm tra lại</h3>
+                <p className="text-xs text-slate-500">
+                  Giáo viên quản trị xem xét và cấp quyền làm lại bài thi
+                </p>
+              </div>
+            </div>
+
+            <div className="p-4 rounded-2xl bg-amber-50/80 border border-amber-200 text-xs text-amber-950 space-y-2">
+              <div className="flex justify-between items-center">
+                <span className="text-slate-600">Học sinh:</span>
+                <strong className="text-slate-900 text-sm">{retakeConfirmSub.studentName}</strong>
+              </div>
+              <div className="flex justify-between items-center">
+                <span className="text-slate-600">Lớp:</span>
+                <strong className="text-slate-900">{retakeConfirmSub.className}</strong>
+              </div>
+              <div className="flex justify-between items-center">
+                <span className="text-slate-600">Mã đề đã thi:</span>
+                <code className="font-mono bg-white px-2 py-0.5 rounded border border-amber-300 font-bold">{retakeConfirmSub.paperCode}</code>
+              </div>
+              <div className="flex justify-between items-center">
+                <span className="text-slate-600">Điểm bài cũ:</span>
+                <strong className="text-amber-800 font-extrabold">{retakeConfirmSub.totalScore ?? 0}đ</strong>
+              </div>
+              <div className="pt-2 border-t border-amber-200/80 text-[11px] text-amber-800 leading-relaxed">
+                ℹ️ Sau khi xác nhận, bài làm cũ sẽ được lưu trữ vào lịch sử. Học sinh sẽ được phép đăng nhập (Họ tên & Lớp) để làm lại bài kiểm tra mới từ đầu với đề thi cá nhân mới.
+              </div>
+            </div>
+
+            <div>
+              <label className="block text-xs font-bold text-slate-700 mb-1">
+                Lý do cho phép làm lại (tùy chọn):
+              </label>
+              <input
+                type="text"
+                value={retakeReason}
+                onChange={(e) => setRetakeReason(e.target.value)}
+                placeholder="VD: Gặp sự cố mạng, máy tính tắt đột ngột, xin phép làm lại..."
+                className="w-full px-3.5 py-2 rounded-xl border border-slate-300 text-xs"
+              />
+            </div>
+
+            <div className="flex items-center justify-end gap-2.5 pt-2">
               <button
                 type="button"
-                onClick={() => setActiveSubDetail(null)}
-                className="px-4 py-2.5 rounded-xl border border-slate-300 text-xs font-bold text-slate-700"
+                onClick={() => setRetakeConfirmSub(null)}
+                disabled={retaking}
+                className="px-4 py-2.5 rounded-xl border border-slate-300 text-xs font-bold text-slate-700 hover:bg-slate-50"
               >
-                Đóng
+                Huỷ bỏ
               </button>
               <button
                 type="button"
-                disabled={savingGrade}
-                onClick={handleSaveAndFinalizeGrade}
-                className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl bg-[#0D6E6E] hover:bg-teal-800 text-white text-xs font-bold shadow-md"
+                disabled={retaking}
+                onClick={handleConfirmAllowRetake}
+                className="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-xl bg-amber-600 hover:bg-amber-700 text-white text-xs font-bold shadow-sm disabled:opacity-50 transition-colors"
               >
-                <Save className="w-4 h-4" />
-                <span>
-                  {savingGrade
-                    ? 'Đang lưu...'
-                    : hasEssayQuestions
-                    ? 'Lưu điểm Tự luận & Chốt kết quả'
-                    : 'Lưu nhận xét & Chốt kết quả'}
-                </span>
+                {retaking ? (
+                  <span>Đang xử lý...</span>
+                ) : (
+                  <>
+                    <RotateCcw className="w-4 h-4" />
+                    <span>Xác nhận cho kiểm tra lại</span>
+                  </>
+                )}
               </button>
             </div>
           </div>

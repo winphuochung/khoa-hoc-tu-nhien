@@ -9,6 +9,7 @@ import {
   Eye,
   AlertTriangle,
   FileCheck,
+  RotateCcw,
 } from 'lucide-react';
 import { apiRequest } from '../../services/apiClient';
 import {
@@ -29,6 +30,7 @@ interface StudentExamSummaryItem {
   allowReview: boolean;
   isOpen: boolean;
   maxTabViolations: number;
+  retakeGranted?: boolean;
   mySubmission: {
     id: string;
     status: 'in_progress' | 'submitted_pending_grading' | 'finalized';
@@ -744,6 +746,10 @@ export const StudentExamRoom: React.FC<StudentExamRoomProps> = ({ onNotify }) =>
                       <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-200 text-xs font-bold">
                         <CheckCircle2 className="w-3.5 h-3.5" /> Đã nộp bài ({sub.paperCode})
                       </span>
+                    ) : ex.retakeGranted ? (
+                      <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-amber-100 text-amber-900 border border-amber-300 text-xs font-bold">
+                        <RotateCcw className="w-3.5 h-3.5 text-amber-700" /> Được phép kiểm tra lại
+                      </span>
                     ) : ex.isOpen ? (
                       <span className="px-3 py-1 rounded-full bg-amber-50 text-amber-900 border border-amber-200 text-xs font-bold">
                         Đang mở thi
@@ -760,6 +766,15 @@ export const StudentExamRoom: React.FC<StudentExamRoomProps> = ({ onNotify }) =>
                     Thang điểm: {ex.totalPoints} điểm • Ngưỡng cảnh báo rời tab:{' '}
                     {ex.maxTabViolations} lần
                   </p>
+
+                  {!isCompleted && ex.retakeGranted && (
+                    <div className="p-3 rounded-xl bg-amber-50 border border-amber-200 text-xs text-amber-900 flex items-center gap-2.5">
+                      <RotateCcw className="w-4 h-4 text-amber-700 shrink-0" />
+                      <span>
+                        Giáo viên quản trị đã xem xét và đồng ý cho em kiểm tra lại lần nữa. Em hãy bấm nút dưới để bắt đầu làm lại bài.
+                      </span>
+                    </div>
+                  )}
 
                   {isCompleted && (
                     <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200 text-xs space-y-1.5">
@@ -798,13 +813,20 @@ export const StudentExamRoom: React.FC<StudentExamRoomProps> = ({ onNotify }) =>
                 <div>
                   {!isCompleted ? (
                     <button
-                      disabled={!ex.isOpen}
+                      disabled={!ex.isOpen && !ex.retakeGranted}
                       onClick={() => handleStartExam(ex.id)}
-                      className="w-full py-3.5 px-5 rounded-xl bg-[#0D6E6E] hover:bg-teal-800 text-white font-bold text-sm shadow-sm disabled:opacity-50"
+                      className="w-full py-3.5 px-5 rounded-xl bg-[#0D6E6E] hover:bg-teal-800 text-white font-bold text-sm shadow-sm disabled:opacity-50 inline-flex items-center justify-center gap-2"
                     >
-                      {sub?.status === 'in_progress'
-                        ? 'Tiếp tục làm bài kiểm tra'
-                        : 'Bắt đầu làm bài kiểm tra'}
+                      {sub?.status === 'in_progress' ? (
+                        'Tiếp tục làm bài kiểm tra'
+                      ) : ex.retakeGranted ? (
+                        <>
+                          <RotateCcw className="w-4 h-4" />
+                          <span>Bắt đầu làm lại bài kiểm tra</span>
+                        </>
+                      ) : (
+                        'Bắt đầu làm bài kiểm tra'
+                      )}
                     </button>
                   ) : (
                     <button

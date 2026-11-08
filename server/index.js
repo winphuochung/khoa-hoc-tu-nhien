@@ -1146,6 +1146,10 @@ app.get('/api/exams', requireAuth, (req, res) => {
       const mySub = db.submissions.find(
         (s) => s.examId === ex.id && s.studentId === req.user.id
       );
+      const retakeGranted = Boolean(
+        db.retakeGrants &&
+          db.retakeGrants.some((rg) => rg.examId === ex.id && rg.studentId === req.user.id)
+      );
       return {
         id: ex.id,
         grade: ex.grade || 9,
@@ -1161,6 +1165,7 @@ app.get('/api/exams', requireAuth, (req, res) => {
         isOpen: ex.isOpen,
         maxTabViolations: ex.maxTabViolations,
         createdAt: ex.createdAt,
+        retakeGranted,
         mySubmission: mySub
           ? {
               id: mySub.id,
@@ -1459,7 +1464,11 @@ app.post('/api/exams/:id/start', requireAuth, (req, res) => {
   if (!exam) {
     return res.status(404).json({ success: false, error: 'Không tìm thấy đợt kiểm tra.' });
   }
-  if (!exam.isOpen) {
+  const hasRetakeGrant = Boolean(
+    db.retakeGrants &&
+      db.retakeGrants.some((rg) => rg.examId === exam.id && rg.studentId === req.user.id)
+  );
+  if (!exam.isOpen && !hasRetakeGrant) {
     return res.status(403).json({
       success: false,
       error: 'Đợt kiểm tra này hiện đang đóng.',
@@ -1520,6 +1529,16 @@ app.post('/api/exams/:id/start', requireAuth, (req, res) => {
       existingForExam
     );
 
+    const wasRetake = Boolean(
+      db.retakeGrants &&
+        db.retakeGrants.some((rg) => rg.examId === exam.id && rg.studentId === req.user.id)
+    );
+    if (db.retakeGrants) {
+      db.retakeGrants = db.retakeGrants.filter(
+        (rg) => !(rg.examId === exam.id && rg.studentId === req.user.id)
+      );
+    }
+
     submission = {
       id: `sub-${crypto.randomUUID().slice(0, 8)}`,
       examId: exam.id,
@@ -1538,12 +1557,15 @@ app.post('/api/exams/:id/start', requireAuth, (req, res) => {
       totalScore: 0,
       violationCount: 0,
       flaggedForReview: false,
+      isRetake: wasRetake,
       deviceInfo,
       activityLogs: [
         {
           timestamp: now,
           eventType: 'exam_start',
-          detail: `Bắt đầu làm bài. Mã đề cá nhân: ${paperCode} (Chữ ký đề: ${paperSignature})`,
+          detail: wasRetake
+            ? `Bắt đầu làm lại bài kiểm tra (Được giáo viên quản trị xem xét cấp quyền). Mã đề cá nhân: ${paperCode} (Chữ ký đề: ${paperSignature})`
+            : `Bắt đầu làm bài. Mã đề cá nhân: ${paperCode} (Chữ ký đề: ${paperSignature})`,
         },
       ],
     };
@@ -1969,6 +1991,49 @@ app.post('/api/submissions/:id/grade', requireTeacher, (req, res) => {
   });
 });
 
+app.post('/api/submissions/:id/allow-retake', requireTeacher, (req, res) => {
+  const db = getDb();
+  const subIndex = db.submissions.findIndex((s) => s.id === req.params.id);
+  if (subIndex === -1) {
+    return res.status(404).json({ success: false, error: 'Không tìm thấy bài làm.' });
+  }
+
+  const sub = db.submissions[subIndex];
+
+  if (!db.archivedSubmissions) {
+    db.archivedSubmissions = [];
+  }
+  db.archivedSubmissions.push({
+    ...sub,
+    retakeAllowedAt: new Date().toISOString(),
+    retakeAllowedBy: req.user.fullName || req.user.username || 'Giáo viên quản trị',
+    retakeReason: req.body?.reason || 'Giáo viên xem xét và cấp quyền cho học sinh kiểm tra lại.',
+  });
+
+  if (!db.retakeGrants) {
+    db.retakeGrants = [];
+  }
+  db.retakeGrants = db.retakeGrants.filter(
+    (rg) => !(rg.examId === sub.examId && rg.studentId === sub.studentId)
+  );
+  db.retakeGrants.push({
+    examId: sub.examId,
+    studentId: sub.studentId,
+    studentName: sub.studentName,
+    className: sub.className,
+    grantedAt: new Date().toISOString(),
+    grantedBy: req.user.fullName || 'Giáo viên quản trị',
+  });
+
+  db.submissions.splice(subIndex, 1);
+  saveDb();
+
+  return res.json({
+    success: true,
+    message: `Đã cấp quyền cho học sinh ${sub.studentName} (${sub.className}) làm lại bài kiểm tra thành công.`,
+  });
+});
+
 app.get('/api/exams/:id/statistics', requireTeacher, (req, res) => {
   const db = getDb();
   const exam = db.exams.find((e) => e.id === req.params.id);
@@ -2049,6 +2114,7 @@ app.get('/api/exams/:id/statistics', requireTeacher, (req, res) => {
       passRatePercent,
       hardestQuestions,
       submissions: subs,
+      retakeGrants: (db.retakeGrants || []).filter((rg) => rg.examId === exam.id),
     },
   });
 });
