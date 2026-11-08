@@ -517,6 +517,14 @@ export const StudentAccountsManager: React.FC<StudentAccountsManagerProps> = ({
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 py-6 space-y-6">
+      {/* Banner thông báo cơ chế đăng nhập không cần mật khẩu cho học sinh */}
+      <div className="bg-emerald-50 border border-emerald-200 rounded-2xl p-4 text-emerald-900 text-xs sm:text-sm flex items-center gap-3">
+        <ShieldCheck className="w-5 h-5 text-emerald-600 flex-shrink-0" />
+        <div>
+          <strong>Cơ chế Đăng nhập mới cho Học sinh:</strong> Hiện tại học sinh chỉ cần chọn đúng <strong>Lớp</strong> và chọn (hoặc tự nhập) <strong>Họ và tên</strong> là có thể vào làm bài kiểm tra ngay mà <strong>không cần mật khẩu</strong>!
+        </div>
+      </div>
+
       {/* 1. School, Teacher & Unlimited Grade 9 Classes Manager */}
       <form
         onSubmit={handleSaveSchoolConfig}

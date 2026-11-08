@@ -214,16 +214,12 @@ app.post('/api/auth/setup-teacher', (req, res) => {
   });
 });
 
-// 3. LOGIN & LOGOUT
+// 3. LOGIN & LOGOUT (Học sinh chỉ cần Họ và tên + Lớp, KHÔNG CẦN MẬT KHẨU)
 app.post('/api/auth/login', (req, res) => {
   const db = getDb();
-  const { username, password, className } = req.body || {};
-  if (!username || !password) {
-    return res.status(400).json({
-      success: false,
-      error: 'Vui lòng nhập tên đăng nhập và mật khẩu.',
-    });
-  }
+  const { username, password, className, role } = req.body || {};
+
+  const isStudentAttempt = role === 'student' || (!password && Boolean(className));
 
   const stripVi = (s) =>
     String(s || '')
@@ -234,6 +230,113 @@ app.post('/api/auth/login', (req, res) => {
       .toLowerCase()
       .replace(/\s+/g, ' ')
       .trim();
+
+  // === CASE A: HỌC SINH ĐĂNG NHẬP (CHỈ CẦN HỌ VÀ TÊN & LỚP - KHÔNG CẦN MẬT KHẨU) ===
+  if (isStudentAttempt) {
+    const rawName = String(username || '').trim();
+    const targetClass = String(className || '')
+      .replace(/^(?:lớp|lop)\s*/i, '')
+      .trim()
+      .toUpperCase();
+
+    if (!rawName) {
+      return res.status(400).json({
+        success: false,
+        error: 'Em vui lòng chọn hoặc nhập Họ và tên của mình.',
+      });
+    }
+    if (!targetClass) {
+      return res.status(400).json({
+        success: false,
+        error: 'Em vui lòng chọn hoặc nhập Lớp học của em.',
+      });
+    }
+
+    const strippedInput = stripVi(rawName);
+    const compactInput = strippedInput.replace(/[^a-z0-9]/g, '');
+
+    // 1. Tìm học sinh trong lớp được chọn
+    let studentUser = db.users.find((u) => {
+      if (u.role !== 'student') return false;
+      const uClass = String(u.className || '')
+        .replace(/^(?:lớp|lop)\s*/i, '')
+        .trim()
+        .toUpperCase();
+      if (uClass !== targetClass) return false;
+      const uName = String(u.username || '').trim().toLowerCase();
+      const uFull = String(u.fullName || '').trim().toLowerCase();
+      if (uName === rawName.toLowerCase() || uFull === rawName.toLowerCase()) return true;
+      if (stripVi(u.username) === strippedInput || stripVi(u.fullName) === strippedInput) return true;
+      return false;
+    });
+
+    // 2. Nếu không khớp lớp, tìm theo tên trong toàn bộ học sinh
+    if (!studentUser) {
+      studentUser = db.users.find((u) => {
+        if (u.role !== 'student') return false;
+        const uName = String(u.username || '').trim().toLowerCase();
+        const uFull = String(u.fullName || '').trim().toLowerCase();
+        if (uName === rawName.toLowerCase() || uFull === rawName.toLowerCase()) return true;
+        if (stripVi(u.username) === strippedInput || stripVi(u.fullName) === strippedInput) return true;
+        return false;
+      });
+    }
+
+    // 3. Nếu chưa có trong danh sách (học sinh mới tự nhập tên): Tự động tạo tài khoản học sinh
+    if (!studentUser) {
+      const baseUsername = compactInput || `hs_${Date.now().toString(36)}`;
+      let finalUsername = baseUsername;
+      let counter = 1;
+      while (db.users.some((u) => u.username.toLowerCase() === finalUsername.toLowerCase())) {
+        finalUsername = `${baseUsername}${counter++}`;
+      }
+
+      studentUser = {
+        id: `stu-${Date.now()}-${crypto.randomBytes(3).toString('hex')}`,
+        username: finalUsername,
+        fullName: rawName,
+        role: 'student',
+        className: targetClass || '9A1',
+        passwordHash: hashPassword('123456'),
+        isLocked: false,
+        createdAt: new Date().toISOString(),
+        updatedAt: new Date().toISOString(),
+      };
+      db.users.push(studentUser);
+      saveDb();
+    }
+
+    if (studentUser.isLocked) {
+      return res.status(403).json({
+        success: false,
+        error: 'Tài khoản học sinh của em đã bị khoá. Vui lòng liên hệ giáo viên bộ môn.',
+      });
+    }
+
+    const token = `tk-student__${studentUser.id}__${crypto.randomBytes(12).toString('hex')}`;
+    db.sessions[token] = {
+      userId: studentUser.id,
+      role: 'student',
+      createdAt: new Date().toISOString(),
+    };
+    saveDb();
+
+    return res.json({
+      success: true,
+      data: {
+        token,
+        user: sanitizeUser(studentUser),
+      },
+    });
+  }
+
+  // === CASE B: GIÁO VIÊN ĐĂNG NHẬP (BẮT BUỘC MẬT KHẨU ĐỂ BẢO VỆ DỮ LIỆU) ===
+  if (!username || !password) {
+    return res.status(400).json({
+      success: false,
+      error: 'Vui lòng nhập tên đăng nhập và mật khẩu giáo viên.',
+    });
+  }
 
   const normalizedUsername = String(username).trim().toLowerCase();
   const strippedInput = stripVi(username);
@@ -254,12 +357,7 @@ app.post('/api/auth/login', (req, res) => {
     return false;
   });
 
-  const user =
-    (targetClass
-      ? matchingUsers.find(
-          (u) => String(u.className || '').trim().toUpperCase() === targetClass
-        )
-      : null) || matchingUsers[0];
+  const user = matchingUsers.find((u) => u.role === 'teacher') || matchingUsers[0];
 
   const cleanPass = String(password).trim();
   const isPasswordValid =
@@ -270,14 +368,14 @@ app.post('/api/auth/login', (req, res) => {
   if (!user || !isPasswordValid) {
     return res.status(401).json({
       success: false,
-      error: 'Tên đăng nhập hoặc mật khẩu không đúng.',
+      error: 'Tên đăng nhập hoặc mật khẩu giáo viên không đúng.',
     });
   }
 
   if (user.isLocked) {
     return res.status(403).json({
       success: false,
-      error: 'Tài khoản của bạn đã bị khoá. Vui lòng liên hệ giáo viên bộ môn.',
+      error: 'Tài khoản của bạn đã bị khoá. Vui lòng liên hệ quản trị viên.',
     });
   }
 

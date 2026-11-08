@@ -50,10 +50,9 @@ export const AuthPortal: React.FC<AuthPortalProps> = ({
     return merged.length > 0 ? merged : ['9A1', '9A2', '9A3', '9A4', '9A5'];
   }, [schoolConfig.classes, studentRoster]);
 
-  // Student Login State
+  // Student Login State (Học sinh chỉ cần chọn Lớp & Họ và tên, KHÔNG CẦN MẬT KHẨU)
   const [selectedClass, setSelectedClass] = useState<string>(availableClasses[0] || '9A1');
   const [studentInput, setStudentInput] = useState<string>('');
-  const [studentPassword, setStudentPassword] = useState<string>('');
 
   // Filter roster by selectedClass
   const studentsInSelectedClass = useMemo(() => {
@@ -74,8 +73,15 @@ export const AuthPortal: React.FC<AuthPortalProps> = ({
 
   const handleStudentLogin = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!studentInput.trim() || !studentPassword.trim()) {
-      onNotify('error', 'Em vui lòng chọn (hoặc nhập) Họ và tên và Mật khẩu.');
+    const finalName = studentInput.trim();
+    const finalClass = selectedClass.trim().toUpperCase();
+
+    if (!finalClass) {
+      onNotify('error', 'Em vui lòng chọn hoặc nhập Lớp học của mình.');
+      return;
+    }
+    if (!finalName) {
+      onNotify('error', 'Em vui lòng chọn (hoặc nhập) đầy đủ Họ và tên học sinh.');
       return;
     }
     setLoading(true);
@@ -83,15 +89,15 @@ export const AuthPortal: React.FC<AuthPortalProps> = ({
       const res = await apiRequest<{ token: string; user: UserAccount }>('/api/auth/login', {
         method: 'POST',
         body: JSON.stringify({
-          username: studentInput.trim(),
-          password: studentPassword.trim(),
-          className: selectedClass,
+          username: finalName,
+          className: finalClass,
+          role: 'student',
         }),
       });
       setStoredToken(res.token);
       onNotify(
         'success',
-        `Chào mừng học sinh ${res.user.fullName} (Lớp ${res.user.className || selectedClass})!`
+        `Chào mừng học sinh ${res.user.fullName} (Lớp ${res.user.className || finalClass})!`
       );
       onAuthSuccess(res.user);
     } catch (err: any) {
@@ -201,23 +207,24 @@ export const AuthPortal: React.FC<AuthPortalProps> = ({
 
           {roleTab === 'student' ? (
             /* ============================================================
-               TAB 1: HỌC SINH ĐĂNG NHẬP (CHỌN LỚP -> CHỌN TÊN -> VÀO THI)
+               TAB 1: HỌC SINH ĐĂNG NHẬP (CHỈ CẦN LỚP & HỌ VÀ TÊN - KHÔNG CẦN MẬT KHẨU)
                ============================================================ */
             <form onSubmit={handleStudentLogin} className="space-y-4">
               <div>
-                <h2 className="text-xl sm:text-2xl font-bold text-slate-900">
-                  Cổng Đăng nhập Học sinh Lớp 9
+                <h2 className="text-xl sm:text-2xl font-bold text-slate-900 flex items-center gap-2">
+                  <GraduationCap className="w-6 h-6 text-[#0D6E6E]" />
+                  <span>Cổng Đăng nhập Học sinh</span>
                 </h2>
-                <p className="text-xs sm:text-sm text-slate-600 mt-0.5">
-                  Em hãy chọn lớp của mình, chọn (hoặc nhập) Họ và tên rồi nhập mật khẩu để vào học
-                  và làm bài kiểm tra.
+                <p className="text-xs sm:text-sm text-slate-600 mt-1 leading-relaxed">
+                  Em chỉ cần chọn <strong>Lớp</strong> và <strong>Họ và tên</strong> của mình để vào học và làm bài kiểm tra (<span className="text-emerald-700 font-bold">không cần mật khẩu</span>).
                 </p>
               </div>
 
-              {/* 1. Chọn Lớp 9 */}
+              {/* 1. Chọn Lớp */}
               <div>
-                <label className="block text-xs font-bold text-slate-700 mb-1.5">
-                  1. Chọn Lớp 9 của em:
+                <label className="block text-xs font-bold text-slate-700 mb-1.5 flex items-center justify-between">
+                  <span>1. Chọn Lớp học của em:</span>
+                  <span className="text-teal-700 font-semibold text-[11px]">Đang chọn: Lớp {selectedClass}</span>
                 </label>
                 <div className="flex flex-wrap gap-1.5">
                   {availableClasses.map((cls) => {
@@ -238,7 +245,7 @@ export const AuthPortal: React.FC<AuthPortalProps> = ({
                         }}
                         className={`px-3.5 py-2 rounded-xl text-xs sm:text-sm font-bold border transition-all ${
                           selectedClass === cls
-                            ? 'bg-[#0D6E6E] text-white border-[#0D6E6E] shadow-xs'
+                            ? 'bg-[#0D6E6E] text-white border-[#0D6E6E] shadow-sm ring-2 ring-teal-500/30'
                             : 'bg-slate-50 text-slate-700 border-slate-300 hover:bg-teal-50'
                         }`}
                       >
@@ -252,7 +259,7 @@ export const AuthPortal: React.FC<AuthPortalProps> = ({
                 </div>
               </div>
 
-              {/* 2. Chọn nhanh tên học sinh trong danh sách lớp (nếu lớp đã có danh sách) */}
+              {/* 2. Chọn nhanh Họ và tên trong danh sách lớp (nếu lớp có danh sách) */}
               {studentsInSelectedClass.length > 0 && (
                 <div>
                   <label className="block text-xs font-bold text-slate-700 mb-1.5">
@@ -261,63 +268,55 @@ export const AuthPortal: React.FC<AuthPortalProps> = ({
                   <select
                     value={studentInput}
                     onChange={(e) => setStudentInput(e.target.value)}
-                    className="w-full px-3.5 py-2.5 rounded-xl border border-teal-300 bg-teal-50/40 text-sm font-semibold text-slate-900 focus:outline-none focus:ring-2 focus:ring-teal-600"
+                    className="w-full px-3.5 py-2.5 rounded-xl border border-teal-300 bg-teal-50/50 text-sm font-semibold text-slate-900 focus:outline-none focus:ring-2 focus:ring-teal-600"
                   >
                     <option value="">
-                      -- Bấm vào đây để chọn tên của em trong Lớp {selectedClass} (
-                      {studentsInSelectedClass.length} học sinh) --
+                      -- Bấm vào đây để chọn tên em ({studentsInSelectedClass.length} học sinh Lớp {selectedClass}) --
                     </option>
                     {studentsInSelectedClass.map((st, idx) => (
                       <option key={st.id} value={st.fullName}>
-                        {idx + 1}. {st.fullName} — (TK: {st.username})
+                        {idx + 1}. {st.fullName}
                       </option>
                     ))}
                   </select>
                 </div>
               )}
 
-              {/* Hoặc tự gõ Họ và tên / Tên đăng nhập */}
+              {/* Hoặc tự nhập Họ và tên */}
               <div>
                 <label className="block text-xs font-bold text-slate-700 mb-1.5">
                   {studentsInSelectedClass.length > 0
-                    ? 'Hoặc tự nhập Họ và tên / Tên đăng nhập:'
-                    : '2. Nhập Họ và tên học sinh (hoặc Tên đăng nhập):'}
+                    ? 'Hoặc tự gõ Họ và tên học sinh (nếu không có trong danh sách trên):'
+                    : '2. Nhập đầy đủ Họ và tên học sinh:'}
                 </label>
                 <input
                   type="text"
                   value={studentInput}
                   onChange={(e) => setStudentInput(e.target.value)}
-                  placeholder="Nhập Họ và tên (VD: Võ Ngọc Bảo Trân) hoặc tên đăng nhập..."
+                  placeholder="Ví dụ: Nguyễn Văn An, Trần Thị Mai, Võ Ngọc Bảo Trân..."
                   className="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm sm:text-base font-medium focus:outline-none focus:ring-2 focus:ring-teal-600"
                   required
                 />
               </div>
 
-              {/* 3. Mật khẩu */}
-              <div>
-                <label className="block text-xs font-bold text-slate-700 mb-1.5">
-                  3. Mật khẩu riêng của học sinh:
-                </label>
-                <input
-                  type="password"
-                  value={studentPassword}
-                  onChange={(e) => setStudentPassword(e.target.value)}
-                  placeholder="Nhập mật khẩu riêng do giáo viên cấp..."
-                  className="w-full px-4 py-2.5 rounded-xl border border-slate-300 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-teal-600"
-                  required
-                />
+              {/* Thông báo xanh: Không cần mật khẩu */}
+              <div className="bg-emerald-50 border border-emerald-200 rounded-xl p-3 text-xs sm:text-sm text-emerald-900 flex items-center gap-2.5">
+                <ShieldCheck className="w-5 h-5 text-emerald-600 flex-shrink-0" />
+                <div>
+                  <span className="font-bold">Đăng nhập nhanh không cần mật khẩu:</span> Em chỉ cần chọn đúng <strong>Lớp</strong> và <strong>Họ tên</strong> là có thể vào phòng thi và học bài ngay.
+                </div>
               </div>
 
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full flex items-center justify-center gap-2 py-3.5 px-6 rounded-xl bg-[#0D6E6E] hover:bg-teal-800 text-white font-bold text-base shadow-md transition-all disabled:opacity-50"
+                className="w-full flex items-center justify-center gap-2 py-3.5 px-6 rounded-xl bg-[#0D6E6E] hover:bg-teal-800 text-white font-bold text-base shadow-md transition-all disabled:opacity-50 cursor-pointer"
               >
                 <LogIn className="w-5 h-5" />
                 <span>
                   {loading
                     ? 'Đang vào lớp học...'
-                    : `Học sinh Đăng nhập vào Lớp ${selectedClass}`}
+                    : `Học sinh Vào học & Làm bài (Lớp ${selectedClass})`}
                 </span>
               </button>
             </form>

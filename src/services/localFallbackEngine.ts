@@ -1140,12 +1140,11 @@ export async function handleLocalApiRequest<T>(
     } as T;
   }
 
-  // 3. POST /api/auth/login
+  // 3. POST /api/auth/login (Học sinh chỉ cần Họ và tên + Lớp, KHÔNG CẦN MẬT KHẨU)
   if (method === 'POST' && pathname === '/api/auth/login') {
-    const { username, password, className } = body;
-    if (!username || !password) {
-      throw new Error('Vui lòng nhập tên đăng nhập và mật khẩu.');
-    }
+    const { username, password, className, role } = body || {};
+    const isStudentAttempt = role === 'student' || (!password && Boolean(className));
+
     const stripVi = (s: string) =>
       String(s || '')
         .normalize('NFD')
@@ -1155,6 +1154,96 @@ export async function handleLocalApiRequest<T>(
         .toLowerCase()
         .replace(/\s+/g, ' ')
         .trim();
+
+    // === CASE A: HỌC SINH ĐĂNG NHẬP (CHỈ CẦN HỌ VÀ TÊN & LỚP - KHÔNG CẦN MẬT KHẨU) ===
+    if (isStudentAttempt) {
+      const rawName = String(username || '').trim();
+      const targetClass = String(className || '')
+        .replace(/^(?:lớp|lop)\s*/i, '')
+        .trim()
+        .toUpperCase();
+
+      if (!rawName) {
+        throw new Error('Em vui lòng chọn hoặc nhập Họ và tên của mình.');
+      }
+      if (!targetClass) {
+        throw new Error('Em vui lòng chọn hoặc nhập Lớp học của em.');
+      }
+
+      const strippedInput = stripVi(rawName);
+      const compactInput = strippedInput.replace(/[^a-z0-9]/g, '');
+
+      // 1. Tìm học sinh trong lớp được chọn
+      let studentUser = db.users.find((u: any) => {
+        if (u.role !== 'student') return false;
+        const uClass = String(u.className || '')
+          .replace(/^(?:lớp|lop)\s*/i, '')
+          .trim()
+          .toUpperCase();
+        if (uClass !== targetClass) return false;
+        const uName = String(u.username || '').trim().toLowerCase();
+        const uFull = String(u.fullName || '').trim().toLowerCase();
+        if (uName === rawName.toLowerCase() || uFull === rawName.toLowerCase()) return true;
+        if (stripVi(u.username) === strippedInput || stripVi(u.fullName) === strippedInput) return true;
+        return false;
+      });
+
+      // 2. Nếu không thấy trong lớp đó, tìm theo tên trong toàn bộ học sinh
+      if (!studentUser) {
+        studentUser = db.users.find((u: any) => {
+          if (u.role !== 'student') return false;
+          const uName = String(u.username || '').trim().toLowerCase();
+          const uFull = String(u.fullName || '').trim().toLowerCase();
+          if (uName === rawName.toLowerCase() || uFull === rawName.toLowerCase()) return true;
+          if (stripVi(u.username) === strippedInput || stripVi(u.fullName) === strippedInput) return true;
+          return false;
+        });
+      }
+
+      // 3. Nếu chưa có trong danh sách (học sinh mới tự nhập tên): Tự động tạo tài khoản học sinh
+      if (!studentUser) {
+        const baseUsername = compactInput || `hs_${Date.now().toString(36)}`;
+        let finalUsername = baseUsername;
+        let counter = 1;
+        while (db.users.some((u: any) => u.username.toLowerCase() === finalUsername.toLowerCase())) {
+          finalUsername = `${baseUsername}${counter++}`;
+        }
+        studentUser = {
+          id: `stu-${Date.now()}-${Math.random().toString(36).slice(2, 6)}`,
+          username: finalUsername,
+          fullName: rawName,
+          role: 'student',
+          className: targetClass || '9A1',
+          passwordHash: hashLocalPassword('123456'),
+          isLocked: false,
+          createdAt: new Date().toISOString(),
+          updatedAt: new Date().toISOString(),
+        };
+        db.users.push(studentUser);
+        saveLocalDb();
+      }
+
+      if (studentUser.isLocked) {
+        throw new Error('Tài khoản học sinh của em đã bị khoá. Vui lòng liên hệ giáo viên bộ môn.');
+      }
+
+      const newToken = `tk-student__${studentUser.id}__${Math.random().toString(36).slice(2, 10)}`;
+      db.sessions[newToken] = {
+        userId: studentUser.id,
+        role: 'student',
+        createdAt: new Date().toISOString(),
+      };
+      saveLocalDb();
+      return {
+        token: newToken,
+        user: sanitizeUser(studentUser),
+      } as T;
+    }
+
+    // === CASE B: GIÁO VIÊN ĐĂNG NHẬP (BẮT BUỘC MẬT KHẨU) ===
+    if (!username || !password) {
+      throw new Error('Vui lòng nhập tên đăng nhập và mật khẩu giáo viên.');
+    }
 
     const normalizedUsername = String(username).trim().toLowerCase();
     const strippedInput = stripVi(username);
@@ -1175,12 +1264,7 @@ export async function handleLocalApiRequest<T>(
       return false;
     });
 
-    const user =
-      (targetClass
-        ? matchingUsers.find(
-            (u: any) => String(u.className || '').trim().toUpperCase() === targetClass
-          )
-        : null) || matchingUsers[0];
+    const user = matchingUsers.find((u: any) => u.role === 'teacher') || matchingUsers[0];
 
     const cleanPass = String(password).trim();
     const isPasswordValid =
@@ -1189,10 +1273,10 @@ export async function handleLocalApiRequest<T>(
         (user.role === 'teacher' && (cleanPass === '123456' || cleanPass === 'gvPassword@2026')));
 
     if (!user || !isPasswordValid) {
-      throw new Error('Tên đăng nhập hoặc mật khẩu không đúng.');
+      throw new Error('Tên đăng nhập hoặc mật khẩu giáo viên không đúng.');
     }
     if (user.isLocked) {
-      throw new Error('Tài khoản của bạn đã bị khoá. Vui lòng liên hệ giáo viên bộ môn.');
+      throw new Error('Tài khoản của bạn đã bị khoá. Vui lòng liên hệ quản trị viên.');
     }
     const newToken = `tk-${user.role}__${user.id}__${Math.random().toString(36).slice(2, 10)}`;
     db.sessions[newToken] = {
